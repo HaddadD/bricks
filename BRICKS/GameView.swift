@@ -19,11 +19,22 @@ struct GameView: View {
             let slotWidth = geo.size.width / 3
 
             ZStack {
-                LinearGradient(
-                    colors: [Theme.backgroundTop, Theme.backgroundBottom],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
+                ZStack {
+                    LinearGradient(
+                        colors: [Theme.backgroundTop, Theme.backgroundBottom],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+
+                    // Milestone celebration, fading out over the next 200 points.
+                    LinearGradient(
+                        colors: [Theme.celebrationTop, Theme.celebrationBottom],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .opacity(model.celebrationLevel)
+                }
+                .animation(.easeInOut(duration: 0.7), value: model.celebrationLevel)
                 .ignoresSafeArea()
                 .contentShape(Rectangle())
                 .onTapGesture {

@@ -63,6 +63,11 @@ check(TrayPiece(shape: bar(3)).colorIndex == TrayPiece(shape: bar(3, vertical: t
 check(TrayPiece(shape: bar(3)).colorIndex != TrayPiece(shape: bar(4)).colorIndex,
       "different sizes are different colours")
 
+let singleColour = TrayPiece(shape: bar(1)).colorIndex
+let corner5 = Shape(grid: [[true, true, true], [true, false, false], [true, false, false]])
+check(singleColour == 8, "the single piece now wears teal")
+check(TrayPiece(shape: corner5).colorIndex == 0, "and the five-cell corner wears blush")
+
 // MARK: - Placement and scoring
 
 print("\nPlacement and scoring")
@@ -284,6 +289,68 @@ check(!m14.isGameOver && m14.score == 0, "New game starts clean")
 check(m14.count(of: .bomb) == 1, "power-ups carry over into the next game")
 check(m14.canPlaceAnywhere(bar(1)), "the new board is empty")
 
+// MARK: - Milestone celebration
+
+print("\nMilestone celebration")
+
+func placeOne(_ m: GameModel, row: Int, col: Int) {
+    m.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+    _ = m.place(trayIndex: 0, atRow: row, col: col)
+    pump(0.3)
+}
+
+let k1 = fresh()
+check(k1.celebrationLevel == 0, "no celebration at the start")
+k1.testSetScore(998)
+placeOne(k1, row: 0, col: 0)                 // 999 — still short
+check(k1.milestoneScore == nil, "nothing fires below 1000")
+
+k1.testSetScore(998)
+m1Filler: do {
+    k1.testSetTray([TrayPiece(shape: bar(5)), nil, nil])
+    _ = k1.place(trayIndex: 0, atRow: 2, col: 0)   // 1003
+    pump(0.3)
+}
+check(k1.milestoneScore == 1003, "crossing 1000 records the score it fired at (got \(String(describing: k1.milestoneScore)))")
+check(k1.celebrationLevel == 1, "the celebration starts at full strength")
+
+// It fades linearly over the next 200 points.
+k1.testSetScore(1053)
+check(abs(k1.celebrationLevel - 0.75) < 0.001, "a quarter of the way back (got \(k1.celebrationLevel))")
+k1.testSetScore(1103)
+check(abs(k1.celebrationLevel - 0.5) < 0.001, "halfway back at +100 (got \(k1.celebrationLevel))")
+k1.testSetScore(1203)
+check(k1.celebrationLevel == 0, "fully back to normal at +200")
+k1.testSetScore(1500)
+check(k1.celebrationLevel == 0, "and stays there")
+
+// No re-fire until the next whole thousand.
+k1.testSetScore(1500)
+placeOne(k1, row: 3, col: 0)
+check(k1.milestoneScore == 1003, "it does not fire again mid-thousand")
+
+k1.testSetScore(1999)
+placeOne(k1, row: 4, col: 0)                 // 2000
+check(k1.milestoneScore == 2000, "the next thousand fires again (got \(String(describing: k1.milestoneScore)))")
+check(k1.celebrationLevel == 1, "and starts at full strength again")
+
+// Landing exactly on the milestone counts.
+let k2 = fresh()
+k2.testSetScore(995)
+k2.testSetTray([TrayPiece(shape: bar(5)), nil, nil])
+_ = k2.place(trayIndex: 0, atRow: 0, col: 0)      // exactly 1000
+pump(0.3)
+check(k2.milestoneScore == 1000, "landing exactly on 1000 fires (got \(String(describing: k2.milestoneScore)))")
+
+let k3 = fresh()
+k3.testSetScore(2500)
+placeOne(k3, row: 0, col: 0)
+check(k3.milestoneScore == 2501, "a run starting past several thousands fires once at the current score")
+
+// New game clears it.
+k3.newGame()
+check(k3.milestoneScore == nil && k3.celebrationLevel == 0, "New game clears the celebration")
+
 // MARK: - Gift expiry
 
 print("\nGift expiry")
@@ -371,6 +438,7 @@ check((2...5).allSatisfy { p2.testCell(row: 6, col: $0).isFilled }, "placed bric
 check(p2.testCell(row: 1, col: 1).hasGift, "an unclaimed gift survives a relaunch")
 check(p2.count(of: .bomb) == 4, "power-up counts survive a relaunch (got \(p2.count(of: .bomb)))")
 check(p2.tray.compactMap { $0 }.count == p1.tray.compactMap { $0 }.count, "the tray survives a relaunch")
+check(p2.milestoneScore == p1.milestoneScore, "the milestone state survives a relaunch")
 
 let p3 = GameModel()
 p3.newGame()

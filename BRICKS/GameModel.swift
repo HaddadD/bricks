@@ -28,6 +28,10 @@ final class GameModel: ObservableObject {
     static let size = 10
     /// Moves a gift survives on the board before it expires.
     static let giftLifespan = 10
+    /// Points between background celebrations.
+    static let milestoneStep = 1000
+    /// Points over which the celebration fades back to the normal background.
+    static let milestoneFade = 200
 
     @Published private(set) var board: [[Cell]]
     @Published private(set) var tray: [TrayPiece?]
@@ -35,6 +39,8 @@ final class GameModel: ObservableObject {
     @Published private(set) var best: Int
     @Published private(set) var powerUps: [PowerUp: Int]
     @Published private(set) var isGameOver = false
+    /// Score at which the most recent milestone fired; nil before the first one.
+    @Published private(set) var milestoneScore: Int? = nil
 
     /// Cells currently playing the clear animation.
     @Published private(set) var clearing: Set<GridPoint> = []
@@ -109,6 +115,7 @@ final class GameModel: ObservableObject {
         }
         undoStack = nil
         pendingGift = false
+        milestoneScore = nil
         giftThreshold = Int.random(in: 280...320)
         persist()
     }
@@ -124,6 +131,7 @@ final class GameModel: ObservableObject {
         var giftThreshold: Int
         var pendingGift: Bool
         var isGameOver: Bool
+        var milestoneScore: Int?
     }
 
     private func persist() {
@@ -134,7 +142,8 @@ final class GameModel: ObservableObject {
             powerUps: Dictionary(uniqueKeysWithValues: powerUps.map { ($0.key.rawValue, $0.value) }),
             giftThreshold: giftThreshold,
             pendingGift: pendingGift,
-            isGameOver: isGameOver
+            isGameOver: isGameOver,
+            milestoneScore: milestoneScore
         )
         if let data = try? JSONEncoder().encode(save) {
             UserDefaults.standard.set(data, forKey: saveKey)
@@ -156,6 +165,7 @@ final class GameModel: ObservableObject {
         giftThreshold = save.giftThreshold
         pendingGift = save.pendingGift
         isGameOver = save.isGameOver
+        milestoneScore = save.milestoneScore
 
         var restored = Dictionary(uniqueKeysWithValues: PowerUp.allCases.map { ($0, 0) })
         for (raw, count) in save.powerUps {
@@ -283,6 +293,7 @@ final class GameModel: ObservableObject {
             UserDefaults.standard.set(best, forKey: bestKey)
         }
 
+        checkMilestone()
         ageGifts()
         maybeSpawnGift()
 
@@ -293,6 +304,29 @@ final class GameModel: ObservableObject {
         }
 
         persist()
+    }
+
+    // MARK: - Milestones
+
+    /// 1 immediately after a milestone, easing to 0 once `milestoneFade` more points
+    /// have been scored. The background reads this to blend the celebration away.
+    var celebrationLevel: Double {
+        guard let from = milestoneScore else { return 0 }
+        let progress = Double(score - from) / Double(GameModel.milestoneFade)
+        return min(1, max(0, 1 - progress))
+    }
+
+    /// Fires each time the score passes another whole `milestoneStep`.
+    private func checkMilestone() {
+        let alreadyFired = (milestoneScore ?? 0) / GameModel.milestoneStep
+        let reached = score / GameModel.milestoneStep
+        guard reached > alreadyFired else { return }
+
+        withAnimation(.easeOut(duration: 0.5)) {
+            milestoneScore = score
+        }
+        showToast("\(reached * GameModel.milestoneStep) points!")
+        Haptics.reward()
     }
 
     // MARK: - Gifts

@@ -44,6 +44,10 @@ enum Theme {
     static let backgroundTop = Color(hex: 0xFDF7F2)
     static let backgroundBottom = Color(hex: 0xF0E8F4)
 
+    /// Shown behind the board for 200 points after each 1000-point milestone.
+    static let celebrationTop = Color(hex: 0xA0E2E1)
+    static let celebrationBottom = Color(hex: 0x61CFCD)
+
     static let boardBackground = Color(hex: 0xF6EDE6)
     static let emptyCell = Color(hex: 0xE7DCD3)
     static let emptyCellHighlight = Color(hex: 0xD6C8BD)
@@ -64,7 +68,7 @@ enum Theme {
     /// Palette slot for each of the nine piece families, ordered so that pieces which
     /// are easy to confuse by silhouette — the bars especially — land on clearly
     /// different hues rather than neighbouring ones.
-    private static let familyPalette = [0, 5, 3, 6, 1, 4, 7, 2, 8]
+    private static let familyPalette = [8, 5, 3, 6, 1, 4, 7, 2, 0]
 
     static func familyColor(_ family: Int) -> Int {
         familyPalette[family % familyPalette.count]
