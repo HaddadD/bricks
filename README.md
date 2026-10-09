@@ -61,6 +61,13 @@ Both live in the app's data container, so they survive re-installing over the to
 Xcode. Deleting the app from the phone is what clears them. **New** starts a fresh run
 and discards the saved one.
 
+## Milestones
+
+Every 1000 points the background switches to one of seven pastel gradients — blush,
+coral, teal, aqua, mint, yellow or lilac — picked at random, never the same one twice
+running. It then fades back to the normal background over the next 200 points scored,
+measured from the score it actually fired at. The choice is saved with the run.
+
 ## Gifts
 
 Roughly every 300 points a gift appears on an **unclaimed** square, showing a countdown
@@ -107,7 +114,8 @@ else.
 
 ### Dev affordances (DEBUG only)
 
-`-demo` as a launch argument seeds a representative board — bricks, both gift states,
+`-celebrate <0-6>` seeds that board mid-celebration on the given background, for
+checking each one without playing to a milestone. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. `GameModel` also
 exposes `testSet*` seams used by the headless rule tests:
 

@@ -41,6 +41,8 @@ final class GameModel: ObservableObject {
     @Published private(set) var isGameOver = false
     /// Score at which the most recent milestone fired; nil before the first one.
     @Published private(set) var milestoneScore: Int? = nil
+    /// Which celebration background that milestone drew.
+    @Published private(set) var milestoneTheme: Int? = nil
 
     /// Cells currently playing the clear animation.
     @Published private(set) var clearing: Set<GridPoint> = []
@@ -73,7 +75,17 @@ final class GameModel: ObservableObject {
         powerUps = Dictionary(uniqueKeysWithValues: PowerUp.allCases.map { ($0, 0) })
 
         #if DEBUG
-        if ProcessInfo.processInfo.arguments.contains("-demo") {
+        let args = ProcessInfo.processInfo.arguments
+        // `-celebrate <n>` seeds a board mid-celebration on background n, for checking
+        // how each one looks without playing to a milestone.
+        if let i = args.firstIndex(of: "-celebrate"), i + 1 < args.count,
+           let n = Int(args[i + 1]) {
+            seedDemoBoard()
+            milestoneScore = score
+            milestoneTheme = n
+            return
+        }
+        if args.contains("-demo") {
             seedDemoBoard()
             return
         }
@@ -116,6 +128,7 @@ final class GameModel: ObservableObject {
         undoStack = nil
         pendingGift = false
         milestoneScore = nil
+        milestoneTheme = nil
         giftThreshold = Int.random(in: 280...320)
         persist()
     }
@@ -132,6 +145,7 @@ final class GameModel: ObservableObject {
         var pendingGift: Bool
         var isGameOver: Bool
         var milestoneScore: Int?
+        var milestoneTheme: Int?
     }
 
     private func persist() {
@@ -143,7 +157,8 @@ final class GameModel: ObservableObject {
             giftThreshold: giftThreshold,
             pendingGift: pendingGift,
             isGameOver: isGameOver,
-            milestoneScore: milestoneScore
+            milestoneScore: milestoneScore,
+            milestoneTheme: milestoneTheme
         )
         if let data = try? JSONEncoder().encode(save) {
             UserDefaults.standard.set(data, forKey: saveKey)
@@ -166,6 +181,7 @@ final class GameModel: ObservableObject {
         pendingGift = save.pendingGift
         isGameOver = save.isGameOver
         milestoneScore = save.milestoneScore
+        milestoneTheme = save.milestoneTheme
 
         var restored = Dictionary(uniqueKeysWithValues: PowerUp.allCases.map { ($0, 0) })
         for (raw, count) in save.powerUps {
@@ -322,8 +338,13 @@ final class GameModel: ObservableObject {
         let reached = score / GameModel.milestoneStep
         guard reached > alreadyFired else { return }
 
+        // Draw a different background from the one the last milestone used.
+        let choices = Theme.celebrations.indices.filter { $0 != milestoneTheme }
+        let picked = choices.randomElement() ?? 0
+
         withAnimation(.easeOut(duration: 0.5)) {
             milestoneScore = score
+            milestoneTheme = picked
         }
         showToast("\(reached * GameModel.milestoneStep) points!")
         Haptics.reward()

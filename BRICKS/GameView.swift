@@ -27,8 +27,9 @@ struct GameView: View {
                     )
 
                     // Milestone celebration, fading out over the next 200 points.
+                    let party = Theme.celebration(model.milestoneTheme)
                     LinearGradient(
-                        colors: [Theme.celebrationTop, Theme.celebrationBottom],
+                        colors: [party.top, party.bottom],
                         startPoint: .top,
                         endPoint: .bottom
                     )

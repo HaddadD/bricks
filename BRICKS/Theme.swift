@@ -44,9 +44,27 @@ enum Theme {
     static let backgroundTop = Color(hex: 0xFDF7F2)
     static let backgroundBottom = Color(hex: 0xF0E8F4)
 
-    /// Shown behind the board for 200 points after each 1000-point milestone.
-    static let celebrationTop = Color(hex: 0xA0E2E1)
-    static let celebrationBottom = Color(hex: 0x61CFCD)
+    /// Backgrounds shown for 200 points after each 1000-point milestone.
+    /// One is picked at random each time, never the same one twice running.
+    struct Celebration {
+        let name: String
+        let top: Color
+        let bottom: Color
+    }
+
+    static let celebrations: [Celebration] = [
+        Celebration(name: "blush",  top: Color(hex: 0xFFC8DD), bottom: Color(hex: 0xFFA3C6)),
+        Celebration(name: "coral",  top: Color(hex: 0xFFD0C1), bottom: Color(hex: 0xFFB098)),
+        Celebration(name: "teal",   top: Color(hex: 0xA0E2E1), bottom: Color(hex: 0xFCFCFB)),
+        Celebration(name: "aqua",   top: Color(hex: 0xFCFCFB), bottom: Color(hex: 0x73DFE8)),
+        Celebration(name: "mint",   top: Color(hex: 0xBFF1D2), bottom: Color(hex: 0x95E8B4)),
+        Celebration(name: "yellow", top: Color(hex: 0xFBEAAC), bottom: Color(hex: 0xF8DC74)),
+        Celebration(name: "lilac",  top: Color(hex: 0xE0CDF9), bottom: Color(hex: 0xCCACF5))
+    ]
+
+    static func celebration(_ index: Int?) -> Celebration {
+        celebrations[(index ?? 0) % celebrations.count]
+    }
 
     static let boardBackground = Color(hex: 0xF6EDE6)
     static let emptyCell = Color(hex: 0xE7DCD3)

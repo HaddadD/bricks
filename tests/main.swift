@@ -3,6 +3,14 @@ import CoreGraphics
 
 var failures: [String] = []
 
+/// Records a failure but prints nothing when it passes — for checks inside loops.
+func check_quiet(_ condition: Bool, _ label: String) {
+    if !condition {
+        print("  FAIL \(label)")
+        failures.append(label)
+    }
+}
+
 func check(_ condition: Bool, _ label: String) {
     if condition {
         print("  ok   \(label)")
@@ -313,6 +321,9 @@ m1Filler: do {
 }
 check(k1.milestoneScore == 1003, "crossing 1000 records the score it fired at (got \(String(describing: k1.milestoneScore)))")
 check(k1.celebrationLevel == 1, "the celebration starts at full strength")
+check(k1.milestoneTheme != nil && Theme.celebrations.indices.contains(k1.milestoneTheme!),
+      "a celebration background is drawn")
+check(Theme.celebrations.count == 7, "there are seven celebration backgrounds")
 
 // It fades linearly over the next 200 points.
 k1.testSetScore(1053)
@@ -333,6 +344,32 @@ k1.testSetScore(1999)
 placeOne(k1, row: 4, col: 0)                 // 2000
 check(k1.milestoneScore == 2000, "the next thousand fires again (got \(String(describing: k1.milestoneScore)))")
 check(k1.celebrationLevel == 1, "and starts at full strength again")
+
+// Across many milestones the background never repeats back to back, and over time
+// every one of the seven gets used.
+var seen = Set<Int>()
+var previous: Int? = nil
+let k4 = fresh()
+for step in 1...60 {
+    // Clear the board each round so the placement always lands and the score is
+    // only what we set plus the piece.
+    for r in 0..<10 { for c in 0..<10 { k4.testSetCell(row: r, col: c, colorIndex: nil) } }
+    k4.testSetScore(step * GameModel.milestoneStep - 2)
+    k4.testSetTray([TrayPiece(shape: bar(5)), nil, nil])
+
+    let before = k4.milestoneScore
+    _ = k4.place(trayIndex: 0, atRow: 0, col: 0)
+    pump(0.12)
+
+    guard k4.milestoneScore != before, let now = k4.milestoneTheme else {
+        check_quiet(false, "milestone \(step) did not fire")
+        continue
+    }
+    check_quiet(now != previous, "milestone \(step) repeated the previous background")
+    seen.insert(now)
+    previous = now
+}
+check(seen.count == 7, "all seven backgrounds come up over 60 milestones (saw \(seen.count))")
 
 // Landing exactly on the milestone counts.
 let k2 = fresh()
