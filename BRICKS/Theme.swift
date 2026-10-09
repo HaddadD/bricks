@@ -53,13 +53,13 @@ enum Theme {
     }
 
     static let celebrations: [Celebration] = [
-        Celebration(name: "blush",  top: Color(hex: 0xFFC8DD), bottom: Color(hex: 0xFFA3C6)),
-        Celebration(name: "coral",  top: Color(hex: 0xFFD0C1), bottom: Color(hex: 0xFFB098)),
+        Celebration(name: "blush",  top: Color(hex: 0xFFA3C6), bottom: Color(hex: 0xFFC8DD)),
+        Celebration(name: "coral",  top: Color(hex: 0xFFB098), bottom: Color(hex: 0xFFD0C1)),
         Celebration(name: "teal",   top: Color(hex: 0xA0E2E1), bottom: Color(hex: 0xFCFCFB)),
-        Celebration(name: "aqua",   top: Color(hex: 0xFCFCFB), bottom: Color(hex: 0x73DFE8)),
-        Celebration(name: "mint",   top: Color(hex: 0xBFF1D2), bottom: Color(hex: 0x95E8B4)),
-        Celebration(name: "yellow", top: Color(hex: 0xFBEAAC), bottom: Color(hex: 0xF8DC74)),
-        Celebration(name: "lilac",  top: Color(hex: 0xE0CDF9), bottom: Color(hex: 0xCCACF5))
+        Celebration(name: "aqua",   top: Color(hex: 0x73DFE8), bottom: Color(hex: 0xFCFCFB)),
+        Celebration(name: "mint",   top: Color(hex: 0x95E8B4), bottom: Color(hex: 0xBFF1D2)),
+        Celebration(name: "yellow", top: Color(hex: 0xF8DC74), bottom: Color(hex: 0xFBEAAC)),
+        Celebration(name: "lilac",  top: Color(hex: 0xCCACF5), bottom: Color(hex: 0xE0CDF9))
     ]
 
     static func celebration(_ index: Int?) -> Celebration {
