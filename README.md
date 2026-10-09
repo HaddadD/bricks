@@ -65,7 +65,8 @@ and discards the saved one.
 
 Every 1000 points the background switches to one of seven pastel gradients — blush,
 coral, teal, aqua, mint, yellow or lilac — picked at random, never the same one twice
-running. It then fades back to the normal background over the next 200 points scored,
+running. Each runs from its colour at the top to the same near-white foot, which keeps
+the tray readable whatever is happening above it. It then fades back to the normal background over the next 200 points scored,
 measured from the score it actually fired at. The choice is saved with the run.
 
 ## Gifts
