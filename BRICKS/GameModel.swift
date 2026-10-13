@@ -299,7 +299,7 @@ final class GameModel: ObservableObject {
                 self.score += award
             }
             if lines > 1 {
-                self.showToast("\(lines) lines! \(cleared) x1.5 = \(award)")
+                self.showToast("\(lines) lines! 1.5x multiplier activated")
             }
             if giftsWon > 0 {
                 for _ in 0..<giftsWon { self.awardGift() }
