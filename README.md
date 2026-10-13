@@ -42,8 +42,11 @@ file with another 1024×1024 PNG that has no alpha channel.
 - The app version is stamped under the board's bottom-left corner, read from the bundle,
   so bumping Marketing Version in Xcode updates it.
 - Filling a row or column clears it. Scoring is 1 point per brick placed, plus 1 per
-  cleared cell — counted as a union, so a row and column crossing is 19, not 20. There
-  is no bonus for clearing several lines at once and no streak between turns.
+  cleared cell — counted as a union, so a row and column crossing is 19, not 20.
+- **Clearing more than one line with a single piece pays 1.5x the cells it clears**,
+  rounded to the nearest point. The multiplier is flat whether it is 2 lines or 5, it
+  applies to the cleared cells rather than the piece you placed, and it applies to that
+  clear alone — the next one starts from scratch. There is no streak between turns.
 - A dragged piece floats well above your finger so neither your hand nor the piece hides
   the square it will land on, and the rows or columns a placement would complete are
   highlighted before you let go.

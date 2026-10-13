@@ -32,6 +32,8 @@ final class GameModel: ObservableObject {
     static let milestoneStep = 1000
     /// Points over which the celebration fades back to the normal background.
     static let milestoneFade = 200
+    /// Multiplier applied when a single placement clears more than one line.
+    static let multiClearBonus = 1.5
 
     @Published private(set) var board: [[Cell]]
     @Published private(set) var tray: [TrayPiece?]
@@ -275,6 +277,13 @@ final class GameModel: ObservableObject {
 
         let lines = fullRows.count + fullCols.count
 
+        // Clearing more than one line in a single placement is worth 1.5x the cells it
+        // clears. It applies to that clear alone — the next one starts from scratch.
+        let cleared = cells.count
+        let award = lines > 1
+            ? Int((Double(cleared) * GameModel.multiClearBonus).rounded())
+            : cleared
+
         withAnimation(.easeOut(duration: 0.16)) {
             clearing = cells
         }
@@ -287,7 +296,10 @@ final class GameModel: ObservableObject {
                     self.board[p.r][p.c] = Cell()
                 }
                 self.clearing = []
-                self.score += cells.count
+                self.score += award
+            }
+            if lines > 1 {
+                self.showToast("\(lines) lines! \(cleared) x1.5 = \(award)")
             }
             if giftsWon > 0 {
                 for _ in 0..<giftsWon { self.awardGift() }

@@ -108,7 +108,36 @@ m2b.testSetScore(0)
 m2b.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
 _ = m2b.place(trayIndex: 0, atRow: 4, col: 9)
 pump()
-check(m2b.score == 1 + 19, "a row and column together pay 1 placed + 19 cleared cells (got \(m2b.score))")
+check(m2b.score == 1 + 29, "a row and column together pay 1 placed + 19 cells x1.5 = 30 (got \(m2b.score))")
+
+// Two rows at once: 20 cells x 1.5 = 30, plus the piece.
+let m2c = fresh()
+for r in [3, 4] { for c in 0..<9 { m2c.testSetCell(row: r, col: c, colorIndex: 2) } }
+m2c.testSetScore(0)
+m2c.testSetTray([TrayPiece(shape: bar(2, vertical: true)), nil, nil])
+_ = m2c.place(trayIndex: 0, atRow: 3, col: 9)
+pump()
+check(m2c.score == 2 + 30, "two rows at once pay 2 placed + 20 cells x1.5 = 32 (got \(m2c.score))")
+
+// Three lines at once gets the same flat 1.5x, not a bigger one.
+let m2d = fresh()
+for r in [0, 1] { for c in 0..<10 { m2d.testSetCell(row: r, col: c, colorIndex: 2) } }
+for r in 3..<10 { m2d.testSetCell(row: r, col: 5, colorIndex: 2) }
+m2d.testSetScore(0)
+m2d.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+_ = m2d.place(trayIndex: 0, atRow: 2, col: 5)
+pump()
+// rows 0 and 1 (20 cells) plus column 5 (10 cells, 2 already counted) = 28 cells
+check(m2d.score == 1 + 42, "three lines pay 1 placed + 28 cells x1.5 = 43 (got \(m2d.score))")
+
+// A single line is untouched, and a later single line after a multi is untouched too.
+let m2e = fresh()
+for c in 0..<9 { m2e.testSetCell(row: 7, col: c, colorIndex: 2) }
+m2e.testSetScore(0)
+m2e.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+_ = m2e.place(trayIndex: 0, atRow: 7, col: 9)
+pump()
+check(m2e.score == 1 + 10, "one line stays at face value: 1 placed + 10 cells (got \(m2e.score))")
 
 // MARK: - Gifts
 
