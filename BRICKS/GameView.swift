@@ -53,6 +53,10 @@ struct GameView: View {
                     VStack(alignment: .leading, spacing: 3) {
                         BoardView(model: model, cellSize: cell, ghost: ghost(cellSize: cell))
                             .allowsHitTesting(!model.isGameOver)
+                            // Nudges the board 12pt down. The three flexible spacers
+                            // each give back a third of any padding added here, so the
+                            // value is 18 to land a true 12pt on screen.
+                            .padding(.top, 18)
 
                         Text(Self.versionLabel)
                             .font(.system(size: 8, weight: .medium, design: .rounded))

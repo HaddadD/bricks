@@ -326,6 +326,74 @@ check(!m14.isGameOver && m14.score == 0, "New game starts clean")
 check(m14.count(of: .bomb) == 1, "power-ups carry over into the next game")
 check(m14.canPlaceAnywhere(bar(1)), "the new board is empty")
 
+// MARK: - Dealing a playable tray
+
+print("\nDealing")
+
+/// Fills every square except the ones listed.
+func fillBoardExcept(_ m: GameModel, free: [(Int, Int)]) {
+    let open = Set(free.map { GridPoint(r: $0.0, c: $0.1) })
+    for r in 0..<10 {
+        for c in 0..<10 {
+            m.testSetCell(row: r, col: c, colorIndex: open.contains(GridPoint(r: r, c: c)) ? nil : 2)
+        }
+    }
+}
+
+// A board with a single open square: only a 1x1 fits anywhere.
+let d1 = fresh()
+fillBoardExcept(d1, free: [(4, 4)])
+check(d1.canPlaceAnywhere(bar(1)), "a 1x1 fits the single open square")
+check(!d1.canPlaceAnywhere(bar(2)), "nothing larger does")
+
+var worstCase = 0
+for _ in 0..<400 {
+    let deal = d1.testDeal().compactMap { $0 }
+    check_quiet(deal.count == 3, "a deal is always three pieces")
+    if !deal.contains(where: { d1.canPlaceAnywhere($0.shape) }) { worstCase += 1 }
+}
+check(worstCase == 0, "400 deals on a one-square board always include a playable piece (\(worstCase) bad)")
+
+// Two awkward open squares that are not adjacent — still only 1x1s fit.
+let d2 = fresh()
+fillBoardExcept(d2, free: [(0, 0), (9, 9)])
+var bad2 = 0
+for _ in 0..<400 where !d2.testDeal().compactMap({ $0 }).contains(where: { d2.canPlaceAnywhere($0.shape) }) {
+    bad2 += 1
+}
+check(bad2 == 0, "same on a two-square board (\(bad2) bad)")
+
+// On an open board the deal is left alone — no forcing.
+let d3 = fresh()
+var allThreeFit = 0
+for _ in 0..<200 {
+    let deal = d3.testDeal().compactMap { $0 }
+    if deal.allSatisfy({ d3.canPlaceAnywhere($0.shape) }) { allThreeFit += 1 }
+}
+check(allThreeFit == 200, "every piece fits on an empty board")
+
+// Shuffle gets the same guarantee.
+let d4 = fresh()
+fillBoardExcept(d4, free: [(4, 4)])
+d4.testSetPowerUp(.shuffle, 5)
+var badShuffle = 0
+for _ in 0..<40 {
+    d4.tapPowerUp(.shuffle)
+    d4.testSetPowerUp(.shuffle, 5)
+    if !d4.tray.compactMap({ $0 }).contains(where: { d4.canPlaceAnywhere($0.shape) }) { badShuffle += 1 }
+}
+check(badShuffle == 0, "shuffling never deals three dead pieces (\(badShuffle) bad)")
+
+// Losing is still possible — just not from the deal. Use up the tray down to a piece
+// that no longer fits.
+let d5 = fresh()
+fillBoardExcept(d5, free: [(0, 0), (0, 1)])
+d5.testSetTray([TrayPiece(shape: bar(2)), nil, nil])
+_ = d5.place(trayIndex: 0, atRow: 0, col: 0)
+pump()
+check(d5.isGameOver || d5.tray.compactMap { $0 }.count == 3,
+      "filling the last gap either ends the game or deals a fresh playable tray")
+
 // MARK: - Milestone celebration
 
 print("\nMilestone celebration")

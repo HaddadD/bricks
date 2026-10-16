@@ -30,6 +30,9 @@ file with another 1024×1024 PNG that has no alpha channel.
 
 - 10×10 board, three pieces in the tray at a time. Drag a piece onto the board; the
   tray refills only once all three are used.
+- **A deal always contains at least one piece you can place.** One or two of the three
+  may not fit, but never all three — being handed a dead hand is never what ends a game.
+  You can still get stuck after placing one or two of them.
 - The full 1010! piece set, same sizes: 1×1, bars of 2–5 in both orientations, 2×2 and
   3×3 squares, the 3-cell corner and the 5-cell corner, each in four rotations —
   19 shapes falling into 9 families.

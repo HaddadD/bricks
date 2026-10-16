@@ -119,7 +119,7 @@ final class GameModel: ObservableObject {
                 repeating: Array(repeating: Cell(), count: GameModel.size),
                 count: GameModel.size
             )
-            tray = [TrayPiece.random(), TrayPiece.random(), TrayPiece.random()]
+            tray = dealTray()
             score = 0
             isGameOver = false
             clearing = []
@@ -192,6 +192,28 @@ final class GameModel: ObservableObject {
             }
         }
         powerUps = restored
+    }
+
+    // MARK: - Dealing
+
+    /// Deals three pieces, guaranteeing at least one of them fits the board as it
+    /// stands. Being handed three dead pieces is never the thing that ends a game —
+    /// one or two of the three may be unplaceable, but never all three.
+    ///
+    /// There is always some shape that fits: a board with no empty square at all would
+    /// have completed every row and column and cleared itself, so a 1x1 always has
+    /// somewhere to go.
+    private func dealTray() -> [TrayPiece?] {
+        var deal = [TrayPiece.random(), TrayPiece.random(), TrayPiece.random()]
+        if deal.contains(where: { canPlaceAnywhere($0.shape) }) {
+            return deal
+        }
+
+        let fitting = Shape.all.filter { canPlaceAnywhere($0) }
+        if let rescue = fitting.randomElement() {
+            deal[Int.random(in: 0..<deal.count)] = TrayPiece(shape: rescue)
+        }
+        return deal
     }
 
     // MARK: - Placement
@@ -312,7 +334,7 @@ final class GameModel: ObservableObject {
     private func finishTurn() {
         if tray.allSatisfy({ $0 == nil }) {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.75)) {
-                tray = [TrayPiece.random(), TrayPiece.random(), TrayPiece.random()]
+                tray = dealTray()
             }
         }
 
@@ -461,7 +483,7 @@ final class GameModel: ObservableObject {
     private func applyShuffle() {
         consume(.shuffle)
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-            tray = [TrayPiece.random(), TrayPiece.random(), TrayPiece.random()]
+            tray = dealTray()
         }
         Haptics.tap()
         showToast("Pieces shuffled")
@@ -636,5 +658,7 @@ extension GameModel {
     func testSetScore(_ value: Int) { score = value }
 
     func testCell(row: Int, col: Int) -> Cell { board[row][col] }
+
+    func testDeal() -> [TrayPiece?] { dealTray() }
 }
 #endif
