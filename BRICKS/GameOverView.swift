@@ -70,8 +70,8 @@ struct GameOverView: View {
             .frame(maxWidth: 320)
             .background(
                 RoundedRectangle(cornerRadius: 26, style: .continuous)
-                    .fill(Color.white)
-                    .shadow(color: Color(hex: 0x9E8B7E).opacity(0.3), radius: 22, y: 10)
+                    .fill(Theme.card)
+                    .shadow(color: Theme.shadow.opacity(0.3), radius: 22, y: 10)
             )
             .padding(.horizontal, 30)
         }

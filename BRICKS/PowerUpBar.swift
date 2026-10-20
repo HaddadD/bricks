@@ -24,9 +24,9 @@ struct PowerUpBar: View {
                     .fill(active ? power.tint.opacity(0.35) : Theme.chip)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
-                            .stroke(active ? power.tint : Color(hex: 0xE6DAD1), lineWidth: active ? 2.5 : 1)
+                            .stroke(active ? power.tint : Theme.chipBorder, lineWidth: active ? 2.5 : 1)
                     )
-                    .shadow(color: Color(hex: 0xC9B8AC).opacity(owned ? 0.3 : 0.1), radius: 4, y: 2)
+                    .shadow(color: Theme.shadow.opacity(owned ? 0.3 : 0.1), radius: 4, y: 2)
 
                 Image(systemName: power.icon)
                     .font(.system(size: 20, weight: .semibold))

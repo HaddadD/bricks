@@ -56,6 +56,20 @@ file with another 1024×1024 PNG that has no alpha channel.
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
 
+## Settings
+
+The gear in the top right opens a sheet with:
+
+- **Dark mode** — every surface colour in `Theme` is declared with a light and a dark
+  value via `Color.adaptive`, resolved from the view's trait collection. The root view
+  drives that from the setting, so the whole tree flips without any call site knowing
+  about it. The pastel bricks keep the same colours in both modes.
+- **Vibrations** — gates every call in `Haptics`.
+- **Reset game** — asks for confirmation first.
+
+Both preferences are stored in `UserDefaults` and survive quitting. The score sits
+centred directly above the board.
+
 ## Saving
 
 The run in progress — board, tray, score, power-ups and pending gift — is written to
@@ -122,7 +136,8 @@ else.
 ### Dev affordances (DEBUG only)
 
 `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
-checking each one without playing to a milestone. `-demo` seeds a representative board — bricks, both gift states,
+checking each one without playing to a milestone. `-settings` opens the settings sheet
+on launch. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. `GameModel` also
 exposes `testSet*` seams used by the headless rule tests:
 

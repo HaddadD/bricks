@@ -10,7 +10,34 @@ extension Color {
             opacity: 1
         )
     }
+
+    /// A colour that resolves differently in light and dark mode. The scheme comes from
+    /// the view's trait collection, which the root view drives from the user's setting,
+    /// so every surface flips without any call site knowing about it.
+    static func adaptive(_ light: UInt32, _ dark: UInt32) -> Color {
+        #if canImport(UIKit)
+        return Color(UIColor { traits in
+            UIColor(hex: traits.userInterfaceStyle == .dark ? dark : light)
+        })
+        #else
+        // The headless rule tests build for macOS, where appearance does not matter.
+        return Color(hex: light)
+        #endif
+    }
 }
+
+#if canImport(UIKit)
+extension UIColor {
+    convenience init(hex: UInt32) {
+        self.init(
+            red: CGFloat((hex >> 16) & 0xFF) / 255,
+            green: CGFloat((hex >> 8) & 0xFF) / 255,
+            blue: CGFloat(hex & 0xFF) / 255,
+            alpha: 1
+        )
+    }
+}
+#endif
 
 /// Pastel palette for BRICKS!
 enum Theme {
@@ -41,8 +68,8 @@ enum Theme {
         Color(hex: 0x63B0B0)
     ]
 
-    static let backgroundTop = Color(hex: 0xFDF7F2)
-    static let backgroundBottom = Color(hex: 0xF0E8F4)
+    static let backgroundTop = Color.adaptive(0xFDF7F2, 0x241F2E)
+    static let backgroundBottom = Color.adaptive(0xF0E8F4, 0x191622)
 
     /// Backgrounds shown for 200 points after each 1000-point milestone.
     /// One is picked at random each time, never the same one twice running.
@@ -54,7 +81,7 @@ enum Theme {
 
     /// Every celebration fades to the same near-white foot, which keeps the tray
     /// readable whatever colour is running at the top.
-    static let celebrationFoot = Color(hex: 0xFCFCFB)
+    static let celebrationFoot = Color.adaptive(0xFCFCFB, 0x191622)
 
     static let celebrations: [Celebration] = [
         Celebration(name: "blush",  top: Color(hex: 0xFFA3C6), bottom: celebrationFoot),
@@ -70,22 +97,26 @@ enum Theme {
         celebrations[(index ?? 0) % celebrations.count]
     }
 
-    static let boardBackground = Color(hex: 0xF6EDE6)
-    static let emptyCell = Color(hex: 0xE7DCD3)
-    static let emptyCellHighlight = Color(hex: 0xD6C8BD)
+    static let boardBackground = Color.adaptive(0xF6EDE6, 0x2E2839)
+    static let emptyCell = Color.adaptive(0xE7DCD3, 0x3B3449)
+    static let emptyCellHighlight = Color.adaptive(0xD6C8BD, 0x4C4360)
 
-    static let ink = Color(hex: 0x5C5059)
-    static let inkSoft = Color(hex: 0x9A8D95)
+    static let ink = Color.adaptive(0x5C5059, 0xF2EDF5)
+    static let inkSoft = Color.adaptive(0x9A8D95, 0xA79DB3)
 
-    static let gift = Color(hex: 0xFF7FA6)
-    static let giftGlow = Color(hex: 0xFFD4E2)
+    static let gift = Color.adaptive(0xFF7FA6, 0xFF8FB2)
+    static let giftGlow = Color.adaptive(0xFFD4E2, 0x5A2F42)
 
     /// Very light brown, for the version stamp under the board.
-    static let versionInk = Color(hex: 0xCBBAAE)
+    static let versionInk = Color.adaptive(0xCBBAAE, 0x5B5170)
 
-    static let trayWell = Color(hex: 0xF6EDE6)
-    static let chip = Color(hex: 0xFFFFFF)
-    static let chipActive = Color(hex: 0xFFE6EF)
+    static let trayWell = Color.adaptive(0xF6EDE6, 0x2E2839)
+    static let chip = Color.adaptive(0xFFFFFF, 0x332C40)
+    static let chipActive = Color.adaptive(0xFFE6EF, 0x45374F)
+    /// Raised surfaces: the game-over card, the settings sheet, the toast capsule.
+    static let card = Color.adaptive(0xFFFFFF, 0x2A2436)
+    static let chipBorder = Color.adaptive(0xE6DAD1, 0x453D54)
+    static let shadow = Color.adaptive(0xC9B8AC, 0x000000)
 
     /// Palette slot for each of the nine piece families, ordered so that pieces which
     /// are easy to confuse by silhouette — the bars especially — land on clearly

@@ -625,19 +625,25 @@ final class GameModel: ObservableObject {
 }
 
 enum Haptics {
+    /// Mirrors the Vibrations setting; every call below is a no-op when it is off.
+    static var enabled = true
+
     static func tap() {
+        guard enabled else { return }
         #if canImport(UIKit)
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         #endif
     }
 
     static func clear(lines: Int) {
+        guard enabled else { return }
         #if canImport(UIKit)
         UIImpactFeedbackGenerator(style: lines > 1 ? .heavy : .medium).impactOccurred()
         #endif
     }
 
     static func reward() {
+        guard enabled else { return }
         #if canImport(UIKit)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         #endif

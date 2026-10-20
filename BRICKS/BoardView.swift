@@ -34,7 +34,7 @@ struct BoardView: View {
         ZStack {
             RoundedRectangle(cornerRadius: cellSize * 0.5, style: .continuous)
                 .fill(Theme.boardBackground)
-                .shadow(color: Color(hex: 0xC9B8AC).opacity(0.35), radius: 10, y: 4)
+                .shadow(color: Theme.shadow.opacity(0.35), radius: 10, y: 4)
 
             grid
         }

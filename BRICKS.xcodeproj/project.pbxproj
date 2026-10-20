@@ -19,6 +19,8 @@
 		B100010A000000000000A001 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000A000000000000A001 /* GameOverView.swift */; };
 		B100010B000000000000A001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B100000B000000000000A001 /* Assets.xcassets */; };
 		B100010C000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
+		B100010E000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
+		B100010F000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		B100000A000000000000A001 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		B100000B000000000000A001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B100000C000000000000A001 /* DragTargeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragTargeting.swift; sourceTree = "<group>"; };
+		B100000E000000000000A001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				B1000003000000000000A001 /* GameModel.swift */,
 				B1000002000000000000A001 /* GameView.swift */,
 				B100000C000000000000A001 /* DragTargeting.swift */,
+				B100000E000000000000A001 /* Settings.swift */,
+				B100000F000000000000A001 /* SettingsView.swift */,
 				B1000007000000000000A001 /* BoardView.swift */,
 				B1000008000000000000A001 /* TrayView.swift */,
 				B1000009000000000000A001 /* PowerUpBar.swift */,
@@ -159,6 +165,8 @@
 				B1000103000000000000A001 /* GameModel.swift in Sources */,
 				B1000102000000000000A001 /* GameView.swift in Sources */,
 				B100010C000000000000A001 /* DragTargeting.swift in Sources */,
+				B100010E000000000000A001 /* Settings.swift in Sources */,
+				B100010F000000000000A001 /* SettingsView.swift in Sources */,
 				B1000107000000000000A001 /* BoardView.swift in Sources */,
 				B1000108000000000000A001 /* TrayView.swift in Sources */,
 				B1000109000000000000A001 /* PowerUpBar.swift in Sources */,
@@ -175,7 +183,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -205,7 +213,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

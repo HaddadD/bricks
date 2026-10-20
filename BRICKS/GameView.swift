@@ -6,11 +6,17 @@ private struct DragInfo: Equatable {
 }
 
 struct GameView: View {
+    @ObservedObject var settings: Settings
     @StateObject private var model = GameModel()
 
     @State private var gridFrame: CGRect = .zero
     @State private var drag: DragInfo? = nil
-    @State private var confirmingReset = false
+    #if DEBUG
+    /// `-settings` opens the sheet straight away, for inspecting it without tapping.
+    @State private var showingSettings = ProcessInfo.processInfo.arguments.contains("-settings")
+    #else
+    @State private var showingSettings = false
+    #endif
 
 
     var body: some View {
@@ -50,19 +56,22 @@ struct GameView: View {
 
                     Spacer(minLength: 6)
 
-                    VStack(alignment: .leading, spacing: 3) {
-                        BoardView(model: model, cellSize: cell, ghost: ghost(cellSize: cell))
-                            .allowsHitTesting(!model.isGameOver)
-                            // Nudges the board 12pt down. The three flexible spacers
-                            // each give back a third of any padding added here, so the
-                            // value is 18 to land a true 12pt on screen.
-                            .padding(.top, 18)
+                    VStack(spacing: 8) {
+                        scoreBoard
 
-                        Text(Self.versionLabel)
-                            .font(.system(size: 8, weight: .medium, design: .rounded))
-                            .foregroundColor(Theme.versionInk)
-                            .padding(.leading, 6)
+                        VStack(alignment: .leading, spacing: 3) {
+                            BoardView(model: model, cellSize: cell, ghost: ghost(cellSize: cell))
+                                .allowsHitTesting(!model.isGameOver)
+
+                            Text(Self.versionLabel)
+                                .font(.system(size: 8, weight: .medium, design: .rounded))
+                                .foregroundColor(Theme.versionInk)
+                                .padding(.leading, 6)
+                        }
                     }
+                    // Nudges the block 12pt down. The three flexible spacers each give
+                    // back a third of any padding added here, so the value is 18.
+                    .padding(.top, 18)
 
                     Spacer(minLength: 6)
 
@@ -100,7 +109,7 @@ struct GameView: View {
                         x: d.location.x,
                         y: d.location.y - liftAmount(cellSize: cell)
                     )
-                    .shadow(color: Color(hex: 0x9E8B7E).opacity(0.35), radius: 8, y: 6)
+                    .shadow(color: Theme.shadow.opacity(0.35), radius: 8, y: 6)
                     .allowsHitTesting(false)
                 }
 
@@ -121,14 +130,12 @@ struct GameView: View {
             }
             .coordinateSpace(name: "game")
             .onPreferenceChange(GridFrameKey.self) { gridFrame = $0 }
-            .alert("Start a new game?", isPresented: $confirmingReset) {
-                Button("Cancel", role: .cancel) { }
-                Button("Yes", role: .destructive) { model.newGame() }
-            } message: {
-                Text("This board and your score of \(model.score) will be lost. Your power-ups are kept.")
+            .sheet(isPresented: $showingSettings) {
+                SettingsView(settings: settings) { model.newGame() }
+                    .presentationDetents([.height(330)])
+                    .presentationDragIndicator(.hidden)
             }
         }
-        .preferredColorScheme(.light)
     }
 
     // MARK: - Layout
@@ -172,21 +179,27 @@ struct GameView: View {
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: -2) {
-                Text("\(model.score)")
-                    .font(.system(size: 30, weight: .heavy, design: .rounded))
-                    .foregroundColor(Theme.ink)
-                    .contentTransition(.numericText())
-                Button {
-                    confirmingReset = true
-                } label: {
-                    Label("New", systemImage: "arrow.counterclockwise")
-                        .font(.system(size: 12, weight: .bold, design: .rounded))
-                        .foregroundColor(Theme.inkSoft)
-                }
-                .buttonStyle(.plain)
+            Button {
+                Haptics.tap()
+                showingSettings = true
+            } label: {
+                Image(systemName: "gearshape.fill")
+                    .font(.system(size: 19, weight: .semibold))
+                    .foregroundColor(Theme.inkSoft)
+                    .frame(width: 42, height: 42)
+                    .background(Circle().fill(Theme.chip))
             }
+            .buttonStyle(.plain)
         }
+    }
+
+    /// The running score, centred directly above the board.
+    private var scoreBoard: some View {
+        Text("\(model.score)")
+            .font(.system(size: 42, weight: .heavy, design: .rounded))
+            .foregroundColor(Theme.ink)
+            .contentTransition(.numericText())
+            .frame(maxWidth: .infinity)
     }
 
     private func banner(text: String, tint: Color) -> some View {
@@ -197,7 +210,7 @@ struct GameView: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 9)
                 .background(
-                    Capsule().fill(Color.white)
+                    Capsule().fill(Theme.card)
                         .shadow(color: tint.opacity(0.45), radius: 8, y: 3)
                 )
                 .overlay(Capsule().stroke(tint.opacity(0.6), lineWidth: 1.5))
