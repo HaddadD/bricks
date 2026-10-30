@@ -94,10 +94,7 @@ struct GameView: View {
                         brickSize: cell - max(2, cell * 0.09),
                         gap: max(2, cell * 0.09)
                     )
-                    .position(
-                        x: d.location.x,
-                        y: d.location.y - DragTargeting.lift(cellSize: cell, lifted: Platform.liftsDraggedPiece)
-                    )
+                    .position(d.location)
                     .shadow(color: Theme.shadow.opacity(0.35), radius: 8, y: 6)
                     .allowsHitTesting(false)
                 }
@@ -420,8 +417,7 @@ struct GameView: View {
             shapeRows: piece.shape.rows,
             shapeCols: piece.shape.cols,
             gridOrigin: gridFrame.origin,
-            cellSize: cellSize,
-            lifted: Platform.liftsDraggedPiece
+            cellSize: cellSize
         )
     }
 

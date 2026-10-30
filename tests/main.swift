@@ -531,27 +531,25 @@ check(PowerUp.allCases.reduce(0) { $0 + g3.count(of: $1) } == 1, "a gift claimed
 print("\nDrag targeting")
 let origin = CGPoint(x: 20, y: 100)
 let cell: CGFloat = 36
-let lift = DragTargeting.lift(cellSize: cell)
-
 let t1 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2 + lift),
+    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2),
     shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell)
-check(t1.row == 4 && t1.col == 3, "1x1 lands on the cell under the lifted piece (got \(t1))")
+check(t1.row == 4 && t1.col == 3, "1x1 lands on the cell right under the finger (got \(t1))")
 
 let t2 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 2 * cell + 1.5 * cell, y: 100 + 7 * cell + cell / 2 + lift),
+    finger: CGPoint(x: 20 + 2 * cell + 1.5 * cell, y: 100 + 7 * cell + cell / 2),
     shapeRows: 1, shapeCols: 3, gridOrigin: origin, cellSize: cell)
 check(t2.row == 7 && t2.col == 2, "3-wide bar anchors on its left cell (got \(t2))")
 
 let t3 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 1.5 * cell + 8, y: 100 + 1.5 * cell + lift - 8),
+    finger: CGPoint(x: 20 + 1.5 * cell + 8, y: 100 + 1.5 * cell - 8),
     shapeRows: 3, shapeCols: 3, gridOrigin: origin, cellSize: cell)
 check(t3.row == 0 && t3.col == 0, "3x3 snaps to the nearest cell within a quarter-cell (got \(t3))")
 
 let t4 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2),
-    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, lifted: false)
-check(t4.row == 4 && t4.col == 3, "with no lift (pointer, pinch) a 1x1 lands right under the pointer (got \(t4))")
+    finger: CGPoint(x: 20 + 4 * cell, y: 100 + 5 * cell),
+    shapeRows: 2, shapeCols: 2, gridOrigin: origin, cellSize: cell)
+check(t4.row == 4 && t4.col == 3, "a 2x2 centred under the finger covers the four cells around it (got \(t4))")
 
 // MARK: - Placement cursor (Apple TV, Apple Watch)
 

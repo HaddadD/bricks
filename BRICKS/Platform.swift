@@ -27,18 +27,6 @@ enum Platform {
         #endif
     }()
 
-    /// Whether a dragged piece should float above the touch point. On a phone the finger
-    /// covers what it's dragging. An iPad's cells are big enough to see past the finger,
-    /// and a lift sized to them throws the piece far above it; a pointer or a Vision Pro
-    /// pinch covers nothing. So everywhere else the piece stays right under the touch.
-    static let liftsDraggedPiece: Bool = {
-        #if os(iOS)
-        return UIDevice.current.userInterfaceIdiom == .phone
-        #else
-        return false
-        #endif
-    }()
-
     /// The kind of device, as the "Play on…" achievements name it.
     static let device: String = {
         #if os(macOS)

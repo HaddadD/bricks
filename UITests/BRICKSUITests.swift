@@ -42,11 +42,11 @@ final class BRICKSUITests: XCTestCase {
 
     #if !os(tvOS)
     /// A point on the board by cell, allowing for its 0.18-cell padding.
-    private func boardPoint(row: Double, col: Double, liftCells: Double = 0) -> XCUICoordinate {
+    private func boardPoint(row: Double, col: Double) -> XCUICoordinate {
         let span = 10.36
         return board.coordinate(withNormalizedOffset: CGVector(
             dx: (0.18 + col + 0.5) / span,
-            dy: (0.18 + row + 0.5 + liftCells) / span
+            dy: (0.18 + row + 0.5) / span
         ))
     }
     #endif
@@ -196,16 +196,10 @@ final class BRICKSUITests: XCTestCase {
         XCTAssertTrue(scoreText.waitForExistence(timeout: 5))
         let before = score
 
-        // On iPhone a finger drags the piece 2.9 cells above itself so the hand doesn't
-        // hide it; on iPad and with a mouse pointer the piece sits right under the touch.
-        #if os(macOS)
-        let lift = 0.0
-        #else
-        let lift = UIDevice.current.userInterfaceIdiom == .phone ? 2.9 : 0.0
-        #endif
+        // The piece sits right under the finger or pointer, so drop it on the cell itself.
         let start = tray(0).coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
         snapshot("before-drag")
-        let target = boardPoint(row: 2, col: 5, liftCells: lift)
+        let target = boardPoint(row: 2, col: 5)
         #if os(macOS)
         start.click(forDuration: 0.2, thenDragTo: target, withVelocity: .slow, thenHoldForDuration: 0.2)
         #else
