@@ -13,8 +13,10 @@ Pick a simulator or your iPhone and hit ⌘R.
 To run it on your own iPhone you need to set a signing team: select the **BRICKS**
 target → **Signing & Capabilities** → tick *Automatically manage signing* → choose your
 team. A free Apple ID works; no paid developer account needed. You will probably also
-want to change the bundle identifier from `com.danielhaddad.BRICKS` to something of your
+want to change the bundle identifier from `ca.wilsonlam.bricks` to something of your
 own, since bundle ids have to be unique.
+
+Publishing to the App Store is covered in [docs/PUBLISHING.md](docs/PUBLISHING.md).
 
 With a free Apple ID the app stops launching after 7 days — plug in and hit ⌘R again to
 re-sign it. Your saved game and high score survive that, since re-installing over the top

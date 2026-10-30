@@ -17,7 +17,7 @@ REF=appstore/raw/iphone-1.png   # brick style and palette reference
 mkdir -p appstore/art
 
 SCREEN='The phone screen must be a perfectly flat, solid, pure chroma-key green (#00FF00) filling the whole display area edge to edge, with absolutely no content, text, reflection, glare, gradient or shadow on it — it will be replaced later. Keep the black camera cutout / Dynamic Island visible on top of the green if the device has one.'
-STYLE='Add a few glossy, chunky rounded pastel bricks (same soft 3D style and palette as the bricks in the attached reference image) floating softly around the device, never overlapping the screen. The headline is a large, bold, rounded sans-serif in dark plum (#4A3F48), the subline smaller and lighter plum. Clean, minimal, premium App Store screenshot. No logos, no watermark, no extra text beyond the headline and subline.'
+STYLE='Add a few glossy, chunky rounded pastel bricks (same soft 3D style and palette as the bricks in the attached reference image) floating softly around the device, never overlapping the screen. The headline is a large, bold, rounded sans-serif in dark plum (#4A3F48), the subline smaller and lighter plum. Clean, minimal, premium App Store screenshot. No logos, no watermark, no extra text or punctuation beyond the exact headline and subline given.'
 
 gen() { # name device background headline subline
   local name=$1 device=$2 bg=$3 head=$4 sub=$5 shape dev
@@ -25,7 +25,7 @@ gen() { # name device background headline subline
     shape='Tall portrait canvas with aspect ratio exactly 1320:2868 (about 1:2.17).'
     dev='a modern iPhone with thin black bezels and a Dynamic Island, straight-on, upright and centred, filling most of the lower two-thirds of the canvas'
   else
-    shape='Portrait canvas with aspect ratio exactly 2064:2752 (3:4).'
+    shape='Portrait canvas with aspect ratio exactly 3:4 (2064 wide by 2752 tall) — wider than a phone screenshot, like an iPad page; do NOT make it tall and narrow.'
     dev='a modern iPad Pro in portrait with thin black bezels, straight-on, upright and centred, filling most of the lower area of the canvas'
   fi
   [ -s "appstore/art/$name.png" ] && { echo "skip $name"; return; }

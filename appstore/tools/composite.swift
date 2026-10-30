@@ -1,7 +1,7 @@
 // composite <art.png> <screenshot.png> <width> <height> <out.png>
 // Scales the GPT art to exactly width x height (aspect-fill), finds the chroma-key
-// green screen, and replaces it with the real screenshot (aspect-fill), with soft
-// edges and green-spill removal.
+// green screen, and replaces it with the real screenshot (aspect-fit, edges extended
+// so no UI is cropped), with soft edges and green-spill removal.
 import Foundation
 import CoreGraphics
 import ImageIO
@@ -13,7 +13,8 @@ func load(_ path: String) -> CGImage {
     return img
 }
 
-func render(_ img: CGImage, into rect: CGRect, width: Int, height: Int) -> [UInt8] {
+func render(_ img: CGImage, into rect: CGRect, width: Int, height: Int,
+            extendingTo box: CGRect? = nil) -> [UInt8] {
     var buf = [UInt8](repeating: 0, count: width * height * 4)
     let cs = CGColorSpace(name: CGColorSpace.sRGB)!
     buf.withUnsafeMutableBytes { p in
@@ -23,9 +24,32 @@ func render(_ img: CGImage, into rect: CGRect, width: Int, height: Int) -> [UInt
         ctx.interpolationQuality = .high
         ctx.setFillColor(CGColor(red: 1, green: 1, blue: 1, alpha: 1))
         ctx.fill(CGRect(x: 0, y: 0, width: width, height: height))
+        // Fill the rest of `box` by stretching the image's outermost rows/columns, so an
+        // aspect-fit screenshot reaches the screen edges without cropping any UI.
+        if let box = box {
+            let (iw, ih) = (img.width, img.height)
+            if rect.minY > box.minY, let row = img.cropping(to: CGRect(x: 0, y: ih - 1, width: iw, height: 1)) {
+                ctx.draw(row, in: CGRect(x: rect.minX, y: box.minY, width: rect.width, height: rect.minY - box.minY + 1))
+            }
+            if rect.maxY < box.maxY, let row = img.cropping(to: CGRect(x: 0, y: 0, width: iw, height: 1)) {
+                ctx.draw(row, in: CGRect(x: rect.minX, y: rect.maxY - 1, width: rect.width, height: box.maxY - rect.maxY + 1))
+            }
+            if rect.minX > box.minX, let col = img.cropping(to: CGRect(x: 0, y: 0, width: 1, height: ih)) {
+                ctx.draw(col, in: CGRect(x: box.minX, y: rect.minY, width: rect.minX - box.minX + 1, height: rect.height))
+            }
+            if rect.maxX < box.maxX, let col = img.cropping(to: CGRect(x: iw - 1, y: 0, width: 1, height: ih)) {
+                ctx.draw(col, in: CGRect(x: rect.maxX - 1, y: rect.minY, width: box.maxX - rect.maxX + 1, height: rect.height))
+            }
+        }
         ctx.draw(img, in: rect)
     }
     return buf
+}
+
+func aspectFit(_ img: CGImage, _ box: CGRect) -> CGRect {
+    let s = min(box.width / CGFloat(img.width), box.height / CGFloat(img.height))
+    let w = CGFloat(img.width) * s, h = CGFloat(img.height) * s
+    return CGRect(x: box.midX - w / 2, y: box.midY - h / 2, width: w, height: h)
 }
 
 func aspectFill(_ img: CGImage, _ box: CGRect) -> CGRect {
@@ -39,6 +63,11 @@ guard a.count == 6, let W = Int(a[3]), let H = Int(a[4]) else {
     print("usage: composite art.png shot.png width height out.png"); exit(2)
 }
 let art = load(a[1]), shot = load(a[2])
+let artAspect = Double(art.width) / Double(art.height), outAspect = Double(W) / Double(H)
+if abs(artAspect - outAspect) > 0.03 {
+    // Aspect-fill will crop the art; usually means the model ignored the canvas shape.
+    FileHandle.standardError.write("WARNING: \(a[1]) is \(art.width)x\(art.height), far from \(W)x\(H); regenerate it\n".data(using: .utf8)!)
+}
 var px = render(art, into: aspectFill(art, CGRect(x: 0, y: 0, width: W, height: H)), width: W, height: H)
 
 // Greenness: how far green exceeds the larger of red/blue. Buffer rows run top-down.
@@ -54,7 +83,8 @@ guard count > W * H / 20 else { print("ERROR: no green screen found (\(count) px
 let box = CGRect(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
 // CoreGraphics draws bottom-up, so flip the box's y when placing the screenshot.
 let cgBox = CGRect(x: box.minX, y: CGFloat(H) - box.maxY, width: box.width, height: box.height)
-let sp = render(shot, into: aspectFill(shot, cgBox), width: W, height: H)
+// Fit (never crop) the screenshot, then extend its edges to fill the screen shape.
+let sp = render(shot, into: aspectFit(shot, cgBox), width: W, height: H, extendingTo: cgBox)
 
 let pad = 6
 for y in max(0, minY - pad)...min(H - 1, maxY + pad) { for x in max(0, minX - pad)...min(W - 1, maxX + pad) {

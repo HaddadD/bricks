@@ -42,12 +42,19 @@ Two separate logins, both stored in the macOS Keychain:
   `<issuer ID>`, App Manager role or higher. Check with
   `asc auth status`. The `.p8` lives at `~/.keys/AuthKey_<key ID>.p8` — never commit it.
 - **Apple ID web session** (only for things Apple's API can't do: creating the app record
-  and the App Privacy declaration). A human has to run this, because it asks for the
-  password and a 2FA code:
+  and the App Privacy declaration). A human has to run this in a real terminal
+  (Terminal.app — not Claude Code's `!` prefix, which has no TTY), because it asks for
+  the password and a 2FA code:
 
   ```bash
-  asc web auth login --apple-id mail@wilsonlam.ca
+  asc web auth login --apple-id mail@wilsonlam.ca --provider-id 129695246
   ```
+
+  `129695246` is the Wilson Lam App Store Connect provider. Note that
+  `--public-provider-id` is *not* the developer team ID; leave it out. Agents can open the
+  window for the human with
+  `osascript -e 'tell application "Terminal" to do script "asc web auth login ..."'`.
+  Check with `asc web auth status`.
 
 ## What's in the repo
 
