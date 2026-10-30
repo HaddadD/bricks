@@ -19,17 +19,33 @@ struct SettingsView: View {
             .ignoresSafeArea()
 
             VStack(spacing: 18) {
+                #if os(iOS)
                 handle
+                #endif
 
-                Text("Settings")
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundColor(Theme.ink)
+                ZStack {
+                    Text("Settings")
+                        .font(.system(size: 22, weight: .black, design: .rounded))
+                        .foregroundColor(Theme.ink)
+
+                    if Platform.sheetsNeedDoneButton {
+                        // No swipe-to-dismiss here, so the sheet closes from a button
+                        // (Return on a Mac keyboard).
+                        Button("Done") { dismiss() }
+                            #if os(macOS) || os(visionOS)
+                            .keyboardShortcut(.defaultAction)
+                            #endif
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                }
 
                 VStack(spacing: 0) {
-                    themeRow
-                    // iPads and Macs have no haptics hardware, so there is nothing to toggle.
+                    if Platform.supportsAppearanceChoice {
+                        themeRow
+                    }
+                    // Only iPhone (and Apple Watch, which has its own settings) can vibrate.
                     if Haptics.isSupported {
-                        divider
+                        if Platform.supportsAppearanceChoice { divider }
                         vibrationRow
                     }
                 }
@@ -49,6 +65,13 @@ struct SettingsView: View {
             .padding(.horizontal, 22)
             .padding(.top, 10)
             .padding(.bottom, 20)
+            #if os(tvOS)
+            // Read from the couch: same layout, larger.
+            .frame(maxWidth: 520)
+            .scaleEffect(Platform.uiScale)
+            #elseif os(macOS) || os(visionOS)
+            .frame(width: 380, height: 300)
+            #endif
         }
         .alert("Start a new game?", isPresented: $confirmingReset) {
             Button("Cancel", role: .cancel) { }
@@ -91,8 +114,11 @@ struct SettingsView: View {
 
             Spacer()
 
-            Toggle("", isOn: $settings.isDark)
+            Toggle("Dark mode", isOn: $settings.isDark)
                 .labelsHidden()
+                #if os(macOS)
+                .toggleStyle(.switch)
+                #endif
                 .tint(Color(hex: 0xA6BDF7))
         }
         .padding(.horizontal, 14)
@@ -114,7 +140,7 @@ struct SettingsView: View {
 
             Spacer()
 
-            Toggle("", isOn: $settings.vibrations)
+            Toggle("Vibrations", isOn: $settings.vibrations)
                 .labelsHidden()
                 .tint(Color(hex: 0x7FBF93))
         }

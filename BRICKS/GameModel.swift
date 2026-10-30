@@ -1,5 +1,9 @@
-import CoreHaptics
 import SwiftUI
+#if os(iOS)
+import CoreHaptics
+#elseif os(watchOS)
+import WatchKit
+#endif
 
 struct Cell: Equatable, Codable {
     var colorIndex: Int?
@@ -629,27 +633,42 @@ enum Haptics {
     /// Mirrors the Vibrations setting; every call below is a no-op when it is off.
     static var enabled = true
 
-    /// Whether this device can vibrate at all (iPhones can; iPads and Macs can't).
-    static let isSupported = CHHapticEngine.capabilitiesForHardware().supportsHaptics
+    /// Whether this device can vibrate at all: iPhones and Apple Watch can; iPad, Mac,
+    /// Apple TV and Vision Pro can't.
+    static let isSupported: Bool = {
+        #if os(iOS)
+        return CHHapticEngine.capabilitiesForHardware().supportsHaptics
+        #elseif os(watchOS)
+        return true
+        #else
+        return false
+        #endif
+    }()
 
     static func tap() {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(.click)
         #endif
     }
 
     static func clear(lines: Int) {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UIImpactFeedbackGenerator(style: lines > 1 ? .heavy : .medium).impactOccurred()
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(lines > 1 ? .success : .directionUp)
         #endif
     }
 
     static func reward() {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(.notification)
         #endif
     }
 }

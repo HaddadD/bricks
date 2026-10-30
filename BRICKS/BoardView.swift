@@ -9,6 +9,37 @@ struct Ghost: Equatable {
     var completedCols: Set<Int>
 }
 
+extension Ghost {
+    /// The preview for `piece` with its top-left on (row, col), including the lines the
+    /// placement would complete, or nil if it doesn't fit there.
+    static func preview(of piece: TrayPiece, atRow row: Int, col: Int, on model: GameModel) -> Ghost? {
+        guard model.canPlace(piece.shape, atRow: row, col: col) else { return nil }
+
+        let points = Set(piece.shape.points.map { GridPoint(r: row + $0.r, c: col + $0.c) })
+
+        var filled = points
+        for r in 0..<GameModel.size {
+            for c in 0..<GameModel.size where model.board[r][c].isFilled {
+                filled.insert(GridPoint(r: r, c: c))
+            }
+        }
+
+        let all = 0..<GameModel.size
+        let rows = Set(all.filter { r in all.allSatisfy { filled.contains(GridPoint(r: r, c: $0)) } })
+        let cols = Set(all.filter { c in all.allSatisfy { filled.contains(GridPoint(r: $0, c: c)) } })
+
+        return Ghost(points: points, colorIndex: piece.colorIndex, completedRows: rows, completedCols: cols)
+    }
+}
+
+/// Cells outlined while aiming by remote or by tapping (Apple TV, Apple Watch): where a
+/// piece would go, or what a hammer or bomb would hit.
+struct Aim: Equatable {
+    var cells: Set<GridPoint>
+    /// The piece doesn't fit here, so pressing would do nothing.
+    var blocked = false
+}
+
 /// Reports the grid's frame in the shared "game" coordinate space.
 struct GridFrameKey: PreferenceKey {
     static var defaultValue: CGRect = .zero
@@ -25,6 +56,10 @@ struct BoardView: View {
     @ObservedObject var model: GameModel
     let cellSize: CGFloat
     let ghost: Ghost?
+    var aim: Aim? = nil
+    /// Called with a tapped cell, when tapping the board should do something other than
+    /// fire an armed hammer or bomb (Apple Watch's tap-to-aim).
+    var onTapCell: ((Int, Int) -> Void)? = nil
 
     /// Inset between the board's edge and its grid.
     static func padding(cellSize: CGFloat) -> CGFloat { max(5, cellSize * 0.18) }
@@ -45,6 +80,9 @@ struct BoardView: View {
             width: cellSize * CGFloat(GameModel.size) + pad * 2,
             height: cellSize * CGFloat(GameModel.size) + pad * 2
         )
+        // One element for VoiceOver and UI tests, rather than a hundred cells.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Board")
     }
 
     private var grid: some View {
@@ -64,13 +102,19 @@ struct BoardView: View {
             }
         )
         .contentShape(Rectangle())
+        #if !os(tvOS)
+        // Apple TV aims with the remote instead; see GameView.
         .onTapGesture(coordinateSpace: .local) { point in
-            guard model.activePower == .hammer || model.activePower == .bomb else { return }
             let c = Int(floor(point.x / cellSize))
             let r = Int(floor(point.y / cellSize))
             guard r >= 0, r < GameModel.size, c >= 0, c < GameModel.size else { return }
-            model.applyTargetedPower(atRow: r, col: c)
+            if let onTapCell {
+                onTapCell(r, c)
+            } else if model.activePower == .hammer || model.activePower == .bomb {
+                model.applyTargetedPower(atRow: r, col: c)
+            }
         }
+        #endif
     }
 
     @ViewBuilder
@@ -100,6 +144,12 @@ struct BoardView: View {
                     .scaleEffect(0.92)
             } else if let movesLeft = cell.giftMovesLeft {
                 GiftMark(movesLeft: movesLeft, size: inner)
+            }
+
+            if let aim, aim.cells.contains(point) {
+                RoundedRectangle(cornerRadius: inner * 0.22, style: .continuous)
+                    .stroke(aim.blocked ? Theme.aimBlocked : Theme.aim, lineWidth: max(2, cellSize * 0.07))
+                    .frame(width: inner, height: inner)
             }
         }
         .frame(width: cellSize, height: cellSize)

@@ -31,9 +31,14 @@ struct TrayView: View {
     /// Stacks the three slots top to bottom, for the wide layout's side column.
     var vertical = false
     /// Index currently being dragged, hidden from the tray.
-    let draggingIndex: Int?
-    let onDragChanged: (Int, CGPoint) -> Void
-    let onDragEnded: (Int) -> Void
+    var draggingIndex: Int? = nil
+    var onDragChanged: (Int, CGPoint) -> Void = { _, _ in }
+    var onDragEnded: (Int) -> Void = { _ in }
+    /// The piece picked for placing by remote or tap, drawn with a ring around it.
+    var selectedIndex: Int? = nil
+    /// When set, a slot is pressed to pick its piece rather than dragged (Apple TV,
+    /// Apple Watch).
+    var onSelect: ((Int) -> Void)? = nil
 
     private var trayBrick: CGFloat { cellSize * 0.62 }
     private var trayGap: CGFloat { 2 }
@@ -66,8 +71,10 @@ struct TrayView: View {
                     brickSize: trayBrick,
                     grabSide: grabSide,
                     hidden: draggingIndex == i,
+                    selected: selectedIndex == i,
                     onDragChanged: onDragChanged,
-                    onDragEnded: onDragEnded
+                    onDragEnded: onDragEnded,
+                    onSelect: onSelect
                 )
             }
         }
@@ -77,7 +84,7 @@ struct TrayView: View {
 
 /// One tray slot.
 ///
-/// Tapping and dragging share a single gesture on purpose. Attaching a TapGesture
+/// Where pieces are dragged, tapping and dragging share a single gesture on purpose. Attaching a TapGesture
 /// alongside a DragGesture lets the tap win arbitration on release, which cancels the
 /// drag before it can commit — so movement past a small threshold is what separates
 /// "this is a drag" from "this is a tap".
@@ -88,8 +95,10 @@ private struct TraySlot: View {
     let brickSize: CGFloat
     let grabSide: CGFloat
     let hidden: Bool
+    let selected: Bool
     let onDragChanged: (Int, CGPoint) -> Void
     let onDragEnded: (Int) -> Void
+    let onSelect: ((Int) -> Void)?
 
     @State private var dragging = false
 
@@ -99,14 +108,42 @@ private struct TraySlot: View {
     private var rotating: Bool { model.activePower == .rotate }
 
     var body: some View {
+        if let onSelect {
+            Button {
+                // While Rotate is armed, pressing any piece turns the whole tray.
+                if rotating { model.rotateTray() } else { onSelect(index) }
+            } label: {
+                piece(selectionRing: selected)
+            }
+            .buttonStyle(FocusLiftStyle())
+            .accessibilityIdentifier("tray-\(index)")
+            .accessibilityLabel("Piece \(index + 1)")
+            .accessibilityAddTraits(selected ? .isSelected : [])
+        } else {
+            draggable
+                .accessibilityIdentifier("tray-\(index)")
+        }
+    }
+
+    private func piece(selectionRing: Bool) -> some View {
         PieceView(shape: piece.shape, colorIndex: piece.colorIndex, brickSize: brickSize)
             .opacity(hidden ? 0 : (model.canPlaceAnywhere(piece.shape) ? 1 : 0.32))
             .scaleEffect(rotating ? 1.06 : 1)
             .overlay(rotateBadge)
+            .overlay(selectionRing ? selectedBadge : nil)
             // The grab area is always the footprint of the largest piece (3x3), so a 1x1
             // is as easy to pick up as a 3x3 rather than being a tiny target.
             .frame(width: grabSide, height: grabSide)
             .contentShape(Rectangle())
+    }
+
+    @ViewBuilder
+    private var draggable: some View {
+        #if os(tvOS)
+        // Apple TV has no drag; TrayView always gets `onSelect` there.
+        piece(selectionRing: false)
+        #else
+        piece(selectionRing: false)
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .named("game"))
                     .onChanged { value in
@@ -120,7 +157,15 @@ private struct TraySlot: View {
                         }
                         onDragChanged(index, value.location)
                     }
-                    .onEnded { _ in
+                    .onEnded { value in
+                        // A fast flick can end before any change crossed the threshold;
+                        // judge it by where it finished instead of treating it as a tap.
+                        if !dragging, model.activePower == nil || rotating,
+                           hypot(value.translation.width, value.translation.height) > dragThreshold {
+                            dragging = true
+                            model.endRotateMode()
+                            onDragChanged(index, value.location)
+                        }
                         if dragging {
                             dragging = false
                             onDragEnded(index)
@@ -129,6 +174,13 @@ private struct TraySlot: View {
                         }
                     }
             )
+        #endif
+    }
+
+    private var selectedBadge: some View {
+        RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .stroke(Theme.aim, lineWidth: 2.5)
+            .padding(-6)
     }
 
     @ViewBuilder

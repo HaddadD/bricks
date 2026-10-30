@@ -21,6 +21,31 @@
 		B100010C000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
 		B100010E000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
 		B100010F000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
+		C2000111000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
+		C2000112000000000000A001 /* PlacementCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000012000000000000A001 /* PlacementCursor.swift */; };
+		C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000013000000000000A001 /* FocusLiftStyle.swift */; };
+		C2000114000000000000A001 /* WatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000014000000000000A001 /* WatchGameView.swift */; };
+		C2001000000000000000A001 /* BRICKSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001000000000000A001 /* BRICKSApp.swift */; };
+		C2001001000000000000A001 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002000000000000A001 /* GameView.swift */; };
+		C2001002000000000000A001 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000A001 /* GameModel.swift */; };
+		C2001003000000000000A001 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004000000000000A001 /* Piece.swift */; };
+		C2001004000000000000A001 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000005000000000000A001 /* Theme.swift */; };
+		C2001005000000000000A001 /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000006000000000000A001 /* PowerUp.swift */; };
+		C2001006000000000000A001 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000007000000000000A001 /* BoardView.swift */; };
+		C2001007000000000000A001 /* TrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000008000000000000A001 /* TrayView.swift */; };
+		C2001008000000000000A001 /* PowerUpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000009000000000000A001 /* PowerUpBar.swift */; };
+		C2001009000000000000A001 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000A000000000000A001 /* GameOverView.swift */; };
+		C200100A000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
+		C200100B000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
+		C200100C000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
+		C200100D000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
+		C200100E000000000000A001 /* PlacementCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000012000000000000A001 /* PlacementCursor.swift */; };
+		C200100F000000000000A001 /* FocusLiftStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000013000000000000A001 /* FocusLiftStyle.swift */; };
+		C2001010000000000000A001 /* WatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000014000000000000A001 /* WatchGameView.swift */; };
+		C200010B000000000000A001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B100000B000000000000A001 /* Assets.xcassets */; };
+		C2000A01000000000000A001 /* BRICKS Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C2000000000000000000A001 /* BRICKS Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3100101000000000000A001 /* BRICKSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3000001000000000000A001 /* BRICKSUITests.swift */; };
+		D3200101000000000000A001 /* BRICKSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3000001000000000000A001 /* BRICKSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +64,77 @@
 		B100000C000000000000A001 /* DragTargeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragTargeting.swift; sourceTree = "<group>"; };
 		B100000E000000000000A001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C2000011000000000000A001 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		C2000012000000000000A001 /* PlacementCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementCursor.swift; sourceTree = "<group>"; };
+		C2000013000000000000A001 /* FocusLiftStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLiftStyle.swift; sourceTree = "<group>"; };
+		C2000014000000000000A001 /* WatchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGameView.swift; sourceTree = "<group>"; };
+		C2000000000000000000A001 /* BRICKS Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRICKS Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3000001000000000000A001 /* BRICKSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRICKSUITests.swift; sourceTree = "<group>"; };
+		D3100000000000000000A001 /* BRICKSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRICKSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3200000000000000000A001 /* BRICKS Watch UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRICKS Watch UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXContainerItemProxy section */
+		C2000B01000000000000A001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1000800000000000000A001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2000400000000000000A001;
+			remoteInfo = "BRICKS Watch";
+		};
+		D3100B01000000000000A001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1000800000000000000A001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1000400000000000000A001;
+			remoteInfo = "BRICKS";
+		};
+		D3200B01000000000000A001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1000800000000000000A001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2000400000000000000A001;
+			remoteInfo = "BRICKS Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2000A00000000000000A001 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C2000A01000000000000A001 /* BRICKS Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B1000200000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2000200000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3100200000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3200200000000000000A001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B1000301000000000000A001 /* BRICKS */,
+				D3000301000000000000A001 /* UITests */,
 				B1000302000000000000A001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +165,10 @@
 				B100000C000000000000A001 /* DragTargeting.swift */,
 				B100000E000000000000A001 /* Settings.swift */,
 				B100000F000000000000A001 /* SettingsView.swift */,
+				C2000011000000000000A001 /* Platform.swift */,
+				C2000012000000000000A001 /* PlacementCursor.swift */,
+				C2000013000000000000A001 /* FocusLiftStyle.swift */,
+				C2000014000000000000A001 /* WatchGameView.swift */,
 				B1000007000000000000A001 /* BoardView.swift */,
 				B1000008000000000000A001 /* TrayView.swift */,
 				B1000009000000000000A001 /* PowerUpBar.swift */,
@@ -85,8 +182,19 @@
 			isa = PBXGroup;
 			children = (
 				B1000000000000000000A001 /* BRICKS.app */,
+				D3200000000000000000A001 /* BRICKS Watch UITests.xctest */,
+				D3100000000000000000A001 /* BRICKSUITests.xctest */,
+				C2000000000000000000A001 /* BRICKS Watch.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D3000301000000000000A001 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3000001000000000000A001 /* BRICKSUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,15 +207,70 @@
 				B1000500000000000000A001 /* Sources */,
 				B1000200000000000000A001 /* Frameworks */,
 				B1000600000000000000A001 /* Resources */,
+				C2000A00000000000000A001 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C2000B02000000000000A001 /* PBXTargetDependency */,
 			);
 			name = BRICKS;
 			productName = BRICKS;
 			productReference = B1000000000000000000A001 /* BRICKS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C2000400000000000000A001 /* BRICKS Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2000700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKS Watch" */;
+			buildPhases = (
+				C2000500000000000000A001 /* Sources */,
+				C2000200000000000000A001 /* Frameworks */,
+				C2000600000000000000A001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BRICKS Watch";
+			productName = "BRICKS Watch";
+			productReference = C2000000000000000000A001 /* BRICKS Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3100400000000000000A001 /* BRICKSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3100700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKSUITests" */;
+			buildPhases = (
+				D3100500000000000000A001 /* Sources */,
+				D3100200000000000000A001 /* Frameworks */,
+				D3100600000000000000A001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3100B02000000000000A001 /* PBXTargetDependency */,
+			);
+			name = "BRICKSUITests";
+			productName = "BRICKSUITests";
+			productReference = D3100000000000000000A001 /* BRICKSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D3200400000000000000A001 /* BRICKS Watch UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3200700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKS Watch UITests" */;
+			buildPhases = (
+				D3200500000000000000A001 /* Sources */,
+				D3200200000000000000A001 /* Frameworks */,
+				D3200600000000000000A001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3200B02000000000000A001 /* PBXTargetDependency */,
+			);
+			name = "BRICKS Watch UITests";
+			productName = "BRICKS Watch UITests";
+			productReference = D3200000000000000000A001 /* BRICKS Watch UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -121,6 +284,17 @@
 				TargetAttributes = {
 					B1000400000000000000A001 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					C2000400000000000000A001 = {
+						CreatedOnToolsVersion = 27.2;
+					};
+					D3200400000000000000A001 = {
+						CreatedOnToolsVersion = 27.2;
+						TestTargetID = C2000400000000000000A001;
+					};
+					D3100400000000000000A001 = {
+						CreatedOnToolsVersion = 27.2;
+						TestTargetID = B1000400000000000000A001;
 					};
 				};
 			};
@@ -138,6 +312,9 @@
 			projectRoot = "";
 			targets = (
 				B1000400000000000000A001 /* BRICKS */,
+				C2000400000000000000A001 /* BRICKS Watch */,
+				D3200400000000000000A001 /* BRICKS Watch UITests */,
+				D3100400000000000000A001 /* BRICKSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +325,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				B100010B000000000000A001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2000600000000000000A001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C200010B000000000000A001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3100600000000000000A001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3200600000000000000A001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,16 +370,83 @@
 				B1000108000000000000A001 /* TrayView.swift in Sources */,
 				B1000109000000000000A001 /* PowerUpBar.swift in Sources */,
 				B100010A000000000000A001 /* GameOverView.swift in Sources */,
+				C2000111000000000000A001 /* Platform.swift in Sources */,
+				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
+				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
+				C2000114000000000000A001 /* WatchGameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2000500000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2001000000000000000A001 /* BRICKSApp.swift in Sources */,
+				C2001001000000000000A001 /* GameView.swift in Sources */,
+				C2001002000000000000A001 /* GameModel.swift in Sources */,
+				C2001003000000000000A001 /* Piece.swift in Sources */,
+				C2001004000000000000A001 /* Theme.swift in Sources */,
+				C2001005000000000000A001 /* PowerUp.swift in Sources */,
+				C2001006000000000000A001 /* BoardView.swift in Sources */,
+				C2001007000000000000A001 /* TrayView.swift in Sources */,
+				C2001008000000000000A001 /* PowerUpBar.swift in Sources */,
+				C2001009000000000000A001 /* GameOverView.swift in Sources */,
+				C200100A000000000000A001 /* DragTargeting.swift in Sources */,
+				C200100B000000000000A001 /* Settings.swift in Sources */,
+				C200100C000000000000A001 /* SettingsView.swift in Sources */,
+				C200100D000000000000A001 /* Platform.swift in Sources */,
+				C200100E000000000000A001 /* PlacementCursor.swift in Sources */,
+				C200100F000000000000A001 /* FocusLiftStyle.swift in Sources */,
+				C2001010000000000000A001 /* WatchGameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3100500000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3100101000000000000A001 /* BRICKSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3200500000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3200101000000000000A001 /* BRICKSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2000B02000000000000A001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C2000400000000000000A001 /* BRICKS Watch */;
+			targetProxy = C2000B01000000000000A001 /* PBXContainerItemProxy */;
+		};
+		D3100B02000000000000A001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1000400000000000000A001 /* BRICKS */;
+			targetProxy = D3100B01000000000000A001 /* PBXContainerItemProxy */;
+		};
+		D3200B02000000000000A001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2000400000000000000A001 /* BRICKS Watch */;
+			targetProxy = D3200B01000000000000A001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B1000701000000000000A001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -201,12 +467,24 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -214,6 +492,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -234,12 +516,24 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -347,6 +641,152 @@
 			};
 			name = Release;
 		};
+		C2000701000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BRICKS;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ca.wilsonlam.bricks;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C2000702000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BRICKS;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ca.wilsonlam.bricks;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		D3100701000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				TEST_TARGET_NAME = "BRICKS";
+			};
+			name = Debug;
+		};
+		D3100702000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx appletvos appletvsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				TEST_TARGET_NAME = "BRICKS";
+			};
+			name = Release;
+		};
+		D3200701000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.watch-uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				TEST_TARGET_NAME = "BRICKS Watch";
+			};
+			name = Debug;
+		};
+		D3200702000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.watch-uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				TEST_TARGET_NAME = "BRICKS Watch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -364,6 +804,33 @@
 			buildConfigurations = (
 				B1000901000000000000A001 /* Debug */,
 				B1000902000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2000700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKS Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2000701000000000000A001 /* Debug */,
+				C2000702000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3100700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3100701000000000000A001 /* Debug */,
+				D3100702000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3200700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKS Watch UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3200701000000000000A001 /* Debug */,
+				D3200702000000000000A001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -548,6 +548,34 @@ let t3 = DragTargeting.target(
     shapeRows: 3, shapeCols: 3, gridOrigin: origin, cellSize: cell)
 check(t3.row == 0 && t3.col == 0, "3x3 snaps to the nearest cell within a quarter-cell (got \(t3))")
 
+let t4 = DragTargeting.target(
+    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2),
+    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, lifted: false)
+check(t4.row == 4 && t4.col == 3, "with no lift (pointer, pinch) a 1x1 lands right under the pointer (got \(t4))")
+
+// MARK: - Placement cursor (Apple TV, Apple Watch)
+
+print("\nPlacement cursor")
+var pc = PlacementCursor(rows: 1, cols: 5, boardSize: 10)
+check(pc.row == 4 && pc.col == 2, "a 1x5 bar starts centred (got \(pc.row),\(pc.col))")
+pc.move(rows: 0, cols: -9)
+check(pc.col == 0, "moving left stops at the edge (got col \(pc.col))")
+pc.move(rows: 0, cols: 99)
+check(pc.col == 5, "moving right keeps the whole bar on the board (got col \(pc.col))")
+pc.move(rows: -1, cols: 0)
+check(pc.row == 3 && pc.col == 5, "moving up one row (got \(pc.row),\(pc.col))")
+
+var pc3 = PlacementCursor(rows: 3, cols: 3, boardSize: 10)
+pc3.centre(onRow: 0, col: 9)
+check(pc3.row == 0 && pc3.col == 7, "tap-to-aim near a corner clamps the 3x3 onto the board (got \(pc3.row),\(pc3.col))")
+pc3.centre(onRow: 5, col: 5)
+check(pc3.row == 4 && pc3.col == 4, "tap-to-aim centres the 3x3 on the tapped cell (got \(pc3.row),\(pc3.col))")
+check(pc3.covers(row: 6, col: 4) && !pc3.covers(row: 7, col: 4), "covers() matches the footprint")
+
+var aim = PlacementCursor(rows: 1, cols: 1, boardSize: 10)
+aim.centre(onRow: 9, col: 0)
+check(aim.row == 9 && aim.col == 0, "a 1x1 target can reach the bottom-left corner")
+
 
 // MARK: - Saving the run in progress
 
