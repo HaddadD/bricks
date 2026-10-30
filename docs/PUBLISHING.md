@@ -15,8 +15,13 @@ depth: `asc-release-flow`, `asc-xcode-build`, `asc-metadata-sync`,
 |---|---|
 | Developer account | Wilson Lam, team ID `76C669ZZ43` (Account Holder: mail@wilsonlam.ca) |
 | Bundle ID | `ca.wilsonlam.bricks` (registered, ASC id `ARK93CR9HR`) |
-| App Store name | `BRICKS!` |
+| App Store name | `BRICKS! Block Puzzle` (plain `BRICKS!` is taken by another developer) |
+| App ID | `6828698183` — https://appstoreconnect.apple.com/apps/6828698183 |
 | SKU | `bricks-ios` |
+| Version 1.5 ID | `3efad04d-e98c-4e92-a8c5-5292972b60e8` |
+| Age rating | 4+ (every questionnaire answer none/false) |
+| App Privacy | Data Not Collected (published) |
+| Content rights | Does not use third-party content |
 | Primary locale | en-US |
 | Category | Games, subcategories Puzzle and Casual |
 | Price | Free, all territories |
@@ -72,20 +77,32 @@ Validate metadata any time with `asc metadata validate --dir ./metadata --output
 
 ## First release: one-time setup
 
-Status as of 2026-10-29: the bundle ID, metadata, screenshots and web pages are done.
-**The app record does not exist yet**; start at step 1.
+### Status (2026-10-29)
 
-1. **Create the app record** (needs the web session):
+Done — the app record exists and the listing is filled in. Only these remain:
+
+- [ ] **App Review details** (needs Wilson's phone number), step 8
+- [ ] **Upload a build** and attach it to 1.5 — see [Every release](#every-release)
+- [ ] Submit for review
+
+`asc validate --app 6828698183 --version 1.5 --output table` shows what's still
+blocking. Its "what's new is empty" warning is expected: Apple doesn't allow release notes
+on an app's first version.
+
+### What was run (for reference, or to redo on a new app)
+
+`APP_ID` is `6828698183`, `VERSION_ID` is `3efad04d-e98c-4e92-a8c5-5292972b60e8`.
+
+1. **Create the app record** (web session):
 
    ```bash
-   asc web apps create --name "BRICKS!" --bundle-id ca.wilsonlam.bricks --sku bricks-ios \
-     --primary-locale en-US --platform IOS --version 1.5 --auto-rename=false
+   asc web apps create --name "BRICKS! Block Puzzle" --bundle-id ca.wilsonlam.bricks \
+     --sku bricks-ios --primary-locale en-US --platform IOS --auto-rename=false
    ```
 
-   `--auto-rename` defaults to **true**, which would quietly publish under a suffixed
-   name — keep it off. If the name is taken, try `"BRICKS! Block Puzzle"` and update
-   `metadata/app-info/en-US.json` to match. Then find the app ID:
-   `asc apps list --output table`, and use it as `APP_ID` below.
+   `--auto-rename` defaults to **true**, which would quietly use a suffixed name — keep
+   it off. The `--version` flag was ignored and the record started at 1.0, so rename it:
+   `asc versions update --version-id VERSION_ID --version 1.5`.
 
 2. **Category, price, availability**:
 
@@ -93,52 +110,53 @@ Status as of 2026-10-29: the bundle ID, metadata, screenshots and web pages are 
    asc app-setup categories set --app APP_ID --primary GAMES \
      --primary-subcategory-one GAMES_PUZZLE --primary-subcategory-two GAMES_CASUAL
    asc app-setup pricing set --app APP_ID --free --base-territory USA
-   asc app-setup availability edit --app APP_ID --all-territories --available true
+   asc pricing availability create --app APP_ID --all-territories --available true \
+     --available-in-new-territories true
    ```
 
-   Flag names drift between `asc` releases; if one is rejected, check `asc <command> -h`
-   and the `asc-cli-usage` skill.
+   On a new app, availability has to be *created*; `asc app-setup availability edit`
+   only works once a record exists.
 
-3. **Age rating**: every questionnaire answer is "none"/false (no violence, gambling,
-   user content, web access or purchases), which rates 4+.
-   `asc age-rating view --app APP_ID`, then `asc age-rating edit --app APP_ID ...` for
-   anything still unset.
+3. **Age rating** — all none/false (no violence, gambling, user content or web access;
+   gifts award random power-ups but nothing is bought, so no loot boxes): 4+.
+   `asc age-rating edit --app APP_ID --all-none`
 
 4. **App Privacy** (web session): Data Not Collected.
 
    ```bash
    asc web privacy plan --app APP_ID --file metadata/privacy.json
    asc web privacy apply --app APP_ID --file metadata/privacy.json
-   asc web privacy publish --app APP_ID
+   asc web privacy publish --app APP_ID --confirm
    ```
 
-5. **Metadata**:
+5. **Content rights**:
+   `asc apps update --id APP_ID --content-rights DOES_NOT_USE_THIRD_PARTY_CONTENT`
+
+6. **Metadata and copyright**:
 
    ```bash
    asc metadata push --app APP_ID --version 1.5 --platform IOS --dir ./metadata --dry-run --output table
    asc metadata push --app APP_ID --version 1.5 --platform IOS --dir ./metadata
+   asc versions update --version-id VERSION_ID --copyright "2026 Daniel Haddad"
    ```
 
-   Copyright isn't part of the metadata files:
-   `asc versions update --version-id VERSION_ID --copyright "2026 Daniel Haddad"`.
+   Keep keywords free of words already in the name or subtitle (Apple indexes those
+   anyway; `asc validate` warns on overlap) and under 100 characters.
 
-6. **Screenshots** (uploaded in file order; `asc screenshots sizes --all` lists the
+7. **Screenshots** (uploaded in file order; `asc screenshots sizes --all` lists the
    display types):
 
    ```bash
-   asc screenshots upload --app APP_ID --version 1.5 --locale en-US \
-     --path appstore/screenshots/iphone-6.9 --device-type IPHONE_67 --dry-run
    asc screenshots upload --app APP_ID --version 1.5 --locale en-US \
      --path appstore/screenshots/iphone-6.9 --device-type IPHONE_67
    asc screenshots upload --app APP_ID --version 1.5 --locale en-US \
      --path appstore/screenshots/ipad-13 --device-type IPAD_PRO_3GEN_129
    ```
 
-   Re-uploading a set needs `--replace --confirm`. 1320×2868 is also accepted as
-   `IPHONE_69`; use whichever slot App Store Connect shows as required.
+   Re-uploading a set needs `--replace --confirm`.
 
-7. **App Review details**: contact name, email and phone for App Review (Wilson Lam,
-   mail@wilsonlam.ca, phone from Wilson). No sign-in is needed, so no demo account.
+8. **App Review details** — *not done yet*: contact name, email and phone for App Review.
+   No sign-in is needed, so no demo account.
 
    ```bash
    asc review details-create --version-id VERSION_ID --contact-first-name Wilson --contact-last-name Lam \
@@ -156,9 +174,9 @@ Status as of 2026-10-29: the bundle ID, metadata, screenshots and web pages are 
 3. Build, upload and submit. Always dry-run first:
 
    ```bash
-   asc publish appstore --app APP_ID --project BRICKS.xcodeproj --scheme BRICKS \
+   asc publish appstore --app 6828698183 --project BRICKS.xcodeproj --scheme BRICKS \
      --version 1.5 --metadata-dir ./metadata/version/1.5 --submit --dry-run --output table
-   asc publish appstore --app APP_ID --project BRICKS.xcodeproj --scheme BRICKS \
+   asc publish appstore --app 6828698183 --project BRICKS.xcodeproj --scheme BRICKS \
      --version 1.5 --metadata-dir ./metadata/version/1.5 --submit --wait --confirm
    ```
 
@@ -166,8 +184,8 @@ Status as of 2026-10-29: the bundle ID, metadata, screenshots and web pages are 
    project in Xcode once with the Wilson Lam team selected so automatic signing can
    create the distribution profile (the Apple Distribution certificate on the account is
    `Q4L36FD425`; its private key must be in this Mac's Keychain).
-4. `asc validate --app APP_ID --version 1.5 --output table` before submitting, and
-   `asc review status --app APP_ID` afterwards. If something blocks, use the
+4. `asc validate --app 6828698183 --version 1.5 --output table` before submitting, and
+   `asc review status --app 6828698183` afterwards. If something blocks, use the
    `asc-submission-health` skill.
 
 ### Things that can fail validation
