@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>method</key><string>app-store-connect</string>
+  <key>destination</key><string>upload</string>
+  <key>teamID</key><string>76C669ZZ43</string>
+  <key>signingStyle</key><string>manual</string>
+  <key>signingCertificate</key><string>Apple Distribution</string>
+  
+  <key>provisioningProfiles</key>
+  <dict><key>ca.wilsonlam.bricks.widget</key><string>11987362-c1dd-461a-a089-3d161405fdb3</string><key>ca.wilsonlam.bricks</key><string>592ebbab-f1ac-4bed-939c-2e672f19db70</string><key>ca.wilsonlam.bricks.watchkitapp</key><string>41bbfdb5-1b9f-460e-819c-ffb29f3a35d3</string></dict>
+  <key>uploadSymbols</key><true/>
+  <key>manageAppVersionAndBuildNumber</key><false/>
+</dict>
+</plist>

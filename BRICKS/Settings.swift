@@ -20,11 +20,18 @@ final class Settings: ObservableObject {
         }
     }
 
+    /// Whether the widget (Home Screen, StandBy, CarPlay) may show the game. iPhone and
+    /// iPad only; the setting lives in the App Group so the widget can see it too.
+    @Published var widgetEnabled: Bool {
+        didSet { WidgetSnapshot.isEnabled = widgetEnabled }
+    }
+
     init() {
         let defaults = UserDefaults.standard
         isDark = defaults.bool(forKey: Key.dark)
         // Vibrations default to on, so read the stored value only once one exists.
         vibrations = defaults.object(forKey: Key.vibrations) as? Bool ?? true
+        widgetEnabled = WidgetSnapshot.isEnabled
         Haptics.enabled = vibrations
     }
 

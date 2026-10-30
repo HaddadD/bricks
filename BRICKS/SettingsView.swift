@@ -19,16 +19,39 @@ struct SettingsView: View {
             .ignoresSafeArea()
 
             VStack(spacing: 18) {
+                #if os(iOS)
                 handle
+                #endif
 
-                Text("Settings")
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundColor(Theme.ink)
+                ZStack {
+                    Text("Settings")
+                        .font(.system(size: 22, weight: .black, design: .rounded))
+                        .foregroundColor(Theme.ink)
+
+                    if Platform.sheetsNeedDoneButton {
+                        // No swipe-to-dismiss here, so the sheet closes from a button
+                        // (Return on a Mac keyboard).
+                        Button("Done") { dismiss() }
+                            #if os(macOS) || os(visionOS)
+                            .keyboardShortcut(.defaultAction)
+                            #endif
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                }
 
                 VStack(spacing: 0) {
-                    themeRow
+                    if Platform.supportsAppearanceChoice {
+                        themeRow
+                    }
+                    // Only iPhone (and Apple Watch, which has its own settings) can vibrate.
+                    if Haptics.isSupported {
+                        if Platform.supportsAppearanceChoice { divider }
+                        vibrationRow
+                    }
+                    #if os(iOS)
                     divider
-                    vibrationRow
+                    widgetRow
+                    #endif
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -46,6 +69,13 @@ struct SettingsView: View {
             .padding(.horizontal, 22)
             .padding(.top, 10)
             .padding(.bottom, 20)
+            #if os(tvOS)
+            // Read from the couch: same layout, larger.
+            .frame(maxWidth: 520)
+            .scaleEffect(Platform.uiScale)
+            #elseif os(macOS) || os(visionOS)
+            .frame(width: 380, height: 300)
+            #endif
         }
         .alert("Start a new game?", isPresented: $confirmingReset) {
             Button("Cancel", role: .cancel) { }
@@ -88,8 +118,11 @@ struct SettingsView: View {
 
             Spacer()
 
-            Toggle("", isOn: $settings.isDark)
+            Toggle("Dark mode", isOn: $settings.isDark)
                 .labelsHidden()
+                #if os(macOS)
+                .toggleStyle(.switch)
+                #endif
                 .tint(Color(hex: 0xA6BDF7))
         }
         .padding(.horizontal, 14)
@@ -111,13 +144,41 @@ struct SettingsView: View {
 
             Spacer()
 
-            Toggle("", isOn: $settings.vibrations)
+            Toggle("Vibrations", isOn: $settings.vibrations)
                 .labelsHidden()
                 .tint(Color(hex: 0x7FBF93))
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
     }
+
+    #if os(iOS)
+    /// Lets the player keep the game off the Home Screen and CarPlay. Off also clears
+    /// what the widget was already showing.
+    private var widgetRow: some View {
+        HStack(spacing: 12) {
+            icon("square.grid.2x2.fill", tint: Color(hex: 0xC8AEF0))
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Widget")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundColor(Theme.ink)
+                Text(settings.widgetEnabled ? "On the Home Screen and CarPlay" : "Off")
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundColor(Theme.inkSoft)
+                    .lineLimit(2)
+            }
+
+            Spacer()
+
+            Toggle("Widget", isOn: $settings.widgetEnabled)
+                .labelsHidden()
+                .tint(Color(hex: 0xC8AEF0))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 13)
+    }
+    #endif
 
     private func icon(_ name: String, tint: Color) -> some View {
         Image(systemName: name)
