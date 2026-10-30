@@ -21,6 +21,10 @@
 		B100010C000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
 		B100010E000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
 		B100010F000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
+		C2000115000000000000A001 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000015000000000000A001 /* AppVersion.swift */; };
+		C2001011000000000000A001 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000015000000000000A001 /* AppVersion.swift */; };
+		C2000116000000000000A001 /* UpdateCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000016000000000000A001 /* UpdateCheck.swift */; };
+		C2001012000000000000A001 /* UpdateCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000016000000000000A001 /* UpdateCheck.swift */; };
 		C2000111000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
 		C2000112000000000000A001 /* PlacementCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000012000000000000A001 /* PlacementCursor.swift */; };
 		C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000013000000000000A001 /* FocusLiftStyle.swift */; };
@@ -72,6 +76,8 @@
 		B100000C000000000000A001 /* DragTargeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragTargeting.swift; sourceTree = "<group>"; };
 		B100000E000000000000A001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C2000015000000000000A001 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		C2000016000000000000A001 /* UpdateCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheck.swift; sourceTree = "<group>"; };
 		C2000011000000000000A001 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		C2000012000000000000A001 /* PlacementCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementCursor.swift; sourceTree = "<group>"; };
 		C2000013000000000000A001 /* FocusLiftStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLiftStyle.swift; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 				E4000001000000000000A001 /* WidgetSnapshot.swift */,
 				E4000002000000000000A001 /* WidgetViews.swift */,
 				E4000006000000000000A001 /* BRICKS.entitlements */,
+				C2000015000000000000A001 /* AppVersion.swift */,
+				C2000016000000000000A001 /* UpdateCheck.swift */,
 				C2000011000000000000A001 /* Platform.swift */,
 				C2000012000000000000A001 /* PlacementCursor.swift */,
 				C2000013000000000000A001 /* FocusLiftStyle.swift */,
@@ -457,6 +465,8 @@
 				B100010A000000000000A001 /* GameOverView.swift in Sources */,
 				E4000101000000000000A001 /* WidgetSnapshot.swift in Sources */,
 				E4000102000000000000A001 /* WidgetViews.swift in Sources */,
+				C2000115000000000000A001 /* AppVersion.swift in Sources */,
+				C2000116000000000000A001 /* UpdateCheck.swift in Sources */,
 				C2000111000000000000A001 /* Platform.swift in Sources */,
 				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
 				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -482,6 +492,8 @@
 				C200100A000000000000A001 /* DragTargeting.swift in Sources */,
 				C200100B000000000000A001 /* Settings.swift in Sources */,
 				C200100C000000000000A001 /* SettingsView.swift in Sources */,
+				C2001011000000000000A001 /* AppVersion.swift in Sources */,
+				C2001012000000000000A001 /* UpdateCheck.swift in Sources */,
 				C200100D000000000000A001 /* Platform.swift in Sources */,
 				C200100E000000000000A001 /* PlacementCursor.swift in Sources */,
 				C200100F000000000000A001 /* FocusLiftStyle.swift in Sources */,

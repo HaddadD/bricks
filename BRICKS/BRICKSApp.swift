@@ -4,6 +4,8 @@ import SwiftUI
 struct BRICKSApp: App {
     @StateObject private var settings = Settings()
     @StateObject private var model = GameModel()
+    @StateObject private var updates = UpdateCheck()
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -14,6 +16,18 @@ struct BRICKSApp: App {
                 // Switching the widget back on shows the game straight away, not after
                 // the next move.
                 .onReceive(settings.$widgetEnabled) { on in if on { model.publishWidget() } }
+                // An App Store copy that's behind the store can't be played until it's
+                // updated.
+                .disabled(updates.requiredVersion != nil)
+                .overlay {
+                    if let version = updates.requiredVersion {
+                        UpdateRequiredView(version: version)
+                    }
+                }
+                .task { await updates.check() }
+                .onChange(of: scenePhase) { phase in
+                    if phase == .active { Task { await updates.check() } }
+                }
         }
         #if os(macOS)
         .defaultSize(width: 1040, height: 760)

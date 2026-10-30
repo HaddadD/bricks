@@ -612,5 +612,12 @@ UserDefaults.standard.set(Data("not a game".utf8), forKey: "bricks.savedGame")
 let p5 = GameModel()
 check(p5.score == 0 && p5.tray.compactMap { $0 }.count == 3, "a corrupt save falls back to a fresh game")
 
+// App Store version gate: numeric, part by part.
+check(AppVersion.isOlder("1.6", than: "1.7"), "1.6 is older than 1.7")
+check(AppVersion.isOlder("1.9", than: "1.10"), "1.9 is older than 1.10")
+check(!AppVersion.isOlder("1.6", than: "1.6.0"), "1.6 is the same as 1.6.0")
+check(!AppVersion.isOlder("1.7", than: "1.6.9"), "1.7 is newer than 1.6.9")
+check(AppVersion.isOlder("1.6", than: "1.6.1"), "1.6 is older than 1.6.1")
+
 print("\n\(failures.isEmpty ? "All checks passed" : "\(failures.count) FAILED: \(failures)")")
 exit(failures.isEmpty ? 0 : 1)

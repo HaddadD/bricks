@@ -184,12 +184,31 @@ else.
 | `GameView.swift` | layout, drag and remote controls, menu commands |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
+| `UpdateCheck.swift` / `AppVersion.swift` | App Store copies must be the latest version (below) |
 | `WidgetSnapshot.swift` / `WidgetViews.swift` | what the widget shows, and how; `BRICKSWidget/` is the extension |
 | `BoardView.swift` / `TrayView.swift` / `PowerUpBar.swift` / `GameOverView.swift` | UI |
 
+### Required updates
+
+A copy downloaded from the App Store can't be played once the store has a newer version:
+on launch and on coming back to the foreground (at most hourly) it asks the public
+iTunes lookup API for the live version, and if the installed one is older, an "Update"
+screen covers the game and opens the App Store page (Apple TV and Apple Watch can't open
+the store from an app, so there it says where to go). The game is saved underneath.
+
+- Only App Store downloads check (`AppTransaction.environment == .production`);
+  TestFlight, Xcode and DEBUG builds never do.
+- A new version is enforced 24 hours after release, once every storefront can download
+  it. Until then players can keep going.
+- Anything that fails (offline, the lookup is down, the app isn't in the player's
+  storefront) lets the player in.
+- The lookup reports one version for the whole app, so release every platform's version
+  together, or Mac, Apple TV and Vision Pro players will be told to update to a version
+  they can't get yet.
+
 ### Dev affordances (DEBUG only)
 
-`-celebrate <0-6>` seeds that board mid-celebration on the given background, for
+`-updateRequired` shows the update screen. `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
 on launch. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. To check the wide
@@ -201,7 +220,7 @@ exposes `testSet*` seams used by the headless rule tests:
 swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
-  tests/main.swift && /tmp/rules_test
+  BRICKS/AppVersion.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
