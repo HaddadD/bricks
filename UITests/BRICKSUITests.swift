@@ -11,7 +11,7 @@ final class BRICKSUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["-demo"]
+        app.launchArguments = ["-demo", "-noGameCenter"]
         app.launch()
     }
 
@@ -173,7 +173,7 @@ final class BRICKSUITests: XCTestCase {
 
         setWidget(false)
         app.terminate()
-        app.launchArguments = ["-widgetPreview"]
+        app.launchArguments = ["-widgetPreview", "-noGameCenter"]
         app.launch()
         XCTAssertTrue(app.staticTexts.matching(isOff).firstMatch.waitForExistence(timeout: 3),
                       "a switched-off widget says so instead of showing the game")
@@ -181,7 +181,7 @@ final class BRICKSUITests: XCTestCase {
 
         // Leave it on, as a player would expect.
         app.terminate()
-        app.launchArguments = ["-demo"]
+        app.launchArguments = ["-demo", "-noGameCenter"]
         app.launch()
         setWidget(true)
     }

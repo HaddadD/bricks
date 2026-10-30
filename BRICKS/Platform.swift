@@ -39,6 +39,23 @@ enum Platform {
         #endif
     }()
 
+    /// The kind of device, as the "Play on…" achievements name it.
+    static let device: String = {
+        #if os(macOS)
+        return "mac"
+        #elseif os(tvOS)
+        return "tv"
+        #elseif os(visionOS)
+        return "vision"
+        #elseif os(watchOS)
+        return "watch"
+        #elseif os(iOS)
+        return UIDevice.current.userInterfaceIdiom == .pad ? "ipad" : "iphone"
+        #else
+        return "iphone"
+        #endif
+    }()
+
     /// Text and chrome scale. Apple TV is read from across the room.
     static let uiScale: CGFloat = {
         #if os(tvOS)

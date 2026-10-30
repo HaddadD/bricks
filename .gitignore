@@ -12,3 +12,6 @@ xcuserdata/
 
 # Raw simulator captures; regenerate with appstore/tools/capture.sh
 appstore/raw/
+
+# Game Center artwork, rendered by appstore/tools/gamecenter.swift
+appstore/gamecenter/

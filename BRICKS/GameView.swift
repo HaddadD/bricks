@@ -16,6 +16,7 @@ private struct Placing: Equatable {
 struct GameView: View {
     @ObservedObject var settings: Settings
     @ObservedObject var model: GameModel
+    @EnvironmentObject private var gameCenter: GameCenter
 
     @State private var gridFrame: CGRect = .zero
     @State private var drag: DragInfo? = nil
@@ -333,6 +334,23 @@ struct GameView: View {
             }
 
             Spacer()
+
+            if gameCenter.isSignedIn {
+                Button {
+                    Haptics.tap()
+                    gameCenter.show(.dashboard)
+                } label: {
+                    Image(systemName: "trophy.fill")
+                        .font(.system(size: 18 * scale, weight: .semibold))
+                        .foregroundColor(Theme.inkSoft)
+                        .frame(width: 42 * scale, height: 42 * scale)
+                        .background(Circle().fill(Theme.chip))
+                }
+                .buttonStyle(FocusLiftStyle())
+                .disabled(controlsLocked)
+                .accessibilityLabel("Game Center")
+                .padding(.trailing, 6 * scale)
+            }
 
             Button {
                 Haptics.tap()

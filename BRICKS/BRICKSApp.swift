@@ -5,6 +5,7 @@ struct BRICKSApp: App {
     @StateObject private var settings = Settings()
     @StateObject private var model = GameModel()
     @StateObject private var updates = UpdateCheck()
+    @StateObject private var progress = PlayerProgress()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
@@ -27,7 +28,11 @@ struct BRICKSApp: App {
                 .task { await updates.check() }
                 .onChange(of: scenePhase) { phase in
                     if phase == .active { Task { await updates.check() } }
+                    if phase == .background { progress.checkpoint() }
                 }
+                .environmentObject(progress)
+                .environmentObject(GameCenter.shared)
+                .onAppear(perform: startGameCenter)
         }
         #if os(macOS)
         .defaultSize(width: 1040, height: 760)
@@ -38,6 +43,13 @@ struct BRICKSApp: App {
         #if os(macOS) || os(iOS) || os(visionOS)
         .commands { GameCommands() }
         #endif
+    }
+
+    private func startGameCenter() {
+        progress.attach(to: model)
+        // The Games app's Play button: carry on, or start over if the game has ended.
+        GameCenter.shared.onWantsToPlay = { [model] in if model.isGameOver { model.newGame() } }
+        GameCenter.shared.signIn()
     }
 
     @ViewBuilder

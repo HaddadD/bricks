@@ -127,6 +127,30 @@ build. It and the app share the `group.ca.wilsonlam.bricks` App Group (App Group
 App Groups capability. Changing an App ID's capabilities invalidates its profiles, so
 regenerate them afterwards (`asc profiles list` shows `INVALID`).
 
+**Game Center:** both app IDs (the app and the Watch app) have the Game Center
+capability, and the app's Game Center record (detail `d4450439-…`) holds the catalog
+from `BRICKS/Achievements.swift`. To add to it, extend the catalog, then:
+
+```bash
+swiftc -O -parse-as-library BRICKS/Achievements.swift appstore/tools/gamecenter.swift -o /tmp/gamecenter
+/tmp/gamecenter render appstore/gamecenter          # artwork (git-ignored)
+/tmp/gamecenter catalog appstore/gamecenter > /tmp/catalog.json
+python3 appstore/tools/gamecenter-setup.py /tmp/catalog.json
+```
+
+What the API insists on, found the hard way: vendor ids allow only letters, digits,
+underscores and periods; recurring leaderboards need `recurrenceDuration` in hours
+(`PT24H`, `PT168H`) plus `recurrenceRule` (`FREQ=DAILY;INTERVAL=1` or `…INTERVAL=7`, as
+there's no weekly frequency); and `asc`'s `--create-initial-version` fails, so challenge
+and activity versions are created separately. TestFlight builds use the Game Center
+sandbox, where everything works as soon as it's created. For the App Store, the items go
+live with the first version that includes them: in App Store Connect, add them to the
+version's Game Center section before submitting.
+
+The Game Center entitlement is restricted, so Mac debug builds leave it out
+(`CODE_SIGN_ENTITLEMENTS[sdk=macosx*]` is empty in Debug); without a registered Mac there's
+no development profile to carry it. Test Game Center on a Mac through TestFlight.
+
 ### What was run (for reference, or to redo on a new app)
 
 `APP_ID` is `6828698183`, `VERSION_ID` is `3efad04d-e98c-4e92-a8c5-5292972b60e8`.
@@ -210,11 +234,11 @@ in this Mac's login keychain:
 |---|---|
 | Certificate | `Z88Z2MBTWF` "Apple Distribution: Wilson Lam (76C669ZZ43)", expires 2027-10-30 |
 | Mac installer | "Mac Installer Distribution" (signs the Mac `.pkg`), made by `create-distribution-cert.sh installer` |
-| iPhone/iPad and Vision Pro profile | `NDN72KR7NT` "BRICKS App Store 1.6", UUID `92bd5220-d591-4749-bd2e-24f58a355ea9` |
+| iPhone/iPad and Vision Pro profile | `75RKJVG2A4` "BRICKS App Store 1.6 GC", UUID `592ebbab-f1ac-4bed-939c-2e672f19db70` |
 | Widget profile | `W9B49BQ523` "BRICKS Widget App Store", UUID `11987362-c1dd-461a-a089-3d161405fdb3` |
-| Apple Watch profile | `257Q662TVC` "BRICKS Watch App Store", UUID `db112c5e-be39-494c-be2c-75f6050c1892` |
-| Apple TV profile | `7B5ZRNG2DJ` "BRICKS tvOS App Store 1.6", UUID `b19442ec-39fa-43d3-8608-6f4d97275187` |
-| Mac profile | `X69R534QW3` "BRICKS Mac App Store 1.6", UUID `14a68933-8202-4081-8230-7f883e889caf` |
+| Apple Watch profile | `HQJ95L3AY3` "BRICKS Watch App Store GC", UUID `41bbfdb5-1b9f-460e-819c-ffb29f3a35d3` |
+| Apple TV profile | `53YXD8GJFL` "BRICKS tvOS App Store GC", UUID `ae27f3f5-ec38-4a92-9422-fcb7cd316ea4` |
+| Mac profile | `5R2TY549TF` "BRICKS Mac App Store GC", UUID `775341d2-0e42-43d9-9d33-c31f34ca10bb` |
 | Key material | `~/.keys/signing/` (owner-only; never commit) |
 
 Why manual: the API key isn't allowed to use Apple's cloud-managed distribution

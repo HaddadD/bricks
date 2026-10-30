@@ -60,6 +60,9 @@ final class GameModel: ObservableObject {
     /// Short-lived banner shown when a gift is collected or a power-up fires.
     @Published var toast: String? = nil
 
+    /// Hears everything achievements are measured on (see PlayerProgress).
+    var onEvent: ((GameEvent) -> Void)?
+
     private var undoStack: Snapshot? = nil
     private var giftThreshold: Int = Int.random(in: 280...320)
     /// Set when a gift was earned but the board had nowhere to put it.
@@ -96,6 +99,12 @@ final class GameModel: ObservableObject {
             seedDemoBoard()
             return
         }
+        // `-gameOver` shows the game-over card over the demo board.
+        if args.contains("-gameOver") {
+            seedDemoBoard()
+            isGameOver = true
+            return
+        }
         #endif
 
         restore()
@@ -119,6 +128,7 @@ final class GameModel: ObservableObject {
     #endif
 
     func newGame() {
+        onEvent?(.newGame)
         withAnimation(.easeOut(duration: 0.25)) {
             board = Array(
                 repeating: Array(repeating: Cell(), count: GameModel.size),
@@ -283,13 +293,14 @@ final class GameModel: ObservableObject {
         }
 
         Haptics.tap()
-        resolveClears()
+        onEvent?(.placed(family: piece.shape.family))
+        resolveClears(placedCells: piece.shape.cellCount)
         return true
     }
 
     // MARK: - Line clearing
 
-    private func resolveClears() {
+    private func resolveClears(placedCells: Int) {
         var fullRows: [Int] = []
         var fullCols: [Int] = []
 
@@ -301,9 +312,11 @@ final class GameModel: ObservableObject {
         }
 
         guard !fullRows.isEmpty || !fullCols.isEmpty else {
+            onEvent?(.missed)
             finishTurn()
             return
         }
+        let filled = board.joined().filter(\.isFilled).count
 
         var cells: Set<GridPoint> = []
         for r in fullRows {
@@ -339,6 +352,10 @@ final class GameModel: ObservableObject {
                 self.clearing = []
                 self.score += award
             }
+            self.onEvent?(.cleared(
+                rows: fullRows.count, cols: fullCols.count, gifts: giftsWon, filled: filled,
+                emptied: !self.board.joined().contains(where: \.isFilled), points: placedCells + award
+            ))
             if lines > 1 {
                 self.showToast("+\(award) points")
             }
@@ -365,11 +382,13 @@ final class GameModel: ObservableObject {
         checkMilestone()
         ageGifts()
         maybeSpawnGift()
+        onEvent?(.score(score))
 
         if !hasAnyMove {
             withAnimation(.easeOut(duration: 0.3).delay(0.25)) {
                 isGameOver = true
             }
+            onEvent?(.gameOver)
         }
 
         persist()
@@ -401,6 +420,7 @@ final class GameModel: ObservableObject {
         }
         showToast("\(reached * GameModel.milestoneStep) points!")
         Haptics.reward()
+        onEvent?(.celebration(picked))
     }
 
     // MARK: - Gifts
@@ -456,6 +476,7 @@ final class GameModel: ObservableObject {
             score += 100
             showToast("All power-ups full — +100 bonus!")
             Haptics.reward()
+            onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
             return
         }
 
@@ -464,6 +485,7 @@ final class GameModel: ObservableObject {
         }
         showToast("Gift claimed — \(won.title) +1")
         Haptics.reward()
+        onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
     }
 
     // MARK: - Power-ups
@@ -501,6 +523,7 @@ final class GameModel: ObservableObject {
 
     private func applyShuffle() {
         consume(.shuffle)
+        onEvent?(.usedPowerUp(PowerUp.shuffle.rawValue, bricks: 0))
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             tray = dealTray()
         }
@@ -515,6 +538,7 @@ final class GameModel: ObservableObject {
             return
         }
         consume(.undo)
+        onEvent?(.usedPowerUp(PowerUp.undo.rawValue, bricks: 0))
         withAnimation(.easeOut(duration: 0.25)) {
             board = snap.board
             tray = snap.tray
@@ -526,6 +550,7 @@ final class GameModel: ObservableObject {
         undoStack = nil
         Haptics.tap()
         showToast("Move undone")
+        onEvent?(.score(score))
         recheckGameOver()
     }
 
@@ -537,6 +562,7 @@ final class GameModel: ObservableObject {
         case .hammer:
             guard board[row][col].isFilled else { return }
             consume(.hammer)
+            onEvent?(.usedPowerUp(PowerUp.hammer.rawValue, bricks: 1))
             flash([GridPoint(r: row, c: col)])
 
         case .bomb:
@@ -549,6 +575,7 @@ final class GameModel: ObservableObject {
             }
             guard !hit.isEmpty else { return }
             consume(.bomb)
+            onEvent?(.usedPowerUp(PowerUp.bomb.rawValue, bricks: hit.count))
             flash(hit)
 
         default:
@@ -591,6 +618,7 @@ final class GameModel: ObservableObject {
                 powerUps[.rotate] = count(of: .rotate) - 1
             }
             rotateCharged = true
+            onEvent?(.usedPowerUp(PowerUp.rotate.rawValue, bricks: 0))
         }
 
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
@@ -622,9 +650,11 @@ final class GameModel: ObservableObject {
     }
 
     private func recheckGameOver() {
+        let wasOver = isGameOver
         withAnimation(.easeOut(duration: 0.25)) {
             isGameOver = !hasAnyMove
         }
+        if isGameOver && !wasOver { onEvent?(.gameOver) }
         persist()
     }
 

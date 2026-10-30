@@ -612,6 +612,81 @@ UserDefaults.standard.set(Data("not a game".utf8), forKey: "bricks.savedGame")
 let p5 = GameModel()
 check(p5.score == 0 && p5.tray.compactMap { $0 }.count == 3, "a corrupt save falls back to a fresh game")
 
+// Game Center catalog: what App Store Connect accepts.
+let totalPoints = Achievement.allCases.map(\.info.points).reduce(0, +)
+check(totalPoints <= 1000, "achievements total \(totalPoints) of Game Center's 1,000 points")
+check(Achievement.allCases.allSatisfy { (1...100).contains($0.info.points) }, "every achievement is worth 1-100 points")
+let allIDs = Achievement.allCases.map(\.id) + Leaderboard.allCases.map(\.id) + Challenge.allCases.map(\.id) + [GameActivity.id]
+check(Set(allIDs).count == allIDs.count, "Game Center ids are unique (\(allIDs.count))")
+check(allIDs.allSatisfy { $0.count <= 100 }, "Game Center ids fit in 100 characters")
+check(allIDs.allSatisfy { $0.allSatisfy { $0.isLetter || $0.isNumber || $0 == "_" || $0 == "." } },
+      "Game Center ids use only letters, digits, underscores and periods")
+check(Achievement.allCases.allSatisfy { $0.info.name.count <= 30 }, "achievement names fit in 30 characters")
+check(PlayerStats.celebrationCount == Theme.celebrations.count, "Light Show counts every celebration colour")
+check(Achievement.allCases.allSatisfy { Achievement.palette[$0.info.color] != nil }, "every badge colour is in the palette")
+
+// Achievement rules, event by event.
+var ps = PlayerStats()
+func feed(_ events: [GameEvent], day: String = "2026-10-30", device: String = "iphone") {
+    for e in events { ps.record(e, device: device, day: day) }
+}
+func done(_ a: Achievement) -> Bool { a.percent(ps) >= 100 }
+feed([.placed(family: 0), .missed, .score(1)])
+check(done(.pieces1) && !done(.lines1) && done(.iPhone) && !done(.iPad), "a first piece earns First Brick and the device")
+feed([.placed(family: 1), .cleared(rows: 1, cols: 1, gifts: 0, filled: 30, emptied: false, points: 42), .score(60)])
+check(done(.lines1) && done(.double) && done(.crossroads) && !done(.triple), "a row and a column at once: Double and Crossroads")
+check(Achievement.lines50.percent(ps) == 4, "Tidy shows progress (2 of 50 lines)")
+for _ in 0..<4 { feed([.placed(family: 2), .cleared(rows: 1, cols: 0, gifts: 0, filled: 20, emptied: false, points: 13)]) }
+check(done(.streak5), "five clearing pieces in a row: On a Roll")
+feed([.placed(family: 0), .missed])
+check(ps.game.streak == 0 && ps.bestStreak == 5, "a piece that clears nothing ends the streak, keeping the best")
+feed([.placed(family: 3), .cleared(rows: 1, cols: 0, gifts: 2, filled: 74, emptied: true, points: 14)])
+check(done(.doubleGift) && done(.closeCall) && done(.cleanSlate), "two gifts, a full board and an empty one")
+for f in 4...8 { feed([.placed(family: f), .missed]) }
+check(done(.fullSet), "all nine kinds of piece in one game: Full Set")
+feed([.score(2600)])
+check(done(.purist) && done(.score2500) && !done(.score5000), "2,500 without power-ups: Purist")
+feed([.usedPowerUp("bomb", bricks: 9)])
+check(done(.directHit) && done(.bomb), "nine bricks with one bomb: Direct Hit")
+for p in ["hammer", "shuffle", "rotate", "undo"] { feed([.usedPowerUp(p, bricks: 1)]) }
+check(done(.toolbox), "all five power-ups in one game: Toolbox")
+feed([.giftClaimed(stock: [5, 5, 5, 5, 4])])
+check(!done(.fullyStocked) && done(.gift1), "one power-up short isn't Fully Stocked")
+feed([.giftClaimed(stock: [5, 5, 5, 5, 5])])
+check(done(.fullyStocked), "five of everything: Fully Stocked")
+feed([.gameOver, .newGame])
+check(ps.games == 1 && ps.game == PlayerStats.GameStats(), "game over then a new game counts one game")
+feed([.newGame])
+check(ps.games == 1, "an untouched board doesn't count as a game")
+feed([.placed(family: 0), .newGame])
+check(ps.games == 2, "an abandoned game with a piece on it counts")
+feed([.score(100)])
+check(ps.bestScore == 2600, "a lower score doesn't lower the best")
+feed([.placed(family: 0)], day: "2026-10-31", device: "mac")
+check(ps.days.count == 2 && done(.mac), "a second day and a second device")
+for i in 0..<7 { feed([.celebration(i)]) }
+check(done(.lightShow), "every celebration colour: Light Show")
+check(Leaderboard.highScore.value(ps) == 100 && Leaderboard.lifetimeLines.value(ps) == ps.lines,
+      "leaderboards take this game's score and lifetime lines")
+
+// GameModel reports what happened, in order.
+let em = GameModel()
+em.newGame()
+var heard: [GameEvent] = []
+em.onEvent = { heard.append($0) }
+for c in 0..<9 { em.testSetCell(row: 0, col: c, colorIndex: 1) }
+em.testSetTray([TrayPiece(shape: bar(1)), TrayPiece(shape: bar(1)), nil])
+em.place(trayIndex: 0, atRow: 0, col: 9)
+pump()
+check(heard.first == .placed(family: 0), "placing reports the piece's family")
+check(heard.contains(.cleared(rows: 1, cols: 0, gifts: 0, filled: 10, emptied: true, points: 11)),
+      "a clear reports its lines, the squares filled and the emptied board (\(heard))")
+check(heard.contains(.score(11)), "the turn reports the score")
+heard = []
+em.place(trayIndex: 1, atRow: 5, col: 5)
+pump()
+check(heard.prefix(2) == [.placed(family: 0), .missed], "a piece that clears nothing reports a miss")
+
 // App Store version gate: numeric, part by part.
 check(AppVersion.isOlder("1.6", than: "1.7"), "1.6 is older than 1.7")
 check(AppVersion.isOlder("1.9", than: "1.10"), "1.9 is older than 1.10")

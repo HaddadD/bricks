@@ -25,6 +25,10 @@
 		C2001011000000000000A001 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000015000000000000A001 /* AppVersion.swift */; };
 		C2000116000000000000A001 /* UpdateCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000016000000000000A001 /* UpdateCheck.swift */; };
 		C2001012000000000000A001 /* UpdateCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000016000000000000A001 /* UpdateCheck.swift */; };
+		C2000117000000000000A001 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000017000000000000A001 /* Achievements.swift */; };
+		C2001013000000000000A001 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000017000000000000A001 /* Achievements.swift */; };
+		C2000118000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
+		C2001014000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
 		C2000111000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
 		C2000112000000000000A001 /* PlacementCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000012000000000000A001 /* PlacementCursor.swift */; };
 		C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000013000000000000A001 /* FocusLiftStyle.swift */; };
@@ -78,6 +82,8 @@
 		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C2000015000000000000A001 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		C2000016000000000000A001 /* UpdateCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheck.swift; sourceTree = "<group>"; };
+		C2000017000000000000A001 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		C2000018000000000000A001 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		C2000011000000000000A001 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		C2000012000000000000A001 /* PlacementCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementCursor.swift; sourceTree = "<group>"; };
 		C2000013000000000000A001 /* FocusLiftStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLiftStyle.swift; sourceTree = "<group>"; };
@@ -217,6 +223,8 @@
 				E4000006000000000000A001 /* BRICKS.entitlements */,
 				C2000015000000000000A001 /* AppVersion.swift */,
 				C2000016000000000000A001 /* UpdateCheck.swift */,
+				C2000017000000000000A001 /* Achievements.swift */,
+				C2000018000000000000A001 /* GameCenter.swift */,
 				C2000011000000000000A001 /* Platform.swift */,
 				C2000012000000000000A001 /* PlacementCursor.swift */,
 				C2000013000000000000A001 /* FocusLiftStyle.swift */,
@@ -467,6 +475,8 @@
 				E4000102000000000000A001 /* WidgetViews.swift in Sources */,
 				C2000115000000000000A001 /* AppVersion.swift in Sources */,
 				C2000116000000000000A001 /* UpdateCheck.swift in Sources */,
+				C2000117000000000000A001 /* Achievements.swift in Sources */,
+				C2000118000000000000A001 /* GameCenter.swift in Sources */,
 				C2000111000000000000A001 /* Platform.swift in Sources */,
 				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
 				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -494,6 +504,8 @@
 				C200100C000000000000A001 /* SettingsView.swift in Sources */,
 				C2001011000000000000A001 /* AppVersion.swift in Sources */,
 				C2001012000000000000A001 /* UpdateCheck.swift in Sources */,
+				C2001013000000000000A001 /* Achievements.swift in Sources */,
+				C2001014000000000000A001 /* GameCenter.swift in Sources */,
 				C200100D000000000000A001 /* Platform.swift in Sources */,
 				C200100E000000000000A001 /* PlacementCursor.swift in Sources */,
 				C200100F000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -562,8 +574,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "";
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphone*]" = BRICKS/BRICKS.entitlements;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -612,8 +627,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphone*]" = BRICKS/BRICKS.entitlements;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +796,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.6;
+				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -809,6 +827,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.6;
+				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

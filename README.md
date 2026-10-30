@@ -171,6 +171,39 @@ they cannot be spent to dig out of a lost board — but whatever you were holdin
 waiting for you in the next one. Starting a new game keeps them and resets everything
 else.
 
+## Game Center
+
+BRICKS! shows up in the Games app with:
+
+- **52 achievements** worth 960 of Game Center's 1,000 points: score in a game (100 up to
+  25,000), lines ever and in one game, clearing 2–5 lines with one piece, a row and a column
+  at once, an empty board, a clear from a nearly full board, clearing streaks, pieces placed,
+  every kind of piece in one game, games played, days played, gifts (including two at once
+  and holding five of everything), each power-up, all five in one game, a nine-brick bomb,
+  2,500 without power-ups, every celebration colour, and playing on each kind of device.
+  Five are hidden until earned. Progress shows as it builds (Tidy at 4% after two lines).
+- **6 leaderboards**: High Score, Today's Best and This Week (they start over daily and
+  weekly), Most Lines in a Game, Biggest Move (points from one piece) and Lifetime Lines.
+- **2 challenges** players send friends from the Games app: Beat My Score and Line Showdown.
+- **An activity**, Classic Game, that the Games app's Play button starts; a game in
+  progress shows as that activity.
+
+In the game, a trophy button beside Settings opens Game Center once you're signed in. The
+game-over card lists the achievements that game earned and links to the leaderboards,
+achievements and challenges. Game Center shows its own banner the moment one's earned.
+
+Signed out, nothing is lost: stats are kept on the device and reported when you sign in,
+and an existing best score counts towards the score achievements. Apple Watch reports
+progress too but has no Game Center screens.
+
+`BRICKS/Achievements.swift` is the whole catalog and the rules for earning it, in plain
+Swift the headless tests check. `appstore/tools/gamecenter.swift` draws each badge from it
+(the game's brick and a symbol on the brick's colour) and prints the catalog;
+`appstore/tools/gamecenter-setup.py` creates it all in App Store Connect and only fills in
+what's missing on a second run. App Store Connect never lets an id be reused, even after
+deleting it, so ids in the catalog are permanent. Ids use letters, digits, underscores and
+periods only.
+
 ## Source
 
 | File | |
@@ -184,6 +217,7 @@ else.
 | `GameView.swift` | layout, drag and remote controls, menu commands |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
+| `Achievements.swift` / `GameCenter.swift` | Game Center's catalog and rules; signing in, reporting, its screens |
 | `UpdateCheck.swift` / `AppVersion.swift` | App Store copies must be the latest version (below) |
 | `WidgetSnapshot.swift` / `WidgetViews.swift` | what the widget shows, and how; `BRICKSWidget/` is the extension |
 | `BoardView.swift` / `TrayView.swift` / `PowerUpBar.swift` / `GameOverView.swift` | UI |
@@ -208,7 +242,7 @@ the store from an app, so there it says where to go). The game is saved undernea
 
 ### Dev affordances (DEBUG only)
 
-`-updateRequired` shows the update screen. `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
+`-updateRequired` shows the update screen. `-gameOver` shows the game-over card with some achievements earned, and `-gameCenterPreview` shows the Game Center buttons without signing in (`-noGameCenter`, which the UI tests use, skips Game Center entirely). `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
 on launch. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. To check the wide
@@ -220,7 +254,7 @@ exposes `testSet*` seams used by the headless rule tests:
 swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
-  BRICKS/AppVersion.swift tests/main.swift && /tmp/rules_test
+  BRICKS/AppVersion.swift BRICKS/Achievements.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
