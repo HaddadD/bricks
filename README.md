@@ -58,6 +58,14 @@ file with another 1024×1024 PNG that has no alpha channel.
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
 
+## iPhone and iPad
+
+On iPhone the game is portrait-only. On iPad it runs in every orientation and in
+resizable windows, which iPad multitasking requires. `GameView` picks its layout from
+the space it is given, never from the device: taller than wide stacks header, board,
+tray and power-ups; wider than tall puts the board on the left with the tray stacked in a
+column beside it and the power-ups underneath.
+
 ## Settings
 
 The gear in the top right opens a sheet with:
@@ -66,7 +74,8 @@ The gear in the top right opens a sheet with:
   value via `Color.adaptive`, resolved from the view's trait collection. The root view
   drives that from the setting, so the whole tree flips without any call site knowing
   about it. The pastel bricks keep the same colours in both modes.
-- **Vibrations** — gates every call in `Haptics`.
+- **Vibrations** — gates every call in `Haptics`. Hidden on devices without haptics
+  hardware (iPad, Mac).
 - **Reset game** — asks for confirmation first.
 
 Both preferences are stored in `UserDefaults` and survive quitting. The score sits
@@ -140,7 +149,9 @@ else.
 `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
 on launch. `-demo` seeds a representative board — bricks, both gift states,
-assorted power-up counts — for inspecting the UI without playing. `GameModel` also
+assorted power-up counts — for inspecting the UI without playing. To check the wide
+layout, rotate the iPad simulator with Device › Rotate Left (iPadOS 26 windowing refuses
+programmatic rotation, so a launch argument can't do it). `GameModel` also
 exposes `testSet*` seams used by the headless rule tests:
 
 ```bash

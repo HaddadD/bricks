@@ -1,3 +1,4 @@
+import CoreHaptics
 import SwiftUI
 
 struct Cell: Equatable, Codable {
@@ -627,6 +628,9 @@ final class GameModel: ObservableObject {
 enum Haptics {
     /// Mirrors the Vibrations setting; every call below is a no-op when it is off.
     static var enabled = true
+
+    /// Whether this device can vibrate at all (iPhones can; iPads and Macs can't).
+    static let isSupported = CHHapticEngine.capabilitiesForHardware().supportsHaptics
 
     static func tap() {
         guard enabled else { return }

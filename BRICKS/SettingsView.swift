@@ -27,8 +27,11 @@ struct SettingsView: View {
 
                 VStack(spacing: 0) {
                     themeRow
-                    divider
-                    vibrationRow
+                    // iPads and Macs have no haptics hardware, so there is nothing to toggle.
+                    if Haptics.isSupported {
+                        divider
+                        vibrationRow
+                    }
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)

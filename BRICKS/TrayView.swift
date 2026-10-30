@@ -28,6 +28,8 @@ struct TrayView: View {
     @ObservedObject var model: GameModel
     let cellSize: CGFloat
     let slotWidth: CGFloat
+    /// Stacks the three slots top to bottom, for the wide layout's side column.
+    var vertical = false
     /// Index currently being dragged, hidden from the tray.
     let draggingIndex: Int?
     let onDragChanged: (Int, CGPoint) -> Void
@@ -38,11 +40,17 @@ struct TrayView: View {
     /// Side of the largest piece (3x3) at tray scale — the hit area every slot gets.
     private var grabSide: CGFloat { trayBrick * 3 + trayGap * 2 }
 
+    /// Height of one slot; three of them make up a vertical tray.
+    static func slotHeight(cellSize: CGFloat) -> CGFloat { cellSize * 2.7 }
+
     var body: some View {
-        HStack(spacing: 0) {
+        let layout = vertical
+            ? AnyLayout(VStackLayout(spacing: 0))
+            : AnyLayout(HStackLayout(spacing: 0))
+        layout {
             ForEach(0..<3, id: \.self) { i in
                 slot(i)
-                    .frame(width: slotWidth, height: cellSize * 2.7)
+                    .frame(width: slotWidth, height: Self.slotHeight(cellSize: cellSize))
             }
         }
     }

@@ -26,7 +26,10 @@ struct BoardView: View {
     let cellSize: CGFloat
     let ghost: Ghost?
 
-    private var pad: CGFloat { max(5, cellSize * 0.18) }
+    /// Inset between the board's edge and its grid.
+    static func padding(cellSize: CGFloat) -> CGFloat { max(5, cellSize * 0.18) }
+
+    private var pad: CGFloat { Self.padding(cellSize: cellSize) }
     private var gap: CGFloat { max(2, cellSize * 0.09) }
     private var inner: CGFloat { cellSize - gap }
 
