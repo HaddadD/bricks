@@ -90,22 +90,35 @@ Release type is *after approval*, so it goes live as soon as Apple approves it. 
 (Apple doesn't allow release notes on an app's first version) and "App Privacy publish
 state unverified" (it is published; the public API just can't see that).
 
-### Next: Mac and iPhone Duo
+### 1.6: every platform, in TestFlight
 
-Deliberately left for a follow-up release, once this Mac is on macOS 26.6+ and
-Xcode 27.1 (Xcode 26.6 can't build with the iOS 27.1 SDK):
+1.6 adds Mac (native), Apple TV, Vision Pro, Apple Watch and iPhone Duo support (see the
+README's Platforms section). It goes to TestFlight first; 1.5 stays the App Store build.
 
-- **iPhone Duo.** Built with an older SDK, the app runs on the Duo but in compatibility
-  mode on the inner display. Rebuild with Xcode 27.1 and test every pose (open, closed,
-  rotated, folded, Split View on each side) in the iPhone Duo simulator. The inner display
-  reports regular/regular size classes and ignores supported orientations; `GameView`
-  already picks its layout from its size, not the device. Duo screenshots become
-  mandatory for new submissions in April 2027.
-- **Mac.** As an iPad app it's offered on Apple Silicon Macs ("Designed for iPad") unless
-  that's switched off under Pricing and Availability. Before promoting it: drop the drag
-  lift for a mouse pointer (`ProcessInfo.processInfo.isiOSAppOnMac`), check window
-  resizing, and consider keyboard shortcuts (⌘Z for undo). Mac Catalyst is the
-  alternative if it should feel like a native Mac app.
+| TestFlight group | Type | Testers |
+|---|---|---|
+| BRICKS Team | internal (no review) | mail@wilsonlam.ca |
+| Friends & Family | external (needs Beta App Review per version) | two invited testers (see App Store Connect) |
+
+The beta description, feedback email and Beta App Review contact are set in App Store
+Connect (`asc testflight app-localizations`, `asc testflight review`).
+
+**Xcode for uploads:** App Store Connect only accepts builds from a released Xcode. When
+this was written that was 27.1, while the installed Xcode was a newer 27.2 it rejected
+("Unsupported SDK or Xcode version"). Keep the accepted release next to the newer one
+(`xcodes install 27.1`) and archive with
+`DEVELOPER_DIR=/Applications/Xcode-27.1.0.app/Contents/Developer`.
+
+**Per platform:** iPhone/iPad, Mac, Apple TV and Vision Pro are separate archives and
+uploads of the `BRICKS` scheme (`-destination 'generic/platform=iOS'`, `…=macOS`,
+`…=tvOS`, `…=visionOS`). The Watch app needs no upload of its own: it's embedded in the
+iPhone archive. Each platform also needs its version in App Store Connect before it can
+go to the App Store (`asc versions create --platform MAC_OS|TV_OS|VISION_OS`), with its
+own screenshots.
+
+**CarPlay:** not supported. Apple only allows navigation, audio, video (parked), messaging
+and driving-task apps in CarPlay, each behind an entitlement Apple grants on request;
+games aren't eligible, and TestFlight builds need the same entitlement as App Store ones.
 
 ### What was run (for reference, or to redo on a new app)
 
@@ -189,7 +202,11 @@ in this Mac's login keychain:
 | | |
 |---|---|
 | Certificate | `Z88Z2MBTWF` "Apple Distribution: Wilson Lam (76C669ZZ43)", expires 2027-10-30 |
-| Profile | `3BY396H9BY` "BRICKS App Store", UUID `48907e19-1632-4106-a709-0d5db39a5779` |
+| Mac installer | "Mac Installer Distribution" (signs the Mac `.pkg`), made by `create-distribution-cert.sh installer` |
+| iPhone/iPad and Vision Pro profile | `3BY396H9BY` "BRICKS App Store", UUID `48907e19-1632-4106-a709-0d5db39a5779` |
+| Apple Watch profile | `257Q662TVC` "BRICKS Watch App Store", UUID `db112c5e-be39-494c-be2c-75f6050c1892` |
+| Apple TV profile | `6Y888NU27L` "BRICKS tvOS App Store", UUID `346d0e21-4bcd-4073-b60a-2696c1cf1f0f` |
+| Mac profile | `8LFL3K4LG7` "BRICKS Mac App Store", UUID `35f63131-76f3-4621-a629-72afd88bf10f` |
 | Key material | `~/.keys/signing/` (owner-only; never commit) |
 
 Why manual: the API key isn't allowed to use Apple's cloud-managed distribution
@@ -205,7 +222,7 @@ asc profiles download --id PROFILE_ID --output ~/.keys/signing/BRICKS_AppStore.m
 asc profiles local install --path ~/.keys/signing/BRICKS_AppStore.mobileprovision
 ```
 
-and put the new profile UUID in `appstore/ExportOptions.plist`. Profiles expire with
+and put the new profile UUID in the matching `appstore/export/*.plist`. Profiles expire with
 their certificate.
 
 ## Every release
@@ -225,7 +242,7 @@ their certificate.
      -destination 'generic/platform=iOS' -archivePath build/BRICKS.xcarchive archive \
      -allowProvisioningUpdates "${KEY[@]}"
    xcodebuild -exportArchive -archivePath build/BRICKS.xcarchive \
-     -exportOptionsPlist appstore/ExportOptions.plist -exportPath build/export "${KEY[@]}"
+     -exportOptionsPlist appstore/export/ios.plist -exportPath build/export "${KEY[@]}"
    ```
 
    With `destination = upload` in the export options, the export *is* the upload.

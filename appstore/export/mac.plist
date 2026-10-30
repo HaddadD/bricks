@@ -7,8 +7,9 @@
   <key>teamID</key><string>76C669ZZ43</string>
   <key>signingStyle</key><string>manual</string>
   <key>signingCertificate</key><string>Apple Distribution</string>
+  <key>installerSigningCertificate</key><string>3rd Party Mac Developer Installer</string>
   <key>provisioningProfiles</key>
-  <dict><key>ca.wilsonlam.bricks</key><string>48907e19-1632-4106-a709-0d5db39a5779</string></dict>
+  <dict><key>ca.wilsonlam.bricks</key><string>35f63131-76f3-4621-a629-72afd88bf10f</string></dict>
   <key>uploadSymbols</key><true/>
   <key>manageAppVersionAndBuildNumber</key><false/>
 </dict>
