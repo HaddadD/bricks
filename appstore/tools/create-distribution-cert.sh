@@ -11,23 +11,31 @@ DIR=~/.keys/signing
 mkdir -p "$DIR" && chmod 700 "$DIR"
 cd "$DIR"
 
-asc certificates create --certificate-type DISTRIBUTION --generate-csr \
-  --key-out dist.key --csr-out dist.csr --common-name "Wilson Lam" --email mail@wilsonlam.ca \
-  --output json > dist.json
+umask 077
+
+# Safe to rerun: a certificate created by an earlier run is reused, not duplicated.
+if [ ! -s dist.json ]; then
+  asc certificates create --certificate-type DISTRIBUTION --generate-csr \
+    --key-out dist.key --csr-out dist.csr --common-name "Wilson Lam" --email mail@wilsonlam.ca \
+    --output json > dist.json
+fi
 
 python3 -I -c '
 import base64, json, sys
 d = json.load(open("dist.json"))["data"]
 open("dist.cer", "wb").write(base64.b64decode(d["attributes"]["certificateContent"]))
-print("Created certificate", d["id"], "expires", d["attributes"].get("expirationDate"))
+print("Certificate", d["id"], "expires", d["attributes"].get("expirationDate"))
 '
 
-# Package key + certificate, then import so codesign can use it without prompting.
-openssl rand -base64 24 > p12.password
-asc certificates export --certificate dist.cer --private-key dist.key --csr dist.csr \
-  --password-file p12.password --p12-out dist.p12 >/dev/null
-security import dist.p12 -k ~/Library/Keychains/login.keychain-db -P "$(cat p12.password)" \
-  -T /usr/bin/codesign -T /usr/bin/xcodebuild
+# Import the key and certificate separately; the keychain pairs them into an identity.
+# (A .p12 from OpenSSL 3+ uses SHA-256/AES-256, which `security import` can't read.)
+# -T lets codesign and xcodebuild use the key without a keychain prompt.
+# The keychain's "openssl" format is PKCS#1, and asc writes PKCS#8, so convert first.
+KC=~/Library/Keychains/login.keychain-db
+openssl rsa -in dist.key -traditional -out dist.rsa.key 2>/dev/null
+security import dist.rsa.key -k "$KC" -t priv -f openssl -T /usr/bin/codesign -T /usr/bin/xcodebuild \
+  || echo "(key already in keychain)"
+security import dist.cer -k "$KC" || echo "(certificate already in keychain)"
 chmod 600 "$DIR"/*
 
 security find-identity -v -p codesigning | grep "Apple Distribution"
