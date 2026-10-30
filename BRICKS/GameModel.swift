@@ -170,6 +170,20 @@ final class GameModel: ObservableObject {
         if let data = try? JSONEncoder().encode(save) {
             UserDefaults.standard.set(data, forKey: saveKey)
         }
+        publishWidget()
+    }
+
+    /// Shares the board and score with the widget (iPhone and iPad), unless the player has
+    /// switched the widget off.
+    func publishWidget() {
+        #if os(iOS)
+        WidgetSnapshot(
+            cells: board.map { $0.map(\.colorIndex) },
+            score: score,
+            best: best,
+            isGameOver: isGameOver
+        ).publish()
+        #endif
     }
 
     /// Reloads the last run. A save written by an older build simply starts a fresh game.

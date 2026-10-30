@@ -46,6 +46,14 @@
 		C2000A01000000000000A001 /* BRICKS Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C2000000000000000000A001 /* BRICKS Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3100101000000000000A001 /* BRICKSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3000001000000000000A001 /* BRICKSUITests.swift */; };
 		D3200101000000000000A001 /* BRICKSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3000001000000000000A001 /* BRICKSUITests.swift */; };
+		E4000101000000000000A001 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000001000000000000A001 /* WidgetSnapshot.swift */; };
+		E4000102000000000000A001 /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000002000000000000A001 /* WidgetViews.swift */; };
+		E4000103000000000000A001 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000001000000000000A001 /* WidgetSnapshot.swift */; };
+		E4000104000000000000A001 /* BRICKSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000003000000000000A001 /* BRICKSWidget.swift */; };
+		E4000105000000000000A001 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000001000000000000A001 /* WidgetSnapshot.swift */; };
+		E4000106000000000000A001 /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4000002000000000000A001 /* WidgetViews.swift */; };
+		E4000107000000000000A001 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000005000000000000A001 /* Theme.swift */; };
+		E4000A01000000000000A001 /* BRICKSWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4000000000000000000A001 /* BRICKSWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +80,13 @@
 		D3000001000000000000A001 /* BRICKSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRICKSUITests.swift; sourceTree = "<group>"; };
 		D3100000000000000000A001 /* BRICKSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRICKSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3200000000000000000A001 /* BRICKS Watch UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRICKS Watch UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4000001000000000000A001 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		E4000002000000000000A001 /* WidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViews.swift; sourceTree = "<group>"; };
+		E4000006000000000000A001 /* BRICKS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRICKS.entitlements; sourceTree = "<group>"; };
+		E4000003000000000000A001 /* BRICKSWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRICKSWidget.swift; sourceTree = "<group>"; };
+		E4000004000000000000A001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4000005000000000000A001 /* BRICKSWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRICKSWidget.entitlements; sourceTree = "<group>"; };
+		E4000000000000000000A001 /* BRICKSWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BRICKSWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +111,13 @@
 			remoteGlobalIDString = C2000400000000000000A001;
 			remoteInfo = "BRICKS Watch";
 		};
+		E4000B01000000000000A001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1000800000000000000A001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4000400000000000000A001;
+			remoteInfo = BRICKSWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +130,17 @@
 				C2000A01000000000000A001 /* BRICKS Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4000A00000000000000A001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E4000A01000000000000A001 /* BRICKSWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -141,6 +174,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4000200000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				B1000301000000000000A001 /* BRICKS */,
+				E4000301000000000000A001 /* BRICKSWidget */,
 				D3000301000000000000A001 /* UITests */,
 				B1000302000000000000A001 /* Products */,
 			);
@@ -165,6 +206,9 @@
 				B100000C000000000000A001 /* DragTargeting.swift */,
 				B100000E000000000000A001 /* Settings.swift */,
 				B100000F000000000000A001 /* SettingsView.swift */,
+				E4000001000000000000A001 /* WidgetSnapshot.swift */,
+				E4000002000000000000A001 /* WidgetViews.swift */,
+				E4000006000000000000A001 /* BRICKS.entitlements */,
 				C2000011000000000000A001 /* Platform.swift */,
 				C2000012000000000000A001 /* PlacementCursor.swift */,
 				C2000013000000000000A001 /* FocusLiftStyle.swift */,
@@ -182,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				B1000000000000000000A001 /* BRICKS.app */,
+				E4000000000000000000A001 /* BRICKSWidgetExtension.appex */,
 				D3200000000000000000A001 /* BRICKS Watch UITests.xctest */,
 				D3100000000000000000A001 /* BRICKSUITests.xctest */,
 				C2000000000000000000A001 /* BRICKS Watch.app */,
@@ -197,6 +242,16 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		E4000301000000000000A001 /* BRICKSWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E4000003000000000000A001 /* BRICKSWidget.swift */,
+				E4000004000000000000A001 /* Info.plist */,
+				E4000005000000000000A001 /* BRICKSWidget.entitlements */,
+			);
+			path = BRICKSWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,11 +263,13 @@
 				B1000200000000000000A001 /* Frameworks */,
 				B1000600000000000000A001 /* Resources */,
 				C2000A00000000000000A001 /* Embed Watch Content */,
+				E4000A00000000000000A001 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				C2000B02000000000000A001 /* PBXTargetDependency */,
+				E4000B02000000000000A001 /* PBXTargetDependency */,
 			);
 			name = BRICKS;
 			productName = BRICKS;
@@ -272,6 +329,23 @@
 			productReference = D3200000000000000000A001 /* BRICKS Watch UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E4000400000000000000A001 /* BRICKSWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4000700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKSWidgetExtension" */;
+			buildPhases = (
+				E4000500000000000000A001 /* Sources */,
+				E4000200000000000000A001 /* Frameworks */,
+				E4000600000000000000A001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BRICKSWidgetExtension;
+			productName = BRICKSWidgetExtension;
+			productReference = E4000000000000000000A001 /* BRICKSWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,6 +360,9 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					C2000400000000000000A001 = {
+						CreatedOnToolsVersion = 27.2;
+					};
+					E4000400000000000000A001 = {
 						CreatedOnToolsVersion = 27.2;
 					};
 					D3200400000000000000A001 = {
@@ -313,6 +390,7 @@
 			targets = (
 				B1000400000000000000A001 /* BRICKS */,
 				C2000400000000000000A001 /* BRICKS Watch */,
+				E4000400000000000000A001 /* BRICKSWidgetExtension */,
 				D3200400000000000000A001 /* BRICKS Watch UITests */,
 				D3100400000000000000A001 /* BRICKSUITests */,
 			);
@@ -350,6 +428,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4000600000000000000A001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,6 +455,8 @@
 				B1000108000000000000A001 /* TrayView.swift in Sources */,
 				B1000109000000000000A001 /* PowerUpBar.swift in Sources */,
 				B100010A000000000000A001 /* GameOverView.swift in Sources */,
+				E4000101000000000000A001 /* WidgetSnapshot.swift in Sources */,
+				E4000102000000000000A001 /* WidgetViews.swift in Sources */,
 				C2000111000000000000A001 /* Platform.swift in Sources */,
 				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
 				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -382,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2001000000000000000A001 /* BRICKSApp.swift in Sources */,
+				E4000103000000000000A001 /* WidgetSnapshot.swift in Sources */,
 				C2001001000000000000A001 /* GameView.swift in Sources */,
 				C2001002000000000000A001 /* GameModel.swift in Sources */,
 				C2001003000000000000A001 /* Piece.swift in Sources */,
@@ -417,6 +505,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4000500000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4000104000000000000A001 /* BRICKSWidget.swift in Sources */,
+				E4000105000000000000A001 /* WidgetSnapshot.swift in Sources */,
+				E4000106000000000000A001 /* WidgetViews.swift in Sources */,
+				E4000107000000000000A001 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -436,6 +535,12 @@
 			target = C2000400000000000000A001 /* BRICKS Watch */;
 			targetProxy = D3200B01000000000000A001 /* PBXContainerItemProxy */;
 		};
+		E4000B02000000000000A001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = E4000400000000000000A001 /* BRICKSWidgetExtension */;
+			targetProxy = E4000B01000000000000A001 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -445,6 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphone*]" = BRICKS/BRICKS.entitlements;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
@@ -494,6 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletv*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=xr*]" = "AppIcon Vision";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphone*]" = BRICKS/BRICKS.entitlements;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
@@ -787,6 +894,70 @@
 			};
 			name = Release;
 		};
+		E4000701000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BRICKSWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BRICKS!";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4000702000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76C669ZZ43;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BRICKSWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BRICKS!";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -831,6 +1002,15 @@
 			buildConfigurations = (
 				D3200701000000000000A001 /* Debug */,
 				D3200702000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4000700000000000000A001 /* Build configuration list for PBXNativeTarget "BRICKSWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4000701000000000000A001 /* Debug */,
+				E4000702000000000000A001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

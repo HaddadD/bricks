@@ -48,6 +48,10 @@ struct SettingsView: View {
                         if Platform.supportsAppearanceChoice { divider }
                         vibrationRow
                     }
+                    #if os(iOS)
+                    divider
+                    widgetRow
+                    #endif
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -147,6 +151,34 @@ struct SettingsView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
     }
+
+    #if os(iOS)
+    /// Lets the player keep the game off the Home Screen and CarPlay. Off also clears
+    /// what the widget was already showing.
+    private var widgetRow: some View {
+        HStack(spacing: 12) {
+            icon("square.grid.2x2.fill", tint: Color(hex: 0xC8AEF0))
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Widget")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundColor(Theme.ink)
+                Text(settings.widgetEnabled ? "On the Home Screen and CarPlay" : "Off")
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundColor(Theme.inkSoft)
+                    .lineLimit(2)
+            }
+
+            Spacer()
+
+            Toggle("Widget", isOn: $settings.widgetEnabled)
+                .labelsHidden()
+                .tint(Color(hex: 0xC8AEF0))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 13)
+    }
+    #endif
 
     private func icon(_ name: String, tint: Color) -> some View {
         Image(systemName: name)

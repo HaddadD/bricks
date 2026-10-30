@@ -127,7 +127,8 @@ struct GameView: View {
             .sheet(isPresented: $showingSettings) {
                 SettingsView(settings: settings) { model.newGame() }
                     #if os(iOS)
-                    .presentationDetents([.height(Haptics.isSupported ? 330 : 270)])
+                    // About 60pt per settings row (dark mode, vibrations, widget).
+                    .presentationDetents([.height(Haptics.isSupported ? 390 : 330)])
                     .presentationDragIndicator(.hidden)
                     #endif
             }

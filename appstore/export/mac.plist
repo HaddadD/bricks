@@ -9,7 +9,7 @@
   <key>signingCertificate</key><string>Apple Distribution</string>
   <key>installerSigningCertificate</key><string>3rd Party Mac Developer Installer</string>
   <key>provisioningProfiles</key>
-  <dict><key>ca.wilsonlam.bricks</key><string>35f63131-76f3-4621-a629-72afd88bf10f</string></dict>
+  <dict><key>ca.wilsonlam.bricks</key><string>14a68933-8202-4081-8230-7f883e889caf</string></dict>
   <key>uploadSymbols</key><true/>
   <key>manageAppVersionAndBuildNumber</key><false/>
 </dict>

@@ -157,6 +157,36 @@ final class BRICKSUITests: XCTestCase {
     }
     #endif
 
+    // MARK: - Widget switch (iPhone, iPad)
+
+    #if os(iOS)
+    /// Settings can switch the widget off, and the widget then shows nothing of the game.
+    func testWidgetCanBeSwitchedOff() {
+        let widgetSwitch = app.switches["Widget"]
+        func setWidget(_ on: Bool) {
+            app.buttons["Settings"].tap()
+            XCTAssertTrue(widgetSwitch.waitForExistence(timeout: 3), "Settings has a Widget switch")
+            if (widgetSwitch.value as? String == "1") != on { widgetSwitch.switches.firstMatch.tap() }
+            XCTAssertEqual(widgetSwitch.value as? String, on ? "1" : "0")
+        }
+        let isOff = NSPredicate(format: "label CONTAINS 'Widget is off'")
+
+        setWidget(false)
+        app.terminate()
+        app.launchArguments = ["-widgetPreview"]
+        app.launch()
+        XCTAssertTrue(app.staticTexts.matching(isOff).firstMatch.waitForExistence(timeout: 3),
+                      "a switched-off widget says so instead of showing the game")
+        snapshot("widget-off")
+
+        // Leave it on, as a player would expect.
+        app.terminate()
+        app.launchArguments = ["-demo"]
+        app.launch()
+        setWidget(true)
+    }
+    #endif
+
     // MARK: - Mac and iPhone/iPad
 
     #if os(macOS) || os(iOS)

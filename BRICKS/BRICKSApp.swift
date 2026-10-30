@@ -11,6 +11,9 @@ struct BRICKSApp: App {
                 // Drives the trait collection, which is what every adaptive colour
                 // in Theme resolves against.
                 .preferredColorScheme(settings.colorScheme)
+                // Switching the widget back on shows the game straight away, not after
+                // the next move.
+                .onReceive(settings.$widgetEnabled) { on in if on { model.publishWidget() } }
         }
         #if os(macOS)
         .defaultSize(width: 1040, height: 760)
@@ -27,6 +30,12 @@ struct BRICKSApp: App {
     private var root: some View {
         #if os(watchOS)
         WatchGameView(settings: settings, model: model)
+        #elseif os(iOS) && DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-widgetPreview") {
+            WidgetPreviewScreen()
+        } else {
+            GameView(settings: settings, model: model)
+        }
         #elseif os(macOS)
         GameView(settings: settings, model: model)
             // Below this the wide layout's power-up chips get cramped.
