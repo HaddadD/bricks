@@ -40,7 +40,14 @@ struct TrayView: View {
     /// Apple Watch).
     var onSelect: ((Int) -> Void)? = nil
 
-    private var trayBrick: CGFloat { cellSize * 0.62 }
+    private var trayBrick: CGFloat {
+        let natural = cellSize * 0.62
+        guard vertical else { return natural }
+        // Stacked slots touch, so a five-long piece standing up has to fit inside its own
+        // slot rather than spill into the next one.
+        let fit = (Self.slotHeight(cellSize: cellSize) * 0.94 - trayGap * 4) / 5
+        return min(natural, fit)
+    }
     private var trayGap: CGFloat { 2 }
     /// Side of the largest piece (3x3) at tray scale — the hit area every slot gets.
     private var grabSide: CGFloat { trayBrick * 3 + trayGap * 2 }

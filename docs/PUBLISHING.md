@@ -331,3 +331,19 @@ appstore/tools/compose.sh        # composite and write appstore/screenshots/
 - The art is optional: if image generation isn't available, any 1320×2868 / 2064×2752
   backdrop with a solid `#00FF00` screen area works with `compose.sh`.
 - Always look at every composed image before uploading.
+
+Mac, Apple TV and Vision Pro (landscape, four each) come from two more scripts:
+
+```bash
+appstore/tools/capture-wide.sh   # Mac window + Apple TV / Vision Pro simulators → appstore/raw/
+appstore/tools/compose-wide.sh   # → appstore/screenshots/{mac,apple-tv,vision-pro}/
+```
+
+Their art is drawn in code (`compose-wide.swift`: the sky, floating bricks and headline),
+not generated, so they need nothing but Xcode. Sizes: Mac 2880×1800 (`APP_DESKTOP`),
+Apple TV and Vision Pro 3840×2160 (`APP_APPLE_TV`, `APP_APPLE_VISION_PRO`). The Mac
+shots are the app's own window (`screencapture -l`), launched with every flag given a
+value (`-demo YES`); a bare flag makes AppKit open the next word as a file and the app
+starts without a window. Vision Pro needs ~30 seconds per launch before its window shows.
+Upload with `asc screenshots upload --version-localization <id> --path
+appstore/screenshots/<dir> --device-type <type>`.

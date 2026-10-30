@@ -11,7 +11,9 @@ final class BRICKSUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["-demo", "-noGameCenter"]
+        // Each flag gets a value: on the Mac a bare flag followed by another pairs with it,
+        // and the leftover word is taken as a file to open, which opens no window.
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES"]
         app.launch()
     }
 
@@ -173,7 +175,7 @@ final class BRICKSUITests: XCTestCase {
 
         setWidget(false)
         app.terminate()
-        app.launchArguments = ["-widgetPreview", "-noGameCenter"]
+        app.launchArguments = ["-widgetPreview", "YES", "-noGameCenter", "YES"]
         app.launch()
         XCTAssertTrue(app.staticTexts.matching(isOff).firstMatch.waitForExistence(timeout: 3),
                       "a switched-off widget says so instead of showing the game")
@@ -181,7 +183,7 @@ final class BRICKSUITests: XCTestCase {
 
         // Leave it on, as a player would expect.
         app.terminate()
-        app.launchArguments = ["-demo", "-noGameCenter"]
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES"]
         app.launch()
         setWidget(true)
     }

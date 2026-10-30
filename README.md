@@ -242,6 +242,10 @@ the store from an app, so there it says where to go). The game is saved undernea
 
 ### Dev affordances (DEBUG only)
 
+On the Mac, give every flag a value (`-demo YES`, not `-demo`): AppKit pairs each `-key`
+with the word after it, and a leftover word is taken as a file to open, so the app
+launches without a window.
+
 `-updateRequired` shows the update screen. `-gameOver` shows the game-over card with some achievements earned, and `-gameCenterPreview` shows the Game Center buttons without signing in (`-noGameCenter`, which the UI tests use, skips Game Center entirely). `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
 on launch. `-demo` seeds a representative board — bricks, both gift states,
