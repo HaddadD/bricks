@@ -116,6 +116,14 @@ iPhone archive. Each platform also needs its version in App Store Connect before
 go to the App Store (`asc versions create --platform MAC_OS|TV_OS|VISION_OS`), with its
 own screenshots.
 
+The 1.6 versions for Mac, Apple TV and Vision Pro exist (release after approval,
+build 3 attached). Their listing text is in `metadata/platforms/<mac|tv|vision>/1.6/`:
+the iPhone description with each platform's controls in place of the finger and haptics
+lines, plus a Game Center section. `asc metadata` has no per-platform layout, so these
+were applied with `asc api PATCH /v1/appStoreVersionLocalizations/<id>`. "What's New"
+stays empty, as it's each platform's first version. `asc validate --app 6828698183
+--version 1.6 --platform MAC_OS|TV_OS|VISION_OS` now only lacks screenshots.
+
 **CarPlay:** the game itself isn't eligible. Apple only allows navigation, audio, video
 (parked), messaging and driving-task apps in CarPlay, each behind an entitlement Apple
 grants on request, and TestFlight builds need the same entitlement as App Store ones.
