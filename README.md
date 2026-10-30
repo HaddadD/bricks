@@ -91,6 +91,19 @@ one is used. Everywhere else the power-ups stay in a bar.
 Haptics play on iPhone and Apple Watch only; Settings shows only what the device can use
 (no Vibrations without haptics hardware, no Dark mode on the always-dark Watch).
 
+## Widget
+
+On iPhone and iPad, a small and a medium widget show the game in progress — the board in
+miniature, drawn with the game's bricks — with the score and best. In iOS 27 the small
+one also appears in CarPlay and StandBy. (CarPlay doesn't allow games, so the widget is
+how BRICKS! gets there.)
+
+After every save the app writes a `WidgetSnapshot` into the `group.ca.wilsonlam.bricks`
+App Group, which the widget extension (`BRICKSWidget/`) reads, and asks it to redraw.
+Settings has a **Widget** switch: off clears what was shared and the widget shows a note
+instead of the game; on shares the current game straight away. `-widgetPreview` (DEBUG)
+shows both sizes in the app.
+
 ## Settings
 
 The gear in the top right opens a sheet with:
@@ -171,6 +184,7 @@ else.
 | `GameView.swift` | layout, drag and remote controls, menu commands |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
+| `WidgetSnapshot.swift` / `WidgetViews.swift` | what the widget shows, and how; `BRICKSWidget/` is the extension |
 | `BoardView.swift` / `TrayView.swift` / `PowerUpBar.swift` / `GameOverView.swift` | UI |
 
 ### Dev affordances (DEBUG only)

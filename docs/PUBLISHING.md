@@ -116,9 +116,16 @@ iPhone archive. Each platform also needs its version in App Store Connect before
 go to the App Store (`asc versions create --platform MAC_OS|TV_OS|VISION_OS`), with its
 own screenshots.
 
-**CarPlay:** not supported. Apple only allows navigation, audio, video (parked), messaging
-and driving-task apps in CarPlay, each behind an entitlement Apple grants on request;
-games aren't eligible, and TestFlight builds need the same entitlement as App Store ones.
+**CarPlay:** the game itself isn't eligible. Apple only allows navigation, audio, video
+(parked), messaging and driving-task apps in CarPlay, each behind an entitlement Apple
+grants on request, and TestFlight builds need the same entitlement as App Store ones.
+Instead, the BRICKS! widget shows there: iOS 27 puts any app's small widgets in CarPlay.
+
+**Widget:** an app extension (`ca.wilsonlam.bricks.widget`) embedded in the iPhone/iPad
+build. It and the app share the `group.ca.wilsonlam.bricks` App Group (App Group ID
+`UT3D68C3HW`, created with `asc web app-groups create`); both bundle IDs have the
+App Groups capability. Changing an App ID's capabilities invalidates its profiles, so
+regenerate them afterwards (`asc profiles list` shows `INVALID`).
 
 ### What was run (for reference, or to redo on a new app)
 
@@ -203,10 +210,11 @@ in this Mac's login keychain:
 |---|---|
 | Certificate | `Z88Z2MBTWF` "Apple Distribution: Wilson Lam (76C669ZZ43)", expires 2027-10-30 |
 | Mac installer | "Mac Installer Distribution" (signs the Mac `.pkg`), made by `create-distribution-cert.sh installer` |
-| iPhone/iPad and Vision Pro profile | `3BY396H9BY` "BRICKS App Store", UUID `48907e19-1632-4106-a709-0d5db39a5779` |
+| iPhone/iPad and Vision Pro profile | `NDN72KR7NT` "BRICKS App Store 1.6", UUID `92bd5220-d591-4749-bd2e-24f58a355ea9` |
+| Widget profile | `W9B49BQ523` "BRICKS Widget App Store", UUID `11987362-c1dd-461a-a089-3d161405fdb3` |
 | Apple Watch profile | `257Q662TVC` "BRICKS Watch App Store", UUID `db112c5e-be39-494c-be2c-75f6050c1892` |
-| Apple TV profile | `6Y888NU27L` "BRICKS tvOS App Store", UUID `346d0e21-4bcd-4073-b60a-2696c1cf1f0f` |
-| Mac profile | `8LFL3K4LG7` "BRICKS Mac App Store", UUID `35f63131-76f3-4621-a629-72afd88bf10f` |
+| Apple TV profile | `7B5ZRNG2DJ` "BRICKS tvOS App Store 1.6", UUID `b19442ec-39fa-43d3-8608-6f4d97275187` |
+| Mac profile | `X69R534QW3` "BRICKS Mac App Store 1.6", UUID `14a68933-8202-4081-8230-7f883e889caf` |
 | Key material | `~/.keys/signing/` (owner-only; never commit) |
 
 Why manual: the API key isn't allowed to use Apple's cloud-managed distribution
