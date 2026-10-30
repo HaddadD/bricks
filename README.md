@@ -56,8 +56,8 @@ file with another 1024×1024 PNG that has no alpha channel.
   rounded to the nearest point. The multiplier is flat whether it is 2 lines or 5, it
   applies to the cleared cells rather than the piece you placed, and it applies to that
   clear alone — the next one starts from scratch. There is no streak between turns.
-- A dragged piece floats well above your finger so neither your hand nor the piece hides
-  the square it will land on, and the rows or columns a placement would complete are
+- On iPhone a dragged piece floats well above your finger so neither your hand nor the
+  piece hides the square it will land on (on iPad's bigger board it stays right under it), and the rows or columns a placement would complete are
   highlighted before you let go.
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
@@ -71,7 +71,7 @@ the board and how the screen is laid out. Those decisions live in `Platform.swif
 |---|---|---|
 | iPhone | drag; the piece floats above your finger | tall, portrait-only |
 | iPhone Duo | drag | outer display: tall, with the power-ups folded into the trailing system column; inner display: tall or wide by orientation |
-| iPad | drag | tall or wide, every orientation, resizable windows |
+| iPad | drag, piece right under your finger | tall or wide, every orientation, resizable windows |
 | Mac | mouse drag, piece right under the pointer; ⌘N new game, ⌘Z undo, ⌘, settings | wide, resizable window |
 | Vision Pro | look and pinch to drag, piece right under the pinch | wide window |
 | Apple TV | press a piece, move it with the remote, press to place, Menu to cancel; hammer and bomb aim the same way | wide, text and chrome scaled ×1.6 |

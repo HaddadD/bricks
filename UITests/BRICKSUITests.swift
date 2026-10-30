@@ -194,12 +194,12 @@ final class BRICKSUITests: XCTestCase {
         XCTAssertTrue(scoreText.waitForExistence(timeout: 5))
         let before = score
 
-        // A finger drags the piece 2.9 cells above itself so the hand doesn't hide it;
-        // a mouse pointer drags it right under the pointer.
+        // On iPhone a finger drags the piece 2.9 cells above itself so the hand doesn't
+        // hide it; on iPad and with a mouse pointer the piece sits right under the touch.
         #if os(macOS)
         let lift = 0.0
         #else
-        let lift = 2.9
+        let lift = UIDevice.current.userInterfaceIdiom == .phone ? 2.9 : 0.0
         #endif
         let start = tray(0).coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
         snapshot("before-drag")

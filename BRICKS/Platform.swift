@@ -1,4 +1,7 @@
 import CoreGraphics
+#if os(iOS)
+import UIKit
+#endif
 
 /// The few ways the platforms differ in how the game is played. Views ask these questions
 /// instead of checking the OS themselves, so the per-platform decisions live in one place.
@@ -24,13 +27,15 @@ enum Platform {
         #endif
     }()
 
-    /// Whether a dragged piece should float above the touch point. A finger covers what it
-    /// is dragging; a pointer or a Vision Pro pinch doesn't, so there the piece stays put.
+    /// Whether a dragged piece should float above the touch point. On a phone the finger
+    /// covers what it's dragging. An iPad's cells are big enough to see past the finger,
+    /// and a lift sized to them throws the piece far above it; a pointer or a Vision Pro
+    /// pinch covers nothing. So everywhere else the piece stays right under the touch.
     static let liftsDraggedPiece: Bool = {
-        #if os(macOS) || os(visionOS)
-        return false
+        #if os(iOS)
+        return UIDevice.current.userInterfaceIdiom == .phone
         #else
-        return true
+        return false
         #endif
     }()
 
