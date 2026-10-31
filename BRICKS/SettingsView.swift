@@ -64,6 +64,10 @@ struct SettingsView: View {
                         .fill(Theme.card)
                 )
 
+                #if os(iOS)
+                sensoryCard
+                #endif
+
                 resetButton
 
                 Spacer(minLength: 0)
@@ -182,6 +186,104 @@ struct SettingsView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
+    }
+
+    /// Sensory enhancement and everything it can play, kept together on a card of their
+    /// own: the runner (with its two worlds) and the two satisfying shows.
+    private var sensoryCard: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 12) {
+                icon("wand.and.stars", tint: Color(hex: 0x7FCF9A))
+
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("Sensory enhancement")
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(Theme.ink)
+                    Text(settings.sensory ? "Plays under the board" : "Off")
+                        .font(.system(size: 12, weight: .medium, design: .rounded))
+                        .foregroundColor(Theme.inkSoft)
+                        .lineLimit(2)
+                }
+
+                Spacer()
+
+                Toggle("Sensory enhancement", isOn: $settings.sensory.animation(.easeInOut(duration: 0.25)))
+                    .labelsHidden()
+                    .tint(Color(hex: 0x7FCF9A))
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 13)
+
+            if settings.sensory {
+                ForEach(SensoryMode.allCases) { mode in
+                    divider
+                    modeRow(mode)
+                    if mode == .runner && settings.sensoryMode == .runner {
+                        worldRow
+                    }
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(Theme.card)
+        )
+    }
+
+    private func modeRow(_ mode: SensoryMode) -> some View {
+        let chosen = settings.sensoryMode == mode
+        return Button {
+            Haptics.tap()
+            withAnimation(.easeInOut(duration: 0.25)) { settings.sensoryMode = mode }
+        } label: {
+            HStack(spacing: 12) {
+                icon(mode.symbol, tint: Color(hex: chosen ? 0xA6BDF7 : 0xC8C2D6))
+
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(mode.title)
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(Theme.ink)
+                    Text(mode.blurb)
+                        .font(.system(size: 12, weight: .medium, design: .rounded))
+                        .foregroundColor(Theme.inkSoft)
+                        .lineLimit(1)
+                }
+
+                Spacer()
+
+                Image(systemName: chosen ? "checkmark.circle.fill" : "circle")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(chosen ? Color(hex: 0x7FA0EE) : Theme.inkSoft.opacity(0.5))
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(chosen ? .isSelected : [])
+    }
+
+    /// The runner's two worlds, under the Runner choice while it's chosen.
+    private var worldRow: some View {
+        HStack(spacing: 12) {
+            Text(settings.runnerStyle.blurb)
+                .font(.system(size: 12, weight: .medium, design: .rounded))
+                .foregroundColor(Theme.inkSoft)
+                .lineLimit(1)
+
+            Spacer()
+
+            Picker("World", selection: $settings.runnerStyle) {
+                ForEach(RunnerStyle.allCases) { style in
+                    Text(style.title).tag(style)
+                }
+            }
+            .pickerStyle(.segmented)
+            .fixedSize()
+        }
+        .padding(.leading, 56)
+        .padding(.trailing, 14)
+        .padding(.bottom, 12)
     }
 
     /// Lets the player keep the game off the Home Screen and CarPlay. Off also clears

@@ -27,6 +27,9 @@ struct GameView: View {
     @State private var placing: Placing? = nil
     @FocusState private var boardFocused: Bool
     @State private var confirmingNewGame = false
+    #if os(iOS)
+    @Environment(\.scenePhase) private var scenePhase
+    #endif
     #if DEBUG
     /// `-settings` opens the sheet straight away, for inspecting it without tapping.
     @State private var showingSettings = ProcessInfo.processInfo.arguments.contains("-settings")
@@ -44,7 +47,10 @@ struct GameView: View {
         GeometryReader { geo in
             let wide = Self.isWide(geo.size)
             let rail = Self.usesRail(geo, wide: wide)
-            let cell = wide ? wideCellSize(for: geo.size) : cellSize(for: geo.size, withBar: !rail)
+            let stage = showsSensory && !wide ? Self.stageHeight(for: geo.size) : 0
+            let cell = wide
+                ? wideCellSize(for: geo.size, sensory: showsSensory)
+                : cellSize(for: geo.size, withBar: !rail, stage: stage)
 
             ZStack {
                 ZStack {
@@ -76,7 +82,7 @@ struct GameView: View {
                 if wide {
                     wideLayout(size: geo.size, cell: cell)
                 } else {
-                    tallLayout(width: geo.size.width, cell: cell, showsBar: !rail)
+                    tallLayout(width: geo.size.width, cell: cell, showsBar: !rail, stage: stage)
                 }
 
                 if rail {
@@ -121,7 +127,16 @@ struct GameView: View {
             }
             .coordinateSpace(name: "game")
             .onPreferenceChange(GridFrameKey.self) { gridFrame = $0 }
-            .onAppear { measure(geo) }
+            .onAppear {
+                measure(geo)
+                syncSensory(float: true)
+            }
+            #if os(iOS)
+            .onChange(of: settings.sensory) { on in syncSensory(float: on) }
+            .onChange(of: settings.sensoryMode) { _ in syncSensory(float: false) }
+            .onChange(of: settings.runnerStyle) { _ in syncSensory(float: false) }
+            .onChange(of: scenePhase) { phase in SensoryPlayer.shared.setActive(phase == .active) }
+            #endif
             .onChange(of: geo.size) { _ in measure(geo) }
             .onReceive(model.$activePower) { power in powerChanged(to: power) }
             #if os(tvOS)
@@ -131,8 +146,7 @@ struct GameView: View {
             .sheet(isPresented: $showingSettings) {
                 SettingsView(settings: settings, offersFloatPieces: canFloatPieces) { model.newGame() }
                     #if os(iOS)
-                    // About 60pt per settings row (dark mode, vibrations, float pieces, widget).
-                    .presentationDetents([.height((Haptics.isSupported ? 390 : 330) + (canFloatPieces ? 60 : 0))])
+                    .presentationDetents([.height(settingsHeight)])
                     .presentationDragIndicator(.hidden)
                     #endif
             }
@@ -164,21 +178,69 @@ struct GameView: View {
             && geo.size.height < geo.size.width * 1.7
     }
 
-    private func cellSize(for size: CGSize, withBar: Bool) -> CGFloat {
+    private func cellSize(for size: CGSize, withBar: Bool, stage: CGFloat) -> CGFloat {
         let byWidth = (size.width - 30) / CGFloat(GameModel.size)
-        // Without the bottom bar, the board gets that height back.
-        let byHeight = (size.height * (withBar ? 0.47 : 0.53)) / CGFloat(GameModel.size)
+        // Without the bottom bar, the board gets that height back. The Sensory enhancement
+        // stage takes some from the board; the tray shrinks with it and gives back the rest.
+        let byHeight = (size.height * (withBar ? 0.47 : 0.53) - stage * 0.36) / CGFloat(GameModel.size)
         return floor(min(byWidth, byHeight))
+    }
+
+    /// Whether Sensory enhancement plays under the board. iPhone and iPad only.
+    private var showsSensory: Bool {
+        #if os(iOS)
+        return settings.sensory
+        #else
+        return false
+        #endif
+    }
+
+    /// The Sensory enhancement stage in the stacked layout: a 16:9 strip along the bottom,
+    /// about a fifth of the height.
+    private static func stageHeight(for size: CGSize) -> CGFloat {
+        floor(min(size.height * 0.2, (size.width - 44) * 9 / 16))
+    }
+
+    private func syncSensory(float: Bool) {
+        #if os(iOS)
+        if settings.sensory {
+            SensoryPlayer.shared.play(.init(mode: settings.sensoryMode, style: settings.runnerStyle), float: float)
+        } else {
+            SensoryPlayer.shared.stop()
+        }
+        #endif
+    }
+
+    @ViewBuilder
+    private func sensoryStage(width: CGFloat, height: CGFloat) -> some View {
+        #if os(iOS)
+        SensoryStage()
+            .frame(width: width, height: height)
+        #endif
+    }
+
+    /// About 60pt per settings row (dark mode, vibrations, float pieces, widget), and the
+    /// Sensory enhancement card below them: its switch, then its three choices and the
+    /// runner's worlds when it's on.
+    private var settingsHeight: CGFloat {
+        var height: CGFloat = Haptics.isSupported ? 390 : 330
+        if canFloatPieces { height += 60 }
+        #if os(iOS)
+        height += 80 + (settings.sensory ? 3 * 60 + (settings.sensoryMode == .runner ? 46 : 0) : 0)
+        #endif
+        return height
     }
 
     /// The board is 10 cells plus 0.36 cells of padding. Header, score and margins take
     /// about 170pt of the height (scaled up on Apple TV); across, the side column wants
     /// at least 5 cells (room for five power-up chips) plus the gutter and outer margins.
-    private func wideCellSize(for size: CGSize) -> CGFloat {
+    private func wideCellSize(for size: CGSize, sensory: Bool) -> CGFloat {
         let board = CGFloat(GameModel.size) + 0.36
         let byHeight = (size.height - 170 * scale) / board
         let byWidth = (size.width - Self.wideGutter - 44) / (board + 5)
-        return max(1, floor(min(byHeight, byWidth)))
+        // The Sensory enhancement stage goes in the side column, which needs the board a
+        // size smaller.
+        return max(1, floor(min(byHeight, byWidth) * (sensory ? 0.86 : 1)))
     }
 
     /// Whatever width the board leaves, capped so the tray doesn't sprawl.
@@ -188,7 +250,7 @@ struct GameView: View {
     }
 
     /// Phones and narrow windows: header, score and board, then the tray and power-ups.
-    private func tallLayout(width: CGFloat, cell: CGFloat, showsBar: Bool) -> some View {
+    private func tallLayout(width: CGFloat, cell: CGFloat, showsBar: Bool, stage: CGFloat) -> some View {
         VStack(spacing: 0) {
             header
                 .padding(.horizontal, 22)
@@ -210,6 +272,12 @@ struct GameView: View {
             if showsBar {
                 powerUps
                     .padding(.horizontal, 18)
+                    .padding(.bottom, 6)
+            }
+
+            if stage > 0 {
+                sensoryStage(width: stage * 16 / 9, height: stage)
+                    .padding(.top, 4)
                     .padding(.bottom, 6)
             }
         }
@@ -235,6 +303,10 @@ struct GameView: View {
 
                     powerUps
                         .frame(width: side)
+
+                    if showsSensory {
+                        sensoryStage(width: side, height: side * 9 / 16)
+                    }
                 }
             }
 

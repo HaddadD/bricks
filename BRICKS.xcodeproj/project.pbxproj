@@ -29,6 +29,9 @@
 		C2001013000000000000A001 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000017000000000000A001 /* Achievements.swift */; };
 		C2000118000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
 		C2000119000000000000A001 /* GameSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000019000000000000A001 /* GameSync.swift */; };
+		C200011A000000000000A001 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200001A000000000000A001 /* Runner.swift */; };
+		C200011B000000000000A001 /* SensoryPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200001B000000000000A001 /* SensoryPlayer.swift */; };
+		C200011D000000000000A001 /* Satisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200001D000000000000A001 /* Satisfying.swift */; };
 		C2001015000000000000A001 /* GameSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000019000000000000A001 /* GameSync.swift */; };
 		C2001014000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
 		C2000111000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
@@ -87,6 +90,10 @@
 		C2000017000000000000A001 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		C2000018000000000000A001 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		C2000019000000000000A001 /* GameSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSync.swift; sourceTree = "<group>"; };
+		C200001A000000000000A001 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
+		C200001B000000000000A001 /* SensoryPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoryPlayer.swift; sourceTree = "<group>"; };
+		C200001D000000000000A001 /* Satisfying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satisfying.swift; sourceTree = "<group>"; };
+		C200001C000000000000A001 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		C2000011000000000000A001 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		C2000012000000000000A001 /* PlacementCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementCursor.swift; sourceTree = "<group>"; };
 		C2000013000000000000A001 /* FocusLiftStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLiftStyle.swift; sourceTree = "<group>"; };
@@ -229,6 +236,10 @@
 				C2000017000000000000A001 /* Achievements.swift */,
 				C2000018000000000000A001 /* GameCenter.swift */,
 				C2000019000000000000A001 /* GameSync.swift */,
+				C200001A000000000000A001 /* Runner.swift */,
+				C200001B000000000000A001 /* SensoryPlayer.swift */,
+				C200001D000000000000A001 /* Satisfying.swift */,
+				C200001C000000000000A001 /* Info-iOS.plist */,
 				C2000011000000000000A001 /* Platform.swift */,
 				C2000012000000000000A001 /* PlacementCursor.swift */,
 				C2000013000000000000A001 /* FocusLiftStyle.swift */,
@@ -482,6 +493,9 @@
 				C2000117000000000000A001 /* Achievements.swift in Sources */,
 				C2000118000000000000A001 /* GameCenter.swift in Sources */,
 				C2000119000000000000A001 /* GameSync.swift in Sources */,
+				C200011A000000000000A001 /* Runner.swift in Sources */,
+				C200011B000000000000A001 /* SensoryPlayer.swift in Sources */,
+				C200011D000000000000A001 /* Satisfying.swift in Sources */,
 				C2000111000000000000A001 /* Platform.swift in Sources */,
 				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
 				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -594,6 +608,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				"INFOPLIST_FILE[sdk=iphone*]" = "BRICKS/Info-iOS.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -646,6 +661,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				"INFOPLIST_FILE[sdk=iphone*]" = "BRICKS/Info-iOS.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

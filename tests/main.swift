@@ -726,5 +726,51 @@ check(!AppVersion.isOlder("1.6", than: "1.6.0"), "1.6 is the same as 1.6.0")
 check(!AppVersion.isOlder("1.7", than: "1.6.9"), "1.7 is newer than 1.6.9")
 check(AppVersion.isOlder("1.6", than: "1.6.1"), "1.6 is older than 1.6.1")
 
+// MARK: - Sensory enhancement
+
+print("\nRunner")
+for style in RunnerStyle.allCases {
+    var misses = 0, distance = 0.0, stars = 0, crowded = false
+    for seed in UInt64(1)...6 {
+        let g = RunnerGame(style: style, seed: seed)
+        var frame = 0
+        // Ten minutes each, with the uneven frame times a busy device gives.
+        while g.time < 600 {
+            g.step(frame % 7 == 0 ? 1.0 / 20 : 1.0 / 30)
+            frame += 1
+            crowded = crowded || g.obstacles.count > 60 || g.coins.count > 80 || g.segments.count > 12
+        }
+        misses += g.hits
+        distance += g.s
+        stars += g.stars
+    }
+    check(misses == 0, "\(style): the autopilot clears every obstacle over an hour (\(misses) misses)")
+    check(distance > 6 * 600 * 9, "\(style): it keeps running, and speeds up (\(Int(distance)) units)")
+    check(stars > 0, "\(style): it picks up stars (\(stars))")
+    check(!crowded, "\(style): what's behind the runner is cleared away")
+}
+
+print("\nSatisfying shows")
+for kind in [SatisfyingKind.oddly, .impossible] {
+    let show = SatisfyingShow(kind: kind)
+    let size = CGSize(width: 192, height: 108)
+    let ctx = CGContext(data: nil, width: 192, height: 108, bitsPerComponent: 8, bytesPerRow: 0,
+                        space: CGColorSpaceCreateDeviceRGB(),
+                        bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)!
+    var blank = 0, frames = 0
+    // Every clip, a frame a second.
+    let length = kind == .oddly ? 50.0 : 30.0
+    while show.time < length {
+        for _ in 0..<10 { show.step(0.1) }
+        show.draw(in: ctx, size: size)
+        frames += 1
+        let pixels = ctx.data!.assumingMemoryBound(to: UInt8.self)
+        var lo = 255, hi = 0
+        for i in stride(from: 0, to: 192 * 108 * 4, by: 4 * 97) { lo = min(lo, Int(pixels[i + 1])); hi = max(hi, Int(pixels[i + 1])) }
+        if hi - lo < 20 { blank += 1 }
+    }
+    check(blank <= 2, "\(kind): every clip renders a picture (\(blank) of \(frames) frames flat)")
+}
+
 print("\n\(failures.isEmpty ? "All checks passed" : "\(failures.count) FAILED: \(failures)")")
 exit(failures.isEmpty ? 0 : 1)

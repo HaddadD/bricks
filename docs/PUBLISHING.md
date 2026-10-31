@@ -244,6 +244,12 @@ no development profile to carry it. Test Game Center on a Mac through TestFlight
      --notes "Single-player offline puzzle game. No account, sign-in, network access or purchases. ..."
    ```
 
+   From the version with Sensory enhancement on, the iPhone and iPad builds declare the
+   Audio, AirPlay and Picture in Picture background mode. Say why in the notes, since
+   the app makes no sound, along these lines: "Settings › Sensory enhancement (off by
+   default) plays a silent, self-playing animation under the board that can float in
+   Picture in Picture; the background mode is only for that Picture in Picture window."
+
 ## Signing
 
 Builds are signed manually with an Apple Distribution certificate whose private key is

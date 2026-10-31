@@ -13,7 +13,9 @@ final class BRICKSUITests: XCTestCase {
         app = XCUIApplication()
         // Each flag gets a value: on the Mac a bare flag followed by another pairs with it,
         // and the leftover word is taken as a file to open, which opens no window.
-        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES"]
+        // Float pieces is on by default where there's room; the drag tests aim with the
+        // piece under the finger, and testFloatPieces checks the default itself.
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES", "-bricks.floatPieces", "NO", "-bricks.sensory", "NO"]
         app.launch()
     }
 
@@ -189,12 +191,55 @@ final class BRICKSUITests: XCTestCase {
     }
     #endif
 
+    // MARK: - Sensory enhancement (iPhone, iPad)
+
+    #if os(iOS)
+    /// Sensory enhancement starts off. Switched on, its three choices sit together under
+    /// it, the runner's worlds show only while the runner is chosen, and the choice plays
+    /// under the board.
+    func testSensoryEnhancement() {
+        app.terminate()
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES", "-bricks.floatPieces", "NO",
+                               "-bricks.sensory", "NO", "-bricks.sensoryMode", "runner"]
+        app.launch()
+        app.buttons["Settings"].tap()
+        let sensory = app.switches["Sensory enhancement"]
+        func choice(_ title: String) -> XCUIElement {
+            app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", title)).firstMatch
+        }
+        XCTAssertTrue(sensory.waitForExistence(timeout: 3), "Settings has Sensory enhancement")
+        XCTAssertEqual(sensory.value as? String, "0", "it starts off")
+        XCTAssertFalse(choice("Oddly Satisfying").exists, "its choices stay hidden while it's off")
+
+        sensory.switches.firstMatch.tap()
+        for title in ["Runner", "Oddly Satisfying", "Impossible Satisfying"] {
+            XCTAssertTrue(choice(title).waitForExistence(timeout: 2), "\(title) is offered under it")
+        }
+        XCTAssertTrue(app.segmentedControls.buttons["Street"].exists, "the runner's worlds show while it's chosen")
+        snapshot("sensory-runner")
+
+        choice("Oddly Satisfying").tap()
+        XCTAssertTrue(choice("Oddly Satisfying").isSelected, "a tap chooses it")
+        XCTAssertFalse(app.segmentedControls.buttons["Street"].exists, "the worlds go with the runner")
+        snapshot("sensory-oddly")
+
+        // Close the sheet; the show is under the board.
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.08)).tap()
+        XCTAssertTrue(app.descendants(matching: .any)["sensory"].firstMatch.waitForExistence(timeout: 3),
+                      "it plays under the board")
+        snapshot("sensory-playing")
+    }
+    #endif
+
     // MARK: - Float pieces (regular iPhones)
 
     #if os(iOS)
-    /// Only a regular, tall iPhone offers "Float pieces". Turned on, a dragged piece floats
-    /// 2.9 cells above the finger and lands under the piece, not under the finger.
+    /// Only a regular, tall iPhone offers "Float pieces", and there it starts on. A dragged
+    /// piece floats 2.9 cells above the finger and lands under the piece, not the finger.
     func testFloatPieces() throws {
+        app.terminate()
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES"]
+        app.launch()
         let floatSwitch = app.switches["Float pieces"]
         app.buttons["Settings"].tap()
         let screen = app.windows.firstMatch.frame.size
@@ -204,7 +249,7 @@ final class BRICKSUITests: XCTestCase {
             throw XCTSkip("Float pieces is only offered on regular iPhones")
         }
         XCTAssertTrue(floatSwitch.waitForExistence(timeout: 3), "a regular iPhone offers Float pieces")
-        XCTAssertEqual(floatSwitch.value as? String, "0", "it starts off")
+        XCTAssertEqual(floatSwitch.value as? String, "1", "it starts on")
         snapshot("float-setting")
 
         app.terminate()

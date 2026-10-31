@@ -58,10 +58,12 @@ file with another 1024×1024 PNG that has no alpha channel.
   clear alone — the next one starts from scratch. There is no streak between turns.
 - A dragged piece sits right under your finger (or pointer, or pinch), exactly where it
   will land, and the rows or columns a placement would complete are highlighted before
-  you let go. On a regular iPhone, **Float pieces** in Settings lifts it 2.9 cells above
-  your finger instead, so your finger doesn't hide it. It's offered only where there's
+  you let go. On a regular iPhone, **Float pieces** lifts it 2.9 cells above your finger
+  instead, so your finger doesn't hide it. It's on by default, but only where there's
   room under the board for the finger to carry a floating piece down to the bottom row,
-  so never on the iPhone Duo's squarer screens or on iPad.
+  so never on the iPhone Duo's squarer screens or on iPad. Where there isn't room the
+  setting is hidden and pieces sit under the finger; the player's own choice is kept and
+  comes back as soon as there's room again.
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
 
@@ -117,9 +119,37 @@ The gear in the top right opens a sheet with:
   about it. The pastel bricks keep the same colours in both modes.
 - **Vibrations** — gates every call in `Haptics`. Hidden on devices without haptics
   hardware (iPad, Mac).
+- **Float pieces** — see The game, above. Regular iPhones only.
+- **Widget** — iPhone and iPad.
+- **Sensory enhancement** — iPhone and iPad, off by default. Something to watch in a 16:9
+  strip under the board (the board gets a little smaller to make room; on a landscape
+  iPad it sits under the power-ups), which can float in Picture in Picture and be moved,
+  resized or tucked away. It's live video, so there's nothing to pause or scrub. Its
+  choices sit together under the switch:
+  - **Runner**: an original endless runner that plays itself. An autopilot reads the
+    track and jumps, slides and changes lanes; collisions are real, but a miss only
+    stumbles, so a run never ends. Two worlds: **Trail**, a winding brick causeway above
+    the clouds with corners, gaps, hurdles and arches, and **Street**, three lanes of
+    toy-town traffic with barriers, parked carts and oncoming ones (`Runner.swift`).
+  - **Oddly Satisfying**: 3D clips of kinetic sand sliced and crumbling, soap cut into
+    bars, glittering slime kneaded, grime pressure-washed off a patio, and a rusty gear
+    wire-brushed to chrome.
+  - **Impossible Satisfying**: glass fruit sliced open, keyboards of jelly, glass and
+    liquid chrome being typed on, and bars of crystal, chrome and opal eaten square by
+    square.
+
+  The shows are SceneKit scenes lit like a product studio: physically based materials,
+  reflections from a soft-box environment, soft shadows, ambient occlusion and bloom,
+  rendered off screen each frame (`Satisfying.swift`). Every frame, runner or show, is
+  drawn on a background queue into a sample-buffer layer, the one Picture in Picture
+  plays (`SensoryPlayer.swift`). Picture in Picture needs the Audio, AirPlay and Picture
+  in Picture background mode (`BRICKS/Info-iOS.plist`, iPhone and iPad only), though
+  nothing makes a sound, and the iOS Simulator doesn't offer it: there it plays under
+  the board only. Outside the app a floating show holds its last frame, since an app in
+  the background can't use the GPU; the runner, drawn on the CPU, keeps running.
 - **Reset game** — asks for confirmation first.
 
-Both preferences are stored in `UserDefaults` and survive quitting. The score sits
+The preferences are stored in `UserDefaults` and survive quitting. The score sits
 centred directly above the board.
 
 ## Saving
@@ -225,6 +255,7 @@ periods only.
 | `Platform.swift` | how each platform plays: input, lift, scale, settings |
 | `Theme.swift` | pastel palette and the brick |
 | `GameView.swift` | layout, drag and remote controls, menu commands |
+| `Runner.swift` / `Satisfying.swift` / `SensoryPlayer.swift` | Sensory enhancement: the runner, the 3D shows, and the video they play in |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
 | `Achievements.swift` / `GameCenter.swift` | Game Center's catalog and rules; signing in, reporting, its screens |
@@ -268,7 +299,8 @@ exposes `testSet*` seams used by the headless rule tests:
 swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
-  BRICKS/AppVersion.swift BRICKS/Achievements.swift tests/main.swift && /tmp/rules_test
+  BRICKS/AppVersion.swift BRICKS/Achievements.swift BRICKS/Runner.swift \
+  BRICKS/Satisfying.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
