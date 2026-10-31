@@ -155,6 +155,14 @@ sandbox, where everything works as soon as it's created. For the App Store, the 
 live with the first version that includes them: in App Store Connect, add them to the
 version's Game Center section before submitting.
 
+**iCloud (game sync):** both app IDs have the iCloud capability, and every build shares
+one key-value store, `$(TeamIdentifierPrefix)ca.wilsonlam.bricks`
+(`com.apple.developer.ubiquity-kvstore-identifier` in `BRICKS.entitlements` and
+`GameCenter.entitlements`), which `GameSync` uses to carry the game in progress to every
+device on the same iCloud account. The Watch app names the main app's store rather than
+its own, so they share it. Simulator builds without signing have no entitlements, so they
+don't sync through iCloud; test it through TestFlight.
+
 The Game Center entitlement is restricted, so Mac debug builds leave it out
 (`CODE_SIGN_ENTITLEMENTS[sdk=macosx*]` is empty in Debug); without a registered Mac there's
 no development profile to carry it. Test Game Center on a Mac through TestFlight.
@@ -242,11 +250,11 @@ in this Mac's login keychain:
 |---|---|
 | Certificate | `Z88Z2MBTWF` "Apple Distribution: Wilson Lam (76C669ZZ43)", expires 2027-10-30 |
 | Mac installer | "Mac Installer Distribution" (signs the Mac `.pkg`), made by `create-distribution-cert.sh installer` |
-| iPhone/iPad and Vision Pro profile | `75RKJVG2A4` "BRICKS App Store 1.6 GC", UUID `592ebbab-f1ac-4bed-939c-2e672f19db70` |
+| iPhone/iPad and Vision Pro profile | `4F89LA2WYM` "BRICKS ios 1.6 Sync", UUID `f581edf4-96dd-4636-9c8f-09a41bebc654` |
 | Widget profile | `W9B49BQ523` "BRICKS Widget App Store", UUID `11987362-c1dd-461a-a089-3d161405fdb3` |
-| Apple Watch profile | `HQJ95L3AY3` "BRICKS Watch App Store GC", UUID `41bbfdb5-1b9f-460e-819c-ffb29f3a35d3` |
-| Apple TV profile | `53YXD8GJFL` "BRICKS tvOS App Store GC", UUID `ae27f3f5-ec38-4a92-9422-fcb7cd316ea4` |
-| Mac profile | `5R2TY549TF` "BRICKS Mac App Store GC", UUID `775341d2-0e42-43d9-9d33-c31f34ca10bb` |
+| Apple Watch profile | `983L2BB277` "BRICKS watch 1.6 Sync", UUID `238b2efd-575b-4974-9b75-7d7039acdb19` |
+| Apple TV profile | `8B6Q2R5745` "BRICKS tvos 1.6 Sync", UUID `11012c2b-b5bf-4214-8d56-360b82e6abac` |
+| Mac profile | `B7DCPM3AJ9` "BRICKS mac 1.6 Sync", UUID `bd1dbe12-216a-4074-83db-a04bfd24b79c` |
 | Key material | `~/.keys/signing/` (owner-only; never commit) |
 
 Why manual: the API key isn't allowed to use Apple's cloud-managed distribution

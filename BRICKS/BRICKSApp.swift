@@ -27,12 +27,15 @@ struct BRICKSApp: App {
                 }
                 .task { await updates.check() }
                 .onChange(of: scenePhase) { phase in
-                    if phase == .active { Task { await updates.check() } }
+                    if phase == .active {
+                        Task { await updates.check() }
+                        GameSync.shared.refresh()
+                    }
                     if phase == .background { progress.checkpoint() }
                 }
                 .environmentObject(progress)
                 .environmentObject(GameCenter.shared)
-                .onAppear(perform: startGameCenter)
+                .onAppear(perform: start)
         }
         #if os(macOS)
         .defaultSize(width: 1040, height: 760)
@@ -45,7 +48,9 @@ struct BRICKSApp: App {
         #endif
     }
 
-    private func startGameCenter() {
+    private func start() {
+        // Every device on the same iCloud account carries on the same game.
+        GameSync.shared.attach(to: model)
         progress.attach(to: model)
         // The Games app's Play button: carry on, or start over if the game has ended.
         GameCenter.shared.onWantsToPlay = { [model] in if model.isGameOver { model.newGame() } }

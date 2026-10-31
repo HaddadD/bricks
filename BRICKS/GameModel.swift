@@ -62,6 +62,9 @@ final class GameModel: ObservableObject {
 
     /// Hears everything achievements are measured on (see PlayerProgress).
     var onEvent: ((GameEvent) -> Void)?
+    /// Hears every save, with when it was made, so GameSync can hand it to the other
+    /// device.
+    var onSaved: ((Data, Date) -> Void)?
 
     private var undoStack: Snapshot? = nil
     private var giftThreshold: Int = Int.random(in: 280...320)
@@ -72,6 +75,7 @@ final class GameModel: ObservableObject {
 
     private let bestKey = "bricks.bestScore"
     private let saveKey = "bricks.savedGame"
+    private let savedAtKey = "bricks.savedAt"
 
     // MARK: - Lifecycle
 
@@ -178,9 +182,42 @@ final class GameModel: ObservableObject {
             milestoneTheme: milestoneTheme
         )
         if let data = try? JSONEncoder().encode(save) {
+            let now = Date()
             UserDefaults.standard.set(data, forKey: saveKey)
+            UserDefaults.standard.set(now.timeIntervalSince1970, forKey: savedAtKey)
+            onSaved?(data, now)
         }
         publishWidget()
+    }
+
+    /// The game as last saved, in the form `adopt` takes.
+    var savedGame: Data? { UserDefaults.standard.data(forKey: saveKey) }
+
+    /// When this device last saved the game; the distant past before its first save.
+    var savedAt: Date {
+        Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: savedAtKey))
+    }
+
+    /// Carries on with a game saved on the other device (iPhone and Apple Watch), if it
+    /// was saved after this one, and keeps the better of the two best scores. Returns
+    /// whether the game was taken over.
+    @discardableResult
+    func adopt(_ data: Data, savedAt otherSavedAt: Date, best otherBest: Int) -> Bool {
+        if otherBest > best {
+            best = otherBest
+            UserDefaults.standard.set(best, forKey: bestKey)
+        }
+        guard otherSavedAt > savedAt, let save = Self.decode(data) else { return false }
+
+        apply(save)
+        activePower = nil
+        clearing = []
+        blasting = []
+        undoStack = nil
+        UserDefaults.standard.set(data, forKey: saveKey)
+        UserDefaults.standard.set(otherSavedAt.timeIntervalSince1970, forKey: savedAtKey)
+        publishWidget()
+        return true
     }
 
     /// Shares the board and score with the widget (iPhone and iPad), unless the player has
@@ -198,13 +235,21 @@ final class GameModel: ObservableObject {
 
     /// Reloads the last run. A save written by an older build simply starts a fresh game.
     private func restore() {
-        guard let data = UserDefaults.standard.data(forKey: saveKey),
-              let save = try? JSONDecoder().decode(SavedGame.self, from: data),
+        guard let data = UserDefaults.standard.data(forKey: saveKey), let save = Self.decode(data)
+        else { return }
+        apply(save)
+    }
+
+    private static func decode(_ data: Data) -> SavedGame? {
+        guard let save = try? JSONDecoder().decode(SavedGame.self, from: data),
               save.board.count == GameModel.size,
               save.board.allSatisfy({ $0.count == GameModel.size }),
               save.tray.count == 3
-        else { return }
+        else { return nil }
+        return save
+    }
 
+    private func apply(_ save: SavedGame) {
         board = save.board
         tray = save.tray
         score = save.score

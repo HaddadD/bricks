@@ -551,6 +551,22 @@ let t4 = DragTargeting.target(
     shapeRows: 2, shapeCols: 2, gridOrigin: origin, cellSize: cell)
 check(t4.row == 4 && t4.col == 3, "a 2x2 centred under the finger covers the four cells around it (got \(t4))")
 
+let lift = DragTargeting.lift(cellSize: cell)
+let t5 = DragTargeting.target(
+    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2 + lift),
+    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true)
+check(t5.row == 4 && t5.col == 3, "a floating 1x1 lands on the cell under the piece, not the finger (got \(t5))")
+check(DragTargeting.lift(cellSize: cell, floating: false) == 0, "no lift unless floating")
+
+let bottom = origin.y + 10 * cell
+let t6 = DragTargeting.target(
+    finger: CGPoint(x: 20 + cell / 2, y: bottom + lift - cell / 2),
+    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true)
+check(t6.row == 9, "a floating 1x1 reaches the bottom row with the finger 2.4 cells under the board (got \(t6))")
+check(DragTargeting.hasRoomToFloat(below: 2.9 * cell, cellSize: cell), "2.9 cells under the board is room to float")
+check(!DragTargeting.hasRoomToFloat(below: 2 * cell, cellSize: cell), "2 cells under the board isn't room to float")
+check(!DragTargeting.hasRoomToFloat(below: 100, cellSize: 0), "no board yet, no floating")
+
 // MARK: - Placement cursor (Apple TV, Apple Watch)
 
 print("\nPlacement cursor")
@@ -604,6 +620,24 @@ let p3 = GameModel()
 p3.newGame()
 let p4 = GameModel()
 check(p4.score == 0 && !p4.testCell(row: 6, col: 2).isFilled, "New game clears the saved run")
+
+// iPhone and Apple Watch hand each other the game: the newer save wins.
+let phoneGame = GameModel()
+phoneGame.newGame()
+phoneGame.testSetTray([TrayPiece(shape: bar(3)), nil, nil])
+_ = phoneGame.place(trayIndex: 0, atRow: 4, col: 0)
+pump(0.3)
+let phoneSave = phoneGame.savedGame!
+let watchGame = GameModel()
+watchGame.newGame()
+check(!watchGame.adopt(phoneSave, savedAt: .distantPast, best: 0), "an older game from the other device is ignored")
+check(watchGame.score == 0, "ignoring it leaves this game alone")
+check(watchGame.adopt(phoneSave, savedAt: Date().addingTimeInterval(60), best: 0), "a newer game from the other device is taken over")
+check(watchGame.score == phoneGame.score && watchGame.testCell(row: 4, col: 1).isFilled,
+      "the board and score carry over (score \(watchGame.score) vs \(phoneGame.score))")
+check(!watchGame.adopt(Data("not a game".utf8), savedAt: Date().addingTimeInterval(120), best: 0),
+      "a garbled game from the other device is ignored")
+check(GameModel().score == phoneGame.score, "a taken-over game is saved here too")
 
 // A save from an older build must not wedge the app.
 UserDefaults.standard.set(Data("not a game".utf8), forKey: "bricks.savedGame")

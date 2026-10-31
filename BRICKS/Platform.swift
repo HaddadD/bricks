@@ -44,6 +44,16 @@ enum Platform {
         #endif
     }()
 
+    /// An iPhone, including the iPhone Duo. Only a phone offers "Float pieces": an iPad's
+    /// cells are big enough to see past the finger, and a pointer or pinch covers nothing.
+    static let isPhone: Bool = {
+        #if os(iOS)
+        return UIDevice.current.userInterfaceIdiom == .phone
+        #else
+        return false
+        #endif
+    }()
+
     /// Text and chrome scale. Apple TV is read from across the room.
     static let uiScale: CGFloat = {
         #if os(tvOS)

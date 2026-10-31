@@ -1,5 +1,6 @@
 #!/bin/bash
-# Turns the raw Mac, Apple TV and Vision Pro captures (capture-wide.sh) into
+# Turns the raw Mac, Apple TV and Vision Pro captures (capture-wide.sh) and the iPhone Duo
+# ones (capture-duo.sh) into
 # upload-ready App Store screenshots at Apple's sizes in appstore/screenshots/.
 #
 #   appstore/tools/compose-wide.sh
@@ -16,6 +17,7 @@ shot() {
     mac) dir=mac; size="2880 1800" ;;
     tv) dir=apple-tv; size="3840 2160" ;;
     vision) dir=vision-pro; size="3840 2160" ;;
+    duo) dir=iphone-duo; size="2007 2853" ;;
   esac
   mkdir -p "appstore/screenshots/$dir"
   # shellcheck disable=SC2086
@@ -38,5 +40,10 @@ shot vision 2 73DFE8 "Every 1,000 points, a new sky" "Seven pastel skies to unlo
 shot vision 3 CCACF5 "52 achievements to chase" "Leaderboards and challenges in Game Center"
 shot vision 4 A6BDF7 "Look, pinch, play" "Put the board anywhere, in light or dark"
 
+shot duo 1 FFA3C6 "Drop. Fill. Clear." "A calm block puzzle that folds into your pocket"
+shot duo 2 73DFE8 "Every 1,000 points, a new sky" "Seven pastel skies to unlock"
+shot duo 3 CCACF5 "52 achievements to chase" "Leaderboards and challenges in Game Center"
+shot duo 4 A6BDF7 "Easy on the eyes, day or night" "Full dark mode, same pastel bricks"
+
 rm -rf "$TMP"
-echo "Wrote appstore/screenshots/{mac,apple-tv,vision-pro}/"
+echo "Wrote appstore/screenshots/{mac,apple-tv,vision-pro,iphone-duo}/"

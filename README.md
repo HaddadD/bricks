@@ -58,7 +58,10 @@ file with another 1024×1024 PNG that has no alpha channel.
   clear alone — the next one starts from scratch. There is no streak between turns.
 - A dragged piece sits right under your finger (or pointer, or pinch), exactly where it
   will land, and the rows or columns a placement would complete are highlighted before
-  you let go.
+  you let go. On a regular iPhone, **Float pieces** in Settings lifts it 2.9 cells above
+  your finger instead, so your finger doesn't hide it. It's offered only where there's
+  room under the board for the finger to carry a floating piece down to the bottom row,
+  so never on the iPhone Duo's squarer screens or on iPad.
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
 
@@ -69,7 +72,7 @@ the board and how the screen is laid out. Those decisions live in `Platform.swif
 
 | | Controls | Layout |
 |---|---|---|
-| iPhone | drag, piece right under your finger | tall, portrait-only |
+| iPhone | drag, piece under your finger, or floating above it with Float pieces | tall, portrait-only |
 | iPhone Duo | drag | outer display: tall, with the power-ups folded into the trailing system column; inner display: tall or wide by orientation |
 | iPad | drag, piece right under your finger | tall or wide, every orientation, resizable windows |
 | Mac | mouse drag, piece right under the pointer; ⌘N new game, ⌘Z undo, ⌘, settings | wide, resizable window |
@@ -125,6 +128,13 @@ The run in progress — board, tray, score, power-ups and pending gift — is wr
 `UserDefaults` (`bricks.savedGame`) after every move and every power-up, and reloaded on
 launch. Quitting the app, a reboot, or a lapsed development signature all resume exactly
 where you left off. Your best score is kept separately under `bricks.bestScore`.
+
+**On every device:** each save also goes to iCloud's key-value store, shared by every
+build of the app, so a game started on one device carries on on any other signed in to
+the same iCloud account — iPhone, iPad, Mac, Apple TV, Vision Pro and Apple Watch. An
+iPhone and its Apple Watch also hand the game straight to each other over
+WatchConnectivity, which is quicker when they're together. Whichever device played last
+wins, and the best score is the best of them all (`GameSync.swift`).
 
 Both live in the app's data container, so they survive re-installing over the top from
 Xcode. Deleting the app from the phone is what clears them. **New** starts a fresh run

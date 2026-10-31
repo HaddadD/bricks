@@ -15,3 +15,4 @@ appstore/raw/
 
 # Game Center artwork, rendered by appstore/tools/gamecenter.swift
 appstore/gamecenter/
+.asc/

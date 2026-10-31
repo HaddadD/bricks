@@ -28,6 +28,8 @@
 		C2000117000000000000A001 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000017000000000000A001 /* Achievements.swift */; };
 		C2001013000000000000A001 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000017000000000000A001 /* Achievements.swift */; };
 		C2000118000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
+		C2000119000000000000A001 /* GameSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000019000000000000A001 /* GameSync.swift */; };
+		C2001015000000000000A001 /* GameSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000019000000000000A001 /* GameSync.swift */; };
 		C2001014000000000000A001 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000018000000000000A001 /* GameCenter.swift */; };
 		C2000111000000000000A001 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000011000000000000A001 /* Platform.swift */; };
 		C2000112000000000000A001 /* PlacementCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000012000000000000A001 /* PlacementCursor.swift */; };
@@ -84,6 +86,7 @@
 		C2000016000000000000A001 /* UpdateCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheck.swift; sourceTree = "<group>"; };
 		C2000017000000000000A001 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		C2000018000000000000A001 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
+		C2000019000000000000A001 /* GameSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSync.swift; sourceTree = "<group>"; };
 		C2000011000000000000A001 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		C2000012000000000000A001 /* PlacementCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementCursor.swift; sourceTree = "<group>"; };
 		C2000013000000000000A001 /* FocusLiftStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLiftStyle.swift; sourceTree = "<group>"; };
@@ -225,6 +228,7 @@
 				C2000016000000000000A001 /* UpdateCheck.swift */,
 				C2000017000000000000A001 /* Achievements.swift */,
 				C2000018000000000000A001 /* GameCenter.swift */,
+				C2000019000000000000A001 /* GameSync.swift */,
 				C2000011000000000000A001 /* Platform.swift */,
 				C2000012000000000000A001 /* PlacementCursor.swift */,
 				C2000013000000000000A001 /* FocusLiftStyle.swift */,
@@ -477,6 +481,7 @@
 				C2000116000000000000A001 /* UpdateCheck.swift in Sources */,
 				C2000117000000000000A001 /* Achievements.swift in Sources */,
 				C2000118000000000000A001 /* GameCenter.swift in Sources */,
+				C2000119000000000000A001 /* GameSync.swift in Sources */,
 				C2000111000000000000A001 /* Platform.swift in Sources */,
 				C2000112000000000000A001 /* PlacementCursor.swift in Sources */,
 				C2000113000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -506,6 +511,7 @@
 				C2001012000000000000A001 /* UpdateCheck.swift in Sources */,
 				C2001013000000000000A001 /* Achievements.swift in Sources */,
 				C2001014000000000000A001 /* GameCenter.swift in Sources */,
+				C2001015000000000000A001 /* GameSync.swift in Sources */,
 				C200100D000000000000A001 /* Platform.swift in Sources */,
 				C200100E000000000000A001 /* PlacementCursor.swift in Sources */,
 				C200100F000000000000A001 /* FocusLiftStyle.swift in Sources */,
@@ -582,7 +588,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
@@ -634,7 +640,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
@@ -783,7 +789,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -814,7 +820,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -843,7 +849,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.6;
@@ -867,7 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.6;
@@ -891,7 +897,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.6;
@@ -910,7 +916,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.6;
@@ -932,7 +938,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BRICKSWidget/Info.plist;
@@ -964,7 +970,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BRICKSWidget/Info.plist;

@@ -19,6 +19,10 @@ struct GameView: View {
     @EnvironmentObject private var gameCenter: GameCenter
 
     @State private var gridFrame: CGRect = .zero
+    /// The game's area inside the safe area, and the whole screen around it, for deciding
+    /// whether "Float pieces" can be offered.
+    @State private var gameSize: CGSize = .zero
+    @State private var screenSize: CGSize = .zero
     @State private var drag: DragInfo? = nil
     @State private var placing: Placing? = nil
     @FocusState private var boardFocused: Bool
@@ -86,7 +90,7 @@ struct GameView: View {
                         .allowsHitTesting(!model.isGameOver)
                 }
 
-                // Piece floating under the finger.
+                // The piece being dragged, under the finger or floating above it.
                 if let d = drag, let piece = model.tray[d.trayIndex] {
                     PieceView(
                         shape: piece.shape,
@@ -94,7 +98,7 @@ struct GameView: View {
                         brickSize: cell - max(2, cell * 0.09),
                         gap: max(2, cell * 0.09)
                     )
-                    .position(d.location)
+                    .position(x: d.location.x, y: d.location.y - DragTargeting.lift(cellSize: cell, floating: floatsPieces))
                     .shadow(color: Theme.shadow.opacity(0.35), radius: 8, y: 6)
                     .allowsHitTesting(false)
                 }
@@ -117,16 +121,18 @@ struct GameView: View {
             }
             .coordinateSpace(name: "game")
             .onPreferenceChange(GridFrameKey.self) { gridFrame = $0 }
+            .onAppear { measure(geo) }
+            .onChange(of: geo.size) { _ in measure(geo) }
             .onReceive(model.$activePower) { power in powerChanged(to: power) }
             #if os(tvOS)
             // Menu finishes a Rotate session; otherwise it does what it always does.
             .onExitCommand(perform: model.activePower == .rotate ? { model.endRotateMode() } : nil)
             #endif
             .sheet(isPresented: $showingSettings) {
-                SettingsView(settings: settings) { model.newGame() }
+                SettingsView(settings: settings, offersFloatPieces: canFloatPieces) { model.newGame() }
                     #if os(iOS)
-                    // About 60pt per settings row (dark mode, vibrations, widget).
-                    .presentationDetents([.height(Haptics.isSupported ? 390 : 330)])
+                    // About 60pt per settings row (dark mode, vibrations, float pieces, widget).
+                    .presentationDetents([.height((Haptics.isSupported ? 390 : 330) + (canFloatPieces ? 60 : 0))])
                     .presentationDragIndicator(.hidden)
                     #endif
             }
@@ -408,6 +414,26 @@ struct GameView: View {
 
     // MARK: - Drag targeting
 
+    private func measure(_ geo: GeometryProxy) {
+        gameSize = geo.size
+        let insets = geo.safeAreaInsets
+        screenSize = CGSize(width: geo.size.width + insets.leading + insets.trailing,
+                            height: geo.size.height + insets.top + insets.bottom)
+    }
+
+    /// Whether "Float pieces" is on offer: a regular iPhone, whose screen is more than
+    /// 1.8 times as tall as it is wide (the iPhone Duo's displays are much squarer), with
+    /// room under the board for the finger to carry a floating piece to the bottom row.
+    private var canFloatPieces: Bool {
+        guard Platform.isPhone, gridFrame != .zero, screenSize.height > screenSize.width * 1.8
+        else { return false }
+        let cell = gridFrame.width / CGFloat(GameModel.size)
+        return DragTargeting.hasRoomToFloat(below: gameSize.height - gridFrame.maxY, cellSize: cell)
+    }
+
+    /// The setting only applies where it's on offer.
+    private var floatsPieces: Bool { settings.floatPieces && canFloatPieces }
+
     /// Top-left board coordinate the dragged piece currently sits on.
     private func dragTarget(cellSize: CGFloat) -> (row: Int, col: Int)? {
         guard let d = drag, let piece = model.tray[d.trayIndex], gridFrame != .zero else { return nil }
@@ -417,7 +443,8 @@ struct GameView: View {
             shapeRows: piece.shape.rows,
             shapeCols: piece.shape.cols,
             gridOrigin: gridFrame.origin,
-            cellSize: cellSize
+            cellSize: cellSize,
+            floating: floatsPieces
         )
     }
 

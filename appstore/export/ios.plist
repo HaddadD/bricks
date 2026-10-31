@@ -9,7 +9,7 @@
   <key>signingCertificate</key><string>Apple Distribution</string>
   
   <key>provisioningProfiles</key>
-  <dict><key>ca.wilsonlam.bricks.widget</key><string>11987362-c1dd-461a-a089-3d161405fdb3</string><key>ca.wilsonlam.bricks</key><string>592ebbab-f1ac-4bed-939c-2e672f19db70</string><key>ca.wilsonlam.bricks.watchkitapp</key><string>41bbfdb5-1b9f-460e-819c-ffb29f3a35d3</string></dict>
+  <dict><key>ca.wilsonlam.bricks.widget</key><string>11987362-c1dd-461a-a089-3d161405fdb3</string><key>ca.wilsonlam.bricks</key><string>f581edf4-96dd-4636-9c8f-09a41bebc654</string><key>ca.wilsonlam.bricks.watchkitapp</key><string>238b2efd-575b-4974-9b75-7d7039acdb19</string></dict>
   <key>uploadSymbols</key><true/>
   <key>manageAppVersionAndBuildNumber</key><false/>
 </dict>

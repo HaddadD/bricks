@@ -189,6 +189,65 @@ final class BRICKSUITests: XCTestCase {
     }
     #endif
 
+    // MARK: - Float pieces (regular iPhones)
+
+    #if os(iOS)
+    /// Only a regular, tall iPhone offers "Float pieces". Turned on, a dragged piece floats
+    /// 2.9 cells above the finger and lands under the piece, not under the finger.
+    func testFloatPieces() throws {
+        let floatSwitch = app.switches["Float pieces"]
+        app.buttons["Settings"].tap()
+        let screen = app.windows.firstMatch.frame.size
+        guard UIDevice.current.userInterfaceIdiom == .phone, screen.height > screen.width * 1.8 else {
+            XCTAssertFalse(floatSwitch.waitForExistence(timeout: 2), "only a regular iPhone offers Float pieces")
+            snapshot("no-float-setting")
+            throw XCTSkip("Float pieces is only offered on regular iPhones")
+        }
+        XCTAssertTrue(floatSwitch.waitForExistence(timeout: 3), "a regular iPhone offers Float pieces")
+        XCTAssertEqual(floatSwitch.value as? String, "0", "it starts off")
+        snapshot("float-setting")
+
+        app.terminate()
+        app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES", "-bricks.floatPieces", "YES"]
+        app.launch()
+        XCTAssertTrue(scoreText.waitForExistence(timeout: 5))
+        let before = score
+
+        let start = tray(0).coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        start.press(forDuration: 0.2, thenDragTo: boardPoint(row: 2 + 2.9, col: 5),
+                    withVelocity: .slow, thenHoldForDuration: 0.2)
+        snapshot("after-float-drag")
+        XCTAssertTrue(waitForScore(above: before), "a floating piece drops onto open board (was \(before), now \(score))")
+    }
+    #endif
+
+    // MARK: - App Store screenshots (iPhone Duo)
+
+    #if os(iOS)
+    /// Not a check: stages each App Store screenshot and keeps it in the test results, for
+    /// screens `simctl io` can't capture (the iPhone Duo). Runs only when asked, with
+    /// `TEST_RUNNER_STORE_SHOTS=1`; see appstore/tools/capture-duo.sh.
+    func testStoreScreenshots() throws {
+        guard ProcessInfo.processInfo.environment["STORE_SHOTS"] == "1" else {
+            throw XCTSkip("Set TEST_RUNNER_STORE_SHOTS=1 to capture the App Store screenshots")
+        }
+        let states = [
+            ["-demo", "YES", "-bricks.darkMode", "NO", "-noGameCenter", "YES"],
+            ["-celebrate", "3", "-bricks.darkMode", "NO", "-noGameCenter", "YES"],
+            ["-gameOver", "YES", "-gameCenterPreview", "YES", "-bricks.darkMode", "NO"],
+            ["-demo", "YES", "-bricks.darkMode", "YES", "-noGameCenter", "YES"],
+        ]
+        for (i, args) in states.enumerated() {
+            app.terminate()
+            app.launchArguments = args + ["-bricks.bestScore", "4820"]
+            app.launch()
+            XCTAssertTrue(scoreText.waitForExistence(timeout: 5))
+            sleep(2)
+            snapshot("store-\(i + 1)")
+        }
+    }
+    #endif
+
     // MARK: - Mac and iPhone/iPad
 
     #if os(macOS) || os(iOS)

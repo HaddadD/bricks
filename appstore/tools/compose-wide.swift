@@ -3,7 +3,7 @@
 // and subtitle across the top, and the capture below in a frame for its platform.
 //
 //   swiftc -O appstore/tools/compose-wide.swift -o /tmp/compose-wide
-//   /tmp/compose-wide <raw.png> <mac|tv|vision> <width> <height> <sky hex> <headline> <subtitle> <out.png>
+//   /tmp/compose-wide <raw.png> <mac|tv|vision|duo> <width> <height> <sky hex> <headline> <subtitle> <out.png>
 //
 // The art is drawn here rather than generated, so it needs nothing beyond Xcode.
 import AppKit
@@ -11,7 +11,7 @@ import AppKit
 let a = CommandLine.arguments
 guard a.count == 9, let raw = NSImage(contentsOfFile: a[1]), let W = Int(a[3]), let H = Int(a[4]),
       let sky = UInt32(a[5], radix: 16) else {
-    print("usage: compose-wide <raw.png> <mac|tv|vision> <width> <height> <sky hex> <headline> <subtitle> <out.png>")
+    print("usage: compose-wide <raw.png> <mac|tv|vision|duo> <width> <height> <sky hex> <headline> <subtitle> <out.png>")
     exit(1)
 }
 let kind = a[2], headline = a[6], subtitle = a[7]
@@ -85,10 +85,12 @@ for (i, s) in spots.enumerated() {
 
 // Headline and subtitle.
 let ink = color(0x3B2A35), soft = color(0x7A6A88)
+// Sized to the height on landscape shots; a portrait one (the Duo) scales them down to fit across.
+let type = min(1, w / h / 1.1)
 var top = h * 0.95
-top -= text(headline, rounded(h * 0.085, .black), ink, centerX: w / 2, top: top)
+top -= text(headline, rounded(h * 0.085 * type, .black), ink, centerX: w / 2, top: top)
 top -= h * 0.005
-top -= text(subtitle, rounded(h * 0.04, .semibold), soft, centerX: w / 2, top: top)
+top -= text(subtitle, rounded(h * 0.04 * type, .semibold), soft, centerX: w / 2, top: top)
 
 // The capture, below the words.
 let bottomMargin = h * 0.05
@@ -106,10 +108,11 @@ if kind == "vision" {
 let aspect = source.size.width / source.size.height
 var shotH = maxH, shotW = maxH * aspect
 if shotW > w * 0.8 { shotW = w * 0.8; shotH = shotW / aspect }
-let bezel: CGFloat = kind == "tv" ? h * 0.014 : 0
+// Apple TV and iPhone Duo sit in a dark bezel, like the hardware.
+let bezel: CGFloat = kind == "tv" ? h * 0.014 : kind == "duo" ? h * 0.01 : 0
 let frame = NSRect(x: (w - shotW) / 2, y: bottomMargin + (maxH - shotH) / 2, width: shotW, height: shotH)
 let outer = frame.insetBy(dx: -bezel, dy: -bezel)
-let radius: CGFloat = kind == "mac" ? h * 0.012 : h * 0.02
+let radius: CGFloat = kind == "mac" ? h * 0.012 : kind == "duo" ? h * 0.03 : h * 0.02
 
 let shadow = NSShadow()
 shadow.shadowColor = color(0x3B2A35, 0.28)
@@ -117,7 +120,7 @@ shadow.shadowBlurRadius = h * 0.04
 shadow.shadowOffset = NSSize(width: 0, height: -h * 0.012)
 NSGraphicsContext.saveGraphicsState()
 shadow.set()
-(kind == "tv" ? color(0x1C1A20) : color(0xFFFFFF)).setFill()
+(kind == "tv" || kind == "duo" ? color(0x1C1A20) : color(0xFFFFFF)).setFill()
 NSBezierPath(roundedRect: outer, xRadius: radius + bezel, yRadius: radius + bezel).fill()
 NSGraphicsContext.restoreGraphicsState()
 NSGraphicsContext.saveGraphicsState()

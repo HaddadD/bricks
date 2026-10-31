@@ -3,6 +3,8 @@ import SwiftUI
 /// The settings sheet behind the gear icon.
 struct SettingsView: View {
     @ObservedObject var settings: Settings
+    /// Whether this screen has room to float a dragged piece above the finger.
+    var offersFloatPieces = false
     /// Called once the player has confirmed they want to throw the board away.
     let onReset: () -> Void
 
@@ -49,6 +51,10 @@ struct SettingsView: View {
                         vibrationRow
                     }
                     #if os(iOS)
+                    if offersFloatPieces {
+                        divider
+                        floatRow
+                    }
                     divider
                     widgetRow
                     #endif
@@ -153,6 +159,31 @@ struct SettingsView: View {
     }
 
     #if os(iOS)
+    /// Floats a dragged piece above the finger, so the finger doesn't hide it or the
+    /// square it will land on. Only offered where there's room under the board for it.
+    private var floatRow: some View {
+        HStack(spacing: 12) {
+            icon("hand.point.up.left.fill", tint: Color(hex: 0xFFB59E))
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Float pieces")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundColor(Theme.ink)
+                Text(settings.floatPieces ? "Above your finger" : "Under your finger")
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundColor(Theme.inkSoft)
+            }
+
+            Spacer()
+
+            Toggle("Float pieces", isOn: $settings.floatPieces)
+                .labelsHidden()
+                .tint(Color(hex: 0xE99A82))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 13)
+    }
+
     /// Lets the player keep the game off the Home Screen and CarPlay. Off also clears
     /// what the widget was already showing.
     private var widgetRow: some View {
