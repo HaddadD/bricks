@@ -101,6 +101,11 @@ final class SensoryPlayer: NSObject, ObservableObject {
     private override init() {
         super.init()
         layer.videoGravity = .resizeAspect
+        #if DEBUG
+        // `-floating` lays the screen out as if the video were in Picture in Picture, which
+        // the Simulator doesn't offer.
+        isFloating = ProcessInfo.processInfo.arguments.contains("-floating")
+        #endif
     }
 
     // MARK: - Control
@@ -274,8 +279,16 @@ final class SensoryPlayer: NSObject, ObservableObject {
 
 extension SensoryPlayer: AVPictureInPictureControllerDelegate {
 
-    func pictureInPictureControllerWillStartPictureInPicture(_ controller: AVPictureInPictureController) {
-        isFloating = true
+    // The board takes its usual size while the video floats, and makes room again as it
+    // comes back. The space goes once the window is up, so the window grows out of it, and
+    // returns before the window flies home, so it has somewhere to land.
+
+    func pictureInPictureControllerDidStartPictureInPicture(_ controller: AVPictureInPictureController) {
+        withAnimation(.easeInOut(duration: 0.3)) { isFloating = true }
+    }
+
+    func pictureInPictureControllerWillStopPictureInPicture(_ controller: AVPictureInPictureController) {
+        withAnimation(.easeInOut(duration: 0.3)) { isFloating = false }
     }
 
     func pictureInPictureControllerDidStopPictureInPicture(_ controller: AVPictureInPictureController) {
@@ -292,8 +305,9 @@ extension SensoryPlayer: AVPictureInPictureControllerDelegate {
 
     func pictureInPictureController(_ controller: AVPictureInPictureController,
                                     restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
-        // It's already back under the board.
-        completionHandler(true)
+        // Make room under the board, then let the window fly into it.
+        withAnimation(.easeInOut(duration: 0.3)) { isFloating = false }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { completionHandler(true) }
     }
 }
 
@@ -319,48 +333,34 @@ extension SensoryPlayer: AVPictureInPictureSampleBufferPlaybackDelegate {
     }
 }
 
-/// Sensory enhancement under the board. While it's floating, this space is where the
-/// window can be parked; a button sends it back out after it's been brought home.
+/// Sensory enhancement under the board, shown only while it isn't floating. A button
+/// sends it back out after it's been brought home.
 struct SensoryStage: View {
     @ObservedObject private var player = SensoryPlayer.shared
 
     var body: some View {
-        ZStack {
-            VideoLayerView(layer: player.layer)
-                .opacity(player.isFloating ? 0 : 1)
-
-            if player.isFloating {
-                VStack(spacing: 6) {
-                    Image(systemName: "pip")
-                        .font(.system(size: 22, weight: .semibold))
-                    Text("Playing in the floating window")
-                        .font(.system(size: 12, weight: .semibold, design: .rounded))
+        VideoLayerView(layer: player.layer)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(alignment: .topTrailing) {
+                if player.canFloat {
+                    Button {
+                        Haptics.tap()
+                        player.float()
+                    } label: {
+                        Image(systemName: "pip.enter")
+                            .font(.system(size: 13, weight: .bold))
+                            .foregroundColor(Theme.ink)
+                            .frame(width: 30, height: 30)
+                            .background(Circle().fill(Theme.card.opacity(0.85)))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(6)
+                    .accessibilityLabel("Float it in a window")
                 }
-                .foregroundColor(Theme.inkSoft)
             }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Theme.card.opacity(player.isFloating ? 0.5 : 0))
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .overlay(alignment: .topTrailing) {
-            if player.canFloat && !player.isFloating {
-                Button {
-                    Haptics.tap()
-                    player.float()
-                } label: {
-                    Image(systemName: "pip.enter")
-                        .font(.system(size: 13, weight: .bold))
-                        .foregroundColor(Theme.ink)
-                        .frame(width: 30, height: 30)
-                        .background(Circle().fill(Theme.card.opacity(0.85)))
-                }
-                .buttonStyle(.plain)
-                .padding(6)
-                .accessibilityLabel("Float it in a window")
-            }
-        }
-        .accessibilityElement(children: .contain)
-        .accessibilityIdentifier("sensory")
+            .accessibilityElement(children: .contain)
+            .accessibilityIdentifier("sensory")
     }
 }
 
@@ -377,10 +377,17 @@ private struct VideoLayerView: UIViewRepresentable {
 
     func updateUIView(_ view: Host, context: Context) {}
 
+    /// The layer lives on while the video floats; it's just out of the window until the
+    /// stage comes back.
+    static func dismantleUIView(_ view: Host, coordinator: ()) {
+        view.video = nil
+    }
+
     final class Host: UIView {
         var video: CALayer? {
             didSet {
-                oldValue?.removeFromSuperlayer()
+                // A newer stage may already have taken the layer; leave it there.
+                if oldValue?.superlayer === layer { oldValue?.removeFromSuperlayer() }
                 if let video { layer.addSublayer(video) }
             }
         }

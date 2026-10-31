@@ -29,6 +29,7 @@ struct GameView: View {
     @State private var confirmingNewGame = false
     #if os(iOS)
     @Environment(\.scenePhase) private var scenePhase
+    @ObservedObject private var sensoryPlayer = SensoryPlayer.shared
     #endif
     #if DEBUG
     /// `-settings` opens the sheet straight away, for inspecting it without tapping.
@@ -186,10 +187,11 @@ struct GameView: View {
         return floor(min(byWidth, byHeight))
     }
 
-    /// Whether Sensory enhancement plays under the board. iPhone and iPad only.
+    /// Whether Sensory enhancement plays under the board. iPhone and iPad only. While it
+    /// floats in Picture in Picture the board takes its usual size again.
     private var showsSensory: Bool {
         #if os(iOS)
-        return settings.sensory
+        return settings.sensory && !sensoryPlayer.isFloating
         #else
         return false
         #endif

@@ -124,7 +124,8 @@ The gear in the top right opens a sheet with:
 - **Sensory enhancement** — iPhone and iPad, off by default. Something to watch in a 16:9
   strip under the board (the board gets a little smaller to make room; on a landscape
   iPad it sits under the power-ups), which can float in Picture in Picture and be moved,
-  resized or tucked away. It's live video, so there's nothing to pause or scrub. Its
+  resized or tucked away; while it floats, the board goes back to its usual size. It's live
+  video, so there's nothing to pause or scrub. Its
   choices sit together under the switch:
   - **Runner**: an original endless runner that plays itself. An autopilot reads the
     track and jumps, slides and changes lanes; collisions are real, but a miss only
@@ -289,7 +290,8 @@ launches without a window.
 
 `-updateRequired` shows the update screen. `-gameOver` shows the game-over card with some achievements earned, and `-gameCenterPreview` shows the Game Center buttons without signing in (`-noGameCenter`, which the UI tests use, skips Game Center entirely). `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
-on launch. `-demo` seeds a representative board — bricks, both gift states,
+on launch. `-floating` lays the screen out as if Sensory enhancement were in Picture in
+Picture, which the Simulator doesn't offer. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. To check the wide
 layout, rotate the iPad simulator with Device › Rotate Left (iPadOS 26 windowing refuses
 programmatic rotation, so a launch argument can't do it). `GameModel` also
