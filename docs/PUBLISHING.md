@@ -282,6 +282,22 @@ asc profiles local install --path ~/.keys/signing/BRICKS_AppStore.mobileprovisio
 and put the new profile UUID in the matching `appstore/export/*.plist`. Profiles expire with
 their certificate.
 
+## TestFlight builds
+
+Every change to the app goes to TestFlight straight away, as its own build: bump
+`CURRENT_PROJECT_VERSION` (every target shares it), archive and upload as in step 3
+below, then once it has processed add the "What to Test" notes, add it to both groups
+and submit it for beta review:
+
+```bash
+asc builds test-notes create --build-id BUILD_ID --locale en-US --whats-new "..."
+asc builds add-groups --build-id BUILD_ID --group BRICKS_TEAM_ID,FRIENDS_AND_FAMILY_ID
+asc testflight review submit --build-id BUILD_ID --confirm
+```
+
+These builds don't go to an App Store version unless a release is planned; the version
+in App Review keeps the build it was submitted with.
+
 ## Every release
 
 1. Bump `MARKETING_VERSION` (and/or `CURRENT_PROJECT_VERSION`) in Xcode. Every upload
