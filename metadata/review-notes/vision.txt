@@ -1,0 +1,24 @@
+1. SCREEN RECORDING
+Not needed for the Apple Vision Pro version unless requested; the iPhone version's App Review Information has one. The app has no account registration, login, account deletion, user-generated content or paid content.
+
+2. PURPOSE AND AUDIENCE
+BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game to fill a few minutes, with no ads, accounts, timers or purchases. Games carry on where you left off and follow you between your Apple devices.
+
+3. HOW TO USE IT (no login, no setup, no sample files)
+- Open the app; a game starts straight away in a window.
+- Look at a tray piece and pinch to pick it up, drag it onto the board and let go. Full rows and columns clear and score. The game ends when no piece fits.
+- Power-ups: Hammer and Bomb (pinch one, then pinch a board cell), Shuffle, Rotate and Undo.
+- Gear icon: Dark mode and Reset game. Trophy icon (when signed in to Game Center): achievements and leaderboards. No immersive space and no high-motion content.
+
+4. EXTERNAL SERVICES
+All are Apple's; there are no third-party services, SDKs, analytics, ads or AI.
+- Game Center (optional): achievements, leaderboards, challenges and the Games app.
+- iCloud key-value storage: the game in progress and best score, so you can continue on another device signed in to the same iCloud account. Works offline without it.
+- The public App Store lookup (itunes.apple.com/lookup): checks for a newer App Store version. Nothing about the player is sent.
+No account, sign-in, server, user-generated content or in-app purchase.
+
+5. REGIONS
+The app and its content are the same in every region.
+
+6. REGULATED INDUSTRY / THIRD-PARTY MATERIAL
+Not applicable. The game, art, names and code are original, made by Daniel Haddad and published by Wilson Lam. No third-party protected material is used.

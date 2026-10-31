@@ -241,8 +241,17 @@ no development profile to carry it. Test Game Center on a Mac through TestFlight
    ```bash
    asc review details-create --version-id VERSION_ID --contact-first-name Wilson --contact-last-name Lam \
      --contact-email mail@wilsonlam.ca --contact-phone "<Wilson's phone>" --demo-account-required=false \
-     --notes "Single-player offline puzzle game. No account, sign-in, network access or purchases. ..."
+     --notes "$(cat metadata/review-notes/ios.txt)"
    ```
+
+   The notes in `metadata/review-notes/<platform>.txt` answer App Review's standard
+   "Information Needed" (Guideline 2.1) questions: purpose and audience, how to use it,
+   external services, regions and third-party material. Apply them with
+   `asc review details-update --id DETAIL_ID --notes "$(cat …)"`. iOS 1.6 was held
+   until they were there, along with a screen recording from a physical iPhone that
+   starts at launch, uploaded with
+   `asc review attachments-upload --review-detail DETAIL_ID --file recording.mov`.
+   Keep them true to the build: they name every service the app talks to.
 
    From the version with Sensory enhancement on, the iPhone and iPad builds declare the
    Audio, AirPlay and Picture in Picture background mode. Say why in the notes, since

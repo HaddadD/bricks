@@ -1,0 +1,27 @@
+1. SCREEN RECORDING
+Attached to this App Review Information: a recording on a physical iPhone running the latest iOS, starting at app launch and showing a typical game, power-ups, Settings, Game Center and the widget. The app has no account registration, login, account deletion, user-generated content or paid content.
+
+2. PURPOSE AND AUDIENCE
+BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game to fill a few minutes, with no ads, accounts, timers or purchases. Games carry on where you left off and follow you between your Apple devices.
+
+3. HOW TO USE IT (no login, no setup, no sample files)
+- Open the app; a game starts straight away.
+- Drag a piece from the tray below the board onto it. A row or column that fills up clears and scores. The game ends when no tray piece fits.
+- Power-ups (bar under the tray): Hammer (smash one brick) and Bomb (clear a 3x3 area): tap one, then tap the board. Shuffle deals a new tray, Rotate turns the tray pieces, Undo takes back a move. A gift on the board pays out a power-up if you build over it and clear its row or column before its countdown ends.
+- Gear icon (top right): Dark mode, Vibrations, Float pieces (iPhone: lifts a dragged piece above your finger), Widget on/off, Reset game.
+- Trophy icon (when signed in to Game Center): achievements and leaderboards.
+- Also included: a Home Screen widget (also shown in StandBy and CarPlay; can be turned off in Settings) and an Apple Watch app (tap a piece, tap the board to aim, tap again to place).
+- iPad: landscape and resizable windows. iPhone Duo: the outer display folds the power-ups into the side column.
+
+4. EXTERNAL SERVICES
+All are Apple's; there are no third-party services, SDKs, analytics, ads or AI.
+- Game Center (optional): achievements, leaderboards, challenges and the Games app.
+- iCloud key-value storage: the game in progress and best score, so you can continue on another device signed in to the same iCloud account. Works offline without it.
+- The public App Store lookup (itunes.apple.com/lookup): checks for a newer App Store version. Nothing about the player is sent.
+No account, sign-in, server, user-generated content or in-app purchase.
+
+5. REGIONS
+The app and its content are the same in every region.
+
+6. REGULATED INDUSTRY / THIRD-PARTY MATERIAL
+Not applicable. The game, art, names and code are original, made by Daniel Haddad and published by Wilson Lam. No third-party protected material is used.
