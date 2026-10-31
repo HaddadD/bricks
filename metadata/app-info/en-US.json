@@ -1,5 +1,6 @@
 {
   "name": "BRICKS! Block Puzzle",
   "subtitle": "Calm, colourful block puzzle",
-  "privacyPolicyUrl": "https://www.wilsonlam.ca/bricks/privacy.html"
+  "privacyPolicyUrl": "https://www.wilsonlam.ca/bricks/privacy.html",
+  "privacyPolicyText": "BRICKS! does not collect, share or sell any personal data. There are no accounts, ads, analytics or tracking, and nothing you do in the game is ever sent to us.\n\nThe app saves your game in progress, your best score and your settings on your device. So you can carry on your game on your other Apple devices, the game and your best score are also saved to your own iCloud account, where only your devices can read them. If you're signed in to Game Center, your scores and achievements go to Apple's Game Center. The App Store version checks the App Store for updates, which sends nothing about you.\n\niCloud, Game Center and the App Store are handled by Apple under Apple's privacy policy. Questions: mail@wilsonlam.ca"
 }

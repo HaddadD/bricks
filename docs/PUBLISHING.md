@@ -66,7 +66,7 @@ Two separate logins, both stored in the macOS Keychain:
 
 | Path | |
 |---|---|
-| `metadata/app-info/en-US.json` | name, subtitle, privacy policy URL |
+| `metadata/app-info/en-US.json` | name, subtitle, privacy policy URL, and the plain-text policy Apple TV shows (`privacyPolicyText`, required once there's a tvOS version) |
 | `metadata/version/<version>/en-US.json` | description, keywords, promo text, support and marketing URLs |
 | `metadata/privacy.json` | App Privacy declaration: **Data Not Collected** |
 | `appstore/screenshots/iphone-6.9/` | 5 screenshots, 1320×2868 (iPhone 6.9″, scales down to every smaller iPhone) |
@@ -150,7 +150,10 @@ What the API insists on, found the hard way: vendor ids allow only letters, digi
 underscores and periods; recurring leaderboards need `recurrenceDuration` in hours
 (`PT24H`, `PT168H`) plus `recurrenceRule` (`FREQ=DAILY;INTERVAL=1` or `…INTERVAL=7`, as
 there's no weekly frequency); and `asc`'s `--create-initial-version` fails, so challenge
-and activity versions are created separately. TestFlight builds use the Game Center
+and activity versions are created separately. Challenge and activity art must be
+3840x2160, and each challenge and activity version needs a default image of its own
+(`POST /v1/gameCenterChallengeImages` or `…ActivityImages` with a `version` relationship) as
+well as one per localization, or App Review won't take it. TestFlight builds use the Game Center
 sandbox, where everything works as soon as it's created. For the App Store, the items go
 live with the first version that includes them: in App Store Connect, add them to the
 version's Game Center section before submitting.

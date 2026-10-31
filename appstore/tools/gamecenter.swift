@@ -122,9 +122,10 @@ func badge(_ path: String, symbolName: String, colorName: String, label: String?
     }
 }
 
-/// A 16:9 banner for challenges and the activity: the badge's brick beside a title.
+/// A 16:9 banner for challenges and the activity, at the 3840x2160 App Store Connect
+/// requires: the badge's brick beside a title.
 func banner(_ path: String, symbolName: String, colorName: String, title: String) {
-    let (w, h): (CGFloat, CGFloat) = (1920, 1080)
+    let (w, h): (CGFloat, CGFloat) = (3840, 2160)
     let shade = Achievement.palette[colorName]!.shade
     png(Int(w), Int(h), path) {
         background(NSRect(x: 0, y: 0, width: w, height: h), colorName)
