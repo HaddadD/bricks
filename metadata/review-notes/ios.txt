@@ -1,8 +1,10 @@
 1. SCREEN RECORDING
-Attached to this App Review Information: a recording on a physical iPhone running the latest iOS, starting at app launch and showing a typical game, power-ups, Settings, Game Center and the widget. The app has no account registration, login, account deletion, user-generated content or paid content.
+Attached to this App Review Information: an 85-second recording on a physical iPhone running the latest iOS. It starts in the App Library, launches BRICKS!, plays a typical game (dragging pieces, clearing rows and columns), opens Settings (Dark mode on and off, Vibrations, Float pieces, Widget), and ends on the Home Screen widget showing the game's score. Power-ups read 0 in the recording because they're earned during play (from gifts on the board); Game Center opens from the trophy icon. The app has no account registration, login, account deletion, user-generated content or paid content.
 
 2. PURPOSE AND AUDIENCE
-BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game to fill a few minutes, with no ads, accounts, timers or purchases. Games carry on where you left off and follow you between your Apple devices.
+BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game for a few spare minutes.
+The problem it solves: most casual puzzle games interrupt play with ads, timers, sign-ups and pay-to-continue prompts. BRICKS! has none of these: it opens straight into a game, is free with no purchases, and works offline.
+The value: a relaxing, skill-based puzzle you can pick up anywhere. Games carry on where you left off and follow you between your Apple devices, and Game Center adds achievements and leaderboards for players who want goals.
 
 3. HOW TO USE IT (no login, no setup, no sample files)
 - Open the app; a game starts straight away.

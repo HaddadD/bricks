@@ -2,7 +2,9 @@
 Not needed for the Apple Vision Pro version unless requested; the iPhone version's App Review Information has one. The app has no account registration, login, account deletion, user-generated content or paid content.
 
 2. PURPOSE AND AUDIENCE
-BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game to fill a few minutes, with no ads, accounts, timers or purchases. Games carry on where you left off and follow you between your Apple devices.
+BRICKS! is a single-player block puzzle for all ages: drop pastel pieces on a 10x10 board and clear full rows and columns. It's for anyone who wants a calm, quick game for a few spare minutes.
+The problem it solves: most casual puzzle games interrupt play with ads, timers, sign-ups and pay-to-continue prompts. BRICKS! has none of these: it opens straight into a game, is free with no purchases, and works offline.
+The value: a relaxing, skill-based puzzle you can pick up anywhere. Games carry on where you left off and follow you between your Apple devices, and Game Center adds achievements and leaderboards for players who want goals.
 
 3. HOW TO USE IT (no login, no setup, no sample files)
 - Open the app; a game starts straight away in a window.
