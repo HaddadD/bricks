@@ -9,6 +9,11 @@ Everything goes through the [`asc` CLI](https://github.com/rorkai/App-Store-Conn
 depth: `asc-release-flow`, `asc-xcode-build`, `asc-metadata-sync`,
 `asc-submission-health`, `asc-testflight-orchestration`.
 
+**Shipping a change?** Follow [RELEASE-PLAYBOOK.md](RELEASE-PLAYBOOK.md): every change
+goes to TestFlight with `appstore/tools/testflight.sh`, then the user is asked whether to
+publish to the App Store too. This file is the reference behind it: accounts, signing,
+and how the app was first set up.
+
 ## Accounts and identifiers
 
 | | |
@@ -18,7 +23,7 @@ depth: `asc-release-flow`, `asc-xcode-build`, `asc-metadata-sync`,
 | App Store name | `BRICKS! Block Puzzle` (plain `BRICKS!` is taken by another developer) |
 | App ID | `6828698183` — https://appstoreconnect.apple.com/apps/6828698183 |
 | SKU | `bricks-ios` |
-| Version 1.5 ID | `3efad04d-e98c-4e92-a8c5-5292972b60e8` |
+| iOS version ID | `3efad04d-e98c-4e92-a8c5-5292972b60e8` (created as 1.5, renamed 1.6) |
 | Age rating | 4+ (every questionnaire answer none/false) |
 | App Privacy | Data Not Collected (published) |
 | Content rights | Does not use third-party content |
@@ -78,17 +83,16 @@ Validate metadata any time with `asc metadata validate --dir ./metadata --output
 
 ## First release: one-time setup
 
-### Status (2026-10-30)
+### Status (2026-11-25)
 
-**1.5 (build 1) is submitted and waiting for App Review** (submission
-`83aa570d-7ca8-4b8c-bee2-918e1dd7cb41`, build `5748387a-06ff-4703-8c41-5552795a3c57`).
-Release type is *after approval*, so it goes live as soon as Apple approves it. Check with
-`asc review status --app 6828698183`; if it's rejected, read Apple's message with
-`asc web review show --app 6828698183` and use the `asc-submission-health` skill.
+**1.6 is live on iPhone/iPad (with Apple Watch), Mac and Vision Pro.** Apple TV 1.6 was
+rejected and needs its App Review message read and answered
+(`asc web review show --app 6828698183`, with a web session). Build 8 (iOS) is the latest
+TestFlight build. Because 1.6 is approved, its build train is closed: the next upload is
+1.6.1 or 1.7. `asc status --app 6828698183` always has the current picture.
 
-`asc validate` reports two non-blocking notes, both expected: "what's new is empty"
-(Apple doesn't allow release notes on an app's first version) and "App Privacy publish
-state unverified" (it is published; the public API just can't see that).
+`asc validate` reports "App Privacy publish state unverified" on every version. That's
+expected: it is published, and the public API just can't see that.
 
 ### 1.6: every platform, in TestFlight
 
@@ -291,55 +295,12 @@ asc profiles local install --path ~/.keys/signing/BRICKS_AppStore.mobileprovisio
 and put the new profile UUID in the matching `appstore/export/*.plist`. Profiles expire with
 their certificate.
 
-## TestFlight builds
+## TestFlight builds and App Store releases
 
-Every change to the app goes to TestFlight straight away, as its own build: bump
-`CURRENT_PROJECT_VERSION` (every target shares it), archive and upload as in step 3
-below, then once it has processed add the "What to Test" notes, add it to both groups
-and submit it for beta review:
-
-```bash
-asc builds test-notes create --build-id BUILD_ID --locale en-US --whats-new "..."
-asc builds add-groups --build-id BUILD_ID --group BRICKS_TEAM_ID,FRIENDS_AND_FAMILY_ID
-asc testflight review submit --build-id BUILD_ID --confirm
-```
-
-These builds don't go to an App Store version unless a release is planned; the version
-in App Review keeps the build it was submitted with.
-
-## Every release
-
-1. Bump `MARKETING_VERSION` (and/or `CURRENT_PROJECT_VERSION`) in Xcode. Every upload
-   needs a build number that hasn't been used before for that version.
-2. Copy `metadata/version/<old>/` to `metadata/version/<new>/` and add `whatsNew`
-   (the `asc-whats-new-writer` skill drafts it from `git log`). `whatsNew` is not allowed
-   on the very first version.
-3. Archive and upload (this is what shipped 1.5; see [Signing](#signing)):
-
-   ```bash
-   # ASC_KEY_ID / ASC_ISSUER_ID: see Authentication above.
-   KEY=(-authenticationKeyPath ~/.keys/AuthKey_$ASC_KEY_ID.p8 -authenticationKeyID $ASC_KEY_ID
-        -authenticationKeyIssuerID $ASC_ISSUER_ID)
-   xcodebuild -project BRICKS.xcodeproj -scheme BRICKS -configuration Release \
-     -destination 'generic/platform=iOS' -archivePath build/BRICKS.xcarchive archive \
-     -allowProvisioningUpdates "${KEY[@]}"
-   xcodebuild -exportArchive -archivePath build/BRICKS.xcarchive \
-     -exportOptionsPlist appstore/export/ios.plist -exportPath build/export "${KEY[@]}"
-   ```
-
-   With `destination = upload` in the export options, the export *is* the upload.
-4. Wait for processing, attach the build, check, and submit:
-
-   ```bash
-   asc builds wait --app 6828698183 --build-number N --platform IOS --version X.Y --fail-on-invalid
-   asc versions attach-build --app 6828698183 --version X.Y --build-number N
-   asc validate --app 6828698183 --version X.Y --output table
-   asc review submit --app 6828698183 --version X.Y --dry-run --output table
-   asc review submit --app 6828698183 --version X.Y --confirm
-   asc review status --app 6828698183
-   ```
-
-   If something blocks, use the `asc-submission-health` skill.
+The routine for every change, from TestFlight to the App Store, is in
+[RELEASE-PLAYBOOK.md](RELEASE-PLAYBOOK.md). `appstore/tools/testflight.sh` does the
+TestFlight part: bump the build number, archive, upload, add notes and groups, and
+submit for beta review. Run it with `--help` for options.
 
 ### Things that can fail validation
 

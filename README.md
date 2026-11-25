@@ -19,7 +19,9 @@ team. A free Apple ID works; no paid developer account needed. You will probably
 want to change the bundle identifier from `ca.wilsonlam.bricks` to something of your
 own, since bundle ids have to be unique.
 
-Publishing to the App Store is covered in [docs/PUBLISHING.md](docs/PUBLISHING.md).
+Shipping a change to TestFlight and the App Store is covered in
+[docs/RELEASE-PLAYBOOK.md](docs/RELEASE-PLAYBOOK.md); accounts, signing and setup are in
+[docs/PUBLISHING.md](docs/PUBLISHING.md).
 
 With a free Apple ID the app stops launching after 7 days — plug in and hit ⌘R again to
 re-sign it. Your saved game and high score survive that, since re-installing over the top
