@@ -55,7 +55,7 @@ struct WidgetFace: View {
             .lineLimit(1)
     }
 
-    private func stat(_ label: String, _ value: Int?) -> some View {
+    private func stat(_ label: LocalizedStringKey, _ value: Int?) -> some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(label)
                 .font(.system(size: 10, weight: .bold, design: .rounded))

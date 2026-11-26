@@ -269,12 +269,17 @@ BRICKS! has been on sale in both since 2026-11-03, because availability is set t
 territory (`asc pricing availability territory-availabilities --app 6828698183` shows
 `CHN` and `HKG` as `AVAILABLE`). Both listings are live:
 https://apps.apple.com/cn/app/id6828698183 and https://apps.apple.com/hk/app/id6828698183.
-Both show the English listing, because the app and its listing are English only.
+Through 1.6 both show the English listing and an English-only app.
 
-- **Language.** China mainland reads Simplified Chinese (App Store locale `zh-Hans`);
-  Hong Kong, Macao and Taiwan read Traditional Chinese (`zh-Hant`). A listing in those
-  locales needs its own name, subtitle, description, keywords and screenshots, plus
-  Game Center names and descriptions for each achievement and leaderboard.
+- **Language.** From 1.7 the app, its listing and its Game Center text are in Simplified
+  Chinese (`zh-Hans`, China mainland) and Traditional Chinese (`zh-Hant`, Hong Kong,
+  Macao and Taiwan), alongside English. The app's strings are in
+  `BRICKS/Localizable.xcstrings`; the listing in `metadata/app-info/` and each version's
+  `<locale>.json`; Game Center text in `metadata/gamecenter/`, applied with
+  `appstore/tools/gamecenter-localize.py`. The listing name is `BRICKS! 方块拼图`
+  (Simplified) and `BRICKS! 方塊拼圖` (Traditional). Mainland usage counts rows as 行
+  and columns as 列; Hong Kong and Taiwan say 列 and 欄, and the Traditional strings follow
+  that. Screenshots are still the English ones.
 - **China mainland rules.** China requires a game publishing approval number from the
   NPPA for games, and an ICP filing number for apps. Apple collects both in App Store
   Connect (App Information, and the China mainland availability settings) and can pull

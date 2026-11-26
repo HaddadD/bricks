@@ -707,7 +707,8 @@ final class GameModel: ObservableObject {
 
     private var toastToken = 0
 
-    private func showToast(_ text: String) {
+    private func showToast(_ message: String.LocalizationValue) {
+        let text = String(localized: message)
         toastToken += 1
         let token = toastToken
         withAnimation(.easeOut(duration: 0.2)) { toast = text }

@@ -184,7 +184,7 @@ show_errors() { # log
 
 RUN="$OUT/$TARGET_VERSION-$NEXT"
 mkdir -p "$RUN"
-FAILED=""
+FAILED="" LATER=""
 
 for p in $PLATFORMS; do
   P=$(asc_platform $p)
@@ -240,6 +240,10 @@ if [ $DISTRIBUTE = 1 ]; then
     # Friends & Family is external, so each build goes through Beta App Review.
     if out=$(asc testflight review submit --build-id "$id" --confirm --output json 2>&1); then
       echo "    submitted for beta review"
+    elif echo "$out" | grep -qi "another build"; then
+      # One build per version can be in Beta App Review at a time; this one waits.
+      echo "    beta review: waits until another $TARGET_VERSION build's review finishes"
+      LATER="$LATER\n  asc testflight review submit --build-id $id --confirm   # $P"
     elif echo "$out" | grep -qiE "already|ENTITY_ERROR.*state"; then
       echo "    beta review: already submitted or not needed"
     else
@@ -248,6 +252,11 @@ if [ $DISTRIBUTE = 1 ]; then
   done
 fi
 
+if [ -n "$LATER" ]; then
+  say "Internal testers have it now. Friends & Family get it once these are submitted for"
+  echo "    beta review, after the earlier build's review finishes (asc status --app $APP_ID):"
+  printf "$LATER\n"
+fi
 if [ -n "$FAILED" ]; then
   say "Finished with problems:$FAILED"
   exit 1

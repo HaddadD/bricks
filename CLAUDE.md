@@ -20,6 +20,12 @@ Follow [docs/RELEASE-PLAYBOOK.md](docs/RELEASE-PLAYBOOK.md). In short:
 
 ## Ground rules
 
+- The app is in English, Simplified Chinese (`zh-Hans`) and Traditional Chinese
+  (`zh-Hant`). Every new on-screen string needs both translations in
+  `BRICKS/Localizable.xcstrings`. A `String` that reaches the screen must be looked up
+  (`String(localized:)` or `LocalizedStringKey`); `Text("literal")` is looked up already.
+  New App Store text goes in each `metadata/**/<locale>.json`, and new Game Center items
+  in `metadata/gamecenter/<locale>.json`.
 - The repo is public: keep API key and issuer IDs, `.p8` files, profiles and phone
   numbers out of it.
 - `origin` is HaddadD/bricks, Daniel Haddad's repo; SuspectOnTheLam has write access

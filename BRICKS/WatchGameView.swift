@@ -147,8 +147,8 @@ struct WatchGameView: View {
     private var hint: String? {
         if let power = model.activePower, !power.targetHint.isEmpty { return power.targetHint }
         guard selected != nil else { return nil }
-        if cursor == nil { return "Tap the board to aim" }
-        return aim?.blocked == true ? "Doesn't fit there" : "Tap the outline to place"
+        if cursor == nil { return String(localized: "Tap the board to aim") }
+        return aim?.blocked == true ? String(localized: "Doesn't fit there") : String(localized: "Tap the outline to place")
     }
 
     // MARK: - Chrome
@@ -242,7 +242,7 @@ struct WatchGameView: View {
         }
     }
 
-    private func stat(_ label: String, _ value: Int) -> some View {
+    private func stat(_ label: LocalizedStringKey, _ value: Int) -> some View {
         VStack(spacing: 0) {
             Text(label)
                 .font(.system(size: 9, weight: .bold, design: .rounded))

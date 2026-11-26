@@ -563,9 +563,37 @@ let t6 = DragTargeting.target(
     finger: CGPoint(x: 20 + cell / 2, y: bottom + lift - cell / 2),
     shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true)
 check(t6.row == 9, "a floating 1x1 reaches the bottom row with the finger 2.4 cells under the board (got \(t6))")
-check(DragTargeting.hasRoomToFloat(below: 2.9 * cell, cellSize: cell), "2.9 cells under the board is room to float")
-check(!DragTargeting.hasRoomToFloat(below: 2 * cell, cellSize: cell), "2 cells under the board isn't room to float")
-check(!DragTargeting.hasRoomToFloat(below: 100, cellSize: 0), "no board yet, no floating")
+
+// With 2.9 cells or more under the board (a tall iPhone), the lift never changes.
+let roomy = 3 * cell, roomyEdge = bottom + roomy
+for y in stride(from: origin.y, through: roomyEdge, by: cell / 4) {
+    check_quiet(DragTargeting.lift(cellSize: cell, room: roomy, toEdge: roomyEdge - y) == lift,
+                "with room the lift stays 2.9 cells at y \(y)")
+}
+check(true, "with 3 cells under the board the lift is 2.9 cells everywhere")
+
+// With little or no room (the Duo, a wide iPad or Mac window, the tray beside the board),
+// a piece floats fully away from the edge and settles toward the finger near it, and
+// every row stays in reach.
+for room in [0, cell / 2, 1.5 * cell] {
+    let edge = bottom + room
+    check(DragTargeting.lift(cellSize: cell, room: room, toEdge: 6 * cell) == lift,
+          "room \(room / cell) cells: full lift away from the edge")
+    check(DragTargeting.lift(cellSize: cell, room: room, toEdge: cell / 2) == room,
+          "room \(room / cell) cells: half a cell from the edge it lifts only the room there is")
+    let t7 = DragTargeting.target(
+        finger: CGPoint(x: 20 + cell / 2, y: edge - cell / 2),
+        shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true, room: room, edge: edge)
+    check(t7.row == 9, "room \(room / cell) cells: a floating 1x1 reaches the bottom row (got \(t7))")
+    var lastY = -CGFloat.infinity
+    var rising = true
+    for y in stride(from: origin.y, through: edge - cell / 2, by: 1) {
+        let top = y - DragTargeting.lift(cellSize: cell, room: room, toEdge: edge - y)
+        rising = rising && top >= lastY
+        lastY = top
+    }
+    check(rising, "room \(room / cell) cells: the piece never moves up as the finger moves down")
+}
 
 // MARK: - Placement cursor (Apple TV, Apple Watch)
 

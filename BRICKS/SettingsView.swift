@@ -50,11 +50,11 @@ struct SettingsView: View {
                         if Platform.supportsAppearanceChoice { divider }
                         vibrationRow
                     }
-                    #if os(iOS)
                     if offersFloatPieces {
                         divider
                         floatRow
                     }
+                    #if os(iOS)
                     divider
                     widgetRow
                     #endif
@@ -162,9 +162,9 @@ struct SettingsView: View {
         .padding(.vertical, 13)
     }
 
-    #if os(iOS)
-    /// Floats a dragged piece above the finger, so the finger doesn't hide it or the
-    /// square it will land on. Only offered where there's room under the board for it.
+    /// Floats a dragged piece above the finger, pointer or pinch, so the hand doesn't hide
+    /// it or the square it will land on. Offered wherever pieces are dragged and there's
+    /// room under the board for it.
     private var floatRow: some View {
         HStack(spacing: 12) {
             icon("hand.point.up.left.fill", tint: Color(hex: 0xFFB59E))
@@ -173,7 +173,7 @@ struct SettingsView: View {
                 Text("Float pieces")
                     .font(.system(size: 15, weight: .bold, design: .rounded))
                     .foregroundColor(Theme.ink)
-                Text(settings.floatPieces ? "Above your finger" : "Under your finger")
+                Text(floatSummary)
                     .font(.system(size: 12, weight: .medium, design: .rounded))
                     .foregroundColor(Theme.inkSoft)
             }
@@ -183,10 +183,24 @@ struct SettingsView: View {
             Toggle("Float pieces", isOn: $settings.floatPieces)
                 .labelsHidden()
                 .tint(Color(hex: 0xE99A82))
+                .toggleStyle(.switch)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
     }
+
+    /// Where the dragged piece sits, in the words of each platform's way of dragging.
+    private var floatSummary: LocalizedStringKey {
+        #if os(macOS)
+        settings.floatPieces ? "Above the pointer" : "Under the pointer"
+        #elseif os(visionOS)
+        settings.floatPieces ? "Above your pinch" : "Under your pinch"
+        #else
+        settings.floatPieces ? "Above your finger" : "Under your finger"
+        #endif
+    }
+
+    #if os(iOS)
 
     /// Sensory enhancement and everything it can play, kept together on a card of their
     /// own: the runner (with its two worlds) and the two satisfying shows.

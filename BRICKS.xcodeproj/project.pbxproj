@@ -18,6 +18,9 @@
 		B1000109000000000000A001 /* PowerUpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000009000000000000A001 /* PowerUpBar.swift */; };
 		B100010A000000000000A001 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000A000000000000A001 /* GameOverView.swift */; };
 		B100010B000000000000A001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B100000B000000000000A001 /* Assets.xcassets */; };
+		F5000101000000000000A001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F5000001000000000000A001 /* Localizable.xcstrings */; };
+		F5000102000000000000A001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F5000001000000000000A001 /* Localizable.xcstrings */; };
+		F5000103000000000000A001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F5000001000000000000A001 /* Localizable.xcstrings */; };
 		B100010C000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
 		B100010E000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
 		B100010F000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
@@ -82,6 +85,7 @@
 		B1000009000000000000A001 /* PowerUpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpBar.swift; sourceTree = "<group>"; };
 		B100000A000000000000A001 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		B100000B000000000000A001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5000001000000000000A001 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B100000C000000000000A001 /* DragTargeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragTargeting.swift; sourceTree = "<group>"; };
 		B100000E000000000000A001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				B1000009000000000000A001 /* PowerUpBar.swift */,
 				B100000A000000000000A001 /* GameOverView.swift */,
 				B100000B000000000000A001 /* Assets.xcassets */,
+				F5000001000000000000A001 /* Localizable.xcstrings */,
 			);
 			path = BRICKS;
 			sourceTree = "<group>";
@@ -413,6 +418,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = B1000300000000000000A001;
 			productRefGroup = B1000302000000000000A001 /* Products */;
@@ -433,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5000101000000000000A001 /* Localizable.xcstrings in Resources */,
 				B100010B000000000000A001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5000102000000000000A001 /* Localizable.xcstrings in Resources */,
 				C200010B000000000000A001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5000103000000000000A001 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +612,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
@@ -625,7 +635,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -655,7 +665,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
@@ -678,7 +688,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -805,7 +815,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -817,7 +827,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -836,7 +846,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -848,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				CODE_SIGN_ENTITLEMENTS = BRICKS/GameCenter.entitlements;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -865,10 +875,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.uitests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -889,10 +899,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.uitests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -913,10 +923,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.watch-uitests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -932,10 +942,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.wilsonlam.bricks.watch-uitests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -954,7 +964,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BRICKSWidget/Info.plist;
@@ -965,7 +975,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -986,7 +996,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = BRICKSWidget/BRICKSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 76C669ZZ43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BRICKSWidget/Info.plist;
@@ -997,7 +1007,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.wilsonlam.bricks.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

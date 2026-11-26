@@ -44,8 +44,8 @@ enum Platform {
         #endif
     }()
 
-    /// An iPhone, including the iPhone Duo. Only a phone offers "Float pieces": an iPad's
-    /// cells are big enough to see past the finger, and a pointer or pinch covers nothing.
+    /// An iPhone, including the iPhone Duo, where "Float pieces" starts out on: a finger
+    /// covers more of a phone's small cells than of an iPad's.
     static let isPhone: Bool = {
         #if os(iOS)
         return UIDevice.current.userInterfaceIdiom == .phone

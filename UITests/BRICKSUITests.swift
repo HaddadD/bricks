@@ -231,25 +231,22 @@ final class BRICKSUITests: XCTestCase {
     }
     #endif
 
-    // MARK: - Float pieces (regular iPhones)
+    // MARK: - Float pieces
 
     #if os(iOS)
-    /// Only a regular, tall iPhone offers "Float pieces", and there it starts on. A dragged
-    /// piece floats 2.9 cells above the finger and lands under the piece, not the finger.
+    /// Every iPhone (the Duo too) and iPad offers "Float pieces"; it starts on on a phone
+    /// and off on iPad. A dragged piece floats 2.9 cells above the finger and lands under
+    /// the piece, not the finger.
     func testFloatPieces() throws {
         app.terminate()
         app.launchArguments = ["-demo", "YES", "-noGameCenter", "YES"]
         app.launch()
         let floatSwitch = app.switches["Float pieces"]
         app.buttons["Settings"].tap()
-        let screen = app.windows.firstMatch.frame.size
-        guard UIDevice.current.userInterfaceIdiom == .phone, screen.height > screen.width * 1.8 else {
-            XCTAssertFalse(floatSwitch.waitForExistence(timeout: 2), "only a regular iPhone offers Float pieces")
-            snapshot("no-float-setting")
-            throw XCTSkip("Float pieces is only offered on regular iPhones")
-        }
-        XCTAssertTrue(floatSwitch.waitForExistence(timeout: 3), "a regular iPhone offers Float pieces")
-        XCTAssertEqual(floatSwitch.value as? String, "1", "it starts on")
+        XCTAssertTrue(floatSwitch.waitForExistence(timeout: 3), "Float pieces is offered")
+        let phone = UIDevice.current.userInterfaceIdiom == .phone
+        XCTAssertEqual(floatSwitch.value as? String, phone ? "1" : "0",
+                       phone ? "it starts on on iPhone" : "it starts off on iPad")
         snapshot("float-setting")
 
         app.terminate()

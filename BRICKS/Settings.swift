@@ -61,9 +61,10 @@ final class Settings: ObservableObject {
         isDark = defaults.bool(forKey: Key.dark)
         // Vibrations default to on, so read the stored value only once one exists.
         vibrations = defaults.object(forKey: Key.vibrations) as? Bool ?? true
-        // On until the player says otherwise. `bool(forKey:)` also reads a launch
-        // argument's "NO", which `as? Bool` wouldn't.
-        floatPieces = defaults.object(forKey: Key.floatPieces) == nil ? true : defaults.bool(forKey: Key.floatPieces)
+        // On iPhone, on until the player says otherwise; elsewhere a pointer, pinch or
+        // big iPad cell hides less, so it's off until asked for. `bool(forKey:)` also
+        // reads a launch argument's "NO", which `as? Bool` wouldn't.
+        floatPieces = defaults.object(forKey: Key.floatPieces) == nil ? Platform.isPhone : defaults.bool(forKey: Key.floatPieces)
         widgetEnabled = WidgetSnapshot.isEnabled
         #if os(iOS)
         sensory = defaults.bool(forKey: Key.sensory)
