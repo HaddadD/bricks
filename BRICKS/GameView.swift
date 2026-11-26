@@ -19,10 +19,8 @@ struct GameView: View {
     @EnvironmentObject private var gameCenter: GameCenter
 
     @State private var gridFrame: CGRect = .zero
-    /// The game's area inside the safe area, and the whole screen around it, for deciding
-    /// whether "Float pieces" can be offered.
+    /// The game's area inside the safe area, which the room under the board is measured in.
     @State private var gameSize: CGSize = .zero
-    @State private var screenSize: CGSize = .zero
     @State private var drag: DragInfo? = nil
     @State private var placing: Placing? = nil
     @FocusState private var boardFocused: Bool
@@ -105,7 +103,7 @@ struct GameView: View {
                         brickSize: cell - max(2, cell * 0.09),
                         gap: max(2, cell * 0.09)
                     )
-                    .position(x: d.location.x, y: d.location.y - DragTargeting.lift(cellSize: cell, floating: floatsPieces))
+                    .position(x: d.location.x, y: d.location.y - DragTargeting.lift(cellSize: cell, floating: floatsPieces, room: roomUnderBoard, toEdge: gameSize.height - d.location.y))
                     .shadow(color: Theme.shadow.opacity(0.35), radius: 8, y: 6)
                     .allowsHitTesting(false)
                 }
@@ -490,20 +488,15 @@ struct GameView: View {
 
     private func measure(_ geo: GeometryProxy) {
         gameSize = geo.size
-        let insets = geo.safeAreaInsets
-        screenSize = CGSize(width: geo.size.width + insets.leading + insets.trailing,
-                            height: geo.size.height + insets.top + insets.bottom)
     }
 
-    /// Whether "Float pieces" is on offer: a regular iPhone, whose screen is more than
-    /// 1.8 times as tall as it is wide (the iPhone Duo's displays are much squarer), with
-    /// room under the board for the finger to carry a floating piece to the bottom row.
-    private var canFloatPieces: Bool {
-        guard Platform.isPhone, gridFrame != .zero, screenSize.height > screenSize.width * 1.8
-        else { return false }
-        let cell = gridFrame.width / CGFloat(GameModel.size)
-        return DragTargeting.hasRoomToFloat(below: gameSize.height - gridFrame.maxY, cellSize: cell)
-    }
+    /// Whether "Float pieces" is on offer: wherever pieces are dragged (iPhone, iPad, Mac,
+    /// Vision Pro). The lift adapts to the room under the board, so any layout works.
+    private var canFloatPieces: Bool { Platform.input == .drag }
+
+    /// The space between the board and the bottom of the game, which decides how far a
+    /// floating piece can stay lifted near the edge (`DragTargeting.lift`).
+    private var roomUnderBoard: CGFloat { max(0, gameSize.height - gridFrame.maxY) }
 
     /// The setting only applies where it's on offer.
     private var floatsPieces: Bool { settings.floatPieces && canFloatPieces }
@@ -518,7 +511,9 @@ struct GameView: View {
             shapeCols: piece.shape.cols,
             gridOrigin: gridFrame.origin,
             cellSize: cellSize,
-            floating: floatsPieces
+            floating: floatsPieces,
+            room: roomUnderBoard,
+            edge: gameSize.height
         )
     }
 

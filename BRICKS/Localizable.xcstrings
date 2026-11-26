@@ -183,6 +183,22 @@
         }
       }
     },
+    "Above the pointer" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在指针上方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在指標上方"
+          }
+        }
+      }
+    },
     "Above your finger" : {
       "localizations" : {
         "zh-Hans" : {
@@ -195,6 +211,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在手指上方"
+          }
+        }
+      }
+    },
+    "Above your pinch" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在捏合处上方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在捏合處上方"
           }
         }
       }
@@ -2029,6 +2061,22 @@
         }
       }
     },
+    "Under the pointer" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在指针下方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在指標下方"
+          }
+        }
+      }
+    },
     "Under your finger" : {
       "localizations" : {
         "zh-Hans" : {
@@ -2041,6 +2089,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在手指下方"
+          }
+        }
+      }
+    },
+    "Under your pinch" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在捏合处下方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在捏合處下方"
           }
         }
       }

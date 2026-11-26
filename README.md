@@ -60,12 +60,12 @@ file with another 1024×1024 PNG that has no alpha channel.
   clear alone — the next one starts from scratch. There is no streak between turns.
 - A dragged piece sits right under your finger (or pointer, or pinch), exactly where it
   will land, and the rows or columns a placement would complete are highlighted before
-  you let go. On a regular iPhone, **Float pieces** lifts it 2.9 cells above your finger
-  instead, so your finger doesn't hide it. It's on by default, but only where there's
-  room under the board for the finger to carry a floating piece down to the bottom row,
-  so never on the iPhone Duo's squarer screens or on iPad. Where there isn't room the
-  setting is hidden and pieces sit under the finger; the player's own choice is kept and
-  comes back as soon as there's room again.
+  you let go. **Float pieces** lifts it above the finger, pointer or pinch instead, so
+  your hand doesn't hide it, on every platform that drags (iPhone, iPhone Duo, iPad, Mac,
+  Vision Pro). It's on by default on iPhone and off elsewhere. The piece floats 2.9 cells
+  up. Where there's less room than that under the board (the Duo, or a wide iPad or Mac
+  window with the tray beside the board), it settles back toward the finger as the
+  finger nears the bottom edge, so every row stays in reach (`DragTargeting.lift`).
 - Every tray slot has the same grab area — the footprint of the largest piece — so a 1x1
   is no harder to pick up than a 3x3.
 
@@ -77,10 +77,10 @@ the board and how the screen is laid out. Those decisions live in `Platform.swif
 | | Controls | Layout |
 |---|---|---|
 | iPhone | drag, piece under your finger, or floating above it with Float pieces | tall, portrait-only |
-| iPhone Duo | drag | outer display: tall, with the power-ups folded into the trailing system column; inner display: tall or wide by orientation |
-| iPad | drag, piece right under your finger | tall or wide, every orientation, resizable windows |
-| Mac | mouse drag, piece right under the pointer; ⌘N new game, ⌘Z undo, ⌘, settings | wide, resizable window |
-| Vision Pro | look and pinch to drag, piece right under the pinch | wide window |
+| iPhone Duo | drag, as on iPhone | outer display: tall, with the power-ups folded into the trailing system column; inner display: tall or wide by orientation |
+| iPad | drag, piece under your finger, or floating above it with Float pieces | tall or wide, every orientation, resizable windows |
+| Mac | mouse drag, piece under the pointer or floating above it; ⌘N new game, ⌘Z undo, ⌘, settings | wide, resizable window |
+| Vision Pro | look and pinch to drag, piece under the pinch or floating above it | wide window |
 | Apple TV | press a piece, move it with the remote, press to place, Menu to cancel; hammer and bomb aim the same way | wide, text and chrome scaled ×1.6 |
 | Apple Watch | tap a piece, tap the board to aim it, tap the outline to place | board and tray side by side, one screen |
 
@@ -121,7 +121,7 @@ The gear in the top right opens a sheet with:
   about it. The pastel bricks keep the same colours in both modes.
 - **Vibrations** — gates every call in `Haptics`. Hidden on devices without haptics
   hardware (iPad, Mac).
-- **Float pieces** — see The game, above. Regular iPhones only.
+- **Float pieces** — see The game, above. Everywhere pieces are dragged; not Apple TV or Apple Watch, which place pieces with the remote or taps.
 - **Widget** — iPhone and iPad.
 - **Sensory enhancement** — iPhone and iPad, off by default. Something to watch in a 16:9
   strip under the board (the board gets a little smaller to make room; on a landscape
