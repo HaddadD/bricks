@@ -269,5 +269,6 @@ TestFlight builds expire after 90 days.
 | ITMS-90062 / "train … is closed" | The version is already approved. Rerun with `--version` (the script checks for this first). |
 | "Cloud signing permission error" | Export tried automatic signing; the export plists must stay `signingStyle = manual`. |
 | A profile is `INVALID` in `asc profiles list` | A capability changed. Regenerate and install it, and put the new UUID in `appstore/export/<platform>.plist` (PUBLISHING.md, Signing). |
+| "Another build is in review" on beta review | Apple reviews one build per version at a time. Internal testers already have the new build; submit it for Friends & Family once the earlier review finishes. The script prints the command. |
 | Build stuck in processing over an hour | Check `asc builds list --app 6828698183 --platform P`; an `INVALID` build has an email from Apple saying why. |
 | App Review "Information Needed" (Guideline 2.1) | Update `metadata/review-notes/<platform>.txt` and the version's notes; attach a device screen recording if asked. |
