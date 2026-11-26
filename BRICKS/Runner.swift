@@ -13,15 +13,15 @@ enum RunnerStyle: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .trail: return "Trail"
-        case .street: return "Street"
+        case .trail: return String(localized: "Trail")
+        case .street: return String(localized: "Street")
         }
     }
 
     var blurb: String {
         switch self {
-        case .trail: return "Above the clouds"
-        case .street: return "Toy-town traffic"
+        case .trail: return String(localized: "Above the clouds")
+        case .street: return String(localized: "Toy-town traffic")
         }
     }
 }
@@ -791,7 +791,7 @@ enum RunnerRenderer {
     private static func hud(_ game: RunnerGame, ctx: CGContext, w: Double, h: Double) {
         let size = h * 0.07
         let pad = h * 0.04
-        let distance = "\(Int(game.s).formatted()) m"
+        let distance = String(localized: "\(Int(game.s).formatted()) m")
         let stars = game.stars.formatted()
 
         func pill(_ text: String, x: Double, alignRight: Bool, icon: Bool) {

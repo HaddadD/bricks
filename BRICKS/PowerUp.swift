@@ -13,11 +13,11 @@ enum PowerUp: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .hammer:  return "Hammer"
-        case .bomb:    return "Bomb"
-        case .shuffle: return "Shuffle"
-        case .rotate:  return "Rotate"
-        case .undo:    return "Undo"
+        case .hammer:  return String(localized: "Hammer")
+        case .bomb:    return String(localized: "Bomb")
+        case .shuffle: return String(localized: "Shuffle")
+        case .rotate:  return String(localized: "Rotate")
+        case .undo:    return String(localized: "Undo")
         }
     }
 
@@ -52,13 +52,13 @@ enum PowerUp: String, CaseIterable, Identifiable {
     /// What to do next once armed, in the words of each platform's controls.
     var targetHint: String {
         switch (self, Platform.input) {
-        case (.hammer, .drag), (.hammer, .tap): return "Tap a brick to smash it"
-        case (.hammer, .remote):                return "Move to a brick and press to smash it"
-        case (.bomb, .drag), (.bomb, .tap):     return "Tap the board to blast a 3×3 area"
-        case (.bomb, .remote):                  return "Move to a spot and press to blast it"
-        case (.rotate, .drag):                  return "Tap to turn all three — drag a piece when done"
-        case (.rotate, .remote):                return "Press a piece to turn all three — Menu when done"
-        case (.rotate, .tap):                   return "Tap a piece to turn all three"
+        case (.hammer, .drag), (.hammer, .tap): return String(localized: "Tap a brick to smash it")
+        case (.hammer, .remote):                return String(localized: "Move to a brick and press to smash it")
+        case (.bomb, .drag), (.bomb, .tap):     return String(localized: "Tap the board to blast a 3×3 area")
+        case (.bomb, .remote):                  return String(localized: "Move to a spot and press to blast it")
+        case (.rotate, .drag):                  return String(localized: "Tap to turn all three — drag a piece when done")
+        case (.rotate, .remote):                return String(localized: "Press a piece to turn all three — Menu when done")
+        case (.rotate, .tap):                   return String(localized: "Tap a piece to turn all three")
         case (.shuffle, _), (.undo, _):         return ""
         }
     }

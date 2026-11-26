@@ -482,7 +482,7 @@ struct GameView: View {
     /// with the remote.
     private var currentHint: String? {
         if let power = model.activePower, !power.targetHint.isEmpty { return power.targetHint }
-        if placing?.trayIndex != nil { return "Move it with the remote, then press to place" }
+        if placing?.trayIndex != nil { return String(localized: "Move it with the remote, then press to place") }
         return nil
     }
 
@@ -563,8 +563,8 @@ struct GameView: View {
     /// Where the remote is aiming, for VoiceOver (and the UI tests).
     private var aimDescription: String {
         guard let p = placing else { return "" }
-        let spot = "row \(p.cursor.row + 1), column \(p.cursor.col + 1)"
-        return aim?.blocked == true ? "\(spot), doesn't fit" : spot
+        let spot = String(localized: "row \(p.cursor.row + 1), column \(p.cursor.col + 1)")
+        return aim?.blocked == true ? String(localized: "\(spot), doesn't fit") : spot
     }
 
     /// Picks a tray piece up and puts it on the board where it fits nearest the middle.

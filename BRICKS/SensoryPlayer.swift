@@ -15,17 +15,17 @@ enum SensoryMode: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .runner: return "Runner"
-        case .oddlySatisfying: return "Oddly Satisfying"
-        case .impossibleSatisfying: return "Impossible Satisfying"
+        case .runner: return String(localized: "Runner")
+        case .oddlySatisfying: return String(localized: "Oddly Satisfying")
+        case .impossibleSatisfying: return String(localized: "Impossible Satisfying")
         }
     }
 
     var blurb: String {
         switch self {
-        case .runner: return "An endless run that plays itself"
-        case .oddlySatisfying: return "Sand, soap, slime, washing, restoring"
-        case .impossibleSatisfying: return "Glass fruit, jelly keys, crystal snacks"
+        case .runner: return String(localized: "An endless run that plays itself")
+        case .oddlySatisfying: return String(localized: "Sand, soap, slime, washing, restoring")
+        case .impossibleSatisfying: return String(localized: "Glass fruit, jelly keys, crystal snacks")
         }
     }
 

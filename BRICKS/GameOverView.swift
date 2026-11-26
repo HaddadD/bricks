@@ -106,7 +106,7 @@ struct GameOverView: View {
                 HStack(spacing: 6) {
                     Image(systemName: info.symbol)
                         .font(.system(size: 12, weight: .bold))
-                    Text(info.name)
+                    Text(LocalizedStringKey(info.name))
                         .font(.system(size: 13, weight: .bold, design: .rounded))
                         .lineLimit(1)
                 }
@@ -125,7 +125,7 @@ struct GameOverView: View {
         .accessibilityIdentifier("earned")
     }
 
-    private func gameCenterButton(_ title: String, _ symbol: String, _ action: @escaping () -> Void) -> some View {
+    private func gameCenterButton(_ title: LocalizedStringKey, _ symbol: String, _ action: @escaping () -> Void) -> some View {
         Button(action: action) {
             VStack(spacing: 3) {
                 Image(systemName: symbol)
@@ -143,7 +143,7 @@ struct GameOverView: View {
         .buttonStyle(FocusLiftStyle())
     }
 
-    private func stat(_ label: String, _ value: Int) -> some View {
+    private func stat(_ label: LocalizedStringKey, _ value: Int) -> some View {
         VStack(spacing: 0) {
             Text(label)
                 .font(.system(size: 11, weight: .bold, design: .rounded))
