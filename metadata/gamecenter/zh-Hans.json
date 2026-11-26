@@ -1,0 +1,317 @@
+{
+  "achievements": {
+    "ca.wilsonlam.bricks.clean_slate": {
+      "earned": "棋盘上一块砖都不剩。",
+      "goal": "把棋盘上的砖块全部清空。",
+      "name": "一扫而空"
+    },
+    "ca.wilsonlam.bricks.close_call": {
+      "earned": "在几乎填满的棋盘上消除了一条线。",
+      "goal": "在已填满 70 格以上时消除一条线。",
+      "name": "惊险过关"
+    },
+    "ca.wilsonlam.bricks.combo.2": {
+      "earned": "一个方块消除了两条线。",
+      "goal": "用一个方块同时消除 2 条线。",
+      "name": "双消"
+    },
+    "ca.wilsonlam.bricks.combo.3": {
+      "earned": "一个方块消除了三条线。",
+      "goal": "用一个方块同时消除 3 条线。",
+      "name": "三消"
+    },
+    "ca.wilsonlam.bricks.combo.4": {
+      "earned": "一个方块消除了四条线。",
+      "goal": "用一个方块同时消除 4 条线。",
+      "name": "四消"
+    },
+    "ca.wilsonlam.bricks.combo.5": {
+      "earned": "一个方块消除了五条线！",
+      "goal": "用一个方块同时消除 5 条或更多线。",
+      "name": "叹为观止"
+    },
+    "ca.wilsonlam.bricks.cross": {
+      "earned": "一行一列，同时消除。",
+      "goal": "用一个方块同时消除一行和一列。",
+      "name": "十字路口"
+    },
+    "ca.wilsonlam.bricks.days.30": {
+      "earned": "你已经在 30 个不同的日子里玩过。",
+      "goal": "在 30 个不同的日子里玩游戏。",
+      "name": "养成习惯"
+    },
+    "ca.wilsonlam.bricks.days.7": {
+      "earned": "你已经在 7 个不同的日子里玩过。",
+      "goal": "在 7 个不同的日子里玩游戏。",
+      "name": "方块一周"
+    },
+    "ca.wilsonlam.bricks.device.ipad": {
+      "earned": "你在 iPad 上玩过了。",
+      "goal": "在 iPad 上玩。",
+      "name": "大棋盘"
+    },
+    "ca.wilsonlam.bricks.device.iphone": {
+      "earned": "你在 iPhone 上玩过了。",
+      "goal": "在 iPhone 上玩。",
+      "name": "口袋解谜家"
+    },
+    "ca.wilsonlam.bricks.device.mac": {
+      "earned": "你在 Mac 上玩过了。",
+      "goal": "在 Mac 上玩。",
+      "name": "桌前时光"
+    },
+    "ca.wilsonlam.bricks.device.tv": {
+      "earned": "你在 Apple TV 上玩过了。",
+      "goal": "在 Apple TV 上玩。",
+      "name": "沙发时光"
+    },
+    "ca.wilsonlam.bricks.device.vision": {
+      "earned": "你在 Apple Vision Pro 上玩过了。",
+      "goal": "在 Apple Vision Pro 上玩。",
+      "name": "空间方块"
+    },
+    "ca.wilsonlam.bricks.device.watch": {
+      "earned": "你在 Apple Watch 上玩过了。",
+      "goal": "在 Apple Watch 上玩。",
+      "name": "腕上方块"
+    },
+    "ca.wilsonlam.bricks.direct_hit": {
+      "earned": "九块砖，一颗炸弹。",
+      "goal": "用一颗炸弹炸掉 9 块砖。",
+      "name": "正中目标"
+    },
+    "ca.wilsonlam.bricks.double_gift": {
+      "earned": "一个方块领到两份礼物。",
+      "goal": "用一个方块领取两份礼物。",
+      "name": "双份礼物"
+    },
+    "ca.wilsonlam.bricks.full_set": {
+      "earned": "一局里用上了每一种方块。",
+      "goal": "在一局中放下全部九种方块。",
+      "name": "全套集齐"
+    },
+    "ca.wilsonlam.bricks.fully_stocked": {
+      "earned": "每种道具都存满了五个。",
+      "goal": "每种道具都持有 5 个。",
+      "name": "储备充足"
+    },
+    "ca.wilsonlam.bricks.game_lines.150": {
+      "earned": "一局消除了 150 条线。",
+      "goal": "单局消除 150 条线。",
+      "name": "马拉松"
+    },
+    "ca.wilsonlam.bricks.game_lines.50": {
+      "earned": "一局消除了 50 条线。",
+      "goal": "单局消除 50 条线。",
+      "name": "持久战"
+    },
+    "ca.wilsonlam.bricks.games.10": {
+      "earned": "你已经玩了 10 局。",
+      "goal": "玩 10 局游戏。",
+      "name": "常客"
+    },
+    "ca.wilsonlam.bricks.games.200": {
+      "earned": "你已经玩了 200 局。",
+      "goal": "玩 200 局游戏。",
+      "name": "方块上瘾"
+    },
+    "ca.wilsonlam.bricks.games.50": {
+      "earned": "你已经玩了 50 局。",
+      "goal": "玩 50 局游戏。",
+      "name": "忠实玩家"
+    },
+    "ca.wilsonlam.bricks.gifts.1": {
+      "earned": "你领到了第一份礼物。",
+      "goal": "领取一份礼物。",
+      "name": "拆礼物"
+    },
+    "ca.wilsonlam.bricks.gifts.100": {
+      "earned": "你已经领取了 100 份礼物。",
+      "goal": "累计领取 100 份礼物。",
+      "name": "圣诞老人的帮手"
+    },
+    "ca.wilsonlam.bricks.gifts.25": {
+      "earned": "你已经领取了 25 份礼物。",
+      "goal": "累计领取 25 份礼物。",
+      "name": "礼物猎人"
+    },
+    "ca.wilsonlam.bricks.light_show": {
+      "earned": "你已经看遍了每一种庆祝颜色。",
+      "goal": "看遍每一种庆祝颜色。",
+      "name": "灯光秀"
+    },
+    "ca.wilsonlam.bricks.lines.1": {
+      "earned": "你完成了第一次消除。",
+      "goal": "消除一条线。",
+      "name": "首次消除"
+    },
+    "ca.wilsonlam.bricks.lines.1000": {
+      "earned": "你已经消除了 1,000 条线。",
+      "goal": "累计消除 1,000 条线。",
+      "name": "消除能手"
+    },
+    "ca.wilsonlam.bricks.lines.250": {
+      "earned": "你已经消除了 250 条线。",
+      "goal": "累计消除 250 条线。",
+      "name": "整理控"
+    },
+    "ca.wilsonlam.bricks.lines.50": {
+      "earned": "你已经消除了 50 条线。",
+      "goal": "累计消除 50 条线。",
+      "name": "整整齐齐"
+    },
+    "ca.wilsonlam.bricks.lines.5000": {
+      "earned": "你已经消除了 5,000 条线。",
+      "goal": "累计消除 5,000 条线。",
+      "name": "清扫大师"
+    },
+    "ca.wilsonlam.bricks.pieces.1": {
+      "earned": "你放下了第一个方块。",
+      "goal": "放下一个方块。",
+      "name": "第一块砖"
+    },
+    "ca.wilsonlam.bricks.pieces.500": {
+      "earned": "你已经放下了 500 个方块。",
+      "goal": "累计放下 500 个方块。",
+      "name": "建筑工"
+    },
+    "ca.wilsonlam.bricks.pieces.5000": {
+      "earned": "你已经放下了 5,000 个方块。",
+      "goal": "累计放下 5,000 个方块。",
+      "name": "建筑师"
+    },
+    "ca.wilsonlam.bricks.power.bomb": {
+      "earned": "用炸弹炸掉了一片砖块。",
+      "goal": "使用一次炸弹。",
+      "name": "轰隆"
+    },
+    "ca.wilsonlam.bricks.power.hammer": {
+      "earned": "用锤子敲碎了一块砖。",
+      "goal": "使用一次锤子。",
+      "name": "敲碎"
+    },
+    "ca.wilsonlam.bricks.power.rotate": {
+      "earned": "把方块转了个方向。",
+      "goal": "使用一次旋转。",
+      "name": "转一转"
+    },
+    "ca.wilsonlam.bricks.power.shuffle": {
+      "earned": "给方块换了一批。",
+      "goal": "使用一次“换一批”。",
+      "name": "换换手气"
+    },
+    "ca.wilsonlam.bricks.power.undo": {
+      "earned": "收回了一步。",
+      "goal": "使用一次撤销。",
+      "name": "改变主意"
+    },
+    "ca.wilsonlam.bricks.purist": {
+      "earned": "2,500 分，没用任何道具。",
+      "goal": "不使用任何道具，单局得到 2,500 分。",
+      "name": "纯粹主义者"
+    },
+    "ca.wilsonlam.bricks.score.100": {
+      "earned": "你在一局中得到了 100 分。",
+      "goal": "单局得到 100 分。",
+      "name": "初试身手"
+    },
+    "ca.wilsonlam.bricks.score.1000": {
+      "earned": "1,000 分，迎来第一次庆祝。",
+      "goal": "单局得到 1,000 分。",
+      "name": "派对时间"
+    },
+    "ca.wilsonlam.bricks.score.10000": {
+      "earned": "你在一局中得到了 10,000 分。",
+      "goal": "单局得到 10,000 分。",
+      "name": "五位数"
+    },
+    "ca.wilsonlam.bricks.score.2500": {
+      "earned": "你在一局中得到了 2,500 分。",
+      "goal": "单局得到 2,500 分。",
+      "name": "高分玩家"
+    },
+    "ca.wilsonlam.bricks.score.25000": {
+      "earned": "单局 25,000 分，堪称传奇。",
+      "goal": "单局得到 25,000 分。",
+      "name": "棋盘传奇"
+    },
+    "ca.wilsonlam.bricks.score.500": {
+      "earned": "你在一局中得到了 500 分。",
+      "goal": "单局得到 500 分。",
+      "name": "渐入佳境"
+    },
+    "ca.wilsonlam.bricks.score.5000": {
+      "earned": "你在一局中得到了 5,000 分。",
+      "goal": "单局得到 5,000 分。",
+      "name": "方块之星"
+    },
+    "ca.wilsonlam.bricks.streak.10": {
+      "earned": "连续十个方块都有消除。",
+      "goal": "连续 10 个方块都消除了线。",
+      "name": "锐不可当"
+    },
+    "ca.wilsonlam.bricks.streak.5": {
+      "earned": "连续五个方块都有消除。",
+      "goal": "连续 5 个方块都消除了线。",
+      "name": "势如破竹"
+    },
+    "ca.wilsonlam.bricks.toolbox": {
+      "earned": "一局里用上了全部五种道具。",
+      "goal": "在一局中用遍五种道具。",
+      "name": "工具箱"
+    }
+  },
+  "activity": {
+    "description": "填满行和列来消除它们。你能拿到多少分？",
+    "name": "经典模式",
+    "vendorId": "ca.wilsonlam.bricks.activity.classic"
+  },
+  "challenges": {
+    "ca.wilsonlam.bricks.challenge.beat_my_score": {
+      "description": "在一局中比朋友得到更多分。",
+      "name": "超越我的分数"
+    },
+    "ca.wilsonlam.bricks.challenge.line_showdown": {
+      "description": "在一局中比朋友消除更多线。",
+      "name": "消除对决"
+    }
+  },
+  "leaderboards": {
+    "ca.wilsonlam.bricks.lb.best_move": {
+      "description": "单个方块得到的最高分。",
+      "many": " 分",
+      "name": "最强一手",
+      "one": " 分"
+    },
+    "ca.wilsonlam.bricks.lb.daily": {
+      "description": "今天最好的一局，每天重新开始。",
+      "many": " 分",
+      "name": "今日最佳",
+      "one": " 分"
+    },
+    "ca.wilsonlam.bricks.lb.game_lines": {
+      "description": "一局中消除最多的线数。",
+      "many": " 条",
+      "name": "单局最多消除",
+      "one": " 条"
+    },
+    "ca.wilsonlam.bricks.lb.high_score": {
+      "description": "你史上最好的一局。",
+      "many": " 分",
+      "name": "最高分",
+      "one": " 分"
+    },
+    "ca.wilsonlam.bricks.lb.lifetime_lines": {
+      "description": "你消除过的所有线。",
+      "many": " 条",
+      "name": "累计消除",
+      "one": " 条"
+    },
+    "ca.wilsonlam.bricks.lb.weekly": {
+      "description": "本周最好的一局，每周重新开始。",
+      "many": " 分",
+      "name": "本周最佳",
+      "one": " 分"
+    }
+  }
+}

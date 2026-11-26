@@ -126,13 +126,15 @@ the build processed (`VALID`) on **every** platform that's live: iOS, Mac, Visio
 and Apple TV once it's approved. If the TestFlight run skipped one, upload it first with
 `appstore/tools/testflight.sh --no-bump --notes … mac`.
 
-1. **What's New.** Copy last release's text and add `whatsNew` (plain, specific, a
-   few lines; the `asc-whats-new-writer` skill drafts it from `git log`):
+1. **What's New.** Copy last release's text and add `whatsNew` in every language
+   (plain, specific, a few lines; the `asc-whats-new-writer` skill drafts it from
+   `git log`). The listing is in English (`en-US`), Simplified Chinese (`zh-Hans`,
+   China mainland) and Traditional Chinese (`zh-Hant`, Hong Kong, Macao and Taiwan):
 
    ```bash
    cp -R metadata/version/PREV metadata/version/V
    for p in mac tv vision; do cp -R metadata/platforms/$p/PREV metadata/platforms/$p/V; done
-   # add "whatsNew" to each en-US.json; update anything else that changed
+   # add "whatsNew" to each <locale>.json; update anything else that changed
    asc metadata validate --dir ./metadata --output table
    ```
 
@@ -151,20 +153,42 @@ and Apple TV once it's approved. If the TestFlight run skipped one, upload it fi
    `asc versions update --version-id TV_VERSION_ID --version V --release-type MANUAL`.
    A first version can't have What's New.
 
-3. **Push the text:**
+3. **Push the text,** every language, after a dry run. The iPhone/iPad text and the
+   app info (name, subtitle, privacy text) push straight from `metadata/`:
 
    ```bash
    asc metadata push --app 6828698183 --version V --platform IOS --dir ./metadata --dry-run --output table
    asc metadata push --app 6828698183 --version V --platform IOS --dir ./metadata
-   for p in mac:MAC_OS vision:VISION_OS; do   # and tv:TV_OS once Apple TV has been live
-     asc localizations update --app 6828698183 --version V --platform ${p#*:} --locale en-US \
-       --whats-new "$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["whatsNew"])' metadata/platforms/${p%:*}/V/en-US.json)"
+   ```
+
+   `asc metadata` expects one `version/` folder, so each other platform's text is staged
+   in that layout first:
+
+   ```bash
+   for p in mac:MAC_OS vision:VISION_OS tv:TV_OS; do
+     dir=$(mktemp -d); mkdir -p $dir/version/V; cp metadata/platforms/${p%:*}/V/*.json $dir/version/V/
+     asc metadata push --app 6828698183 --version V --platform ${p#*:} --dir $dir --dry-run --output table
+     asc metadata push --app 6828698183 --version V --platform ${p#*:} --dir $dir
    done
    ```
 
-   (`asc metadata` has one layout for every platform, so the Mac, Apple TV and Vision
-   Pro text goes through `asc localizations update`, which also takes `--description`,
-   `--keywords` and `--promotional-text`.)
+   Read each dry run: it lists every field it will add or change, per language.
+
+   **Game Center text** in Chinese is in `metadata/gamecenter/<locale>.json` (achievement
+   names match the in-game ones in `BRICKS/Localizable.xcstrings`). Add it to any
+   achievement, leaderboard, challenge or activity that doesn't have it yet:
+
+   ```bash
+   swiftc -O -parse-as-library BRICKS/Achievements.swift appstore/tools/gamecenter.swift -o /tmp/gamecenter
+   /tmp/gamecenter render appstore/gamecenter && /tmp/gamecenter catalog > /tmp/catalog.json
+   for l in zh-Hans zh-Hant; do python3 appstore/tools/gamecenter-localize.py /tmp/catalog.json $l; done          # dry run
+   for l in zh-Hans zh-Hant; do python3 appstore/tools/gamecenter-localize.py /tmp/catalog.json $l --apply; done
+   ```
+
+   **Screenshots:** a language without its own screenshots shows the English ones. To
+   make Chinese ones, capture with `-AppleLanguages "(zh-Hans)"` and upload them to that
+   version localization with `asc screenshots upload --locale zh-Hans` (PUBLISHING.md,
+   Rebuilding the screenshots).
 
 4. **App Review notes.** Each version needs App Review Information. Check it, and
    bring the notes up to date if the change affects anything they describe (features,
