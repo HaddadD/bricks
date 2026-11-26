@@ -10,6 +10,7 @@ struct SettingsView: View {
 
     @Environment(\.dismiss) private var dismiss
     @State private var confirmingReset = false
+    @State private var showingHowToPlay = false
 
     var body: some View {
         ZStack {
@@ -42,12 +43,18 @@ struct SettingsView: View {
                 }
 
                 VStack(spacing: 0) {
+                    // How to play leads, so it is the one row that never needs a
+                    // divider above it; everything below carries its own.
+                    howToPlayRow
                     if Platform.supportsAppearanceChoice {
+                        divider
                         themeRow
                     }
+                    divider
+                    soundRow
                     // Only iPhone (and Apple Watch, which has its own settings) can vibrate.
                     if Haptics.isSupported {
-                        if Platform.supportsAppearanceChoice { divider }
+                        divider
                         vibrationRow
                     }
                     if offersFloatPieces {
@@ -87,6 +94,14 @@ struct SettingsView: View {
             .frame(width: 380, height: 300)
             #endif
         }
+        .sheet(isPresented: $showingHowToPlay) {
+            HowToPlayView()
+                #if os(iOS)
+                // Tall enough for the power-up list, which is the longest card. On a
+                // shorter phone this clamps to the full height on its own.
+                .presentationDetents([.height(620)])
+                #endif
+        }
         .alert("Start a new game?", isPresented: $confirmingReset) {
             Button("Cancel", role: .cancel) { }
             Button("Yes", role: .destructive) {
@@ -113,6 +128,36 @@ struct SettingsView: View {
 
     // MARK: - Rows
 
+    private var howToPlayRow: some View {
+        Button {
+            Haptics.tap()
+            showingHowToPlay = true
+        } label: {
+            HStack(spacing: 12) {
+                icon("questionmark.circle.fill", tint: Color(hex: 0xFFA8C5))
+
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("How to play")
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(Theme.ink)
+                    Text("Rules, combos and power-ups")
+                        .font(.system(size: 12, weight: .medium, design: .rounded))
+                        .foregroundColor(Theme.inkSoft)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundColor(Theme.inkSoft.opacity(0.6))
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 13)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+
     private var themeRow: some View {
         HStack(spacing: 12) {
             icon("moon.fill", tint: Color(hex: 0xA6BDF7))
@@ -137,6 +182,34 @@ struct SettingsView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
+    }
+
+    private var soundRow: some View {
+        HStack(spacing: 12) {
+            icon(settings.sounds ? "speaker.wave.2.fill" : "speaker.slash.fill",
+                 tint: Color(hex: 0xFFB59E))
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Sounds")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundColor(Theme.ink)
+                Text(settings.sounds ? "On" : "Off")
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundColor(Theme.inkSoft)
+            }
+
+            Spacer()
+
+            Toggle("", isOn: $settings.sounds)
+                .labelsHidden()
+                .tint(Color(hex: 0xE99A82))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 13)
+        // Play the clear sound when it is switched on, so you hear what you just got.
+        .onChange(of: settings.sounds) { on in
+            if on { Sound.lineClear() }
+        }
     }
 
     private var vibrationRow: some View {

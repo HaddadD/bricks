@@ -219,7 +219,8 @@ for r in 4...6 { for c in 4...6 { m9.testSetCell(row: r, col: c, colorIndex: 2) 
 m9.testSetCell(row: 4, col: 5, colorIndex: nil, gift: true)
 m9.testSetPowerUp(.bomb, 2)
 m9.activePower = .bomb
-m9.applyTargetedPower(atRow: 5, col: 5)
+m9.applyTargetedPower(atRow: 5, col: 5)      // aims
+m9.applyTargetedPower(atRow: 5, col: 5)      // confirms
 pump(0.4)
 var remaining = 0
 for r in 0..<10 { for c in 0..<10 where m9.testCell(row: r, col: c).isFilled { remaining += 1 } }
@@ -525,6 +526,372 @@ _ = g3.place(trayIndex: 0, atRow: 0, col: 0)
 _ = g3.place(trayIndex: 1, atRow: 0, col: 5)
 pump()
 check(PowerUp.allCases.reduce(0) { $0 + g3.count(of: $1) } == 1, "a gift claimed in time still pays out")
+
+// MARK: - Repainting the survivors
+
+print("\nMulti-line repaint")
+
+check(Set((0..<9).map { Theme.rainbowIndex(row: 0, col: $0) }).count == 9,
+      "the rainbow runs through all nine pastels")
+check(Theme.rainbowIndex(row: 3, col: 4) == Theme.rainbowIndex(row: 4, col: 3),
+      "it bands on row + col, so it reads as diagonal stripes")
+check((0..<200).allSatisfy { _ in Theme.randomBlock(avoiding: 3) != 3 },
+      "a repaint never redraws the colour it is avoiding")
+
+// Two rows at once: everything left standing ends up one colour.
+let r1 = fresh()
+for r in [3, 4] { for c in 0..<9 { r1.testSetCell(row: r, col: c, colorIndex: 2) } }
+r1.testSetCell(row: 7, col: 7, colorIndex: 2)
+r1.testSetCell(row: 8, col: 1, colorIndex: 5)
+r1.testSetTray([TrayPiece(shape: bar(2, vertical: true)), nil, nil])
+_ = r1.place(trayIndex: 0, atRow: 3, col: 9)
+pump()
+let left1 = r1.testCell(row: 7, col: 7).colorIndex
+let left2 = r1.testCell(row: 8, col: 1).colorIndex
+check(left1 != nil && left1 == left2,
+      "two lines repaint every survivor the same colour (got \(String(describing: left1)) / \(String(describing: left2)))")
+
+// One line leaves the board alone.
+let r2 = fresh()
+for c in 0..<9 { r2.testSetCell(row: 7, col: c, colorIndex: 2) }
+r2.testSetCell(row: 0, col: 0, colorIndex: 5)
+r2.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+_ = r2.place(trayIndex: 0, atRow: 7, col: 9)
+pump()
+check(r2.testCell(row: 0, col: 0).colorIndex == 5, "a single line does not repaint anything")
+
+// Five lines at once: diagonal rainbow instead of one colour.
+let r3 = fresh()
+for r in 0..<5 { for c in 0..<9 { r3.testSetCell(row: r, col: c, colorIndex: 2) } }
+for (r, c) in [(7, 0), (7, 1), (8, 0), (9, 4)] { r3.testSetCell(row: r, col: c, colorIndex: 2) }
+r3.testSetTray([TrayPiece(shape: bar(5, vertical: true)), nil, nil])
+_ = r3.place(trayIndex: 0, atRow: 0, col: 9)
+pump()
+check([(7, 0), (7, 1), (8, 0), (9, 4)].allSatisfy {
+          r3.testCell(row: $0.0, col: $0.1).colorIndex == Theme.rainbowIndex(row: $0.0, col: $0.1)
+      },
+      "five lines lay a rainbow over the survivors")
+check(r3.testCell(row: 7, col: 0).colorIndex != r3.testCell(row: 7, col: 1).colorIndex,
+      "neighbouring survivors sit in different rainbow bands")
+
+// A board already wearing one colour always changes to a different one.
+var sameAgain = 0
+for round in 0..<6 {
+    let r4 = fresh()
+    for r in [3, 4] { for c in 0..<9 { r4.testSetCell(row: r, col: c, colorIndex: 6) } }
+    r4.testSetCell(row: 7, col: 7, colorIndex: 6)
+    r4.testSetTray([TrayPiece(shape: bar(2, vertical: true)), nil, nil])
+    _ = r4.place(trayIndex: 0, atRow: 3, col: 9)
+    pump(0.35)
+    if r4.testCell(row: 7, col: 7).colorIndex == 6 { sameAgain += 1 }
+    check_quiet(r4.testCell(row: 7, col: 7).colorIndex != nil, "round \(round) lost its survivor")
+}
+check(sameAgain == 0, "repainting a one-colour board always picks another colour (\(sameAgain) repeats)")
+
+// The tray is not touched: a piece still wears its family colour after a repaint.
+let r5 = fresh()
+for r in [3, 4] { for c in 0..<9 { r5.testSetCell(row: r, col: c, colorIndex: 2) } }
+r5.testSetCell(row: 7, col: 7, colorIndex: 2)
+r5.testSetTray([TrayPiece(shape: bar(2, vertical: true)), TrayPiece(shape: bar(4)), nil])
+_ = r5.place(trayIndex: 0, atRow: 3, col: 9)
+pump()
+check(r5.tray[1]?.colorIndex == TrayPiece(shape: bar(4)).colorIndex,
+      "tray pieces keep their family colour through a repaint")
+
+// MARK: - Combo streak
+
+print("\nCombo streak")
+
+/// One turn that clears a line: fills the row up to the last square, then plays a 1x1
+/// into it. Only the placement counts as a turn.
+func clearLine(_ m: GameModel, row: Int) {
+    for c in 0..<9 { m.testSetCell(row: row, col: c, colorIndex: 2) }
+    m.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+    _ = m.place(trayIndex: 0, atRow: row, col: 9)
+    pump(0.35)
+}
+
+let x1 = fresh()
+check(x1.combo == 0, "no streak at the start")
+clearLine(x1, row: 0)
+check(x1.combo == 1, "the first clear is not a combo yet")
+clearLine(x1, row: 1)
+check(x1.combo == 2, "a clear on the very next turn starts the streak at 2")
+clearLine(x1, row: 2)
+check(x1.combo == 3, "and keeps counting")
+
+placeOne(x1, row: 5, col: 5)        // a turn that completes nothing
+check(x1.combo == 0, "a turn that clears nothing breaks the streak")
+clearLine(x1, row: 3)
+check(x1.combo == 1, "and the next clear starts over at 1")
+
+// Survivors go rainbow on the fifth combo, even though each clear is a single line.
+let x2 = fresh()
+for (r, c) in [(7, 0), (7, 1), (8, 0)] { x2.testSetCell(row: r, col: c, colorIndex: 2) }
+for row in 0..<3 { clearLine(x2, row: row) }
+check(x2.combo == 3, "three clears in a row")
+check([(7, 0), (7, 1), (8, 0)].allSatisfy { x2.testCell(row: $0.0, col: $0.1).colorIndex == 2 },
+      "single-line clears below the fifth leave the colours alone")
+
+for row in 3..<5 { clearLine(x2, row: row) }
+check(x2.combo == 5, "five clears in a row")
+check([(7, 0), (7, 1), (8, 0)].allSatisfy {
+          x2.testCell(row: $0.0, col: $0.1).colorIndex == Theme.rainbowIndex(row: $0.0, col: $0.1)
+      },
+      "the fifth combo turns the whole board rainbow")
+
+// Repaint them flat again so the next rainbow is something we can actually see.
+for (r, c) in [(7, 0), (7, 1), (8, 0)] { x2.testSetCell(row: r, col: c, colorIndex: 2) }
+for row in 0..<4 { clearLine(x2, row: row) }
+check(x2.combo == 9, "the streak keeps running past five")
+check(x2.testCell(row: 7, col: 0).colorIndex == 2, "combos in between leave the board alone")
+clearLine(x2, row: 4)
+check(x2.combo == 10, "reaching ten")
+check([(7, 0), (7, 1), (8, 0)].allSatisfy {
+          x2.testCell(row: $0.0, col: $0.1).colorIndex == Theme.rainbowIndex(row: $0.0, col: $0.1)
+      },
+      "and every multiple of five goes rainbow again")
+
+// Lines broken together each count, so one turn can move the streak on several.
+let x5 = fresh()
+for r in [3, 4] { for c in 0..<9 { x5.testSetCell(row: r, col: c, colorIndex: 2) } }
+x5.testSetTray([TrayPiece(shape: bar(2, vertical: true)), nil, nil])
+_ = x5.place(trayIndex: 0, atRow: 3, col: 9)
+pump()
+check(x5.combo == 2, "two lines in one turn count as two (got \(x5.combo))")
+check(!x5.comboFlared, "a streak of two is not a rainbow step")
+
+// Going through a multiple of five counts, not only landing on one.
+let x6 = fresh()
+for (r, c) in [(7, 0), (7, 1), (8, 0)] { x6.testSetCell(row: r, col: c, colorIndex: 2) }
+x6.testSetCombo(4)
+for r in [0, 1] { for c in 0..<10 { x6.testSetCell(row: r, col: c, colorIndex: 2) } }
+for r in 3..<10 { x6.testSetCell(row: r, col: 5, colorIndex: 2) }
+x6.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+_ = x6.place(trayIndex: 0, atRow: 2, col: 5)   // completes rows 0, 1 and column 5
+pump()
+check(x6.combo == 7, "a three-line break takes a streak of 4 to 7 (got \(x6.combo))")
+check(x6.comboFlared, "passing through five counts as a rainbow step")
+check([(7, 0), (7, 1), (8, 0)].allSatisfy {
+          x6.testCell(row: $0.0, col: $0.1).colorIndex == Theme.rainbowIndex(row: $0.0, col: $0.1)
+      },
+      "and the board goes rainbow without the streak ever reading 5")
+
+// A five-line break is a rainbow step on its own, from a standing start.
+let x7 = fresh()
+for r in 0..<5 { for c in 0..<9 { x7.testSetCell(row: r, col: c, colorIndex: 2) } }
+x7.testSetTray([TrayPiece(shape: bar(5, vertical: true)), nil, nil])
+_ = x7.place(trayIndex: 0, atRow: 0, col: 9)
+pump()
+check(x7.combo == 5 && x7.comboFlared, "five lines at once is a streak of 5 straight away")
+
+// Undo puts the streak back where it was.
+let x3 = fresh()
+clearLine(x3, row: 0)
+clearLine(x3, row: 1)
+check(x3.combo == 2, "two in a row before the undo")
+x3.testSetPowerUp(.undo, 1)
+x3.tapPowerUp(.undo)
+pump(0.3)
+check(x3.combo == 1, "undo rewinds the streak with the move (got \(x3.combo))")
+
+// It survives a relaunch, and a new game clears it.
+let x4 = GameModel()
+x4.newGame()
+clearLine(x4, row: 0)
+clearLine(x4, row: 1)
+let saved = x4.combo
+check(GameModel().combo == saved, "the streak survives a relaunch (\(saved))")
+x4.newGame()
+check(x4.combo == 0 && GameModel().combo == 0, "New game clears the streak")
+
+// MARK: - Sound
+
+print("\nSound")
+
+// The four effects that are recordings rather than notes. The test checks the files are
+// there and are really MP3s, since a missing clip is silent at runtime rather than loud.
+check(Set(Sound.Clip.allCases.map(\.rawValue)).count == Sound.Clip.allCases.count,
+      "every clip names its own file")
+
+for clip in Sound.Clip.allCases {
+    let path = "BRICKS/Sounds/\(clip.rawValue).mp3"
+    guard let data = FileManager.default.contents(atPath: path) else {
+        check(false, "\(clip.rawValue).mp3 is in BRICKS/Sounds")
+        continue
+    }
+    check(data.count > 1024, "\(clip.rawValue).mp3 is in BRICKS/Sounds and has audio in it")
+    // Either an ID3 tag or a bare MPEG frame header.
+    let head = [UInt8](data.prefix(3))
+    let isMP3 = head.starts(with: [0x49, 0x44, 0x33]) || (head.first == 0xFF && (head[1] & 0xE0) == 0xE0)
+    check_quiet(isMP3, "\(clip.rawValue).mp3 really is an MP3")
+}
+
+// A clip that is not copied into the app is a clip that never plays, so the project has
+// to carry the folder.
+let pbx = (try? String(contentsOfFile: "BRICKS.xcodeproj/project.pbxproj", encoding: .utf8)) ?? ""
+check(pbx.contains("/* Sounds in Resources */,"), "the Sounds folder is in the Resources build phase")
+check(pbx.contains("lastKnownFileType = folder; path = Sounds;"),
+      "...as a folder reference, so a new clip comes along without touching the project")
+
+/// Normalised magnitude of frequency `freq` in a slice of the waveform — enough to ask
+/// "is this note in there" without a full FFT.
+func tone(_ samples: [Float], _ freq: Double, from: Double, to: Double) -> Double {
+    let rate = Sound.testSampleRate
+    let first = max(0, Int(from * rate))
+    let last = min(samples.count, Int(to * rate))
+    guard last > first else { return 0 }
+
+    var re = 0.0, im = 0.0
+    for i in first..<last {
+        let t = Double(i) / rate
+        re += Double(samples[i]) * cos(2 * .pi * freq * t)
+        im += Double(samples[i]) * sin(2 * .pi * freq * t)
+    }
+    return (re * re + im * im).squareRoot() / Double(last - first)
+}
+
+func peak(_ samples: [Float]) -> Float { samples.map { abs($0) }.max() ?? 0 }
+
+// The 1000-point milestone is the one effect still synthesised, so it is still checked
+// by looking at the waveform.
+let party = Sound.testMilestoneSamples()
+check(peak(party) > 0.05, "the milestone renders an audible waveform (peak \(peak(party)))")
+check(peak(party) < 1.0, "the milestone stays inside full scale, so nothing clips (peak \(peak(party)))")
+check(tone(party, 1318.51, from: 0.25, to: 0.5) > 10 * tone(party, 1400, from: 0.25, to: 0.5),
+      "the fanfare reaches E6 rather than drifting off the scale")
+// 600 Hz sits between the chord's C5 and E5 and is a harmonic of neither, so it stands
+// in for "nothing on that pitch".
+check(tone(party, 523.25, from: 0.9, to: 1.4) > 5 * tone(party, 600, from: 0.9, to: 1.4),
+      "and settles onto the held chord's root")
+
+
+// MARK: - Arming the bomb
+
+print("\nBomb confirmation")
+let b1 = fresh()
+for r in 4...6 { for c in 4...6 { b1.testSetCell(row: r, col: c, colorIndex: 2) } }
+b1.testSetPowerUp(.bomb, 1)
+b1.tapPowerUp(.bomb)
+check(b1.powerHint == PowerUp.bomb.targetHint, "an armed bomb asks you to pick a square")
+
+b1.applyTargetedPower(atRow: 5, col: 5)
+pump(0.4)
+check(b1.bombAim == GridPoint(r: 5, c: 5), "the first tap aims the bomb")
+check(b1.testCell(row: 5, col: 5).isFilled, "the first tap blasts nothing")
+check(b1.count(of: .bomb) == 1, "the first tap spends nothing")
+check(b1.activePower == .bomb, "the bomb stays armed while it is aimed")
+check(b1.powerHint == "Tap the tick to set it off", "an aimed bomb asks to be confirmed")
+
+b1.applyTargetedPower(atRow: 5, col: 8)
+pump(0.3)
+check(b1.bombAim == GridPoint(r: 5, c: 8), "a tap elsewhere moves the aim")
+check(b1.count(of: .bomb) == 1, "moving the aim spends nothing")
+check(b1.testCell(row: 5, col: 5).isFilled, "moving the aim blasts nothing")
+
+b1.applyTargetedPower(atRow: 5, col: 5)      // re-aims
+b1.applyTargetedPower(atRow: 5, col: 5)      // confirms
+pump(0.5)
+check(b1.count(of: .bomb) == 0, "a second tap on the aimed square spends the bomb")
+check(!b1.testCell(row: 5, col: 5).isFilled, "the second tap is what blasts")
+check(b1.bombAim == nil, "the aim clears once it has gone off")
+check(b1.activePower == nil, "the bomb disarms once it has gone off")
+
+// Aiming over bare board shows the footprint but has nothing to confirm.
+let b2 = fresh()
+b2.testSetPowerUp(.bomb, 1)
+b2.tapPowerUp(.bomb)
+b2.applyTargetedPower(atRow: 1, col: 1)
+b2.applyTargetedPower(atRow: 1, col: 1)
+pump(0.4)
+check(b2.bombAim == GridPoint(r: 1, c: 1), "an aim over empty board still shows")
+check(b2.bombBlast(atRow: 1, col: 1).isEmpty, "...with nothing in range")
+check(b2.count(of: .bomb) == 1, "an aim with nothing under it cannot be confirmed")
+
+// Changing your mind costs nothing.
+let b3 = fresh()
+b3.testSetCell(row: 2, col: 2, colorIndex: 1)
+b3.testSetPowerUp(.bomb, 1)
+b3.tapPowerUp(.bomb)
+b3.applyTargetedPower(atRow: 2, col: 2)
+b3.cancelPower()
+check(b3.bombAim == nil && b3.activePower == nil, "cancelling drops the aim")
+check(b3.count(of: .bomb) == 1, "cancelling an aimed bomb costs nothing")
+check(b3.testCell(row: 2, col: 2).isFilled, "cancelling an aimed bomb blasts nothing")
+
+let b4 = fresh()
+for r in 0..<10 { for c in 0..<10 { b4.testSetCell(row: r, col: c, colorIndex: 0) } }
+check(b4.bombBlast(atRow: 5, col: 5).count == 9, "a blast in the middle takes 9 bricks")
+check(b4.bombBlast(atRow: 0, col: 0).count == 4,
+      "a blast in the corner is clipped to 4 (got \(b4.bombBlast(atRow: 0, col: 0).count))")
+
+
+// MARK: - Undo hands the same pieces back
+
+print("\nUndo")
+let u1 = fresh()
+let held: [TrayPiece?] = [TrayPiece(shape: bar(2)), nil, nil]
+u1.testSetTray(held)
+u1.testSetPowerUp(.undo, 1)
+_ = u1.place(trayIndex: 0, atRow: 0, col: 0)
+pump(0.4)
+let dealt = u1.tray.compactMap { $0 }.map(\.id)
+check(dealt.count == 3, "placing the last piece deals three more")
+
+u1.tapPowerUp(.undo)
+pump(0.3)
+check(u1.tray.compactMap { $0 }.map(\.id) == [held[0]!.id], "undo gives back the very piece that was played")
+check(!u1.testCell(row: 0, col: 0).isFilled, "undo takes the piece off the board")
+
+_ = u1.place(trayIndex: 0, atRow: 4, col: 4)
+pump(0.4)
+check(u1.tray.compactMap { $0 }.map(\.id) == dealt, "the deal an undo took back comes round again")
+
+// Shuffling is a request for new pieces, so it throws the held deal away.
+let u2 = fresh()
+u2.testSetTray([TrayPiece(shape: bar(2)), nil, nil])
+u2.testSetPowerUp(.undo, 1)
+u2.testSetPowerUp(.shuffle, 1)
+_ = u2.place(trayIndex: 0, atRow: 0, col: 0)
+pump(0.4)
+let dropped = u2.tray.compactMap { $0 }.map(\.id)
+u2.tapPowerUp(.undo)
+pump(0.3)
+u2.tapPowerUp(.shuffle)
+pump(0.3)
+check(u2.tray.compactMap { $0 }.map(\.id) != dropped, "shuffling drops the deal an undo was holding")
+
+// However the board has changed in the meantime, the tray that comes out is playable.
+let u3 = fresh()
+u3.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+u3.testSetPowerUp(.undo, 1)
+_ = u3.place(trayIndex: 0, atRow: 9, col: 9)
+pump(0.4)
+u3.tapPowerUp(.undo)
+pump(0.3)
+// Leave three holes in a corner, so only the smallest pieces can go anywhere.
+for r in 0..<10 { for c in 0..<10 { u3.testSetCell(row: r, col: c, colorIndex: 0) } }
+for hole in [(0, 0), (0, 1), (1, 0)] { u3.testSetCell(row: hole.0, col: hole.1, colorIndex: nil) }
+_ = u3.place(trayIndex: 0, atRow: 0, col: 0)
+pump(0.4)
+check(u3.tray.compactMap { $0 }.contains { u3.canPlaceAnywhere($0.shape) },
+      "a held deal that no longer fits is dropped rather than handed over dead")
+
+// Undo while a clear is still playing out would land under the animation finishing.
+let u4 = fresh()
+u4.testSetTray([TrayPiece(shape: bar(1)), nil, nil])
+for c in 0..<9 { u4.testSetCell(row: 0, col: c, colorIndex: 1) }
+u4.testSetPowerUp(.undo, 1)
+_ = u4.place(trayIndex: 0, atRow: 0, col: 9)
+u4.tapPowerUp(.undo)
+check(u4.count(of: .undo) == 1, "undo mid-clear is ignored rather than fighting the animation")
+pump(0.6)
+check(!u4.testCell(row: 0, col: 0).isFilled, "the clear still finishes")
+u4.tapPowerUp(.undo)
+pump(0.3)
+check(u4.count(of: .undo) == 0, "undo works once the clear has finished")
+check(u4.testCell(row: 0, col: 0).isFilled, "...and puts the cleared line back")
+
 
 // MARK: - Drag targeting
 

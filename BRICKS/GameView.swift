@@ -109,12 +109,12 @@ struct GameView: View {
                 }
 
                 if let hint = currentHint {
-                    banner(text: hint, tint: model.activePower?.tint ?? Theme.gift, wide: wide, short: rail)
+                    banner(text: hint, tint: model.activePower?.bannerTint ?? Theme.gift, wide: wide, short: rail)
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
 
                 if let toast = model.toast, model.activePower == nil, placing == nil {
-                    banner(text: toast, tint: Theme.gift, wide: wide, short: rail)
+                    banner(text: toast, tint: model.toastPower?.bannerTint ?? Theme.gift, wide: wide, short: rail)
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
 
@@ -443,32 +443,81 @@ struct GameView: View {
         }
     }
 
-    /// The running score, centred directly above the board.
+    /// The running score, centred directly above the board, with the combo streak
+    /// sitting off to its right. The badge is laid over the row rather than beside the
+    /// score so that the score itself stays put when a streak starts.
     private var scoreBoard: some View {
-        Text("\(model.score)")
-            .font(.system(size: 42 * scale, weight: .heavy, design: .rounded))
-            .foregroundColor(Theme.ink)
-            .contentTransition(.numericText())
-            .frame(maxWidth: .infinity)
-            .accessibilityIdentifier("score")
+        ZStack {
+            Text("\(model.score)")
+                .font(.system(size: 42 * scale, weight: .heavy, design: .rounded))
+                .foregroundColor(Theme.ink)
+                .contentTransition(.numericText())
+                .frame(maxWidth: .infinity)
+                .accessibilityIdentifier("score")
+
+            if model.combo >= 2 {
+                HStack {
+                    Spacer()
+                    comboBadge
+                }
+                .padding(.trailing, 14 * scale)
+                .transition(.scale(scale: 0.5).combined(with: .opacity))
+            }
+        }
+        .animation(.spring(response: 0.35, dampingFraction: 0.6), value: model.combo)
     }
 
-    /// A message capsule. Phones show it in the gap between the header and the score; wide
-    /// layouts have no such gap, so it sits in the header row's empty middle instead. A
-    /// short screen (the Duo's outer display) has neither, so it goes over the tray.
+    /// One clear is not a combo; the badge appears on the second in a row. Every fifth
+    /// one turns the board rainbow, and the badge wears the same rainbow to say so.
+    private var comboBadge: some View {
+        let rainbow = model.comboFlared
+
+        return HStack(spacing: 4 * scale) {
+            Image(systemName: "flame.fill")
+                .font(.system(size: 11 * scale, weight: .black))
+            Text("Combo \(model.combo)")
+                .font(.system(size: 13 * scale, weight: .heavy, design: .rounded))
+                .contentTransition(.numericText())
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 10 * scale)
+        .padding(.vertical, 6 * scale)
+        .background(
+            Capsule().fill(
+                LinearGradient(
+                    colors: rainbow
+                        ? (0..<5).map { Theme.block(Theme.rainbowIndex(row: 0, col: $0 * 2)) }
+                        : [Theme.gift, Theme.gift],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+            )
+        )
+        .shadow(color: Theme.gift.opacity(0.4), radius: 5 * scale, y: 2)
+        .scaleEffect(rainbow ? 1.1 : 1)
+        // A new badge per step, so each one pops in rather than quietly renumbering.
+        .id(model.combo)
+    }
+
+    /// A message capsule, in the same filled look the combo badge wears: white type on
+    /// the tint rather than outlined in it, since anything to do with a power-up is
+    /// filled in that power-up's own colour and the pastels are too light to carry it.
+    ///
+    /// Phones show it in the gap between the header and the score; wide layouts have no
+    /// such gap, so it sits in the header row's empty middle instead. A short screen
+    /// (the Duo's outer display) has neither, so it goes over the tray.
     private func banner(text: String, tint: Color, wide: Bool, short: Bool) -> some View {
         VStack {
             if short { Spacer() }
             Text(text)
-                .font(.system(size: 14 * scale, weight: .bold, design: .rounded))
-                .foregroundColor(Theme.ink)
+                .font(.system(size: 14 * scale, weight: .heavy, design: .rounded))
+                .foregroundColor(.white)
                 .padding(.horizontal, 16 * scale)
                 .padding(.vertical, 9 * scale)
                 .background(
-                    Capsule().fill(Theme.card)
+                    Capsule().fill(tint)
                         .shadow(color: tint.opacity(0.45), radius: 8, y: 3)
                 )
-                .overlay(Capsule().stroke(tint.opacity(0.6), lineWidth: 1.5))
                 .padding(.top, short ? 0 : (wide ? 14 : 78) * scale)
                 .padding(.bottom, short ? 40 : 0)
             if !short { Spacer() }
@@ -479,7 +528,9 @@ struct GameView: View {
     /// What the banner says: an armed power-up's instructions, or how to place a piece
     /// with the remote.
     private var currentHint: String? {
-        if let power = model.activePower, !power.targetHint.isEmpty { return power.targetHint }
+        // The bomb's hint changes once it is aimed, so the model decides which step the
+        // armed power-up is on rather than the view reading `targetHint` directly.
+        if model.activePower != nil, let hint = model.powerHint { return hint }
         if placing?.trayIndex != nil { return String(localized: "Move it with the remote, then press to place") }
         return nil
     }

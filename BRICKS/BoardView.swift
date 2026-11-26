@@ -75,6 +75,7 @@ struct BoardView: View {
                 .shadow(color: Theme.shadow.opacity(0.35), radius: 10, y: 4)
 
             grid
+                .overlay(alignment: .topLeading) { bombAim }
         }
         .frame(
             width: cellSize * CGFloat(GameModel.size) + pad * 2,
@@ -115,6 +116,46 @@ struct BoardView: View {
             }
         }
         #endif
+    }
+
+    /// Where the bomb is pointed, drawn as an outline round the 3×3 it would take with a
+    /// tick in the middle to tap. Clipped to the board, so an aim at the edge outlines
+    /// only the squares that are really in range.
+    @ViewBuilder
+    private var bombAim: some View {
+        if let aim = model.bombAim {
+            let tint = PowerUp.bomb.bannerTint
+            let minRow = max(0, aim.r - 1)
+            let minCol = max(0, aim.c - 1)
+            let rows = min(GameModel.size - 1, aim.r + 1) - minRow + 1
+            let cols = min(GameModel.size - 1, aim.c + 1) - minCol + 1
+            let armed = !model.bombBlast(atRow: aim.r, col: aim.c).isEmpty
+
+            ZStack(alignment: .topLeading) {
+                RoundedRectangle(cornerRadius: inner * 0.3, style: .continuous)
+                    .strokeBorder(tint, style: StrokeStyle(lineWidth: 2.5, dash: [6, 4]))
+                    .background(
+                        RoundedRectangle(cornerRadius: inner * 0.3, style: .continuous)
+                            .fill(tint.opacity(0.14))
+                    )
+                    .frame(width: CGFloat(cols) * cellSize - gap, height: CGFloat(rows) * cellSize - gap)
+                    .offset(x: CGFloat(minCol) * cellSize + gap / 2,
+                            y: CGFloat(minRow) * cellSize + gap / 2)
+
+                if armed {
+                    Image(systemName: "checkmark")
+                        .font(.system(size: inner * 0.5, weight: .black))
+                        .foregroundColor(.white)
+                        .frame(width: inner * 0.92, height: inner * 0.92)
+                        .background(Circle().fill(tint))
+                        .shadow(color: Theme.shadow.opacity(0.4), radius: 4, y: 2)
+                        .offset(x: CGFloat(aim.c) * cellSize + (cellSize - inner * 0.92) / 2,
+                                y: CGFloat(aim.r) * cellSize + (cellSize - inner * 0.92) / 2)
+                }
+            }
+            .allowsHitTesting(false)
+            .transition(.scale(scale: 0.85).combined(with: .opacity))
+        }
     }
 
     @ViewBuilder
