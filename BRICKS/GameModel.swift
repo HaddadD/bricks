@@ -1,4 +1,9 @@
 import SwiftUI
+#if os(iOS)
+import CoreHaptics
+#elseif os(watchOS)
+import WatchKit
+#endif
 
 struct Cell: Equatable, Codable {
     var colorIndex: Int?
@@ -55,6 +60,12 @@ final class GameModel: ObservableObject {
     /// Short-lived banner shown when a gift is collected or a power-up fires.
     @Published var toast: String? = nil
 
+    /// Hears everything achievements are measured on (see PlayerProgress).
+    var onEvent: ((GameEvent) -> Void)?
+    /// Hears every save, with when it was made, so GameSync can hand it to the other
+    /// device.
+    var onSaved: ((Data, Date) -> Void)?
+
     private var undoStack: Snapshot? = nil
     private var giftThreshold: Int = Int.random(in: 280...320)
     /// Set when a gift was earned but the board had nowhere to put it.
@@ -64,6 +75,7 @@ final class GameModel: ObservableObject {
 
     private let bestKey = "bricks.bestScore"
     private let saveKey = "bricks.savedGame"
+    private let savedAtKey = "bricks.savedAt"
 
     // MARK: - Lifecycle
 
@@ -91,6 +103,12 @@ final class GameModel: ObservableObject {
             seedDemoBoard()
             return
         }
+        // `-gameOver` shows the game-over card over the demo board.
+        if args.contains("-gameOver") {
+            seedDemoBoard()
+            isGameOver = true
+            return
+        }
         #endif
 
         restore()
@@ -114,6 +132,7 @@ final class GameModel: ObservableObject {
     #endif
 
     func newGame() {
+        onEvent?(.newGame)
         withAnimation(.easeOut(duration: 0.25)) {
             board = Array(
                 repeating: Array(repeating: Cell(), count: GameModel.size),
@@ -163,19 +182,74 @@ final class GameModel: ObservableObject {
             milestoneTheme: milestoneTheme
         )
         if let data = try? JSONEncoder().encode(save) {
+            let now = Date()
             UserDefaults.standard.set(data, forKey: saveKey)
+            UserDefaults.standard.set(now.timeIntervalSince1970, forKey: savedAtKey)
+            onSaved?(data, now)
         }
+        publishWidget()
+    }
+
+    /// The game as last saved, in the form `adopt` takes.
+    var savedGame: Data? { UserDefaults.standard.data(forKey: saveKey) }
+
+    /// When this device last saved the game; the distant past before its first save.
+    var savedAt: Date {
+        Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: savedAtKey))
+    }
+
+    /// Carries on with a game saved on the other device (iPhone and Apple Watch), if it
+    /// was saved after this one, and keeps the better of the two best scores. Returns
+    /// whether the game was taken over.
+    @discardableResult
+    func adopt(_ data: Data, savedAt otherSavedAt: Date, best otherBest: Int) -> Bool {
+        if otherBest > best {
+            best = otherBest
+            UserDefaults.standard.set(best, forKey: bestKey)
+        }
+        guard otherSavedAt > savedAt, let save = Self.decode(data) else { return false }
+
+        apply(save)
+        activePower = nil
+        clearing = []
+        blasting = []
+        undoStack = nil
+        UserDefaults.standard.set(data, forKey: saveKey)
+        UserDefaults.standard.set(otherSavedAt.timeIntervalSince1970, forKey: savedAtKey)
+        publishWidget()
+        return true
+    }
+
+    /// Shares the board and score with the widget (iPhone and iPad), unless the player has
+    /// switched the widget off.
+    func publishWidget() {
+        #if os(iOS)
+        WidgetSnapshot(
+            cells: board.map { $0.map(\.colorIndex) },
+            score: score,
+            best: best,
+            isGameOver: isGameOver
+        ).publish()
+        #endif
     }
 
     /// Reloads the last run. A save written by an older build simply starts a fresh game.
     private func restore() {
-        guard let data = UserDefaults.standard.data(forKey: saveKey),
-              let save = try? JSONDecoder().decode(SavedGame.self, from: data),
+        guard let data = UserDefaults.standard.data(forKey: saveKey), let save = Self.decode(data)
+        else { return }
+        apply(save)
+    }
+
+    private static func decode(_ data: Data) -> SavedGame? {
+        guard let save = try? JSONDecoder().decode(SavedGame.self, from: data),
               save.board.count == GameModel.size,
               save.board.allSatisfy({ $0.count == GameModel.size }),
               save.tray.count == 3
-        else { return }
+        else { return nil }
+        return save
+    }
 
+    private func apply(_ save: SavedGame) {
         board = save.board
         tray = save.tray
         score = save.score
@@ -264,13 +338,14 @@ final class GameModel: ObservableObject {
         }
 
         Haptics.tap()
-        resolveClears()
+        onEvent?(.placed(family: piece.shape.family))
+        resolveClears(placedCells: piece.shape.cellCount)
         return true
     }
 
     // MARK: - Line clearing
 
-    private func resolveClears() {
+    private func resolveClears(placedCells: Int) {
         var fullRows: [Int] = []
         var fullCols: [Int] = []
 
@@ -282,9 +357,11 @@ final class GameModel: ObservableObject {
         }
 
         guard !fullRows.isEmpty || !fullCols.isEmpty else {
+            onEvent?(.missed)
             finishTurn()
             return
         }
+        let filled = board.joined().filter(\.isFilled).count
 
         var cells: Set<GridPoint> = []
         for r in fullRows {
@@ -320,6 +397,10 @@ final class GameModel: ObservableObject {
                 self.clearing = []
                 self.score += award
             }
+            self.onEvent?(.cleared(
+                rows: fullRows.count, cols: fullCols.count, gifts: giftsWon, filled: filled,
+                emptied: !self.board.joined().contains(where: \.isFilled), points: placedCells + award
+            ))
             if lines > 1 {
                 self.showToast("+\(award) points")
             }
@@ -346,11 +427,13 @@ final class GameModel: ObservableObject {
         checkMilestone()
         ageGifts()
         maybeSpawnGift()
+        onEvent?(.score(score))
 
         if !hasAnyMove {
             withAnimation(.easeOut(duration: 0.3).delay(0.25)) {
                 isGameOver = true
             }
+            onEvent?(.gameOver)
         }
 
         persist()
@@ -382,6 +465,7 @@ final class GameModel: ObservableObject {
         }
         showToast("\(reached * GameModel.milestoneStep) points!")
         Haptics.reward()
+        onEvent?(.celebration(picked))
     }
 
     // MARK: - Gifts
@@ -437,6 +521,7 @@ final class GameModel: ObservableObject {
             score += 100
             showToast("All power-ups full — +100 bonus!")
             Haptics.reward()
+            onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
             return
         }
 
@@ -445,6 +530,7 @@ final class GameModel: ObservableObject {
         }
         showToast("Gift claimed — \(won.title) +1")
         Haptics.reward()
+        onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
     }
 
     // MARK: - Power-ups
@@ -482,6 +568,7 @@ final class GameModel: ObservableObject {
 
     private func applyShuffle() {
         consume(.shuffle)
+        onEvent?(.usedPowerUp(PowerUp.shuffle.rawValue, bricks: 0))
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             tray = dealTray()
         }
@@ -496,6 +583,7 @@ final class GameModel: ObservableObject {
             return
         }
         consume(.undo)
+        onEvent?(.usedPowerUp(PowerUp.undo.rawValue, bricks: 0))
         withAnimation(.easeOut(duration: 0.25)) {
             board = snap.board
             tray = snap.tray
@@ -507,6 +595,7 @@ final class GameModel: ObservableObject {
         undoStack = nil
         Haptics.tap()
         showToast("Move undone")
+        onEvent?(.score(score))
         recheckGameOver()
     }
 
@@ -518,6 +607,7 @@ final class GameModel: ObservableObject {
         case .hammer:
             guard board[row][col].isFilled else { return }
             consume(.hammer)
+            onEvent?(.usedPowerUp(PowerUp.hammer.rawValue, bricks: 1))
             flash([GridPoint(r: row, c: col)])
 
         case .bomb:
@@ -530,6 +620,7 @@ final class GameModel: ObservableObject {
             }
             guard !hit.isEmpty else { return }
             consume(.bomb)
+            onEvent?(.usedPowerUp(PowerUp.bomb.rawValue, bricks: hit.count))
             flash(hit)
 
         default:
@@ -572,6 +663,7 @@ final class GameModel: ObservableObject {
                 powerUps[.rotate] = count(of: .rotate) - 1
             }
             rotateCharged = true
+            onEvent?(.usedPowerUp(PowerUp.rotate.rawValue, bricks: 0))
         }
 
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
@@ -603,9 +695,11 @@ final class GameModel: ObservableObject {
     }
 
     private func recheckGameOver() {
+        let wasOver = isGameOver
         withAnimation(.easeOut(duration: 0.25)) {
             isGameOver = !hasAnyMove
         }
+        if isGameOver && !wasOver { onEvent?(.gameOver) }
         persist()
     }
 
@@ -628,24 +722,42 @@ enum Haptics {
     /// Mirrors the Vibrations setting; every call below is a no-op when it is off.
     static var enabled = true
 
+    /// Whether this device can vibrate at all: iPhones and Apple Watch can; iPad, Mac,
+    /// Apple TV and Vision Pro can't.
+    static let isSupported: Bool = {
+        #if os(iOS)
+        return CHHapticEngine.capabilitiesForHardware().supportsHaptics
+        #elseif os(watchOS)
+        return true
+        #else
+        return false
+        #endif
+    }()
+
     static func tap() {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(.click)
         #endif
     }
 
     static func clear(lines: Int) {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UIImpactFeedbackGenerator(style: lines > 1 ? .heavy : .medium).impactOccurred()
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(lines > 1 ? .success : .directionUp)
         #endif
     }
 
     static func reward() {
         guard enabled else { return }
-        #if canImport(UIKit)
+        #if os(iOS)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().play(.notification)
         #endif
     }
 }

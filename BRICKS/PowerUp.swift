@@ -49,12 +49,17 @@ enum PowerUp: String, CaseIterable, Identifiable {
         }
     }
 
+    /// What to do next once armed, in the words of each platform's controls.
     var targetHint: String {
-        switch self {
-        case .hammer:  return "Tap a brick to smash it"
-        case .bomb:    return "Tap the board to blast a 3×3 area"
-        case .rotate:  return "Tap to turn all three — drag a piece when done"
-        case .shuffle, .undo: return ""
+        switch (self, Platform.input) {
+        case (.hammer, .drag), (.hammer, .tap): return "Tap a brick to smash it"
+        case (.hammer, .remote):                return "Move to a brick and press to smash it"
+        case (.bomb, .drag), (.bomb, .tap):     return "Tap the board to blast a 3×3 area"
+        case (.bomb, .remote):                  return "Move to a spot and press to blast it"
+        case (.rotate, .drag):                  return "Tap to turn all three — drag a piece when done"
+        case (.rotate, .remote):                return "Press a piece to turn all three — Menu when done"
+        case (.rotate, .tap):                   return "Tap a piece to turn all three"
+        case (.shuffle, _), (.undo, _):         return ""
         }
     }
 }

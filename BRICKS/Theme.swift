@@ -1,4 +1,7 @@
 import SwiftUI
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+import AppKit
+#endif
 
 extension Color {
     init(hex: UInt32) {
@@ -15,18 +18,39 @@ extension Color {
     /// the view's trait collection, which the root view drives from the user's setting,
     /// so every surface flips without any call site knowing about it.
     static func adaptive(_ light: UInt32, _ dark: UInt32) -> Color {
-        #if canImport(UIKit)
+        #if os(watchOS)
+        // Apple Watch is always dark.
+        return Color(hex: dark)
+        #elseif canImport(UIKit)
         return Color(UIColor { traits in
             UIColor(hex: traits.userInterfaceStyle == .dark ? dark : light)
         })
+        #elseif canImport(AppKit)
+        // On the Mac the window's appearance plays the trait collection's part.
+        return Color(NSColor(name: nil) { appearance in
+            let isDark = appearance.bestMatch(from: [.aqua, .darkAqua]) == .darkAqua
+            return NSColor(hex: isDark ? dark : light)
+        })
         #else
-        // The headless rule tests build for macOS, where appearance does not matter.
         return Color(hex: light)
         #endif
     }
 }
 
-#if canImport(UIKit)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+extension NSColor {
+    convenience init(hex: UInt32) {
+        self.init(
+            srgbRed: CGFloat((hex >> 16) & 0xFF) / 255,
+            green: CGFloat((hex >> 8) & 0xFF) / 255,
+            blue: CGFloat(hex & 0xFF) / 255,
+            alpha: 1
+        )
+    }
+}
+#endif
+
+#if canImport(UIKit) && !os(watchOS)
 extension UIColor {
     convenience init(hex: UInt32) {
         self.init(
@@ -106,6 +130,10 @@ enum Theme {
 
     static let gift = Color.adaptive(0xFF7FA6, 0xFF8FB2)
     static let giftGlow = Color.adaptive(0xFFD4E2, 0x5A2F42)
+
+    /// Outline of the cells being aimed at by remote or by tap; red when the piece won't fit.
+    static let aim = Color.adaptive(0x5C5059, 0xF2EDF5)
+    static let aimBlocked = Color(hex: 0xE8555F)
 
     /// Very light brown, for the version stamp under the board.
     static let versionInk = Color.adaptive(0xCBBAAE, 0x5B5170)

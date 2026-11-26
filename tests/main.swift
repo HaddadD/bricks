@@ -531,22 +531,64 @@ check(PowerUp.allCases.reduce(0) { $0 + g3.count(of: $1) } == 1, "a gift claimed
 print("\nDrag targeting")
 let origin = CGPoint(x: 20, y: 100)
 let cell: CGFloat = 36
-let lift = DragTargeting.lift(cellSize: cell)
-
 let t1 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2 + lift),
+    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2),
     shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell)
-check(t1.row == 4 && t1.col == 3, "1x1 lands on the cell under the lifted piece (got \(t1))")
+check(t1.row == 4 && t1.col == 3, "1x1 lands on the cell right under the finger (got \(t1))")
 
 let t2 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 2 * cell + 1.5 * cell, y: 100 + 7 * cell + cell / 2 + lift),
+    finger: CGPoint(x: 20 + 2 * cell + 1.5 * cell, y: 100 + 7 * cell + cell / 2),
     shapeRows: 1, shapeCols: 3, gridOrigin: origin, cellSize: cell)
 check(t2.row == 7 && t2.col == 2, "3-wide bar anchors on its left cell (got \(t2))")
 
 let t3 = DragTargeting.target(
-    finger: CGPoint(x: 20 + 1.5 * cell + 8, y: 100 + 1.5 * cell + lift - 8),
+    finger: CGPoint(x: 20 + 1.5 * cell + 8, y: 100 + 1.5 * cell - 8),
     shapeRows: 3, shapeCols: 3, gridOrigin: origin, cellSize: cell)
 check(t3.row == 0 && t3.col == 0, "3x3 snaps to the nearest cell within a quarter-cell (got \(t3))")
+
+let t4 = DragTargeting.target(
+    finger: CGPoint(x: 20 + 4 * cell, y: 100 + 5 * cell),
+    shapeRows: 2, shapeCols: 2, gridOrigin: origin, cellSize: cell)
+check(t4.row == 4 && t4.col == 3, "a 2x2 centred under the finger covers the four cells around it (got \(t4))")
+
+let lift = DragTargeting.lift(cellSize: cell)
+let t5 = DragTargeting.target(
+    finger: CGPoint(x: 20 + 3 * cell + cell / 2, y: 100 + 4 * cell + cell / 2 + lift),
+    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true)
+check(t5.row == 4 && t5.col == 3, "a floating 1x1 lands on the cell under the piece, not the finger (got \(t5))")
+check(DragTargeting.lift(cellSize: cell, floating: false) == 0, "no lift unless floating")
+
+let bottom = origin.y + 10 * cell
+let t6 = DragTargeting.target(
+    finger: CGPoint(x: 20 + cell / 2, y: bottom + lift - cell / 2),
+    shapeRows: 1, shapeCols: 1, gridOrigin: origin, cellSize: cell, floating: true)
+check(t6.row == 9, "a floating 1x1 reaches the bottom row with the finger 2.4 cells under the board (got \(t6))")
+check(DragTargeting.hasRoomToFloat(below: 2.9 * cell, cellSize: cell), "2.9 cells under the board is room to float")
+check(!DragTargeting.hasRoomToFloat(below: 2 * cell, cellSize: cell), "2 cells under the board isn't room to float")
+check(!DragTargeting.hasRoomToFloat(below: 100, cellSize: 0), "no board yet, no floating")
+
+// MARK: - Placement cursor (Apple TV, Apple Watch)
+
+print("\nPlacement cursor")
+var pc = PlacementCursor(rows: 1, cols: 5, boardSize: 10)
+check(pc.row == 4 && pc.col == 2, "a 1x5 bar starts centred (got \(pc.row),\(pc.col))")
+pc.move(rows: 0, cols: -9)
+check(pc.col == 0, "moving left stops at the edge (got col \(pc.col))")
+pc.move(rows: 0, cols: 99)
+check(pc.col == 5, "moving right keeps the whole bar on the board (got col \(pc.col))")
+pc.move(rows: -1, cols: 0)
+check(pc.row == 3 && pc.col == 5, "moving up one row (got \(pc.row),\(pc.col))")
+
+var pc3 = PlacementCursor(rows: 3, cols: 3, boardSize: 10)
+pc3.centre(onRow: 0, col: 9)
+check(pc3.row == 0 && pc3.col == 7, "tap-to-aim near a corner clamps the 3x3 onto the board (got \(pc3.row),\(pc3.col))")
+pc3.centre(onRow: 5, col: 5)
+check(pc3.row == 4 && pc3.col == 4, "tap-to-aim centres the 3x3 on the tapped cell (got \(pc3.row),\(pc3.col))")
+check(pc3.covers(row: 6, col: 4) && !pc3.covers(row: 7, col: 4), "covers() matches the footprint")
+
+var aim = PlacementCursor(rows: 1, cols: 1, boardSize: 10)
+aim.centre(onRow: 9, col: 0)
+check(aim.row == 9 && aim.col == 0, "a 1x1 target can reach the bottom-left corner")
 
 
 // MARK: - Saving the run in progress
@@ -579,10 +621,156 @@ p3.newGame()
 let p4 = GameModel()
 check(p4.score == 0 && !p4.testCell(row: 6, col: 2).isFilled, "New game clears the saved run")
 
+// iPhone and Apple Watch hand each other the game: the newer save wins.
+let phoneGame = GameModel()
+phoneGame.newGame()
+phoneGame.testSetTray([TrayPiece(shape: bar(3)), nil, nil])
+_ = phoneGame.place(trayIndex: 0, atRow: 4, col: 0)
+pump(0.3)
+let phoneSave = phoneGame.savedGame!
+let watchGame = GameModel()
+watchGame.newGame()
+check(!watchGame.adopt(phoneSave, savedAt: .distantPast, best: 0), "an older game from the other device is ignored")
+check(watchGame.score == 0, "ignoring it leaves this game alone")
+check(watchGame.adopt(phoneSave, savedAt: Date().addingTimeInterval(60), best: 0), "a newer game from the other device is taken over")
+check(watchGame.score == phoneGame.score && watchGame.testCell(row: 4, col: 1).isFilled,
+      "the board and score carry over (score \(watchGame.score) vs \(phoneGame.score))")
+check(!watchGame.adopt(Data("not a game".utf8), savedAt: Date().addingTimeInterval(120), best: 0),
+      "a garbled game from the other device is ignored")
+check(GameModel().score == phoneGame.score, "a taken-over game is saved here too")
+
 // A save from an older build must not wedge the app.
 UserDefaults.standard.set(Data("not a game".utf8), forKey: "bricks.savedGame")
 let p5 = GameModel()
 check(p5.score == 0 && p5.tray.compactMap { $0 }.count == 3, "a corrupt save falls back to a fresh game")
+
+// Game Center catalog: what App Store Connect accepts.
+let totalPoints = Achievement.allCases.map(\.info.points).reduce(0, +)
+check(totalPoints <= 1000, "achievements total \(totalPoints) of Game Center's 1,000 points")
+check(Achievement.allCases.allSatisfy { (1...100).contains($0.info.points) }, "every achievement is worth 1-100 points")
+let allIDs = Achievement.allCases.map(\.id) + Leaderboard.allCases.map(\.id) + Challenge.allCases.map(\.id) + [GameActivity.id]
+check(Set(allIDs).count == allIDs.count, "Game Center ids are unique (\(allIDs.count))")
+check(allIDs.allSatisfy { $0.count <= 100 }, "Game Center ids fit in 100 characters")
+check(allIDs.allSatisfy { $0.allSatisfy { $0.isLetter || $0.isNumber || $0 == "_" || $0 == "." } },
+      "Game Center ids use only letters, digits, underscores and periods")
+check(Achievement.allCases.allSatisfy { $0.info.name.count <= 30 }, "achievement names fit in 30 characters")
+check(PlayerStats.celebrationCount == Theme.celebrations.count, "Light Show counts every celebration colour")
+check(Achievement.allCases.allSatisfy { Achievement.palette[$0.info.color] != nil }, "every badge colour is in the palette")
+
+// Achievement rules, event by event.
+var ps = PlayerStats()
+func feed(_ events: [GameEvent], day: String = "2026-10-30", device: String = "iphone") {
+    for e in events { ps.record(e, device: device, day: day) }
+}
+func done(_ a: Achievement) -> Bool { a.percent(ps) >= 100 }
+feed([.placed(family: 0), .missed, .score(1)])
+check(done(.pieces1) && !done(.lines1) && done(.iPhone) && !done(.iPad), "a first piece earns First Brick and the device")
+feed([.placed(family: 1), .cleared(rows: 1, cols: 1, gifts: 0, filled: 30, emptied: false, points: 42), .score(60)])
+check(done(.lines1) && done(.double) && done(.crossroads) && !done(.triple), "a row and a column at once: Double and Crossroads")
+check(Achievement.lines50.percent(ps) == 4, "Tidy shows progress (2 of 50 lines)")
+for _ in 0..<4 { feed([.placed(family: 2), .cleared(rows: 1, cols: 0, gifts: 0, filled: 20, emptied: false, points: 13)]) }
+check(done(.streak5), "five clearing pieces in a row: On a Roll")
+feed([.placed(family: 0), .missed])
+check(ps.game.streak == 0 && ps.bestStreak == 5, "a piece that clears nothing ends the streak, keeping the best")
+feed([.placed(family: 3), .cleared(rows: 1, cols: 0, gifts: 2, filled: 74, emptied: true, points: 14)])
+check(done(.doubleGift) && done(.closeCall) && done(.cleanSlate), "two gifts, a full board and an empty one")
+for f in 4...8 { feed([.placed(family: f), .missed]) }
+check(done(.fullSet), "all nine kinds of piece in one game: Full Set")
+feed([.score(2600)])
+check(done(.purist) && done(.score2500) && !done(.score5000), "2,500 without power-ups: Purist")
+feed([.usedPowerUp("bomb", bricks: 9)])
+check(done(.directHit) && done(.bomb), "nine bricks with one bomb: Direct Hit")
+for p in ["hammer", "shuffle", "rotate", "undo"] { feed([.usedPowerUp(p, bricks: 1)]) }
+check(done(.toolbox), "all five power-ups in one game: Toolbox")
+feed([.giftClaimed(stock: [5, 5, 5, 5, 4])])
+check(!done(.fullyStocked) && done(.gift1), "one power-up short isn't Fully Stocked")
+feed([.giftClaimed(stock: [5, 5, 5, 5, 5])])
+check(done(.fullyStocked), "five of everything: Fully Stocked")
+feed([.gameOver, .newGame])
+check(ps.games == 1 && ps.game == PlayerStats.GameStats(), "game over then a new game counts one game")
+feed([.newGame])
+check(ps.games == 1, "an untouched board doesn't count as a game")
+feed([.placed(family: 0), .newGame])
+check(ps.games == 2, "an abandoned game with a piece on it counts")
+feed([.score(100)])
+check(ps.bestScore == 2600, "a lower score doesn't lower the best")
+feed([.placed(family: 0)], day: "2026-10-31", device: "mac")
+check(ps.days.count == 2 && done(.mac), "a second day and a second device")
+for i in 0..<7 { feed([.celebration(i)]) }
+check(done(.lightShow), "every celebration colour: Light Show")
+check(Leaderboard.highScore.value(ps) == 100 && Leaderboard.lifetimeLines.value(ps) == ps.lines,
+      "leaderboards take this game's score and lifetime lines")
+
+// GameModel reports what happened, in order.
+let em = GameModel()
+em.newGame()
+var heard: [GameEvent] = []
+em.onEvent = { heard.append($0) }
+for c in 0..<9 { em.testSetCell(row: 0, col: c, colorIndex: 1) }
+em.testSetTray([TrayPiece(shape: bar(1)), TrayPiece(shape: bar(1)), nil])
+em.place(trayIndex: 0, atRow: 0, col: 9)
+pump()
+check(heard.first == .placed(family: 0), "placing reports the piece's family")
+check(heard.contains(.cleared(rows: 1, cols: 0, gifts: 0, filled: 10, emptied: true, points: 11)),
+      "a clear reports its lines, the squares filled and the emptied board (\(heard))")
+check(heard.contains(.score(11)), "the turn reports the score")
+heard = []
+em.place(trayIndex: 1, atRow: 5, col: 5)
+pump()
+check(heard.prefix(2) == [.placed(family: 0), .missed], "a piece that clears nothing reports a miss")
+
+// App Store version gate: numeric, part by part.
+check(AppVersion.isOlder("1.6", than: "1.7"), "1.6 is older than 1.7")
+check(AppVersion.isOlder("1.9", than: "1.10"), "1.9 is older than 1.10")
+check(!AppVersion.isOlder("1.6", than: "1.6.0"), "1.6 is the same as 1.6.0")
+check(!AppVersion.isOlder("1.7", than: "1.6.9"), "1.7 is newer than 1.6.9")
+check(AppVersion.isOlder("1.6", than: "1.6.1"), "1.6 is older than 1.6.1")
+
+// MARK: - Sensory enhancement
+
+print("\nRunner")
+for style in RunnerStyle.allCases {
+    var misses = 0, distance = 0.0, stars = 0, crowded = false
+    for seed in UInt64(1)...6 {
+        let g = RunnerGame(style: style, seed: seed)
+        var frame = 0
+        // Ten minutes each, with the uneven frame times a busy device gives.
+        while g.time < 600 {
+            g.step(frame % 7 == 0 ? 1.0 / 20 : 1.0 / 30)
+            frame += 1
+            crowded = crowded || g.obstacles.count > 60 || g.coins.count > 80 || g.segments.count > 12
+        }
+        misses += g.hits
+        distance += g.s
+        stars += g.stars
+    }
+    check(misses == 0, "\(style): the autopilot clears every obstacle over an hour (\(misses) misses)")
+    check(distance > 6 * 600 * 9, "\(style): it keeps running, and speeds up (\(Int(distance)) units)")
+    check(stars > 0, "\(style): it picks up stars (\(stars))")
+    check(!crowded, "\(style): what's behind the runner is cleared away")
+}
+
+print("\nSatisfying shows")
+for kind in [SatisfyingKind.oddly, .impossible] {
+    let show = SatisfyingShow(kind: kind)
+    let size = CGSize(width: 192, height: 108)
+    let ctx = CGContext(data: nil, width: 192, height: 108, bitsPerComponent: 8, bytesPerRow: 0,
+                        space: CGColorSpaceCreateDeviceRGB(),
+                        bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)!
+    var blank = 0, frames = 0
+    // Every clip, a frame a second.
+    let length = kind == .oddly ? 50.0 : 30.0
+    while show.time < length {
+        for _ in 0..<10 { show.step(0.1) }
+        show.draw(in: ctx, size: size)
+        frames += 1
+        let pixels = ctx.data!.assumingMemoryBound(to: UInt8.self)
+        var lo = 255, hi = 0
+        for i in stride(from: 0, to: 192 * 108 * 4, by: 4 * 97) { lo = min(lo, Int(pixels[i + 1])); hi = max(hi, Int(pixels[i + 1])) }
+        if hi - lo < 20 { blank += 1 }
+    }
+    check(blank <= 2, "\(kind): every clip renders a picture (\(blank) of \(frames) frames flat)")
+}
 
 print("\n\(failures.isEmpty ? "All checks passed" : "\(failures.count) FAILED: \(failures)")")
 exit(failures.isEmpty ? 0 : 1)

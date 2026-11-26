@@ -2,6 +2,8 @@ import SwiftUI
 
 struct GameOverView: View {
     @ObservedObject var model: GameModel
+    @EnvironmentObject private var progress: PlayerProgress
+    @EnvironmentObject private var gameCenter: GameCenter
 
     var body: some View {
         ZStack {
@@ -44,6 +46,10 @@ struct GameOverView: View {
                     .padding(.top, 2)
                 }
 
+                if !progress.earnedThisGame.isEmpty {
+                    earned
+                }
+
                 Button {
                     model.newGame()
                 } label: {
@@ -65,6 +71,16 @@ struct GameOverView: View {
                 }
                 .buttonStyle(.plain)
                 .padding(.top, 4)
+
+                if gameCenter.isSignedIn {
+                    HStack(spacing: 8) {
+                        gameCenterButton("Leaderboards", "list.number") { gameCenter.show(.leaderboards) }
+                        gameCenterButton("Achievements", "rosette") { gameCenter.show(.achievements) }
+                        if GameCenter.hasChallenges {
+                            gameCenterButton("Challenge", "flag.2.crossed.fill") { gameCenter.show(.challenges) }
+                        }
+                    }
+                }
             }
             .padding(24)
             .frame(maxWidth: 320)
@@ -75,6 +91,56 @@ struct GameOverView: View {
             )
             .padding(.horizontal, 30)
         }
+    }
+
+    /// The achievements this game earned, up to three, then a count of the rest.
+    private var earned: some View {
+        let list = progress.earnedThisGame
+        return VStack(spacing: 6) {
+            Text(list.count == 1 ? "Achievement earned" : "\(list.count) achievements earned")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .foregroundColor(Theme.inkSoft)
+            ForEach(list.prefix(3), id: \.self) { achievement in
+                let info = achievement.info
+                let tint = Color(hex: Achievement.palette[info.color]?.shade ?? 0xAD93D5)
+                HStack(spacing: 6) {
+                    Image(systemName: info.symbol)
+                        .font(.system(size: 12, weight: .bold))
+                    Text(info.name)
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
+                        .lineLimit(1)
+                }
+                .foregroundColor(tint)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+                .background(Capsule().fill(tint.opacity(0.16)))
+            }
+            if list.count > 3 {
+                Text("+\(list.count - 3) more")
+                    .font(.system(size: 11, weight: .semibold, design: .rounded))
+                    .foregroundColor(Theme.inkSoft)
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("earned")
+    }
+
+    private func gameCenterButton(_ title: String, _ symbol: String, _ action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            VStack(spacing: 3) {
+                Image(systemName: symbol)
+                    .font(.system(size: 16, weight: .semibold))
+                Text(title)
+                    .font(.system(size: 10, weight: .bold, design: .rounded))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+            .foregroundColor(Theme.inkSoft)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 8)
+            .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Theme.emptyCell.opacity(0.55)))
+        }
+        .buttonStyle(FocusLiftStyle())
     }
 
     private func stat(_ label: String, _ value: Int) -> some View {
