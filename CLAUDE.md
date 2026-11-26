@@ -22,8 +22,9 @@ Follow [docs/RELEASE-PLAYBOOK.md](docs/RELEASE-PLAYBOOK.md). In short:
 
 - The repo is public: keep API key and issuer IDs, `.p8` files, profiles and phone
   numbers out of it.
-- `origin` is HaddadD/bricks, Daniel Haddad's repo. Work goes on a branch in `fork`
-  (SuspectOnTheLam/bricks) and reaches `origin` by pull request.
+- `origin` is HaddadD/bricks, Daniel Haddad's repo; SuspectOnTheLam has write access
+  (since 2026-11-26). Push working branches to both `origin` and `fork` (SuspectOnTheLam/bricks);
+  work reaches `main` by pull request (PR #1 is `app-store-publishing`).
 - Archive with the Xcode App Store Connect accepts (27.1, at
   `/Applications/Xcode-27.1.0.app`), not the newest one installed.
 - Accounts, signing, Game Center, screenshots and one-time setup:

@@ -29,7 +29,7 @@ and how the app was first set up.
 | Content rights | Does not use third-party content |
 | Primary locale | en-US |
 | Category | Games, subcategories Puzzle and Casual |
-| Price | Free, all territories |
+| Price | Free, all 175 territories, including China mainland and Hong Kong (see [China mainland and Hong Kong](#china-mainland-and-hong-kong)) |
 | Copyright | `2026 Daniel Haddad` |
 | Support URL | https://www.wilsonlam.ca/bricks/support.html |
 | Privacy policy URL | https://www.wilsonlam.ca/bricks/privacy.html |
@@ -262,6 +262,29 @@ no development profile to carry it. Test Game Center on a Mac through TestFlight
    the app makes no sound, along these lines: "Settings › Sensory enhancement (off by
    default) plays a silent, self-playing animation under the board that can float in
    Picture in Picture; the background mode is only for that Picture in Picture window."
+
+## China mainland and Hong Kong
+
+BRICKS! has been on sale in both since 2026-11-03, because availability is set to every
+territory (`asc pricing availability territory-availabilities --app 6828698183` shows
+`CHN` and `HKG` as `AVAILABLE`). Both listings are live:
+https://apps.apple.com/cn/app/id6828698183 and https://apps.apple.com/hk/app/id6828698183.
+Both show the English listing, because the app and its listing are English only.
+
+- **Language.** China mainland reads Simplified Chinese (App Store locale `zh-Hans`);
+  Hong Kong, Macao and Taiwan read Traditional Chinese (`zh-Hant`). A listing in those
+  locales needs its own name, subtitle, description, keywords and screenshots, plus
+  Game Center names and descriptions for each achievement and leaderboard.
+- **China mainland rules.** China requires a game publishing approval number from the
+  NPPA for games, and an ICP filing number for apps. Apple collects both in App Store
+  Connect (App Information, and the China mainland availability settings) and can pull
+  an app from China mainland until they're provided. BRICKS! is free with no in-app
+  purchases and is live without either as of 2026-11-26. If App Store Connect or App
+  Review asks for one, the realistic answer for a solo developer outside China is to take
+  China mainland out of availability; both numbers need a company in China.
+  Hong Kong has no such requirements.
+- **Services.** Game Center and iCloud work in both. iCloud in China mainland is run by
+  a local partner; the key-value store needs no change for that.
 
 ## Signing
 

@@ -92,7 +92,7 @@ to the script.
 
    ```bash
    git commit -am "Build 9 of 1.7 for TestFlight"
-   git push fork HEAD
+   git push origin HEAD && git push fork HEAD
    ```
 
 6. **Report** the version and build, the platforms, and the beta review state
