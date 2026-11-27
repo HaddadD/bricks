@@ -257,12 +257,6 @@ no development profile to carry it. Test Game Center on a Mac through TestFlight
    `asc review attachments-upload --review-detail DETAIL_ID --file recording.mov`.
    Keep them true to the build: they name every service the app talks to.
 
-   From the version with Sensory enhancement on, the iPhone and iPad builds declare the
-   Audio, AirPlay and Picture in Picture background mode. Say why in the notes, since
-   the app makes no sound, along these lines: "Settings › Sensory enhancement (off by
-   default) plays a silent, self-playing animation under the board that can float in
-   Picture in Picture; the background mode is only for that Picture in Picture window."
-
 ## China mainland and Hong Kong
 
 BRICKS! has been on sale in both since 2026-11-03, because availability is set to every

@@ -142,33 +142,6 @@ The gear in the top right opens a sheet with:
   hardware (iPad, Mac).
 - **Float pieces** — see The game, above. Everywhere pieces are dragged; not Apple TV or Apple Watch, which place pieces with the remote or taps.
 - **Widget** — iPhone and iPad.
-- **Sensory enhancement** — iPhone and iPad, off by default. Something to watch in a 16:9
-  strip under the board (the board gets a little smaller to make room; on a landscape
-  iPad it sits under the power-ups), which can float in Picture in Picture and be moved,
-  resized or tucked away; while it floats, the board goes back to its usual size. It's live
-  video, so there's nothing to pause or scrub. Its
-  choices sit together under the switch:
-  - **Runner**: an original endless runner that plays itself. An autopilot reads the
-    track and jumps, slides and changes lanes; collisions are real, but a miss only
-    stumbles, so a run never ends. Two worlds: **Trail**, a winding brick causeway above
-    the clouds with corners, gaps, hurdles and arches, and **Street**, three lanes of
-    toy-town traffic with barriers, parked carts and oncoming ones (`Runner.swift`).
-  - **Oddly Satisfying**: 3D clips of kinetic sand sliced and crumbling, soap cut into
-    bars, glittering slime kneaded, grime pressure-washed off a patio, and a rusty gear
-    wire-brushed to chrome.
-  - **Impossible Satisfying**: glass fruit sliced open, keyboards of jelly, glass and
-    liquid chrome being typed on, and bars of crystal, chrome and opal eaten square by
-    square.
-
-  The shows are SceneKit scenes lit like a product studio: physically based materials,
-  reflections from a soft-box environment, soft shadows, ambient occlusion and bloom,
-  rendered off screen each frame (`Satisfying.swift`). Every frame, runner or show, is
-  drawn on a background queue into a sample-buffer layer, the one Picture in Picture
-  plays (`SensoryPlayer.swift`). Picture in Picture needs the Audio, AirPlay and Picture
-  in Picture background mode (`BRICKS/Info-iOS.plist`, iPhone and iPad only), though
-  nothing makes a sound, and the iOS Simulator doesn't offer it: there it plays under
-  the board only. Outside the app a floating show holds its last frame, since an app in
-  the background can't use the GPU; the runner, drawn on the CPU, keeps running.
 - **Sounds** — gates every call in `Sound`. Switching it on plays the clear sound, so
   you hear what you just turned on.
 - **Reset game** — asks for confirmation first.
@@ -350,7 +323,6 @@ periods only.
 | `GameView.swift` | layout, drag and remote controls, menu commands |
 | `Sound.swift` | the four clips, and the synthesiser left for the milestone |
 | `SettingsView.swift` / `HowToPlayView.swift` | the gear sheet and the rules deck |
-| `Runner.swift` / `Satisfying.swift` / `SensoryPlayer.swift` | Sensory enhancement: the runner, the 3D shows, and the video they play in |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
 | `Achievements.swift` / `GameCenter.swift` | Game Center's catalog and rules; signing in, reporting, its screens |
@@ -384,8 +356,7 @@ launches without a window.
 
 `-updateRequired` shows the update screen. `-gameOver` shows the game-over card with some achievements earned, and `-gameCenterPreview` shows the Game Center buttons without signing in (`-noGameCenter`, which the UI tests use, skips Game Center entirely). `-celebrate <0-6>` seeds that board mid-celebration on the given background, for
 checking each one without playing to a milestone. `-settings` opens the settings sheet
-on launch. `-floating` lays the screen out as if Sensory enhancement were in Picture in
-Picture, which the Simulator doesn't offer. `-demo` seeds a representative board — bricks, both gift states,
+on launch. `-demo` seeds a representative board — bricks, both gift states,
 assorted power-up counts — for inspecting the UI without playing. To check the wide
 layout, rotate the iPad simulator with Device › Rotate Left (iPadOS 26 windowing refuses
 programmatic rotation, so a launch argument can't do it). `GameModel` also
@@ -395,8 +366,7 @@ exposes `testSet*` seams used by the headless rule tests:
 swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
-  BRICKS/AppVersion.swift BRICKS/Achievements.swift BRICKS/Runner.swift \
-  BRICKS/Satisfying.swift BRICKS/Sound.swift tests/main.swift && /tmp/rules_test
+  BRICKS/AppVersion.swift BRICKS/Achievements.swift BRICKS/Sound.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
