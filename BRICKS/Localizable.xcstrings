@@ -4,6 +4,22 @@
     "" : {
       "shouldTranslate" : false
     },
+    "%@ +1" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        }
+      }
+    },
     "%@ m" : {
       "localizations" : {
         "zh-Hans" : {
@@ -103,6 +119,22 @@
         }
       }
     },
+    "%lld pts!" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分！"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分！"
+          }
+        }
+      }
+    },
     "+%lld more" : {
       "localizations" : {
         "zh-Hans" : {
@@ -135,6 +167,38 @@
         }
       }
     },
+    "+%lld pts" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld 分"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld 分"
+          }
+        }
+      }
+    },
+    "+100 bonus!" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "奖励 100 分！"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "獎勵 100 分！"
+          }
+        }
+      }
+    },
     "A gift appeared — clear its line!" : {
       "localizations" : {
         "zh-Hans" : {
@@ -151,6 +215,22 @@
         }
       }
     },
+    "A gift appeared!" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出现礼物了！"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出現禮物了！"
+          }
+        }
+      }
+    },
     "A gift expired" : {
       "localizations" : {
         "zh-Hans" : {
@@ -163,6 +243,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "禮物過期了"
+          }
+        }
+      }
+    },
+    "A point for every brick you place, and a point for every cell you clear.\n\nBreak more than one line with a single piece and those cleared cells pay one and a half times — a row and a column crossing counts as 19 cells, not 20." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每放下一块砖得 1 分，每消除一格也得 1 分。\n\n用一个方块同时消除多条线，那些格子按 1.5 倍计分——一行和一列交叉时算 19 格，而不是 20 格。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每放下一塊磚得 1 分，每消除一格也得 1 分。\n\n用一個方塊同時消除多條線，那些格子按 1.5 倍計分——一行和一列交叉時算 19 格，而不是 20 格。"
           }
         }
       }
@@ -486,6 +582,38 @@
         }
       }
     },
+    "Clear a 3×3 area — aim it, then confirm" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "炸掉 3×3 的范围——先瞄准，再确认"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "炸掉 3×3 的範圍——先瞄準，再確認"
+          }
+        }
+      }
+    },
+    "Clear on one turn and clear again on the very next one and a combo starts, counting up beside your score.\n\nEvery line counts, so breaking three at once moves it on three. Every fifth combo turns the whole board rainbow. A turn that clears nothing ends the streak." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这一步有消除，紧接着下一步又有消除，连击就开始了，并在得分旁边累加。\n\n每条线都算，所以一次消三条就前进三。每到第五次连击，整个棋盘都会变成彩虹色。某一步没有消除，连击就断了。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這一步有消除，緊接著下一步又有消除，連擊就開始了，並在得分旁邊累加。\n\n每條線都算，所以一次消三條就前進三。每到第五次連擊，整個棋盤都會變成彩虹色。某一步沒有消除，連擊就斷了。"
+          }
+        }
+      }
+    },
     "Close Call" : {
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
@@ -500,6 +628,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "驚險過關"
+          }
+        }
+      }
+    },
+    "Combo %lld" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连击 %lld"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連擊 %lld"
+          }
+        }
+      }
+    },
+    "Combos" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连击"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連擊"
           }
         }
       }
@@ -568,6 +728,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "深色模式"
+          }
+        }
+      }
+    },
+    "Deal three new pieces" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发三个新方块"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發三個新方塊"
           }
         }
       }
@@ -676,20 +852,34 @@
         }
       }
     },
-    "Double Delivery" : {
-      "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
-      "extractionState" : "manual",
+    "Drag a piece from the tray onto the 10×10 board. Fill a whole row or column and it clears away.\n\nThe tray only refills once all three pieces are gone, and a fresh deal always holds at least one piece that fits somewhere." : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "双份礼物"
+            "value" : "把方块从托盘拖到 10×10 的棋盘上。填满一整行或一整列，它就会消除。\n\n只有三个方块全部用完，托盘才会补充；每次新发的方块里，至少有一个放得下。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "雙份禮物"
+            "value" : "把方塊從托盤拖到 10×10 的棋盤上。填滿一整行或一整列，它就會消除。\n\n只有三個方塊全部用完，托盤才會補充；每次新發的方塊裡，至少有一個放得下。"
+          }
+        }
+      }
+    },
+    "Every 300 points or so a gift lands on an empty square, counting down from 10 moves.\n\nBuild over it and clear that row or column before the counter runs out and it pays a power-up. Smashing the brick on top only uncovers it again." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大约每 300 分，就会有一份礼物落在空格上，并从 10 步开始倒数。\n\n在倒数结束前盖住它，并消除那一行或那一列，就能拿到一个道具。敲碎上面的砖块只会让它重新露出来。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大約每 300 分，就會有一份禮物落在空格上，並從 10 步開始倒數。\n\n在倒數結束前蓋住它，並消除那一行或那一列，就能拿到一個道具。敲碎上面的磚塊只會讓它重新露出來。"
           }
         }
       }
@@ -744,6 +934,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "五位數"
+          }
+        }
+      }
+    },
+    "Five of each, at most. Tap one to use it." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每种最多五个。轻点即可使用。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每種最多五個。點一下即可使用。"
           }
         }
       }
@@ -871,6 +1077,22 @@
         }
       }
     },
+    "Gifts" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "礼物"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "禮物"
+          }
+        }
+      }
+    },
     "Glass fruit, jelly keys, crystal snacks" : {
       "localizations" : {
         "zh-Hans" : {
@@ -951,6 +1173,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "高分玩家"
+          }
+        }
+      }
+    },
+    "How to play" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玩法说明"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玩法說明"
           }
         }
       }
@@ -1159,6 +1397,22 @@
         }
       }
     },
+    "Move to a spot and press to aim the blast" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移到目标位置，按下即可瞄准"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移到目標位置，按下即可瞄準"
+          }
+        }
+      }
+    },
     "Move to a spot and press to blast it" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1323,24 +1577,6 @@
         }
       }
     },
-    "On Your Wrist" : {
-      "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腕上方块"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腕上方塊"
-          }
-        }
-      }
-    },
     "On a Roll" : {
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
@@ -1475,6 +1711,22 @@
         }
       }
     },
+    "Power-ups" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具"
+          }
+        }
+      }
+    },
     "Press a piece to turn all three — Menu when done" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1487,6 +1739,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "按下方塊即可旋轉全部三個——完成後按選單鍵"
+          }
+        }
+      }
+    },
+    "Press again to set it off" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再按一次即可引爆"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再按一次即可引爆"
           }
         }
       }
@@ -1561,6 +1829,22 @@
         }
       }
     },
+    "Rewind your last move, the pieces you were holding and all" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "撤回上一步，连手上的方块一起回来"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "復原上一步，連手上的方塊一起回來"
+          }
+        }
+      }
+    },
     "Rotate" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1577,6 +1861,22 @@
         }
       }
     },
+    "Rules, combos and power-ups" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "规则、连击和道具"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "規則、連擊和道具"
+          }
+        }
+      }
+    },
     "Runner" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1589,6 +1889,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "跑酷"
+          }
+        }
+      }
+    },
+    "Running out" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无路可走"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無路可走"
           }
         }
       }
@@ -1639,6 +1955,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "聖誕老人的幫手"
+          }
+        }
+      }
+    },
+    "Scoring" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计分"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計分"
           }
         }
       }
@@ -1755,6 +2087,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "敲碎"
+          }
+        }
+      }
+    },
+    "Smash a single brick" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "敲碎一块砖"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "敲碎一塊磚"
+          }
+        }
+      }
+    },
+    "Sounds" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音效"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音效"
           }
         }
       }
@@ -1925,6 +2289,22 @@
         }
       }
     },
+    "Tap the tick to set it off" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点对勾即可引爆"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點一下勾號即可引爆"
+          }
+        }
+      }
+    },
     "Tap to turn all three — drag a piece when done" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1937,6 +2317,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點一下即可旋轉全部三個——完成後拖曳方塊"
+          }
+        }
+      }
+    },
+    "Tap where you want the 3×3 blast" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点想要炸开 3×3 的位置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點一下想要炸開 3×3 的位置"
+          }
+        }
+      }
+    },
+    "The board" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "棋盘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "棋盤"
           }
         }
       }
@@ -2039,6 +2451,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "三消"
+          }
+        }
+      }
+    },
+    "Turn all three pieces a quarter turn, as often as you like" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把三个方块各转 90°，想转多少次都行"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把三個方塊各轉 90°，想轉多少次都行"
           }
         }
       }
@@ -2289,6 +2717,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "方塊一週"
+          }
+        }
+      }
+    },
+    "When none of your three pieces fit anywhere, the game is over — a power-up cannot dig you out of it.\n\nWhatever you were holding carries into the next game, and your board is saved as you go, so closing the app never costs you a run." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当三个方块都放不下时，游戏就结束了——道具也救不回来。\n\n你手上的道具会带到下一局，棋盘也会随时保存，所以关掉应用绝不会让你丢掉这一局。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當三個方塊都放不下時，遊戲就結束了——道具也救不回來。\n\n你手上的道具會帶到下一局，棋盤也會隨時保存，所以關掉應用程式絕不會讓你丟掉這一局。"
           }
         }
       }

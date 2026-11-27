@@ -7,12 +7,15 @@ struct HowToPlayView: View {
 
     /// One card of the deck. `powers` is filled on the power-up card only, which lists
     /// them from `PowerUp` itself rather than repeating their names here.
+    /// `title` and `blurb` are `LocalizedStringKey`, not `String`: `Text` only looks a
+    /// string up when it is handed a key, so plain `String` fields would ship this whole
+    /// deck in English whatever the device language.
     private struct Rule: Identifiable {
         let id: Int
         let icon: String
         let tint: Color
-        let title: String
-        let blurb: String
+        let title: LocalizedStringKey
+        let blurb: LocalizedStringKey
         var powers: [PowerUp] = []
     }
 
