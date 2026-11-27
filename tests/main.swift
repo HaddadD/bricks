@@ -1068,7 +1068,7 @@ check(done(.streak5), "five clearing pieces in a row: On a Roll")
 feed([.placed(family: 0), .missed])
 check(ps.game.streak == 0 && ps.bestStreak == 5, "a piece that clears nothing ends the streak, keeping the best")
 feed([.placed(family: 3), .cleared(rows: 1, cols: 0, gifts: 2, filled: 74, emptied: true, points: 14)])
-check(done(.doubleGift) && done(.closeCall) && done(.cleanSlate), "two gifts, a full board and an empty one")
+check(done(.closeCall) && done(.cleanSlate), "a clear from a nearly full board that empties it")
 for f in 4...8 { feed([.placed(family: f), .missed]) }
 check(done(.fullSet), "all nine kinds of piece in one game: Full Set")
 feed([.score(2600)])
