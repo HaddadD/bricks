@@ -755,7 +755,6 @@ final class GameModel: ObservableObject {
         nextDeal = snap.dealt
         undoStack = nil
         Haptics.tap()
-        showToast("Move undone")
         onEvent?(.score(score))
         showToast("Move undone", from: .undo)
         recheckGameOver()

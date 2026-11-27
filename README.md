@@ -396,7 +396,7 @@ swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
   BRICKS/AppVersion.swift BRICKS/Achievements.swift BRICKS/Runner.swift \
-  BRICKS/Satisfying.swift tests/main.swift && /tmp/rules_test
+  BRICKS/Satisfying.swift BRICKS/Sound.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
