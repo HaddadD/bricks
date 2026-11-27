@@ -26,6 +26,11 @@ private struct Snapshot {
     var score: Int
     var giftThreshold: Int
     var pendingGift: Bool
+    var combo: Int
+    /// The deal this move's placement emptied the tray into, if it emptied it. Rewinding
+    /// puts that deal back in the deck so it comes round again, rather than letting the
+    /// undo roll a fresh one.
+    var dealt: [TrayPiece?]? = nil
 }
 
 final class GameModel: ObservableObject {
@@ -39,6 +44,10 @@ final class GameModel: ObservableObject {
     static let milestoneFade = 200
     /// Multiplier applied when a single placement clears more than one line.
     static let multiClearBonus = 1.5
+    /// Lines in one placement that repaint the survivors as a rainbow rather than one colour.
+    static let rainbowLines = 5
+    /// Every this many combos the board goes rainbow — at 5, 10, 15 and so on.
+    static let comboRainbow = 5
 
     @Published private(set) var board: [[Cell]]
     @Published private(set) var tray: [TrayPiece?]
@@ -46,6 +55,15 @@ final class GameModel: ObservableObject {
     @Published private(set) var best: Int
     @Published private(set) var powerUps: [PowerUp: Int]
     @Published private(set) var isGameOver = false
+    /// Placements in a row that have cleared something. One clear is not a combo yet —
+    /// it takes a second clear on the very next placement for the streak to start, so
+    /// nothing is shown below 2. Any placement that clears nothing drops it to 0.
+    @Published private(set) var combo: Int = 0
+    /// True while the badge is showing the step that went through a multiple of five —
+    /// the one that put the rainbow on the board. With several lines counting at once
+    /// the streak can jump past five without landing on it, so the badge cannot work
+    /// this out from the number alone.
+    @Published private(set) var comboFlared = false
     /// Score at which the most recent milestone fired; nil before the first one.
     @Published private(set) var milestoneScore: Int? = nil
     /// Which celebration background that milestone drew.
@@ -57,8 +75,15 @@ final class GameModel: ObservableObject {
     @Published private(set) var blasting: Set<GridPoint> = []
 
     @Published var activePower: PowerUp? = nil
+    /// Where the bomb is pointed, once it has been aimed but not yet set off. The bomb
+    /// takes two taps — one to aim, one to confirm — since five bricks are a lot to lose
+    /// to a fat finger.
+    @Published private(set) var bombAim: GridPoint? = nil
     /// Short-lived banner shown when a gift is collected or a power-up fires.
     @Published var toast: String? = nil
+    /// Set when the toast is about a particular power-up, so its capsule can glow in
+    /// that power-up's colour the way an armed hint does. nil glows the usual pink.
+    @Published private(set) var toastPower: PowerUp? = nil
 
     /// Hears everything achievements are measured on (see PlayerProgress).
     var onEvent: ((GameEvent) -> Void)?
@@ -67,6 +92,8 @@ final class GameModel: ObservableObject {
     var onSaved: ((Data, Date) -> Void)?
 
     private var undoStack: Snapshot? = nil
+    /// A deal an undo took back off the tray, waiting to be handed out again.
+    private var nextDeal: [TrayPiece?]? = nil
     private var giftThreshold: Int = Int.random(in: 280...320)
     /// Set when a gift was earned but the board had nowhere to put it.
     private var pendingGift = false
@@ -97,6 +124,25 @@ final class GameModel: ObservableObject {
             seedDemoBoard()
             milestoneScore = score
             milestoneTheme = n
+            return
+        }
+        // `-repaint <lines>` seeds a board as it looks after a clear of that many lines,
+        // for checking the repaint without engineering a five-line break by hand.
+        if let i = args.firstIndex(of: "-repaint"), i + 1 < args.count,
+           let n = Int(args[i + 1]) {
+            seedDemoBoard()
+            repaintSurvivors(rainbow: n >= GameModel.rainbowLines)
+            return
+        }
+        // `-combo <n>` seeds a board mid-streak, for checking the badge.
+        if let i = args.firstIndex(of: "-combo"), i + 1 < args.count,
+           let n = Int(args[i + 1]) {
+            seedDemoBoard()
+            combo = n
+            if n % GameModel.comboRainbow == 0 {
+                comboFlared = true
+                repaintSurvivors(rainbow: true)
+            }
             return
         }
         if args.contains("-demo") {
@@ -140,13 +186,17 @@ final class GameModel: ObservableObject {
             )
             tray = dealTray()
             score = 0
+            combo = 0
+            comboFlared = false
             isGameOver = false
             clearing = []
             blasting = []
             activePower = nil
+            bombAim = nil
             // Power-ups deliberately survive into the next game.
         }
         undoStack = nil
+        nextDeal = nil
         pendingGift = false
         milestoneScore = nil
         milestoneTheme = nil
@@ -167,6 +217,7 @@ final class GameModel: ObservableObject {
         var isGameOver: Bool
         var milestoneScore: Int?
         var milestoneTheme: Int?
+        var combo: Int?
     }
 
     private func persist() {
@@ -179,7 +230,8 @@ final class GameModel: ObservableObject {
             pendingGift: pendingGift,
             isGameOver: isGameOver,
             milestoneScore: milestoneScore,
-            milestoneTheme: milestoneTheme
+            milestoneTheme: milestoneTheme,
+            combo: combo
         )
         if let data = try? JSONEncoder().encode(save) {
             let now = Date()
@@ -258,6 +310,7 @@ final class GameModel: ObservableObject {
         isGameOver = save.isGameOver
         milestoneScore = save.milestoneScore
         milestoneTheme = save.milestoneTheme
+        combo = save.combo ?? 0
 
         var restored = Dictionary(uniqueKeysWithValues: PowerUp.allCases.map { ($0, 0) })
         for (raw, count) in save.powerUps {
@@ -277,6 +330,21 @@ final class GameModel: ObservableObject {
     /// There is always some shape that fits: a board with no empty square at all would
     /// have completed every row and column and cleared itself, so a 1x1 always has
     /// somewhere to go.
+    /// The deal an undo put back, if there is one, otherwise a fresh one.
+    ///
+    /// Rewinding a move hands its deal back to the deck so that replaying the move gives
+    /// you the same three pieces — undo is a rewind, not a reroll. The held deal is
+    /// dropped if the board has since changed enough that none of it fits, since the
+    /// promise that a deal always contains a playable piece outranks it.
+    private func heldOrFreshDeal() -> [TrayPiece?] {
+        defer { nextDeal = nil }
+        if let held = nextDeal,
+           held.compactMap({ $0 }).contains(where: { canPlaceAnywhere($0.shape) }) {
+            return held
+        }
+        return dealTray()
+    }
+
     private func dealTray() -> [TrayPiece?] {
         var deal = [TrayPiece.random(), TrayPiece.random(), TrayPiece.random()]
         if deal.contains(where: { canPlaceAnywhere($0.shape) }) {
@@ -326,7 +394,8 @@ final class GameModel: ObservableObject {
             tray: tray,
             score: score,
             giftThreshold: giftThreshold,
-            pendingGift: pendingGift
+            pendingGift: pendingGift,
+            combo: combo
         )
 
         withAnimation(.spring(response: 0.24, dampingFraction: 0.7)) {
@@ -335,9 +404,13 @@ final class GameModel: ObservableObject {
             }
             score += piece.shape.cellCount
             tray[trayIndex] = nil
+            // Playing a piece settles it: a bomb left half-aimed is no longer pointed at
+            // the board it was aimed at.
+            bombAim = nil
         }
 
         Haptics.tap()
+        Sound.place()
         onEvent?(.placed(family: piece.shape.family))
         resolveClears(placedCells: piece.shape.cellCount)
         return true
@@ -358,6 +431,11 @@ final class GameModel: ObservableObject {
 
         guard !fullRows.isEmpty || !fullCols.isEmpty else {
             onEvent?(.missed)
+            // A placement that clears nothing ends the streak.
+            withAnimation(.easeOut(duration: 0.2)) {
+                combo = 0
+                comboFlared = false
+            }
             finishTurn()
             return
         }
@@ -387,6 +465,7 @@ final class GameModel: ObservableObject {
             clearing = cells
         }
         Haptics.clear(lines: lines)
+        Sound.lineClear()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) { [weak self] in
             guard let self = self else { return }
@@ -401,8 +480,25 @@ final class GameModel: ObservableObject {
                 rows: fullRows.count, cols: fullCols.count, gifts: giftsWon, filled: filled,
                 emptied: !self.board.joined().contains(where: \.isFilled), points: placedCells + award
             ))
+            // Every line counts, so breaking three at once moves the streak on three.
+            let before = self.combo
+            withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) {
+                self.combo += lines
+            }
+
+            // Either a big break or every fifth combo turns the board rainbow; a
+            // smaller multi-line break settles it on one colour. Passing a multiple of
+            // five counts, not just landing on one — a three-line break that takes the
+            // streak from 4 to 7 has gone through 5.
+            let streak = self.combo / GameModel.comboRainbow > before / GameModel.comboRainbow
+            withAnimation(.easeOut(duration: 0.3)) { self.comboFlared = streak }
+            if streak || lines > 1 {
+                withAnimation(.easeInOut(duration: 0.45)) {
+                    self.repaintSurvivors(rainbow: streak || lines >= GameModel.rainbowLines)
+                }
+            }
             if lines > 1 {
-                self.showToast("+\(award) points")
+                self.showToast("+\(award) pts")
             }
             if giftsWon > 0 {
                 for _ in 0..<giftsWon { self.awardGift() }
@@ -411,12 +507,46 @@ final class GameModel: ObservableObject {
         }
     }
 
+    /// Repaints every brick still standing: diagonal rainbow bands after a five-line
+    /// break or every fifth combo, otherwise one random colour.
+    ///
+    /// Only the board is repainted. Tray pieces keep their family colour, so you can
+    /// still tell a four-bar from a five-bar while the board is all one shade.
+    private func repaintSurvivors(rainbow: Bool) {
+        var standing: [GridPoint] = []
+        for r in 0..<GameModel.size {
+            for c in 0..<GameModel.size where board[r][c].isFilled {
+                standing.append(GridPoint(r: r, c: c))
+            }
+        }
+        guard !standing.isEmpty else { return }
+
+        if rainbow {
+            for p in standing {
+                board[p.r][p.c].colorIndex = Theme.rainbowIndex(row: p.r, col: p.c)
+            }
+            return
+        }
+
+        // If the board is already a single colour — which it is after any earlier
+        // multi-clear — draw a different one so the repaint is visible.
+        let present = Set(standing.compactMap { board[$0.r][$0.c].colorIndex })
+        let colour = Theme.randomBlock(avoiding: present.count == 1 ? present.first : nil)
+        for p in standing {
+            board[p.r][p.c].colorIndex = colour
+        }
+    }
+
     /// Refills the tray when empty, spawns gifts, and checks for game over.
     private func finishTurn() {
         if tray.allSatisfy({ $0 == nil }) {
+            let deal = heldOrFreshDeal()
             withAnimation(.spring(response: 0.3, dampingFraction: 0.75)) {
-                tray = dealTray()
+                tray = deal
             }
+            // Remember what this turn dealt, so undoing it can hand the same three
+            // pieces back rather than drawing new ones.
+            undoStack?.dealt = deal
         }
 
         if score > best {
@@ -430,6 +560,7 @@ final class GameModel: ObservableObject {
         onEvent?(.score(score))
 
         if !hasAnyMove {
+            if !isGameOver { Sound.gameOver() }
             withAnimation(.easeOut(duration: 0.3).delay(0.25)) {
                 isGameOver = true
             }
@@ -463,9 +594,10 @@ final class GameModel: ObservableObject {
             milestoneScore = score
             milestoneTheme = picked
         }
-        showToast("\(reached * GameModel.milestoneStep) points!")
+        showToast("\(reached * GameModel.milestoneStep) pts!")
         Haptics.reward()
         onEvent?(.celebration(picked))
+        Sound.milestone()
     }
 
     // MARK: - Gifts
@@ -493,24 +625,22 @@ final class GameModel: ObservableObject {
         }
         if score >= giftThreshold { giftThreshold = score + Int.random(in: 280...320) }
         pendingGift = false
-        showToast("A gift appeared — clear its line!")
+        showToast("A gift appeared!")
     }
 
-    /// Ticks every gift down one move, clearing any that run out.
+    /// Ticks every gift down one move, clearing any that run out. Expiry is silent —
+    /// the countdown on the badge has already been saying it for ten moves.
     private func ageGifts() {
-        var expired = false
         for r in 0..<GameModel.size {
             for c in 0..<GameModel.size {
                 guard let left = board[r][c].giftMovesLeft else { continue }
                 if left <= 1 {
                     board[r][c].giftMovesLeft = nil
-                    expired = true
                 } else {
                     board[r][c].giftMovesLeft = left - 1
                 }
             }
         }
-        if expired { showToast("A gift expired") }
     }
 
     /// Grants one random power-up, respecting the cap of 5 per type.
@@ -519,7 +649,7 @@ final class GameModel: ObservableObject {
 
         guard let won = available.randomElement() else {
             score += 100
-            showToast("All power-ups full — +100 bonus!")
+            showToast("+100 bonus!")
             Haptics.reward()
             onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
             return
@@ -528,9 +658,10 @@ final class GameModel: ObservableObject {
         withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) {
             powerUps[won, default: 0] += 1
         }
-        showToast("Gift claimed — \(won.title) +1")
+        showToast("\(won.title) +1", from: won)
         Haptics.reward()
         onEvent?(.giftClaimed(stock: PowerUp.allCases.map(count(of:))))
+        Sound.powerUp()
     }
 
     // MARK: - Power-ups
@@ -555,31 +686,54 @@ final class GameModel: ObservableObject {
         } else {
             if power == .undo || power == .shuffle { return }
             rotateCharged = false
-            withAnimation(.easeOut(duration: 0.15)) { activePower = power }
+            withAnimation(.easeOut(duration: 0.15)) {
+                activePower = power
+                bombAim = nil
+            }
         }
     }
 
+    /// What the banner says for whatever is armed. The bomb has two steps, so it has two
+    /// things to say.
+    var powerHint: String? {
+        guard let power = activePower else { return nil }
+        if power == .bomb && bombAim != nil { return power.confirmHint }
+        return power.targetHint.isEmpty ? nil : power.targetHint
+    }
+
+    /// Spends one charge. Every power-up but Rotate goes through here, so this is where
+    /// the sound of using one lives; Rotate charges itself on its first turn instead.
     private func consume(_ power: PowerUp) {
+        Sound.powerUp()
         withAnimation(.easeOut(duration: 0.2)) {
             powerUps[power, default: 0] = max(0, (powerUps[power] ?? 0) - 1)
             activePower = nil
+            bombAim = nil
         }
     }
 
     private func applyShuffle() {
         consume(.shuffle)
         onEvent?(.usedPowerUp(PowerUp.shuffle.rawValue, bricks: 0))
+        // Asking for new pieces throws away a deal an undo was holding back, which is
+        // the whole point of asking.
+        nextDeal = nil
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             tray = dealTray()
         }
         Haptics.tap()
-        showToast("Pieces shuffled")
+        showToast("Pieces shuffled", from: .shuffle)
         recheckGameOver()
     }
 
     private func applyUndo() {
+        // A clear or a blast still settling finishes by writing into the board a
+        // fraction of a second from now, which would land on top of whatever this puts
+        // back. Nothing is spent, so the next tap works.
+        guard clearing.isEmpty, blasting.isEmpty else { return }
+
         guard let snap = undoStack else {
-            showToast("Nothing to undo")
+            showToast("Nothing to undo", from: .undo)
             return
         }
         consume(.undo)
@@ -588,14 +742,21 @@ final class GameModel: ObservableObject {
             board = snap.board
             tray = snap.tray
             score = snap.score
+            combo = snap.combo
+            // Whether the step being rewound to was itself a rainbow one is not worth
+            // tracking; the badge simply stops flaring.
+            comboFlared = false
             clearing = []
         }
         giftThreshold = snap.giftThreshold
         pendingGift = snap.pendingGift
+        // If the move being rewound emptied the tray, the deal it drew is put back and
+        // comes round again on the next refill.
+        nextDeal = snap.dealt
         undoStack = nil
         Haptics.tap()
-        showToast("Move undone")
         onEvent?(.score(score))
+        showToast("Move undone", from: .undo)
         recheckGameOver()
     }
 
@@ -611,21 +772,41 @@ final class GameModel: ObservableObject {
             flash([GridPoint(r: row, c: col)])
 
         case .bomb:
-            var hit: [GridPoint] = []
-            for r in (row - 1)...(row + 1) {
-                for c in (col - 1)...(col + 1) {
-                    guard r >= 0, r < GameModel.size, c >= 0, c < GameModel.size else { continue }
-                    if board[r][c].isFilled { hit.append(GridPoint(r: r, c: c)) }
+            let spot = GridPoint(r: row, c: col)
+            let hit = bombBlast(atRow: row, col: col)
+
+            // Two taps: the first aims, the second sets it off. Tapping anywhere else
+            // moves the aim there instead, so changing your mind costs nothing. Aiming
+            // over empty board is allowed — seeing the footprint is the point of the
+            // first tap — but there is nothing to confirm, which the missing tick says.
+            if bombAim == spot, !hit.isEmpty {
+                withAnimation(.easeOut(duration: 0.15)) { bombAim = nil }
+                consume(.bomb)
+                onEvent?(.usedPowerUp(PowerUp.bomb.rawValue, bricks: hit.count))
+                flash(hit)
+            } else {
+                withAnimation(.spring(response: 0.26, dampingFraction: 0.7)) {
+                    bombAim = spot
                 }
+                Haptics.tap()
             }
-            guard !hit.isEmpty else { return }
-            consume(.bomb)
-            onEvent?(.usedPowerUp(PowerUp.bomb.rawValue, bricks: hit.count))
-            flash(hit)
 
         default:
             return
         }
+    }
+
+    /// The bricks a bomb centred on this square would take, clipped to the board.
+    /// The view asks too, to decide whether the aim gets a tick to tap.
+    func bombBlast(atRow row: Int, col: Int) -> [GridPoint] {
+        var hit: [GridPoint] = []
+        for r in (row - 1)...(row + 1) {
+            for c in (col - 1)...(col + 1) {
+                guard r >= 0, r < GameModel.size, c >= 0, c < GameModel.size else { continue }
+                if board[r][c].isFilled { hit.append(GridPoint(r: r, c: c)) }
+            }
+        }
+        return hit
     }
 
     /// Removes cells with a short flash, preserving any gifts underneath.
@@ -662,6 +843,7 @@ final class GameModel: ObservableObject {
             withAnimation(.easeOut(duration: 0.2)) {
                 powerUps[.rotate] = count(of: .rotate) - 1
             }
+            Sound.powerUp()
             rotateCharged = true
             onEvent?(.usedPowerUp(PowerUp.rotate.rawValue, bricks: 0))
         }
@@ -689,15 +871,20 @@ final class GameModel: ObservableObject {
     func cancelPower() {
         guard activePower != nil else { return }
         let wasRotate = activePower == .rotate
-        withAnimation(.easeOut(duration: 0.15)) { activePower = nil }
+        withAnimation(.easeOut(duration: 0.15)) {
+            activePower = nil
+            bombAim = nil
+        }
         rotateCharged = false
         if wasRotate { recheckGameOver() }
     }
 
     private func recheckGameOver() {
         let wasOver = isGameOver
+        let over = !hasAnyMove
+        if over && !wasOver { Sound.gameOver() }
         withAnimation(.easeOut(duration: 0.25)) {
-            isGameOver = !hasAnyMove
+            isGameOver = over
         }
         if isGameOver && !wasOver { onEvent?(.gameOver) }
         persist()
@@ -707,11 +894,20 @@ final class GameModel: ObservableObject {
 
     private var toastToken = 0
 
-    private func showToast(_ message: String.LocalizationValue) {
+    /// `from` tints the capsule in a power-up's own colour; nil leaves it the usual pink.
+    private func showToast(_ message: String.LocalizationValue, from power: PowerUp? = nil) {
         let text = String(localized: message)
         toastToken += 1
         let token = toastToken
+        toastPower = power
         withAnimation(.easeOut(duration: 0.2)) { toast = text }
+
+        #if DEBUG
+        // A toast is gone in under two seconds, which is quicker than a screenshot can
+        // be taken. `-stickytoast` holds it up so the styling can be looked at.
+        if ProcessInfo.processInfo.arguments.contains("-stickytoast") { return }
+        #endif
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.9) { [weak self] in
             guard let self = self, self.toastToken == token else { return }
             withAnimation(.easeIn(duration: 0.3)) { self.toast = nil }
@@ -775,6 +971,8 @@ extension GameModel {
     func testSetPowerUp(_ power: PowerUp, _ count: Int) { powerUps[power] = count }
 
     func testSetScore(_ value: Int) { score = value }
+
+    func testSetCombo(_ value: Int) { combo = value }
 
     func testCell(row: Int, col: Int) -> Cell { board[row][col] }
 

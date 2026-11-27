@@ -65,6 +65,10 @@ struct TrayView: View {
                     .frame(width: slotWidth, height: Self.slotHeight(cellSize: cellSize))
             }
         }
+        // Slot 1 stays on the left in every language, like the board it feeds: a drag
+        // reports a raw `CGPoint` that `DragTargeting` measures against the grid origin,
+        // and the "Piece %lld" labels number the slots in the order they are drawn.
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     @ViewBuilder

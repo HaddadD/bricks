@@ -70,20 +70,10 @@
       "goal": "在 Apple Vision Pro 上玩。",
       "name": "空間方塊"
     },
-    "ca.wilsonlam.bricks.device.watch": {
-      "earned": "你在 Apple Watch 上玩過了。",
-      "goal": "在 Apple Watch 上玩。",
-      "name": "腕上方塊"
-    },
     "ca.wilsonlam.bricks.direct_hit": {
       "earned": "九塊磚，一顆炸彈。",
       "goal": "用一顆炸彈炸掉 9 塊磚。",
       "name": "正中目標"
-    },
-    "ca.wilsonlam.bricks.double_gift": {
-      "earned": "一個方塊領到兩份禮物。",
-      "goal": "用一個方塊領取兩份禮物。",
-      "name": "雙份禮物"
     },
     "ca.wilsonlam.bricks.full_set": {
       "earned": "一局裡用上了每一種方塊。",

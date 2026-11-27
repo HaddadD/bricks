@@ -11,6 +11,7 @@ final class Settings: ObservableObject {
         static let sensory = "bricks.sensory"
         static let sensoryMode = "bricks.sensoryMode"
         static let runnerStyle = "bricks.runnerStyle"
+        static let sounds = "bricks.sounds"
     }
 
     @Published var isDark: Bool {
@@ -56,10 +57,17 @@ final class Settings: ObservableObject {
     }
     #endif
 
+    @Published var sounds: Bool {
+        didSet {
+            UserDefaults.standard.set(sounds, forKey: Key.sounds)
+            Sound.enabled = sounds
+        }
+    }
+
     init() {
         let defaults = UserDefaults.standard
         isDark = defaults.bool(forKey: Key.dark)
-        // Vibrations default to on, so read the stored value only once one exists.
+        // Vibrations and sounds default to on, so read the stored value only once one exists.
         vibrations = defaults.object(forKey: Key.vibrations) as? Bool ?? true
         // On iPhone, on until the player says otherwise; elsewhere a pointer, pinch or
         // big iPad cell hides less, so it's off until asked for. `bool(forKey:)` also
@@ -71,7 +79,9 @@ final class Settings: ObservableObject {
         sensoryMode = defaults.string(forKey: Key.sensoryMode).flatMap(SensoryMode.init) ?? .runner
         runnerStyle = defaults.string(forKey: Key.runnerStyle).flatMap(RunnerStyle.init) ?? .trail
         #endif
+        sounds = defaults.object(forKey: Key.sounds) as? Bool ?? true
         Haptics.enabled = vibrations
+        Sound.enabled = sounds
     }
 
     var colorScheme: ColorScheme { isDark ? .dark : .light }

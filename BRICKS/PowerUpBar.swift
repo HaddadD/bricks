@@ -18,6 +18,11 @@ struct PowerUpBar: View {
                 chip(power)
             }
         }
+        // The count badge sits in a `.topTrailing` ZStack and is then nudged out by
+        // `offset(x:)`. SwiftUI mirrors the alignment in a right-to-left language but not
+        // the offset, which would drag the badge inwards over its own icon, so keep the
+        // chips left-to-right.
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     private func chip(_ power: PowerUp) -> some View {
@@ -126,5 +131,7 @@ struct PowerUpRail: View {
             }
         }
         .frame(width: width, height: width)
+        // Same corner-badge offset as the bar's chips; see the note there.
+        .environment(\.layoutDirection, .leftToRight)
     }
 }

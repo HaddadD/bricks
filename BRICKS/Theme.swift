@@ -14,6 +14,18 @@ extension Color {
         )
     }
 
+    /// The same colour with every channel scaled down. The pastel tints are far too
+    /// light to carry white text, so a surface filled with one uses a deeper version.
+    init(hex: UInt32, deepened: Double) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xFF) / 255 * deepened,
+            green: Double((hex >> 8) & 0xFF) / 255 * deepened,
+            blue: Double(hex & 0xFF) / 255 * deepened,
+            opacity: 1
+        )
+    }
+
     /// A colour that resolves differently in light and dark mode. The scheme comes from
     /// the view's trait collection, which the root view drives from the user's setting,
     /// so every surface flips without any call site knowing about it.
@@ -153,6 +165,20 @@ enum Theme {
 
     static func familyColor(_ family: Int) -> Int {
         familyPalette[family % familyPalette.count]
+    }
+
+    /// The nine pastels in hue order, for the rainbow the board puts on after a
+    /// five-line clear. Banding it on `row + col` draws diagonal stripes.
+    private static let rainbowOrder = [1, 2, 3, 4, 8, 5, 6, 7, 0]
+
+    static func rainbowIndex(row: Int, col: Int) -> Int {
+        rainbowOrder[(row + col) % rainbowOrder.count]
+    }
+
+    /// A block colour for the whole board to take over after a multi-line clear.
+    /// `avoiding` is the colour it is already wearing, so the change always shows.
+    static func randomBlock(avoiding current: Int?) -> Int {
+        blocks.indices.filter { $0 != current }.randomElement() ?? 0
     }
 
     static func block(_ index: Int) -> Color { blocks[index % blocks.count] }

@@ -50,7 +50,7 @@ enum Achievement: String, CaseIterable {
     case days7 = "days.7", days30 = "days.30"
     // Gifts
     case gift1 = "gifts.1", gifts25 = "gifts.25", gifts100 = "gifts.100"
-    case doubleGift = "double_gift", fullyStocked = "fully_stocked"
+    case fullyStocked = "fully_stocked"
     // Power-ups
     case hammer = "power.hammer", bomb = "power.bomb", shuffle = "power.shuffle"
     case rotate = "power.rotate", undo = "power.undo"
@@ -59,7 +59,7 @@ enum Achievement: String, CaseIterable {
     case lightShow = "light_show"
     // Every device
     case iPhone = "device.iphone", iPad = "device.ipad", mac = "device.mac"
-    case tv = "device.tv", vision = "device.vision", watch = "device.watch"
+    case tv = "device.tv", vision = "device.vision"
 
     static let prefix = "ca.wilsonlam.bricks."
     var id: String { Achievement.prefix + rawValue }
@@ -133,7 +133,6 @@ enum Achievement: String, CaseIterable {
         case .gift1:        return i("Unwrapped", "Claim a gift.", "You claimed your first gift.", 5, "gift.fill", "coral")
         case .gifts25:      return i("Gift Hunter", "Claim 25 gifts.", "You've claimed 25 gifts.", 15, "gift.fill", "coral", label: "25")
         case .gifts100:     return i("Santa's Helper", "Claim 100 gifts.", "You've claimed 100 gifts.", 30, "gift.fill", "coral", label: "100")
-        case .doubleGift:   return i("Double Delivery", "Claim two gifts with one piece.", "Two gifts with one piece.", 20, "gift.fill", "blush", label: "×2")
         case .fullyStocked: return i("Fully Stocked", "Hold 5 of every power-up.", "Every power-up, five times over.", 30, "shippingbox.fill", "apricot", hidden: true)
 
         case .hammer:    return i("Smash", "Use a hammer.", "Smashed a brick with the hammer.", 5, "hammer.fill", "coral")
@@ -152,7 +151,6 @@ enum Achievement: String, CaseIterable {
         case .mac:    return i("Desk Job", "Play on a Mac.", "You played on a Mac.", 10, "macbook", "aqua")
         case .tv:     return i("Couch Co-op", "Play on Apple TV.", "You played on Apple TV.", 10, "appletv.fill", "aqua")
         case .vision: return i("Spatial Bricks", "Play on Apple Vision Pro.", "You played on Apple Vision Pro.", 10, "visionpro", "aqua")
-        case .watch:  return i("On Your Wrist", "Play on Apple Watch.", "You played on Apple Watch.", 10, "applewatch", "aqua")
         }
     }
 
@@ -195,9 +193,9 @@ enum Achievement: String, CaseIterable {
         case .hammer, .bomb, .shuffle, .rotate, .undo:
             return flag(s.powerUpsUsed.contains(String(rawValue.dropFirst("power.".count))))
         case .lightShow: return of(s.celebrations.count, PlayerStats.celebrationCount)
-        case .iPhone, .iPad, .mac, .tv, .vision, .watch:
+        case .iPhone, .iPad, .mac, .tv, .vision:
             return flag(s.devices.contains(String(rawValue.dropFirst("device.".count))))
-        case .fullSet, .crossroads, .cleanSlate, .closeCall, .doubleGift, .fullyStocked,
+        case .fullSet, .crossroads, .cleanSlate, .closeCall, .fullyStocked,
              .toolbox, .directHit, .purist:
             return flag(s.feats.contains(rawValue))
         }
@@ -319,7 +317,7 @@ struct PlayerStats: Codable, Equatable {
             days.insert(day)
             devices.insert(device)
 
-        case let .cleared(rows, cols, gifts, filled, emptied, points):
+        case let .cleared(rows, cols, _, filled, emptied, points):
             let count = rows + cols
             lines += count
             game.lines += count
@@ -331,7 +329,6 @@ struct PlayerStats: Codable, Equatable {
             if rows > 0 && cols > 0 { feats.insert(Achievement.crossroads.rawValue) }
             if emptied { feats.insert(Achievement.cleanSlate.rawValue) }
             if filled >= 70 { feats.insert(Achievement.closeCall.rawValue) }
-            if gifts >= 2 { feats.insert(Achievement.doubleGift.rawValue) }
 
         case .missed:
             game.streak = 0

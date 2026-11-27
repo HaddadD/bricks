@@ -50,6 +50,15 @@ file with another 1024×1024 PNG that has no alpha channel.
   pastels, ordered so pieces that are easy to confuse by silhouette get clearly
   different hues.
 - **New** asks for confirmation before throwing away the board.
+- Toasts and power-up hints share one look — a filled capsule in white type, the same
+  as the combo badge. Anything to do with a particular power-up is filled in that
+  power-up's own colour, whether it is an armed hint or the toast that follows using
+  it; everything else is pink. The pastel tints are too light to carry white text, so
+  a filled capsule uses `Color(hex:deepened:)` to take the same hue darker.
+- The score sits just under the title, and banners float in the gap between it and the
+  board. They take no space of their own — the banner overlays the spacer above the
+  board rather than sitting in the stack — so the board stays exactly where it is
+  whether a banner is up or not, and never moves under your finger mid-drag.
 - The app version is stamped under the board's bottom-left corner, read from the bundle,
   so bumping Marketing Version in Xcode updates it.
 - Filling a row or column clears it. Scoring is 1 point per brick placed, plus 1 per
@@ -58,6 +67,12 @@ file with another 1024×1024 PNG that has no alpha channel.
   rounded to the nearest point. The multiplier is flat whether it is 2 lines or 5, it
   applies to the cleared cells rather than the piece you placed, and it applies to that
   clear alone — the next one starts from scratch. There is no streak between turns.
+- **A multi-line clear repaints whatever is left standing.** Break 2–4 lines at once
+  and every brick still on the board turns a single colour, picked at random and never
+  the one it is already wearing. Break all five and the survivors take a diagonal
+  rainbow instead. Only the board is repainted — tray pieces keep their family colour,
+  so you can still tell a four-bar from a five-bar.
+- **Clearing on consecutive turns builds a combo** — see below.
 - A dragged piece sits right under your finger (or pointer, or pinch), exactly where it
   will land, and the rows or columns a placement would complete are highlighted before
   you let go. **Float pieces** lifts it above the finger, pointer or pinch instead, so
@@ -115,6 +130,10 @@ shows both sizes in the app.
 
 The gear in the top right opens a sheet with:
 
+- **How to play** — opens a six-card deck you swipe through: the board, scoring,
+  combos, gifts, the power-ups and running out of moves. The power-up card builds
+  itself from `PowerUp` rather than repeating their names, so adding one would show up
+  there on its own.
 - **Dark mode** — every surface colour in `Theme` is declared with a light and a dark
   value via `Color.adaptive`, resolved from the view's trait collection. The root view
   drives that from the setting, so the whole tree flips without any call site knowing
@@ -150,10 +169,45 @@ The gear in the top right opens a sheet with:
   nothing makes a sound, and the iOS Simulator doesn't offer it: there it plays under
   the board only. Outside the app a floating show holds its last frame, since an app in
   the background can't use the GPU; the runner, drawn on the CPU, keeps running.
+- **Sounds** — gates every call in `Sound`. Switching it on plays the clear sound, so
+  you hear what you just turned on.
 - **Reset game** — asks for confirmation first.
 
 The preferences are stored in `UserDefaults` and survive quitting. The score sits
 centred directly above the board.
+
+## Sounds
+
+Four of the five are recordings, living in `BRICKS/Sounds`:
+
+| | |
+|---|---|
+| **Dropping a piece** | `Pop Sound.mp3` |
+| **Clearing a line** | `Clear Line.mp3` — the same whether one line goes or five |
+| **A power-up** | `Powerup Sound.mp3` — both winning one from a gift and spending one |
+| **Losing** | `Losing Sound.mp3` |
+
+The project carries that folder as a **folder reference**, not as four separate file
+entries, so swapping a clip means replacing the file and nothing else, and a new clip
+dropped in is copied into the app without touching the Xcode project. The name in
+`Sound.Clip` is the filename.
+
+**The 1000-point milestone is the exception** — no recording was supplied for it, so it
+is still synthesised: an arpeggio landing on a held major chord, built from a short list
+of notes that `Sound.swift` renders into samples at playback time (a sine with two quiet
+harmonics, a fast attack and an exponential tail, which gives a soft struck bar rather
+than a beep). Drop a fifth file in and it can go the way of the others.
+
+Each clip gets one `AVAudioPlayer`, loaded the first time it is asked for and kept.
+Playing a clip that is already playing restarts it rather than layering a second copy —
+hurrying through a deal should sound like a run of pops, not a pile-up — while different
+clips overlap freely, so a placement that clears a line plays both. Loading and starting
+happen off the main thread, since decoding a file is slow enough to drop a frame
+mid-animation.
+
+Everything runs on an `.ambient` session with `.mixWithOthers`: the game never
+interrupts whatever you are listening to, and the ring/silent switch mutes it like any
+other game.
 
 ## Saving
 
@@ -172,6 +226,27 @@ wins, and the best score is the best of them all (`GameSync.swift`).
 Both live in the app's data container, so they survive re-installing over the top from
 Xcode. Deleting the app from the phone is what clears them. **New** starts a fresh run
 and discards the saved one.
+
+## Combos
+
+Clear something on one turn and then clear again on the very next one and a streak
+starts. The badge appears to the right of the score reading **Combo 2**, and counts up
+for as long as every placement keeps clearing. A single placement that clears nothing
+drops it straight back to zero — one clear on its own is never a combo, so the badge
+only ever shows from 2 up.
+
+**Every line counts**, including lines broken together: a three-line break moves the
+streak on three, and a five-line break starts one at 5 from nothing.
+
+Every fifth combo — 5, 10, 15 and on — repaints the whole board as a rainbow, the same
+diagonal bands a five-line break draws, and the badge wears that rainbow for the step
+it fires on. Because several lines can land at once, what counts is *passing* a
+multiple of five rather than stopping on one: a three-line break taking the streak from
+4 to 7 goes through 5, so it fires. `comboFlared` carries that to the badge, which
+cannot tell from the number alone.
+
+The streak is saved with the run and rewinds with Undo, so undoing a clearing move puts
+the count back where it was.
 
 ## Milestones
 
@@ -198,16 +273,31 @@ Stored along the bottom, **max 5 of each**.
 | | | |
 |---|---|---|
 | **Hammer** | smash a single brick | tap the chip, then tap a brick |
-| **Bomb** | clear a 3×3 area | tap the chip, then tap the board |
+| **Bomb** | clear a 3×3 area | tap the chip, tap where you want it, then tap the tick |
 | **Shuffle** | deal three new tray pieces | instant |
 | **Rotate** | turn **all three** tray pieces 90° | tap the chip, then tap the tray — tap again for another quarter turn |
 | **Undo** | rewind the last placement | instant |
 
 Tapping an armed chip again — or tapping empty space — cancels it.
 
+**The bomb asks twice.** Nine bricks is a lot to lose to a fat finger, so the first tap
+only aims it: a dashed outline shows exactly which squares are in range, clipped at the
+board's edges, with a tick on the square you picked. Tapping that tick sets it off;
+tapping anywhere else moves the aim there instead, and cancelling costs nothing. You can
+aim over bare board to look at the footprint — there is just no tick to tap, since there
+would be nothing to blast. The hammer still goes on one tap: one brick is cheap.
+
 One Rotate charge buys a whole session: every tap turns the whole tray another quarter
 turn, and the charge is spent on the first turn rather than on arming — so arming and
 changing your mind is free. Dragging a piece ends the session and finishes that use.
+
+**Undo is a rewind, not a reroll.** It puts back the board, the score, the combo and the
+very pieces you were holding — and if the move you are undoing emptied the tray, the
+three pieces it dealt you are put back in the deck too, so replaying that move hands you
+the same deal rather than a fresh one. The only exception is a held deal that no longer
+fits the board you have ended up with: that one is dropped, because a deal always
+containing a playable piece matters more. Shuffle throws a held deal away, which is the
+whole point of asking for new pieces.
 
 **Power-ups carry over between games.** When you run out of moves the game is over —
 they cannot be spent to dig out of a lost board — but whatever you were holding is
@@ -258,6 +348,8 @@ periods only.
 | `Platform.swift` | how each platform plays: input, lift, scale, settings |
 | `Theme.swift` | pastel palette and the brick |
 | `GameView.swift` | layout, drag and remote controls, menu commands |
+| `Sound.swift` | the four clips, and the synthesiser left for the milestone |
+| `SettingsView.swift` / `HowToPlayView.swift` | the gear sheet and the rules deck |
 | `Runner.swift` / `Satisfying.swift` / `SensoryPlayer.swift` | Sensory enhancement: the runner, the 3D shows, and the video they play in |
 | `WatchGameView.swift` | Apple Watch's one-screen layout and tap controls |
 | `FocusLiftStyle.swift` | the focus lift for Apple TV's remote and keyboards |
@@ -304,7 +396,7 @@ swiftc -D DEBUG -o /tmp/rules_test \
   BRICKS/Platform.swift BRICKS/Piece.swift BRICKS/PowerUp.swift BRICKS/Theme.swift \
   BRICKS/GameModel.swift BRICKS/DragTargeting.swift BRICKS/PlacementCursor.swift \
   BRICKS/AppVersion.swift BRICKS/Achievements.swift BRICKS/Runner.swift \
-  BRICKS/Satisfying.swift tests/main.swift && /tmp/rules_test
+  BRICKS/Satisfying.swift BRICKS/Sound.swift tests/main.swift && /tmp/rules_test
 ```
 
 `UITests/BRICKSUITests.swift` plays a real move on each platform with its own controls —
