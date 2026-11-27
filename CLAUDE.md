@@ -20,9 +20,12 @@ Follow [docs/RELEASE-PLAYBOOK.md](docs/RELEASE-PLAYBOOK.md). In short:
 
 ## Ground rules
 
-- The app is in English, Simplified Chinese (`zh-Hans`) and Traditional Chinese
-  (`zh-Hant`). Every new on-screen string needs both translations in
-  `BRICKS/Localizable.xcstrings`. A `String` that reaches the screen must be looked up
+- The app is in English and 33 other languages (from 1.7 build 11); the App Store
+  listing and Game Center text are in English, Simplified Chinese (`zh-Hans`) and
+  Traditional Chinese (`zh-Hant`). Every new on-screen string needs a translation in
+  every language in `BRICKS/Localizable.xcstrings` (`appstore/tools/strings-merge.py`
+  adds one), and `python3 appstore/tools/strings-check.py` must pass before a TestFlight
+  upload. A `String` that reaches the screen must be looked up
   (`String(localized:)` or `LocalizedStringKey`); `Text("literal")` is looked up already.
   New App Store text goes in each `metadata/**/<locale>.json`, and new Game Center items
   in `metadata/gamecenter/<locale>.json`.
