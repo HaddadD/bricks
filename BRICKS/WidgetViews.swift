@@ -114,6 +114,9 @@ struct MiniBoard: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .aspectRatio(1, contentMode: .fit)
+        // The same board the app draws, so it must not mirror in a right-to-left
+        // language while the app's own board stays put.
+        .environment(\.layoutDirection, .leftToRight)
     }
 }
 

@@ -84,6 +84,15 @@ struct BoardView: View {
         // One element for VoiceOver and UI tests, rather than a hundred cells.
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Board")
+        // The grid is drawn by index and read back by raw coordinate: the tap handler
+        // below divides `point.x` by the cell size, `bombAim` offsets by `col * cellSize`,
+        // and `DragTargeting` subtracts the grid origin. SwiftUI mirrors an HStack in a
+        // right-to-left language but does not mirror `offset(x:)` or local tap
+        // coordinates, so in Hebrew or Arabic column 0 would move to the right while all
+        // of that arithmetic kept pointing left. Pin the board itself left-to-right —
+        // a 10×10 grid has no reading order to respect — and let the chrome around it
+        // mirror normally.
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     private var grid: some View {

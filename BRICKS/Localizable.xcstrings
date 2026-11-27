@@ -6,6 +6,12 @@
     },
     "%@ +1" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -49,6 +55,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "he" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ +1"
@@ -196,6 +208,12 @@
     },
     "%@ m" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ د"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -242,6 +260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ m"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ דק'"
           }
         },
         "hi" : {
@@ -386,6 +410,12 @@
     },
     "%@, %lld left" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@، بقي %lld"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -432,6 +462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld restants"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, נותרו %lld"
           }
         },
         "hi" : {
@@ -576,6 +612,12 @@
     },
     "%@, doesn't fit" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@، لا يناسب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -622,6 +664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, ne rentre pas"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, לא מתאים"
           }
         },
         "hi" : {
@@ -769,6 +817,12 @@
     },
     "%lld achievements earned" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تحقيق %lld إنجاز"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -815,6 +869,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld succès obtenus"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld הישגים הושגו"
           }
         },
         "hi" : {
@@ -959,6 +1019,12 @@
     },
     "%lld held" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld في المخزون"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1005,6 +1071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld en réserve"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld במחסן"
           }
         },
         "hi" : {
@@ -1149,6 +1221,12 @@
     },
     "%lld points!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld نقطة!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1195,6 +1273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld points !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld נקודות!"
           }
         },
         "hi" : {
@@ -1339,6 +1423,12 @@
     },
     "%lld pts!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ن!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1385,6 +1475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld pts !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld נק'!"
           }
         },
         "hi" : {
@@ -1529,6 +1625,12 @@
     },
     "+%lld more" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld إضافية"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1575,6 +1677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld autres"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עוד %lld"
           }
         },
         "hi" : {
@@ -1719,6 +1827,12 @@
     },
     "+%lld points" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld نقطة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1765,6 +1879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld points"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld נקודות"
           }
         },
         "hi" : {
@@ -1909,6 +2029,12 @@
     },
     "+%lld pts" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld ن"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1955,6 +2081,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld pts"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld נק'"
           }
         },
         "hi" : {
@@ -2099,6 +2231,12 @@
     },
     "+100 bonus!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مكافأة +100!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2145,6 +2283,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+100 bonus !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בונוס +100!"
           }
         },
         "hi" : {
@@ -2289,6 +2433,12 @@
     },
     "A gift appeared — clear its line!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هدية — امسح صفّها!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2335,6 +2485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un cadeau — libère sa ligne !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתנה — נקה את השורה שלה!"
           }
         },
         "hi" : {
@@ -2479,6 +2635,12 @@
     },
     "A gift appeared!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ظهرت هدية!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2525,6 +2687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un cadeau est apparu !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הופיעה מתנה!"
           }
         },
         "hi" : {
@@ -2669,6 +2837,12 @@
     },
     "A gift expired" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتهت صلاحية هدية"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2715,6 +2889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un cadeau a expiré"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתנה פגה"
           }
         },
         "hi" : {
@@ -2859,6 +3039,12 @@
     },
     "A point for every brick you place, and a point for every cell you clear.\n\nBreak more than one line with a single piece and those cleared cells pay one and a half times — a row and a column crossing counts as 19 cells, not 20." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نقطة لكل طوبة تضعها، ونقطة لكل مربع تمسحه.\n\nاكسر أكثر من صف بقطعة واحدة وتُحسب المربعات الممسوحة مرة ونصفًا — الصف والعمود المتقاطعان يُحسبان 19 مربعًا لا 20."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2905,6 +3091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un point pour chaque brique posée, et un point pour chaque case libérée.\n\nCasse plus d'une ligne avec une seule pièce et ces cases rapportent une fois et demie — une ligne et une colonne qui se croisent comptent 19 cases, pas 20."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נקודה על כל לבנה שאתה מניח, ונקודה על כל משבצת שאתה מנקה.\n\nשבור יותר משורה אחת בחתיכה אחת והמשבצות שהתנקו שוות פעם וחצי — שורה ועמודה שחוצות זו את זו נחשבות 19 משבצות, לא 20."
           }
         },
         "hi" : {
@@ -3049,6 +3241,12 @@
     },
     "Above the clouds" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فوق السحاب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3095,6 +3293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Au-dessus des nuages"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מעל העננים"
           }
         },
         "hi" : {
@@ -3239,6 +3443,12 @@
     },
     "Above the pointer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فوق المؤشر"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3285,6 +3495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Au-dessus du pointeur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מעל המצביע"
           }
         },
         "hi" : {
@@ -3429,6 +3645,12 @@
     },
     "Above your finger" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فوق إصبعك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3475,6 +3697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Au-dessus de ton doigt"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מעל האצבע"
           }
         },
         "hi" : {
@@ -3619,6 +3847,12 @@
     },
     "Above your pinch" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فوق قبضتك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3665,6 +3899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Au-dessus de ta pince"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מעל האחיזה"
           }
         },
         "hi" : {
@@ -3809,6 +4049,12 @@
     },
     "Achievement earned" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تحقيق إنجاز"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3855,6 +4101,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Succès obtenu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הישג הושג"
           }
         },
         "hi" : {
@@ -3999,6 +4251,12 @@
     },
     "Achievements" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإنجازات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4045,6 +4303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Succès"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הישגים"
           }
         },
         "hi" : {
@@ -4189,6 +4453,12 @@
     },
     "All power-ups full — +100 bonus!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كل الأدوات ممتلئة — مكافأة +100!"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4235,6 +4505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tous les bonus au maximum — +100 points !"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כל העזרים מלאים — בונוס +100!"
           }
         },
         "hi" : {
@@ -4379,6 +4655,12 @@
     },
     "An endless run that plays itself" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جولة لا تنتهي تلعب نفسها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4425,6 +4707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Une course sans fin qui se joue toute seule"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "משחק אין-סופי שמשחק את עצמו"
           }
         },
         "hi" : {
@@ -4571,6 +4859,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مهندس معماري"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4617,6 +4911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Architecte"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אדריכל"
           }
         },
         "hi" : {
@@ -4761,6 +5061,12 @@
     },
     "BEST" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأفضل"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4807,6 +5113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "RECORD"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיא"
           }
         },
         "hi" : {
@@ -4956,6 +5268,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوح كبير"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5002,6 +5320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grand plateau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לוח גדול"
           }
         },
         "hi" : {
@@ -5146,6 +5470,12 @@
     },
     "Board" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللوح"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5192,6 +5522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plateau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לוח"
           }
         },
         "hi" : {
@@ -5336,6 +5672,12 @@
     },
     "Bomb" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قنبلة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5382,6 +5724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bombe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פצצה"
           }
         },
         "hi" : {
@@ -5528,6 +5876,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مدمن الطوب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5574,6 +5928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accro aux briques"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מכור ללבנים"
           }
         },
         "hi" : {
@@ -5720,6 +6080,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نجم الطوب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5766,6 +6132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Star des briques"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כוכב הלבנים"
           }
         },
         "hi" : {
@@ -5912,6 +6284,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بنّاء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5958,6 +6336,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bâtisseur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בנאי"
           }
         },
         "hi" : {
@@ -6102,6 +6486,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6148,6 +6538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ביטול"
           }
         },
         "hi" : {
@@ -6292,6 +6688,12 @@
     },
     "Challenge" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحدٍ"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6338,6 +6740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Défi"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אתגר"
           }
         },
         "hi" : {
@@ -6484,6 +6892,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوح نظيف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6530,6 +6944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Table rase"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לוח נקי"
           }
         },
         "hi" : {
@@ -6674,6 +7094,12 @@
     },
     "Clear a 3×3 area — aim it, then confirm" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمسح منطقة 3×3 — سدّد ثم أكّد"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6720,6 +7146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Libère une zone 3×3 — visez, puis confirmez"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנקה שטח 3×3 — כוון ואשר"
           }
         },
         "hi" : {
@@ -6864,6 +7296,12 @@
     },
     "Clear on one turn and clear again on the very next one and a combo starts, counting up beside your score.\n\nEvery line counts, so breaking three at once moves it on three. Every fifth combo turns the whole board rainbow. A turn that clears nothing ends the streak." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "امسح في دور ثم امسح مرة أخرى في الدور الذي يليه مباشرة، فيبدأ كومبو يتصاعد بجوار نقاطك.\n\nكل صف يُحسب، فكسر ثلاثة معًا يدفع الكومبو ثلاث درجات. كل كومبو خامس يصبغ اللوح كله بألوان قوس قزح. الدور الذي لا يمسح شيئًا ينهي السلسلة."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6910,6 +7348,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Libère une ligne à un tour puis une autre au tour suivant et un combo démarre, qui s'incrémente à côté de ton score.\n\nChaque ligne compte : en casser trois d'un coup fait avancer le combo de trois. Tous les cinq combos, tout le plateau passe en arc-en-ciel. Un tour sans libération met fin à la série."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נקה בתור אחד ונקה שוב בתור שאחריו, ומתחיל קומבו שעולה לצד הניקוד שלך.\n\nכל שורה נחשבת, ולכן שבירת שלוש בבת אחת מקדמת אותו בשלוש. כל קומבו חמישי צובע את כל הלוח בצבעי הקשת. תור שלא מנקה דבר מסיים את הרצף."
           }
         },
         "hi" : {
@@ -7056,6 +7500,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بشق الأنفس"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7102,6 +7552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Juste à temps"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "על חוט השערה"
           }
         },
         "hi" : {
@@ -7246,6 +7702,12 @@
     },
     "Combo %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كومبو %lld"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7292,6 +7754,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Combo %lld"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קומבו %lld"
           }
         },
         "hi" : {
@@ -7436,6 +7904,12 @@
     },
     "Combos" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الكومبو"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7482,6 +7956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Combos"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קומבו"
           }
         },
         "hi" : {
@@ -7628,6 +8108,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لعب مشترك على الأريكة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7674,6 +8160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coop sur canapé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "משחק משותף על הספה"
           }
         },
         "hi" : {
@@ -7820,6 +8312,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقاطع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7866,6 +8364,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Croisement"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צומת"
           }
         },
         "hi" : {
@@ -8010,6 +8514,12 @@
     },
     "Dark" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داكن"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8056,6 +8566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sombre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כהה"
           }
         },
         "hi" : {
@@ -8200,6 +8716,12 @@
     },
     "Dark mode" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوضع الداكن"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8246,6 +8768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mode sombre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מצב כהה"
           }
         },
         "hi" : {
@@ -8390,6 +8918,12 @@
     },
     "Deal three new pieces" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوزّع ثلاث قطع جديدة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8436,6 +8970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Distribue trois nouvelles pièces"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מחלק שלוש חתיכות חדשות"
           }
         },
         "hi" : {
@@ -8582,6 +9122,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عمل مكتبي"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8628,6 +9174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Au bureau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עבודה משרדית"
           }
         },
         "hi" : {
@@ -8774,6 +9326,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مخلص"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8820,6 +9378,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fidèle"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסור"
           }
         },
         "hi" : {
@@ -8966,6 +9530,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إصابة مباشرة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9012,6 +9582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coup direct"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פגיעה ישירה"
           }
         },
         "hi" : {
@@ -9156,6 +9732,12 @@
     },
     "Doesn't fit there" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يناسب هناك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9202,6 +9784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ne rentre pas là"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לא מתאים שם"
           }
         },
         "hi" : {
@@ -9346,6 +9934,12 @@
     },
     "Done" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9392,6 +9986,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terminé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סיום"
           }
         },
         "hi" : {
@@ -9538,6 +10138,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مزدوج"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9584,6 +10190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כפול"
           }
         },
         "hi" : {
@@ -9728,6 +10340,12 @@
     },
     "Drag a piece from the tray onto the 10×10 board. Fill a whole row or column and it clears away.\n\nThe tray only refills once all three pieces are gone, and a fresh deal always holds at least one piece that fits somewhere." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسحب قطعة من الحاوية إلى اللوح 10×10. املأ صفًا أو عمودًا كاملًا فيُمسح.\n\nلا تُعاد تعبئة الحاوية إلا بعد استخدام القطع الثلاث كلها، وكل توزيع جديد يحتوي دائمًا على قطعة واحدة على الأقل تناسب مكانًا ما."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9774,6 +10392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fais glisser une pièce du plateau de réserve vers la grille 10×10. Remplis une ligne ou une colonne entière et elle se libère.\n\nLa réserve ne se renouvelle que lorsque les trois pièces sont parties, et chaque nouvelle distribution contient toujours au moins une pièce qui rentre quelque part."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גרור חתיכה מהמגש אל הלוח בגודל 10×10. מלא שורה או עמודה שלמה והיא מתנקה.\n\nהמגש מתמלא מחדש רק אחרי שכל שלוש החתיכות נגמרו, ובכל חלוקה חדשה יש תמיד לפחות חתיכה אחת שמתאימה למקום כלשהו."
           }
         },
         "hi" : {
@@ -9918,6 +10542,12 @@
     },
     "Every 300 points or so a gift lands on an empty square, counting down from 10 moves.\n\nBuild over it and clear that row or column before the counter runs out and it pays a power-up. Smashing the brick on top only uncovers it again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كل 300 نقطة تقريبًا تهبط هدية على مربع فارغ وتبدأ العد التنازلي من 10 حركات.\n\nابنِ فوقها وامسح ذلك الصف أو العمود قبل أن ينتهي العدّاد فتمنحك أداة. تحطيم الطوبة التي فوقها يكشفها من جديد فقط."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9964,6 +10594,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tous les 300 points environ, un cadeau se pose sur une case vide et décompte à partir de 10 coups.\n\nConstruis par-dessus et libère cette ligne ou cette colonne avant la fin du décompte pour gagner un bonus. Fracasser la brique posée dessus ne fait que le découvrir à nouveau."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בערך בכל 300 נקודות מתנה נוחתת על משבצת ריקה ומתחילה לרדת מ-10 מהלכים.\n\nבנה מעליה ונקה את השורה או העמודה הזו לפני שהמונה נגמר, והיא תשלם עזר. ריסוק הלבנה שמעליה רק חושף אותה מחדש."
           }
         },
         "hi" : {
@@ -10110,6 +10746,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أول طوبة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10156,6 +10798,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Première brique"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הלבנה הראשונה"
           }
         },
         "hi" : {
@@ -10302,6 +10950,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أول صف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10348,6 +11002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Première ligne"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "השורה הראשונה"
           }
         },
         "hi" : {
@@ -10494,6 +11154,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خمسة أرقام"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10540,6 +11206,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cinq chiffres"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חמש ספרות"
           }
         },
         "hi" : {
@@ -10684,6 +11356,12 @@
     },
     "Five of each, at most. Tap one to use it." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خمسة من كل نوع كحد أقصى. اضغط لاستخدامها."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10730,6 +11408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cinq de chaque, au maximum. Touche-en un pour l'utiliser."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חמישה מכל סוג, לכל היותר. הקש כדי להשתמש."
           }
         },
         "hi" : {
@@ -10874,6 +11558,12 @@
     },
     "Float it in a window" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لتطفو في نافذة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10920,6 +11610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La faire flotter dans une fenêtre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיצוף בחלון"
           }
         },
         "hi" : {
@@ -11064,6 +11760,12 @@
     },
     "Float pieces" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارفع القطع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11110,6 +11812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pièces soulevées"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הרמת חתיכות"
           }
         },
         "hi" : {
@@ -11256,6 +11964,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يد جديدة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11302,6 +12016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nouvelle main"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יד חדשה"
           }
         },
         "hi" : {
@@ -11448,6 +12168,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المجموعة كاملة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11494,6 +12220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeu complet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סט שלם"
           }
         },
         "hi" : {
@@ -11640,6 +12372,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المخزون ممتلئ"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11686,6 +12424,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réserves pleines"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מחסן מלא"
           }
         },
         "hi" : {
@@ -11835,6 +12579,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صائد الهدايا"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11881,6 +12631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chasseur de cadeaux"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צייד מתנות"
           }
         },
         "hi" : {
@@ -12025,6 +12781,12 @@
     },
     "Gift claimed — %@ +1" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم استلام الهدية — %@ +1"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12071,6 +12833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cadeau récupéré — %@ +1"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "המתנה נאספה — %@ +1"
           }
         },
         "hi" : {
@@ -12215,6 +12983,12 @@
     },
     "Gifts" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهدايا"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12261,6 +13035,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cadeaux"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתנות"
           }
         },
         "hi" : {
@@ -12405,6 +13185,12 @@
     },
     "Glass fruit, jelly keys, crystal snacks" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فواكه زجاجية، مفاتيح جيلي، وجبات كريستال"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12451,6 +13237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fruits de verre, touches de gelée, friandises de cristal"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פירות זכוכית, מקשי ג'לי, חטיפי קריסטל"
           }
         },
         "hi" : {
@@ -12597,6 +13389,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يصبح عادة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12643,6 +13441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ça devient une habitude"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נהפך להרגל"
           }
         },
         "hi" : {
@@ -12787,6 +13591,12 @@
     },
     "Hammer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مطرقة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12833,6 +13643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marteau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פטיש"
           }
         },
         "hi" : {
@@ -12977,6 +13793,12 @@
     },
     "Hide power-ups" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء الأدوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13023,6 +13845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masquer les bonus"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסתר עזרים"
           }
         },
         "hi" : {
@@ -13169,6 +13997,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاعب كبير"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13215,6 +14049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gros joueur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחקן גדול"
           }
         },
         "hi" : {
@@ -13359,6 +14199,12 @@
     },
     "How to play" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كيف تلعب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13405,6 +14251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comment jouer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "איך משחקים"
           }
         },
         "hi" : {
@@ -13549,6 +14401,12 @@
     },
     "Impossible Satisfying" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مُرضٍ بشكل لا يُصدّق"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13595,6 +14453,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Satisfaisant impossible"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מספק עד בלי די"
           }
         },
         "hi" : {
@@ -13741,6 +14605,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بوم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13787,6 +14657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaboum"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בום"
           }
         },
         "hi" : {
@@ -13931,6 +14807,12 @@
     },
     "Kept for your next game" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محفوظة للجولة القادمة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13977,6 +14859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gardé pour ta prochaine partie"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נשמר למשחק הבא"
           }
         },
         "hi" : {
@@ -14121,6 +15009,12 @@
     },
     "Leaderboards" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحات الصدارة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14167,6 +15061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Classements"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טבלאות שיאים"
           }
         },
         "hi" : {
@@ -14313,6 +15213,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسطورة اللوح"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14359,6 +15265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Légende de la grille"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אגדת הלוח"
           }
         },
         "hi" : {
@@ -14503,6 +15415,12 @@
     },
     "Light" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فاتح"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14549,6 +15467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clair"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בהיר"
           }
         },
         "hi" : {
@@ -14695,6 +15619,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض أضواء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14741,6 +15671,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeu de lumières"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מופע אורות"
           }
         },
         "hi" : {
@@ -14887,6 +15823,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منظّف الصفوف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14933,6 +15875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nettoyeur de lignes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנקה שורות"
           }
         },
         "hi" : {
@@ -15079,6 +16027,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطريق الطويل"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15125,6 +16079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Longue haleine"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הדרך הארוכה"
           }
         },
         "hi" : {
@@ -15271,6 +16231,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ماراثون"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15317,6 +16283,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marathon"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מרתון"
           }
         },
         "hi" : {
@@ -15461,6 +16433,12 @@
     },
     "Move it with the remote, then press to place" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حرّكها بجهاز التحكم ثم اضغط لوضعها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15507,6 +16485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Déplace-la avec la télécommande, puis appuie pour poser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הזז עם השלט, ואז לחץ כדי להניח"
           }
         },
         "hi" : {
@@ -15651,6 +16635,12 @@
     },
     "Move to a brick and press to smash it" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتقل إلى طوبة واضغط لتحطيمها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15697,6 +16687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Va sur une brique et appuie pour la fracasser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עבור ללבנה ולחץ כדי לרסק אותה"
           }
         },
         "hi" : {
@@ -15841,6 +16837,12 @@
     },
     "Move to a spot and press to aim the blast" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتقل إلى موضع واضغط للتسديد"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15887,6 +16889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Va sur un emplacement et appuie pour viser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עבור למקום ולחץ כדי לכוון"
           }
         },
         "hi" : {
@@ -16031,6 +17039,12 @@
     },
     "Move to a spot and press to blast it" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتقل إلى موضع واضغط لتفجيره"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16077,6 +17091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Va sur un emplacement et appuie pour faire exploser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עבור למקום ולחץ כדי לפוצץ"
           }
         },
         "hi" : {
@@ -16221,6 +17241,12 @@
     },
     "Move undone" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم التراجع عن الحركة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16267,6 +17293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coup annulé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "המהלך בוטל"
           }
         },
         "hi" : {
@@ -16413,6 +17445,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مهووس بالترتيب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16459,6 +17497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maniaque de l'ordre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חולה על סדר"
           }
         },
         "hi" : {
@@ -16603,6 +17647,12 @@
     },
     "New Game" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لعبة جديدة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16649,6 +17699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nouvelle partie"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "משחק חדש"
           }
         },
         "hi" : {
@@ -16793,6 +17849,12 @@
     },
     "No more moves" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد حركات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16839,6 +17901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plus aucun coup"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אין עוד מהלכים"
           }
         },
         "hi" : {
@@ -16983,6 +18051,12 @@
     },
     "Nothing to undo" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء للتراجع عنه"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17029,6 +18103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rien à annuler"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אין מה לבטל"
           }
         },
         "hi" : {
@@ -17173,6 +18253,12 @@
     },
     "Oddly Satisfying" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مُرضٍ بشكل غريب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17219,6 +18305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Étrangement satisfaisant"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מספק באופן מוזר"
           }
         },
         "hi" : {
@@ -17363,6 +18455,12 @@
     },
     "Off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17409,6 +18507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Désactivé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כבוי"
           }
         },
         "hi" : {
@@ -17555,6 +18659,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإقلاع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17601,6 +18711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Décollage"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "המראה"
           }
         },
         "hi" : {
@@ -17745,6 +18861,12 @@
     },
     "On" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17791,6 +18913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פועל"
           }
         },
         "hi" : {
@@ -17937,6 +19065,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في سلسلة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17983,6 +19117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En série"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברצף"
           }
         },
         "hi" : {
@@ -18127,6 +19267,12 @@
     },
     "On the Home Screen and CarPlay" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في الشاشة الرئيسية وCarPlay"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18173,6 +19319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sur l'écran d'accueil et dans CarPlay"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "במסך הבית וב-CarPlay"
           }
         },
         "hi" : {
@@ -18319,6 +19471,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت الحفلة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18365,6 +19523,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "C'est la fête"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זמן מסיבה"
           }
         },
         "hi" : {
@@ -18509,6 +19673,12 @@
     },
     "Piece %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "القطعة %lld"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18555,6 +19725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pièce %lld"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חתיכה %lld"
           }
         },
         "hi" : {
@@ -18699,6 +19875,12 @@
     },
     "Pieces shuffled" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تبديل القطع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18745,6 +19927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pièces remélangées"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "החתיכות הוחלפו"
           }
         },
         "hi" : {
@@ -18889,6 +20077,12 @@
     },
     "Play again" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العب مرة أخرى"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18935,6 +20129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rejouer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחק שוב"
           }
         },
         "hi" : {
@@ -19079,6 +20279,12 @@
     },
     "Plays under the board" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُسمع تحت اللوح"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19125,6 +20331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se joue sous le plateau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתנגן מתחת ללוח"
           }
         },
         "hi" : {
@@ -19271,6 +20483,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ألغاز الجيب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19317,6 +20535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Casse-tête de poche"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חידה בכיס"
           }
         },
         "hi" : {
@@ -19461,6 +20685,12 @@
     },
     "Power-ups" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأدوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19507,6 +20737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bonus"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עזרים"
           }
         },
         "hi" : {
@@ -19651,6 +20887,12 @@
     },
     "Press a piece to turn all three — Menu when done" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط قطعة لتدوير الثلاث — Menu عند الانتهاء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19697,6 +20939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appuie sur une pièce pour tourner les trois — Menu pour finir"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לחץ על חתיכה כדי לסובב את כל השלוש — Menu בסוף"
           }
         },
         "hi" : {
@@ -19841,6 +21089,12 @@
     },
     "Press again to set it off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط مرة أخرى لتفجيرها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19887,6 +21141,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appuie à nouveau pour déclencher"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לחץ שוב כדי לפוצץ"
           }
         },
         "hi" : {
@@ -20033,6 +21293,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متشدد"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20079,6 +21345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Puriste"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טהרן"
           }
         },
         "hi" : {
@@ -20225,6 +21497,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رباعي"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20271,6 +21549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quadruple"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מרובע"
           }
         },
         "hi" : {
@@ -20417,6 +21701,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زائر دائم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20463,6 +21753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habitué"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לקוח קבוע"
           }
         },
         "hi" : {
@@ -20607,6 +21903,12 @@
     },
     "Reset game" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة تعيين اللعبة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20653,6 +21955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réinitialiser la partie"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפס את המשחק"
           }
         },
         "hi" : {
@@ -20797,6 +22105,12 @@
     },
     "Rewind your last move, the pieces you were holding and all" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتراجع عن حركتك الأخيرة، مع القطع التي كانت بيدك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20843,6 +22157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annule ton dernier coup, avec les pièces que tu avais en main"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מבטל את המהלך האחרון, כולל החתיכות שהיו לך"
           }
         },
         "hi" : {
@@ -20987,6 +22307,12 @@
     },
     "Rotate" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدوير"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21033,6 +22359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tourner"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סובב"
           }
         },
         "hi" : {
@@ -21177,6 +22509,12 @@
     },
     "Rules, combos and power-ups" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "القواعد والكومبو والأدوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21223,6 +22561,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Règles, combos et bonus"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חוקים, קומבו ועזרים"
           }
         },
         "hi" : {
@@ -21367,6 +22711,12 @@
     },
     "Runner" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عدّاء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21413,6 +22763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coureur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רץ"
           }
         },
         "hi" : {
@@ -21557,6 +22913,12 @@
     },
     "Running out" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما لا يبقى مكان"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21603,6 +22965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quand plus rien ne rentre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כשנגמר המקום"
           }
         },
         "hi" : {
@@ -21747,6 +23115,12 @@
     },
     "SCORE" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النقاط"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21793,6 +23167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SCORE"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ניקוד"
           }
         },
         "hi" : {
@@ -21937,6 +23317,12 @@
     },
     "Sand, soap, slime, washing, restoring" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رمل، صابون، سلايم، غسل، ترميم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21983,6 +23369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sable, savon, slime, lavage, restauration"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חול, סבון, סליים, שטיפה, שיקום"
           }
         },
         "hi" : {
@@ -22129,6 +23521,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مساعد سانتا"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22175,6 +23573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lutin du Père Noël"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "העוזר של סנטה"
           }
         },
         "hi" : {
@@ -22319,6 +23723,12 @@
     },
     "Scoring" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النقاط"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22365,6 +23775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Score"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ניקוד"
           }
         },
         "hi" : {
@@ -22511,6 +23927,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غيّرت رأيي"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22557,6 +23979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Changement d'avis"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיניתי את דעתי"
           }
         },
         "hi" : {
@@ -22701,6 +24129,12 @@
     },
     "Sensory enhancement" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقوية الإحساس"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22747,6 +24181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Renfort sensoriel"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חיזוק החושים"
           }
         },
         "hi" : {
@@ -22891,6 +24331,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22937,6 +24383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réglages"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הגדרות"
           }
         },
         "hi" : {
@@ -23081,6 +24533,12 @@
     },
     "Settings…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات…"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23127,6 +24585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réglages…"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הגדרות…"
           }
         },
         "hi" : {
@@ -23271,6 +24735,12 @@
     },
     "Show power-ups" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إظهار الأدوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23317,6 +24787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Afficher les bonus"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הצג עזרים"
           }
         },
         "hi" : {
@@ -23461,6 +24937,12 @@
     },
     "Shuffle" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبديل"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23507,6 +24989,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mélanger"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "החלף"
           }
         },
         "hi" : {
@@ -23653,6 +25141,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحطيم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23699,6 +25193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fracasser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רסק"
           }
         },
         "hi" : {
@@ -23843,6 +25343,12 @@
     },
     "Smash a single brick" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحطّم طوبة واحدة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23889,6 +25395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fracasse une seule brique"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מרסק לבנה אחת"
           }
         },
         "hi" : {
@@ -24033,6 +25545,12 @@
     },
     "Sounds" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأصوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24079,6 +25597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sons"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צלילים"
           }
         },
         "hi" : {
@@ -24225,6 +25749,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طوب في الفضاء"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24271,6 +25801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Briques spatiales"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לבנים במרחב"
           }
         },
         "hi" : {
@@ -24417,6 +25953,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مذهل"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24463,6 +26005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spectaculaire"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מרהיב"
           }
         },
         "hi" : {
@@ -24607,6 +26155,12 @@
     },
     "Start a new game?" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل تبدأ لعبة جديدة؟"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24653,6 +26207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commencer une nouvelle partie ?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "להתחיל משחק חדש?"
           }
         },
         "hi" : {
@@ -24797,6 +26357,12 @@
     },
     "Street" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شارع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24843,6 +26409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rue"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רחוב"
           }
         },
         "hi" : {
@@ -24989,6 +26561,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيد التنظيف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25035,6 +26613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Balayeur suprême"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אמן הניקיון"
           }
         },
         "hi" : {
@@ -25179,6 +26763,12 @@
     },
     "Tap a brick to smash it" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على طوبة لتحطيمها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25225,6 +26815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche une brique pour la fracasser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על לבנה כדי לרסק אותה"
           }
         },
         "hi" : {
@@ -25369,6 +26965,12 @@
     },
     "Tap a piece to turn all three" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على قطعة لتدوير الثلاث"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25415,6 +27017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche une pièce pour tourner les trois"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על חתיכה כדי לסובב את כל השלוש"
           }
         },
         "hi" : {
@@ -25559,6 +27167,12 @@
     },
     "Tap the board to aim" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على اللوح للتسديد"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25605,6 +27219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche le plateau pour viser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על הלוח כדי לכוון"
           }
         },
         "hi" : {
@@ -25749,6 +27369,12 @@
     },
     "Tap the board to blast a 3×3 area" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على اللوح لتفجير منطقة 3×3"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25795,6 +27421,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche le plateau pour faire exploser une zone 3×3"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על הלוח כדי לפוצץ שטח 3×3"
           }
         },
         "hi" : {
@@ -25939,6 +27571,12 @@
     },
     "Tap the outline to place" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على المخطط لوضع القطعة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25985,6 +27623,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche le contour pour poser"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על המסגרת כדי להניח"
           }
         },
         "hi" : {
@@ -26129,6 +27773,12 @@
     },
     "Tap the tick to set it off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على علامة الصح لتفجيرها"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26175,6 +27825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche la coche pour déclencher"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש על הסימון כדי לפוצץ"
           }
         },
         "hi" : {
@@ -26319,6 +27975,12 @@
     },
     "Tap to turn all three — drag a piece when done" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط لتدوير الثلاث — ثم اسحب قطعة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26365,6 +28027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche pour tourner les trois — fais glisser une pièce pour finir"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש כדי לסובב את כל השלוש — ואז גרור חתיכה"
           }
         },
         "hi" : {
@@ -26509,6 +28177,12 @@
     },
     "Tap where you want the 3×3 blast" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط في المكان الذي تريد فيه انفجار 3×3"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26555,6 +28229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche l'endroit où tu veux l'explosion 3×3"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הקש במקום שבו אתה רוצה את פיצוץ ה-3×3"
           }
         },
         "hi" : {
@@ -26699,6 +28379,12 @@
     },
     "The board" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللوح"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26745,6 +28431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le plateau"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הלוח"
           }
         },
         "hi" : {
@@ -26889,6 +28581,12 @@
     },
     "This board and your score will be lost. Your power-ups are kept." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستفقد هذا اللوح ونقاطك. أدواتك تبقى."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26935,6 +28633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ce plateau et ton score seront perdus. Tes bonus sont conservés."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הלוח הזה והניקוד שלך יאבדו. העזרים נשמרים."
           }
         },
         "hi" : {
@@ -27081,6 +28785,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرتب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27127,6 +28837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rangé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסודר"
           }
         },
         "hi" : {
@@ -27273,6 +28989,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صندوق الأدوات"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27319,6 +29041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Boîte à outils"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ארגז כלים"
           }
         },
         "hi" : {
@@ -27463,6 +29191,12 @@
     },
     "Toy-town traffic" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حركة المرور في مدينة الألعاب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27509,6 +29243,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Circulation en ville miniature"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנועה בעיר הצעצועים"
           }
         },
         "hi" : {
@@ -27653,6 +29393,12 @@
     },
     "Trail" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27699,6 +29445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sentier"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שביל"
           }
         },
         "hi" : {
@@ -27845,6 +29597,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثلاثي"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27891,6 +29649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triple"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "משולש"
           }
         },
         "hi" : {
@@ -28035,6 +29799,12 @@
     },
     "Turn all three pieces a quarter turn, as often as you like" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يدوّر القطع الثلاث ربع دورة، كلما أردت"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28081,6 +29851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tourne les trois pièces d'un quart de tour, aussi souvent que tu veux"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסובב את שלוש החתיכות ברביע סיבוב, כמה פעמים שתרצה"
           }
         },
         "hi" : {
@@ -28227,6 +30003,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لفّة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28273,6 +30055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pivot"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סיבוב"
           }
         },
         "hi" : {
@@ -28417,6 +30205,12 @@
     },
     "Under the pointer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحت المؤشر"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28463,6 +30257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sous le pointeur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתחת למצביע"
           }
         },
         "hi" : {
@@ -28607,6 +30407,12 @@
     },
     "Under your finger" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحت إصبعك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28653,6 +30459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sous ton doigt"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתחת לאצבע"
           }
         },
         "hi" : {
@@ -28797,6 +30609,12 @@
     },
     "Under your pinch" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحت قبضتك"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28843,6 +30661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sous ta pince"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מתחת לאחיזה"
           }
         },
         "hi" : {
@@ -28987,6 +30811,12 @@
     },
     "Undo" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تراجع"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29033,6 +30863,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בטל"
           }
         },
         "hi" : {
@@ -29177,6 +31013,12 @@
     },
     "Undo Move" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تراجع عن الحركة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29223,6 +31065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler le coup"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בטל מהלך"
           }
         },
         "hi" : {
@@ -29369,6 +31217,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يُوقف"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29415,6 +31269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inarrêtable"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בלי עצירה"
           }
         },
         "hi" : {
@@ -29561,6 +31421,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فُتحت"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29607,6 +31473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Déballé"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נפתח"
           }
         },
         "hi" : {
@@ -29751,6 +31623,12 @@
     },
     "Update" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29797,6 +31675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mettre à jour"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עדכן"
           }
         },
         "hi" : {
@@ -29941,6 +31825,12 @@
     },
     "Update BRICKS! from the App Store to keep playing." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدّث BRICKS! من App Store لمواصلة اللعب."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29987,6 +31877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mets BRICKS! à jour depuis l'App Store pour continuer à jouer."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עדכן את BRICKS! ב-App Store כדי להמשיך לשחק."
           }
         },
         "hi" : {
@@ -30131,6 +32027,12 @@
     },
     "Update to keep playing. Your game and best score are saved." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدّث لمواصلة اللعب. لعبتك وأفضل نتيجة محفوظتان."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30177,6 +32079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mets à jour pour continuer à jouer. Ta partie et ton record sont sauvegardés."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עדכן כדי להמשיך לשחק. המשחק והשיא שלך שמורים."
           }
         },
         "hi" : {
@@ -30321,6 +32229,12 @@
     },
     "Version %@ is out" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صدرت النسخة %@"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30367,6 +32281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La version %@ est disponible"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גרסה %@ יצאה"
           }
         },
         "hi" : {
@@ -30511,6 +32431,12 @@
     },
     "Vibrations" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاهتزاز"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30557,6 +32483,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vibrations"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רעידות"
           }
         },
         "hi" : {
@@ -30703,6 +32635,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسخين"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30749,6 +32687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Échauffement"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חימום"
           }
         },
         "hi" : {
@@ -30895,6 +32839,12 @@
       "comment" : "A Game Center achievement's name (BRICKS/Achievements.swift), shown on the game-over card.",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسبوع من الطوب"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30941,6 +32891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Une semaine de briques"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שבוע של לבנים"
           }
         },
         "hi" : {
@@ -31085,6 +33041,12 @@
     },
     "When none of your three pieces fit anywhere, the game is over — a power-up cannot dig you out of it.\n\nWhatever you were holding carries into the next game, and your board is saved as you go, so closing the app never costs you a run." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما لا تناسب أي من قطعك الثلاث أي مكان، تنتهي اللعبة — ولا تستطيع أداة أن تُخرجك من ذلك.\n\nما كان في مخزونك ينتقل إلى الجولة التالية، ويُحفظ لوحك أثناء اللعب، فإغلاق التطبيق لا يكلّفك جولة أبدًا."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31131,6 +33093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quand aucune de tes trois pièces ne rentre plus nulle part, la partie est finie — aucun bonus ne peut t'en sortir.\n\nCe que tu avais en main passe à la partie suivante, et ton plateau est sauvegardé au fil du jeu : fermer l'app ne te coûte jamais une partie."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כששלוש החתיכות שלך לא מתאימות לשום מקום, המשחק נגמר — שום עזר לא יחלץ אותך מזה.\n\nמה שהיה לך במחסן עובר למשחק הבא, והלוח נשמר תוך כדי, כך שסגירת האפליקציה לא עולה לך במשחק."
           }
         },
         "hi" : {
@@ -31275,6 +33243,12 @@
     },
     "Widget" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أداة"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31321,6 +33295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Widget"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "וידג'ט"
           }
         },
         "hi" : {
@@ -31465,6 +33445,12 @@
     },
     "Widget is off.\nTurn it on in BRICKS! settings." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأداة متوقفة.\nشغّلها من إعدادات BRICKS!."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31511,6 +33497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le widget est désactivé.\nActive-le dans les réglages de BRICKS!."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הווידג'ט כבוי.\nהפעל אותו בהגדרות BRICKS!."
           }
         },
         "hi" : {
@@ -31655,6 +33647,12 @@
     },
     "World" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العالم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31701,6 +33699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Monde"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עולם"
           }
         },
         "hi" : {
@@ -31845,6 +33849,12 @@
     },
     "Yes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعم"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31891,6 +33901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oui"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כן"
           }
         },
         "hi" : {
@@ -32035,6 +34051,12 @@
     },
     "Your game in progress and your score." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لعبتك الجارية ونقاطك."
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32081,6 +34103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta partie en cours et ton score."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "המשחק שבאמצע והניקוד שלך."
           }
         },
         "hi" : {
@@ -32225,6 +34253,12 @@
     },
     "best %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأفضل %lld"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32271,6 +34305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "record %lld"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיא %lld"
           }
         },
         "hi" : {
@@ -32415,6 +34455,12 @@
     },
     "row %lld, column %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الصف %lld، العمود %lld"
+          }
+        },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32461,6 +34507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ligne %lld, colonne %lld"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שורה %lld, עמודה %lld"
           }
         },
         "hi" : {
