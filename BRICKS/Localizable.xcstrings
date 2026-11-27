@@ -72,6 +72,12 @@
             "value" : "%@ +1"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -85,6 +91,12 @@
           }
         },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "ms" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ +1"
@@ -157,6 +169,12 @@
           }
         },
         "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ +1"
@@ -244,6 +262,12 @@
             "value" : "%@ p"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ mnt"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -260,6 +284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ m"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ min"
           }
         },
         "nb" : {
@@ -332,6 +362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ хв"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ph"
           }
         },
         "zh-Hans" : {
@@ -416,6 +452,12 @@
             "value" : "%@, még %lld"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, sisa %lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -432,6 +474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld개 남음"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, tinggal %lld"
           }
         },
         "nb" : {
@@ -504,6 +552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, залишилось %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, còn %lld"
           }
         },
         "zh-Hans" : {
@@ -588,6 +642,12 @@
             "value" : "%@, nem fér el"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, tidak pas"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -604,6 +664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, 놓을 수 없음"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, tak muat"
           }
         },
         "nb" : {
@@ -676,6 +742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, не вміщається"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, không vừa"
           }
         },
         "zh-Hans" : {
@@ -763,6 +835,12 @@
             "value" : "%lld teljesítmény megszerezve"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld pencapaian diraih"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -779,6 +857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업적 %lld개 달성"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld pencapaian diperoleh"
           }
         },
         "nb" : {
@@ -851,6 +935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Здобуто досягнень: %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đạt %lld thành tích"
           }
         },
         "zh-Hans" : {
@@ -935,6 +1025,12 @@
             "value" : "%lld raktáron"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld tersimpan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -951,6 +1047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld개 보유"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld disimpan"
           }
         },
         "nb" : {
@@ -1023,6 +1125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "У запасі: %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Còn %lld"
           }
         },
         "zh-Hans" : {
@@ -1107,6 +1215,12 @@
             "value" : "%lld pont!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld poin!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1123,6 +1237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld점!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mata!"
           }
         },
         "nb" : {
@@ -1195,6 +1315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld балів!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld điểm!"
           }
         },
         "zh-Hans" : {
@@ -1279,6 +1405,12 @@
             "value" : "%lld p!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld poin!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1295,6 +1427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld점!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mata!"
           }
         },
         "nb" : {
@@ -1367,6 +1505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld б!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld đ!"
           }
         },
         "zh-Hans" : {
@@ -1451,6 +1595,12 @@
             "value" : "+%lld további"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld lagi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1467,6 +1617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld개 더"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld lagi"
           }
         },
         "nb" : {
@@ -1539,6 +1695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ще %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld nữa"
           }
         },
         "zh-Hans" : {
@@ -1623,6 +1785,12 @@
             "value" : "+%lld pont"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld poin"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1639,6 +1807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld점"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld mata"
           }
         },
         "nb" : {
@@ -1711,6 +1885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld балів"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld điểm"
           }
         },
         "zh-Hans" : {
@@ -1795,6 +1975,12 @@
             "value" : "+%lld p"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld poin"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1811,6 +1997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld점"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld mata"
           }
         },
         "nb" : {
@@ -1883,6 +2075,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld б"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld đ"
           }
         },
         "zh-Hans" : {
@@ -1967,6 +2165,12 @@
             "value" : "+100 bónusz!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+100 bonus!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1983,6 +2187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보너스 100점!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+100 bonus!"
           }
         },
         "nb" : {
@@ -2055,6 +2265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+100 балів!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+100 điểm thưởng!"
           }
         },
         "zh-Hans" : {
@@ -2139,6 +2355,12 @@
             "value" : "Ajándék — tüntesd el a sorát!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ada hadiah — bersihkan barisnya!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2155,6 +2377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물 등장 — 그 줄을 지우세요!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ada hadiah — bersihkan barisnya!"
           }
         },
         "nb" : {
@@ -2227,6 +2455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подарунок — очисти його рядок!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có quà — xoá hàng của nó!"
           }
         },
         "zh-Hans" : {
@@ -2311,6 +2545,12 @@
             "value" : "Megjelent egy ajándék!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah hadiah muncul!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2327,6 +2567,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물이 나타났어요!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah hadiah muncul!"
           }
         },
         "nb" : {
@@ -2399,6 +2645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "З'явився подарунок!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một món quà xuất hiện!"
           }
         },
         "zh-Hans" : {
@@ -2483,6 +2735,12 @@
             "value" : "Egy ajándék elveszett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah hadiah hangus"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2499,6 +2757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물이 사라졌어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah hadiah terlepas"
           }
         },
         "nb" : {
@@ -2571,6 +2835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подарунок зник"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một món quà đã hết hạn"
           }
         },
         "zh-Hans" : {
@@ -2655,6 +2925,12 @@
             "value" : "Egy pont minden lehelyezett kockáért, és egy pont minden eltüntetett mezőért.\n\nTörj el egyetlen elemmel több mint egy sort, és az eltüntetett mezők másfélszeresen fizetnek — egy egymást keresztező sor és oszlop 19 mezőnek számít, nem 20-nak."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satu poin untuk setiap balok yang kamu letakkan, dan satu poin untuk setiap kotak yang kamu bersihkan.\n\nBersihkan lebih dari satu baris dengan satu balok dan kotak-kotak itu dihitung satu setengah kali — satu baris dan satu kolom yang bersilangan dihitung 19 kotak, bukan 20."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2671,6 +2947,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록을 하나 놓을 때마다 1점, 칸을 하나 지울 때마다 1점.\n\n한 조각으로 두 줄 이상을 지우면 그 칸들은 1.5배로 계산됩니다. 가로줄과 세로줄이 교차하면 20칸이 아니라 19칸입니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satu mata bagi setiap blok yang anda letakkan, dan satu mata bagi setiap petak yang anda bersihkan.\n\nBersihkan lebih daripada satu baris dengan satu blok sahaja dan petak-petak itu dikira satu setengah kali — satu baris dan satu lajur yang bersilang dikira 19 petak, bukan 20."
           }
         },
         "nb" : {
@@ -2743,6 +3025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бал за кожен кубик, який ти ставиш, і бал за кожну клітинку, яку очищаєш.\n\nЗруйнуй однією фігурою більше ніж один рядок, і очищені клітинки дадуть у півтора раза більше — рядок і стовпець, що перетинаються, рахуються як 19 клітинок, а не 20."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một điểm cho mỗi viên gạch bạn đặt, và một điểm cho mỗi ô bạn xoá.\n\nXoá hơn một hàng bằng một khối duy nhất thì những ô đó được tính gấp một lần rưỡi — một hàng và một cột cắt nhau tính là 19 ô, không phải 20."
           }
         },
         "zh-Hans" : {
@@ -2827,6 +3115,12 @@
             "value" : "A felhők felett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas awan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2843,6 +3137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "구름 위"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas awan"
           }
         },
         "nb" : {
@@ -2915,6 +3215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Над хмарами"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên những tầng mây"
           }
         },
         "zh-Hans" : {
@@ -2999,6 +3305,12 @@
             "value" : "A kurzor felett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas penunjuk"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3015,6 +3327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "포인터 위"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas penuding"
           }
         },
         "nb" : {
@@ -3087,6 +3405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Над курсором"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên con trỏ"
           }
         },
         "zh-Hans" : {
@@ -3171,6 +3495,12 @@
             "value" : "Az ujjad felett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas jari"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3187,6 +3517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "손가락 위"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas jari"
           }
         },
         "nb" : {
@@ -3259,6 +3595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Над пальцем"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên ngón tay"
           }
         },
         "zh-Hans" : {
@@ -3343,6 +3685,12 @@
             "value" : "A fogásod felett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas jepitan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3359,6 +3707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "집은 손가락 위"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di atas cubitan"
           }
         },
         "nb" : {
@@ -3431,6 +3785,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Над захватом"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên chỗ bạn kẹp"
           }
         },
         "zh-Hans" : {
@@ -3515,6 +3875,12 @@
             "value" : "Teljesítmény megszerezve"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencapaian diraih"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3531,6 +3897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업적 달성"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencapaian diperoleh"
           }
         },
         "nb" : {
@@ -3603,6 +3975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Досягнення здобуто"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đạt thành tích"
           }
         },
         "zh-Hans" : {
@@ -3687,6 +4065,12 @@
             "value" : "Teljesítmények"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencapaian"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3703,6 +4087,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업적"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencapaian"
           }
         },
         "nb" : {
@@ -3775,6 +4165,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Досягнення"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thành tích"
           }
         },
         "zh-Hans" : {
@@ -3859,6 +4255,12 @@
             "value" : "Minden segítség tele — +100 bónusz!"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua alat penuh — +100 bonus!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3875,6 +4277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아이템이 모두 가득 — 보너스 100점!"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua alat penuh — +100 bonus!"
           }
         },
         "nb" : {
@@ -3947,6 +4355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Усі помічники повні — +100 балів!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mọi trợ thủ đã đầy — +100 điểm thưởng!"
           }
         },
         "zh-Hans" : {
@@ -4031,6 +4445,12 @@
             "value" : "Végtelen játék, ami magát játssza"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainan tanpa akhir yang berjalan sendiri"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4047,6 +4467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "저절로 굴러가는 끝없는 질주"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainan tanpa penghujung yang bermain sendiri"
           }
         },
         "nb" : {
@@ -4119,6 +4545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нескінченна гра, яка грає сама"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một ván vô tận tự chơi lấy"
           }
         },
         "zh-Hans" : {
@@ -4205,6 +4637,12 @@
             "value" : "Építész"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arsitek"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4221,6 +4659,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "건축가"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arkitek"
           }
         },
         "nb" : {
@@ -4293,6 +4737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Архітектор"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiến trúc sư"
           }
         },
         "zh-Hans" : {
@@ -4377,6 +4827,12 @@
             "value" : "REKORD"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TERBAIK"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4393,6 +4849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "최고"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TERBAIK"
           }
         },
         "nb" : {
@@ -4465,6 +4927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "РЕКОРД"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KỶ LỤC"
           }
         },
         "zh-Hans" : {
@@ -4554,6 +5022,12 @@
             "value" : "Nagy tábla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan besar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4570,6 +5044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "큰 보드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan besar"
           }
         },
         "nb" : {
@@ -4642,6 +5122,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Велике поле"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn lớn"
           }
         },
         "zh-Hans" : {
@@ -4726,6 +5212,12 @@
             "value" : "Tábla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4742,6 +5234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan"
           }
         },
         "nb" : {
@@ -4814,6 +5312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поле"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn"
           }
         },
         "zh-Hans" : {
@@ -4898,6 +5402,12 @@
             "value" : "Bomba"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bom"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4914,6 +5424,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "폭탄"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bom"
           }
         },
         "nb" : {
@@ -4986,6 +5502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бомба"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bom"
           }
         },
         "zh-Hans" : {
@@ -5072,6 +5594,12 @@
             "value" : "Kockafüggő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pecandu balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5088,6 +5616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록 중독"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketagih blok"
           }
         },
         "nb" : {
@@ -5160,6 +5694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Залежний від кубиків"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghiện gạch"
           }
         },
         "zh-Hans" : {
@@ -5246,6 +5786,12 @@
             "value" : "Kockasztár"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bintang balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5262,6 +5808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록 스타"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bintang blok"
           }
         },
         "nb" : {
@@ -5334,6 +5886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зірка кубиків"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngôi sao gạch"
           }
         },
         "zh-Hans" : {
@@ -5420,6 +5978,12 @@
             "value" : "Építő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembangun"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5436,6 +6000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "건설가"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembina"
           }
         },
         "nb" : {
@@ -5508,6 +6078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Будівельник"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Người xây"
           }
         },
         "zh-Hans" : {
@@ -5592,6 +6168,12 @@
             "value" : "Mégse"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5608,6 +6190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "취소"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
           }
         },
         "nb" : {
@@ -5680,6 +6268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скасувати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huỷ"
           }
         },
         "zh-Hans" : {
@@ -5764,6 +6358,12 @@
             "value" : "Kihívás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tantangan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5780,6 +6380,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "챌린지"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cabaran"
           }
         },
         "nb" : {
@@ -5852,6 +6458,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Виклик"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử thách"
           }
         },
         "zh-Hans" : {
@@ -5938,6 +6550,12 @@
             "value" : "Tiszta tábla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan bersih"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5954,6 +6572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "완전히 비움"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan bersih"
           }
         },
         "nb" : {
@@ -6026,6 +6650,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Чисте поле"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn sạch trơn"
           }
         },
         "zh-Hans" : {
@@ -6110,6 +6740,12 @@
             "value" : "3×3-as területet tüntet el — célozz, majd hagyd jóvá"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membersihkan area 3×3 — bidik, lalu konfirmasi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6126,6 +6762,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3×3 범위를 지웁니다 — 조준한 뒤 확정"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membersihkan kawasan 3×3 — acu, kemudian sahkan"
           }
         },
         "nb" : {
@@ -6198,6 +6840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Очищає ділянку 3×3 — націль і підтверди"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xoá một vùng 3×3 — ngắm rồi xác nhận"
           }
         },
         "zh-Hans" : {
@@ -6282,6 +6930,12 @@
             "value" : "Tüntess el egy sort az egyik lépésben, majd a rögtön következőben is, és elindul egy kombó, ami a pontszámod mellett számol felfelé.\n\nMinden sor számít, így három egyszerre hárommal viszi előre. Minden ötödik kombó szivárványszínűvé festi az egész táblát. Egy olyan lépés, ami semmit sem tüntet el, véget vet a sorozatnak."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bersihkan di satu langkah lalu bersihkan lagi di langkah berikutnya, dan kombo dimulai, naik di samping skormu.\n\nSetiap baris dihitung, jadi membersihkan tiga sekaligus memajukan kombo tiga angka. Setiap kombo kelima mengubah seluruh papan jadi pelangi. Satu langkah yang tidak membersihkan apa pun mengakhiri rentetan."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6298,6 +6952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "한 턴에 지우고 바로 다음 턴에도 지우면 콤보가 시작되어 점수 옆에서 올라갑니다.\n\n지운 줄은 모두 세므로 세 줄을 한 번에 지우면 셋이 올라갑니다. 다섯 콤보마다 보드 전체가 무지개색으로 바뀝니다. 아무것도 지우지 못한 턴에 연속이 끊깁니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bersihkan dalam satu pusingan dan bersihkan lagi dalam pusingan seterusnya, maka kombo bermula dan menaik di sebelah mata anda.\n\nSetiap baris dikira, jadi membersihkan tiga serentak memajukan kombo sebanyak tiga. Setiap kombo kelima menukar seluruh papan menjadi warna pelangi. Pusingan yang tidak membersihkan apa-apa menamatkan rentetan."
           }
         },
         "nb" : {
@@ -6370,6 +7030,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Очисти одним ходом і очисти знову наступним — почнеться комбо, яке рахує поруч із твоїм рахунком.\n\nКожен рядок має значення, тож три одразу зсувають комбо на три. Кожне п'яте комбо робить усе поле веселкою. Хід, який нічого не очищає, обриває серію."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xoá được ở một lượt rồi xoá tiếp ngay lượt sau là combo bắt đầu, đếm lên bên cạnh điểm của bạn.\n\nMỗi hàng đều được tính, nên xoá ba hàng một lúc thì combo nhảy ba. Cứ đến combo thứ năm là cả bàn chuyển thành cầu vồng. Một lượt không xoá được gì sẽ ngắt chuỗi."
           }
         },
         "zh-Hans" : {
@@ -6456,6 +7122,12 @@
             "value" : "Hajszálon múlt"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyaris saja"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6472,6 +7144,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "가까스로"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyaris-nyaris"
           }
         },
         "nb" : {
@@ -6544,6 +7222,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "На волосині"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trong gang tấc"
           }
         },
         "zh-Hans" : {
@@ -6628,6 +7312,12 @@
             "value" : "Kombó %lld"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kombo %lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6644,6 +7334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld 콤보"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kombo %lld"
           }
         },
         "nb" : {
@@ -6716,6 +7412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Комбо %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combo %lld"
           }
         },
         "zh-Hans" : {
@@ -6800,6 +7502,12 @@
             "value" : "Kombók"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kombo"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6816,6 +7524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "콤보"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kombo"
           }
         },
         "nb" : {
@@ -6888,6 +7602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Комбо"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combo"
           }
         },
         "zh-Hans" : {
@@ -6974,6 +7694,12 @@
             "value" : "Kanapés kooperáció"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main bareng di sofa"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6990,6 +7716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "소파 협동"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main bersama di sofa"
           }
         },
         "nb" : {
@@ -7062,6 +7794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кооп на дивані"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi chung trên ghế"
           }
         },
         "zh-Hans" : {
@@ -7148,6 +7886,12 @@
             "value" : "Kereszteződés"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persimpangan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7164,6 +7908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "교차로"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpang"
           }
         },
         "nb" : {
@@ -7236,6 +7986,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перехрестя"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao lộ"
           }
         },
         "zh-Hans" : {
@@ -7320,6 +8076,12 @@
             "value" : "Sötét"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelap"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7336,6 +8098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다크"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelap"
           }
         },
         "nb" : {
@@ -7408,6 +8176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Темна"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tối"
           }
         },
         "zh-Hans" : {
@@ -7492,6 +8266,12 @@
             "value" : "Sötét mód"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode gelap"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7508,6 +8288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다크 모드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mod gelap"
           }
         },
         "nb" : {
@@ -7580,6 +8366,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Темний режим"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ tối"
           }
         },
         "zh-Hans" : {
@@ -7664,6 +8456,12 @@
             "value" : "Három új elemet ad"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memberi tiga balok baru"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7680,6 +8478,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "새 조각 세 개를 줍니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memberi tiga blok baharu"
           }
         },
         "nb" : {
@@ -7752,6 +8556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Видає три нові фігури"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chia ba khối mới"
           }
         },
         "zh-Hans" : {
@@ -7838,6 +8648,12 @@
             "value" : "Irodai munka"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kerja kantoran"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7854,6 +8670,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "책상 앞에서"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kerja di meja"
           }
         },
         "nb" : {
@@ -7926,6 +8748,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Робота за столом"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Việc bàn giấy"
           }
         },
         "zh-Hans" : {
@@ -8012,6 +8840,12 @@
             "value" : "Elkötelezett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setia"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8028,6 +8862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "열성 팬"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setia"
           }
         },
         "nb" : {
@@ -8100,6 +8940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Відданий"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tận tâm"
           }
         },
         "zh-Hans" : {
@@ -8186,6 +9032,12 @@
             "value" : "Telitalálat"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tepat sasaran"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8202,6 +9054,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "정통으로"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tepat sasaran"
           }
         },
         "nb" : {
@@ -8274,6 +9132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Прямий удар"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trúng đích"
           }
         },
         "zh-Hans" : {
@@ -8358,6 +9222,12 @@
             "value" : "Oda nem fér el"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak pas di situ"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8374,6 +9244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "거기에는 놓을 수 없어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak muat di situ"
           }
         },
         "nb" : {
@@ -8446,6 +9322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Туди не вміщається"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không vừa chỗ đó"
           }
         },
         "zh-Hans" : {
@@ -8530,6 +9412,12 @@
             "value" : "Kész"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8546,6 +9434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "완료"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
           }
         },
         "nb" : {
@@ -8618,6 +9512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Готово"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong"
           }
         },
         "zh-Hans" : {
@@ -8704,6 +9604,12 @@
             "value" : "Dupla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganda"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8720,6 +9626,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "더블"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dua kali"
           }
         },
         "nb" : {
@@ -8792,6 +9704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подвійне"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gấp đôi"
           }
         },
         "zh-Hans" : {
@@ -8876,6 +9794,12 @@
             "value" : "Húzz egy elemet a tartóból a 10×10-es táblára. Tölts ki egy teljes sort vagy oszlopot, és eltűnik.\n\nA tartó csak akkor töltődik fel, ha mind a három elem elfogyott, és egy új osztásban mindig van legalább egy elem, ami elfér valahol."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geser satu balok dari baki ke papan 10×10. Isi satu baris atau kolom penuh dan baris itu hilang.\n\nBaki baru terisi lagi setelah ketiga balok habis, dan setiap bagian baru selalu punya setidaknya satu balok yang pas di suatu tempat."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8892,6 +9816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "트레이의 조각을 10×10 보드로 끌어다 놓으세요. 가로줄이나 세로줄을 가득 채우면 지워집니다.\n\n트레이는 세 조각을 모두 쓴 뒤에야 다시 채워지고, 새로 받는 조각에는 어딘가에 놓을 수 있는 것이 항상 하나 이상 있습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seret satu blok dari dulang ke papan 10×10. Isi satu baris atau lajur penuh dan baris itu akan hilang.\n\nDulang hanya diisi semula apabila ketiga-tiga blok sudah habis, dan setiap pemberian baharu sentiasa ada sekurang-kurangnya satu blok yang muat di suatu tempat."
           }
         },
         "nb" : {
@@ -8964,6 +9894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перетягни фігуру з лотка на поле 10×10. Заповни цілий рядок або стовпець — і він очиститься.\n\nЛоток поповнюється лише тоді, коли всі три фігури використані, а нова роздача завжди має хоча б одну фігуру, яка десь вміщається."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kéo một khối từ khay lên bàn 10×10. Lấp kín cả một hàng hoặc một cột là nó biến mất.\n\nKhay chỉ được bù khi cả ba khối đã dùng hết, và mỗi lượt chia mới luôn có ít nhất một khối đặt được ở đâu đó."
           }
         },
         "zh-Hans" : {
@@ -9048,6 +9984,12 @@
             "value" : "Körülbelül minden 300 pontnál egy ajándék érkezik egy üres mezőre, és 10 lépéstől számol visszafelé.\n\nÉpíts rá, és tüntesd el azt a sort vagy oszlopot, mielőtt a visszaszámlálás lejár, és segítséget kapsz. A fölötte lévő kocka szétzúzása csak újra felfedi."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kira-kira setiap 300 poin, sebuah hadiah mendarat di kotak kosong dan menghitung mundur dari 10 langkah.\n\nBangun di atasnya dan bersihkan baris atau kolom itu sebelum hitungannya habis, dan kamu dapat satu alat. Menghancurkan balok di atasnya cuma membuka hadiahnya lagi."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9064,6 +10006,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "대략 300점마다 빈 칸에 선물이 내려앉아 10수부터 거꾸로 셉니다.\n\n카운트가 끝나기 전에 그 위를 덮고 해당 줄을 지우면 아이템을 받습니다. 위에 있는 블록을 깨면 선물이 다시 드러날 뿐입니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kira-kira setiap 300 mata, sebuah hadiah mendarat di petak kosong dan mengira menurun dari 10 langkah.\n\nBina di atasnya dan bersihkan baris atau lajur itu sebelum pengiraan habis, maka anda mendapat satu alat. Menghancurkan blok di atasnya hanya mendedahkannya semula."
           }
         },
         "nb" : {
@@ -9136,6 +10084,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Приблизно кожні 300 балів на порожню клітинку падає подарунок і відлічує від 10 ходів.\n\nЗабудуй його й очисти той рядок або стовпець, доки лічильник не вийшов, — і отримаєш помічника. Якщо розбити кубик над ним, подарунок просто знову відкриється."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khoảng mỗi 300 điểm lại có một món quà rơi xuống một ô trống và đếm ngược từ 10 lượt.\n\nXây lên trên nó rồi xoá hàng hoặc cột đó trước khi hết lượt, bạn sẽ được một trợ thủ. Đập viên gạch nằm trên chỉ làm lộ lại món quà thôi."
           }
         },
         "zh-Hans" : {
@@ -9222,6 +10176,12 @@
             "value" : "Első kocka"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balok pertama"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9238,6 +10198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "첫 블록"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blok pertama"
           }
         },
         "nb" : {
@@ -9310,6 +10276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перший кубик"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viên gạch đầu"
           }
         },
         "zh-Hans" : {
@@ -9396,6 +10368,12 @@
             "value" : "Első sor"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baris pertama"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9412,6 +10390,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "첫 줄 완성"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baris pertama"
           }
         },
         "nb" : {
@@ -9484,6 +10468,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перший рядок"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hàng đầu tiên"
           }
         },
         "zh-Hans" : {
@@ -9570,6 +10560,12 @@
             "value" : "Öt számjegy"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lima angka"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9586,6 +10582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다섯 자리"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lima angka"
           }
         },
         "nb" : {
@@ -9658,6 +10660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "П'ять цифр"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Năm chữ số"
           }
         },
         "zh-Hans" : {
@@ -9742,6 +10750,12 @@
             "value" : "Mindegyikből legfeljebb öt. Koppints rá a használathoz."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maksimal lima tiap jenis. Ketuk untuk memakai."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9758,6 +10772,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "종류마다 최대 다섯 개. 탭하면 사용합니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paling banyak lima setiap satu. Ketik untuk guna."
           }
         },
         "nb" : {
@@ -9830,6 +10850,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Щонайбільше п'ять кожного. Торкнись, щоб використати."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mỗi loại nhiều nhất năm cái. Nhấn để dùng."
           }
         },
         "zh-Hans" : {
@@ -9914,6 +10940,12 @@
             "value" : "Lebegjen egy ablakban"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biar melayang di jendela"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9930,6 +10962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "창에 띄우기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biar terapung dalam tetingkap"
           }
         },
         "nb" : {
@@ -10002,6 +11040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нехай лине у вікні"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để nó bay trong một cửa sổ"
           }
         },
         "zh-Hans" : {
@@ -10086,6 +11130,12 @@
             "value" : "Elemek felemelése"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angkat balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10102,6 +11152,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "조각 띄우기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angkat blok"
           }
         },
         "nb" : {
@@ -10174,6 +11230,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Підіймати фігури"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nâng các khối"
           }
         },
         "zh-Hans" : {
@@ -10260,6 +11322,12 @@
             "value" : "Új kéz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tangan baru"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10276,6 +11344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "새로운 손패"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tangan baharu"
           }
         },
         "nb" : {
@@ -10348,6 +11422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нова рука"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tay mới"
           }
         },
         "zh-Hans" : {
@@ -10434,6 +11514,12 @@
             "value" : "Teljes készlet"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set lengkap"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10450,6 +11536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "풀 세트"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set penuh"
           }
         },
         "nb" : {
@@ -10522,6 +11614,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Повний набір"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đủ bộ"
           }
         },
         "zh-Hans" : {
@@ -10608,6 +11706,12 @@
             "value" : "Tele raktár"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stok penuh"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10624,6 +11728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "재고 가득"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stok penuh"
           }
         },
         "nb" : {
@@ -10696,6 +11806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Повні запаси"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kho đầy"
           }
         },
         "zh-Hans" : {
@@ -10785,6 +11901,12 @@
             "value" : "Ajándékvadász"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemburu hadiah"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10801,6 +11923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물 사냥꾼"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemburu hadiah"
           }
         },
         "nb" : {
@@ -10873,6 +12001,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Полювач на подарунки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thợ săn quà"
           }
         },
         "zh-Hans" : {
@@ -10957,6 +12091,12 @@
             "value" : "Ajándék begyűjtve — %@ +1"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiah diambil — %@ +1"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10973,6 +12113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물 획득 — %@ +1"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiah diambil — %@ +1"
           }
         },
         "nb" : {
@@ -11045,6 +12191,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подарунок отримано — %@ +1"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nhận quà — %@ +1"
           }
         },
         "zh-Hans" : {
@@ -11129,6 +12281,12 @@
             "value" : "Ajándékok"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiah"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11145,6 +12303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선물"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiah"
           }
         },
         "nb" : {
@@ -11217,6 +12381,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подарунки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quà"
           }
         },
         "zh-Hans" : {
@@ -11301,6 +12471,12 @@
             "value" : "Üveggyümölcs, zselés billentyűk, kristály nassolnivaló"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buah kaca, tombol jeli, camilan kristal"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11317,6 +12493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "유리 과일, 젤리 키, 크리스털 간식"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buah kaca, kekunci jeli, snek kristal"
           }
         },
         "nb" : {
@@ -11389,6 +12571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скляні фрукти, желейні клавіші, кристальні смаколики"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trái cây thuỷ tinh, phím thạch, bánh pha lê"
           }
         },
         "zh-Hans" : {
@@ -11475,6 +12663,12 @@
             "value" : "Szokássá válik"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jadi kebiasaan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11491,6 +12685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "습관이 됐다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jadi tabiat"
           }
         },
         "nb" : {
@@ -11563,6 +12763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стає звичкою"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thành thói quen"
           }
         },
         "zh-Hans" : {
@@ -11647,6 +12853,12 @@
             "value" : "Kalapács"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Martil"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11663,6 +12875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "해머"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukul"
           }
         },
         "nb" : {
@@ -11735,6 +12953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Молоток"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búa"
           }
         },
         "zh-Hans" : {
@@ -11819,6 +13043,12 @@
             "value" : "Segítségek elrejtése"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sembunyikan alat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11835,6 +13065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아이템 숨기기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sembunyikan alat"
           }
         },
         "nb" : {
@@ -11907,6 +13143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Приховати помічників"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ẩn trợ thủ"
           }
         },
         "zh-Hans" : {
@@ -11993,6 +13235,12 @@
             "value" : "Nagyjátékos"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemain besar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12009,6 +13257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "큰손"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemain besar"
           }
         },
         "nb" : {
@@ -12081,6 +13335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Великий гравець"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tay to"
           }
         },
         "zh-Hans" : {
@@ -12165,6 +13425,12 @@
             "value" : "Hogyan játssz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cara bermain"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12181,6 +13447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "게임 방법"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cara bermain"
           }
         },
         "nb" : {
@@ -12253,6 +13525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Як грати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cách chơi"
           }
         },
         "zh-Hans" : {
@@ -12337,6 +13615,12 @@
             "value" : "Hihetetlenül kielégítő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuaskan luar biasa"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12353,6 +13637,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "믿기 힘든 쾌감"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuaskan tak terkata"
           }
         },
         "nb" : {
@@ -12425,6 +13715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Неймовірно приємно"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoả mãn khó tin"
           }
         },
         "zh-Hans" : {
@@ -12511,6 +13807,12 @@
             "value" : "Bumm"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dum"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12527,6 +13829,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "콰광"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dum"
           }
         },
         "nb" : {
@@ -12599,6 +13907,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бум"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bùm"
           }
         },
         "zh-Hans" : {
@@ -12683,6 +13997,12 @@
             "value" : "Megmarad a következő játékra"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan untuk permainan berikutnya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12699,6 +14019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다음 게임까지 유지됩니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan untuk permainan seterusnya"
           }
         },
         "nb" : {
@@ -12771,6 +14097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Залишиться на наступну гру"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giữ lại cho ván sau"
           }
         },
         "zh-Hans" : {
@@ -12855,6 +14187,12 @@
             "value" : "Ranglisták"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan peringkat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12871,6 +14209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "순위표"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan pendahulu"
           }
         },
         "nb" : {
@@ -12943,6 +14287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Рейтинги"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bảng xếp hạng"
           }
         },
         "zh-Hans" : {
@@ -13029,6 +14379,12 @@
             "value" : "A tábla legendája"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legenda papan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13045,6 +14401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드의 전설"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legenda papan"
           }
         },
         "nb" : {
@@ -13117,6 +14479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Легенда поля"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huyền thoại của bàn"
           }
         },
         "zh-Hans" : {
@@ -13201,6 +14569,12 @@
             "value" : "Világos"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terang"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13217,6 +14591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "라이트"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerah"
           }
         },
         "nb" : {
@@ -13289,6 +14669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Світла"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sáng"
           }
         },
         "zh-Hans" : {
@@ -13375,6 +14761,12 @@
             "value" : "Fényshow"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pertunjukan cahaya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13391,6 +14783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "라이트 쇼"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persembahan cahaya"
           }
         },
         "nb" : {
@@ -13463,6 +14861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Світлове шоу"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Màn diễn ánh sáng"
           }
         },
         "zh-Hans" : {
@@ -13549,6 +14953,12 @@
             "value" : "Sortisztító"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembersih baris"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13565,6 +14975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "줄 청소부"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembersih baris"
           }
         },
         "nb" : {
@@ -13637,6 +15053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Чистильник рядків"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Người dọn hàng"
           }
         },
         "zh-Hans" : {
@@ -13723,6 +15145,12 @@
             "value" : "Hosszú táv"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perjalanan panjang"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13739,6 +15167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "장거리"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perjalanan jauh"
           }
         },
         "nb" : {
@@ -13811,6 +15245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Довга дорога"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đường dài"
           }
         },
         "zh-Hans" : {
@@ -13897,6 +15337,12 @@
             "value" : "Maraton"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraton"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13913,6 +15359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "마라톤"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraton"
           }
         },
         "nb" : {
@@ -13985,6 +15437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Марафон"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marathon"
           }
         },
         "zh-Hans" : {
@@ -14069,6 +15527,12 @@
             "value" : "Mozgasd a távirányítóval, majd nyomd meg a lehelyezéshez"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geser dengan remote, lalu tekan untuk meletakkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14085,6 +15549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "리모컨으로 옮긴 뒤 눌러서 놓으세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerakkan dengan alat kawalan, kemudian tekan untuk letak"
           }
         },
         "nb" : {
@@ -14157,6 +15627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Переміщуй пультом, тоді натисни, щоб поставити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di chuyển bằng điều khiển, rồi bấm để đặt"
           }
         },
         "zh-Hans" : {
@@ -14241,6 +15717,12 @@
             "value" : "Állj egy kockára, és nyomd meg a szétzúzáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pindah ke sebuah balok dan tekan untuk menghancurkannya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14257,6 +15739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록으로 옮긴 뒤 누르면 깨집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pergi ke satu blok dan tekan untuk menghancurkannya"
           }
         },
         "nb" : {
@@ -14329,6 +15817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейди до кубика й натисни, щоб розбити його"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đi đến một viên gạch rồi bấm để đập"
           }
         },
         "zh-Hans" : {
@@ -14413,6 +15907,12 @@
             "value" : "Állj egy pontra, és nyomd meg a célzáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pindah ke satu titik dan tekan untuk membidik"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14429,6 +15929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위치로 옮긴 뒤 누르면 조준합니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pergi ke satu tempat dan tekan untuk mengacu"
           }
         },
         "nb" : {
@@ -14501,6 +16007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейди на місце й натисни, щоб націлитись"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đi đến một chỗ rồi bấm để ngắm"
           }
         },
         "zh-Hans" : {
@@ -14585,6 +16097,12 @@
             "value" : "Állj egy pontra, és nyomd meg a robbantáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pindah ke satu titik dan tekan untuk meledakkannya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14601,6 +16119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위치로 옮긴 뒤 누르면 터집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pergi ke satu tempat dan tekan untuk meletupkannya"
           }
         },
         "nb" : {
@@ -14673,6 +16197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейди на місце й натисни, щоб підірвати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đi đến một chỗ rồi bấm để nổ"
           }
         },
         "zh-Hans" : {
@@ -14757,6 +16287,12 @@
             "value" : "Lépés visszavonva"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langkah dibatalkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14773,6 +16309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "한 수 되돌렸어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langkah dibatalkan"
           }
         },
         "nb" : {
@@ -14845,6 +16387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Хід скасовано"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã hoàn lại"
           }
         },
         "zh-Hans" : {
@@ -14931,6 +16479,12 @@
             "value" : "Rendmániás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maniak kerapian"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14947,6 +16501,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "정리의 달인"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gila kerapian"
           }
         },
         "nb" : {
@@ -15019,6 +16579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Любитель порядку"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chúa sạch sẽ"
           }
         },
         "zh-Hans" : {
@@ -15103,6 +16669,12 @@
             "value" : "Új játék"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainan baru"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15119,6 +16691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "새 게임"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainan baharu"
           }
         },
         "nb" : {
@@ -15191,6 +16769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нова гра"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ván mới"
           }
         },
         "zh-Hans" : {
@@ -15275,6 +16859,12 @@
             "value" : "Nincs több lépés"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada langkah lagi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15291,6 +16881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "놓을 곳이 없어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiada langkah lagi"
           }
         },
         "nb" : {
@@ -15363,6 +16959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Немає ходів"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hết nước đi"
           }
         },
         "zh-Hans" : {
@@ -15447,6 +17049,12 @@
             "value" : "Nincs mit visszavonni"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada yang bisa dibatalkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15463,6 +17071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "되돌릴 수가 없어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiada apa untuk dibatalkan"
           }
         },
         "nb" : {
@@ -15535,6 +17149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нічого скасовувати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có gì để hoàn"
           }
         },
         "zh-Hans" : {
@@ -15619,6 +17239,12 @@
             "value" : "Furcsán kielégítő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuaskan secara aneh"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15635,6 +17261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "묘하게 기분 좋은"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuaskan secara pelik"
           }
         },
         "nb" : {
@@ -15707,6 +17339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дивно приємно"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoả mãn lạ kỳ"
           }
         },
         "zh-Hans" : {
@@ -15791,6 +17429,12 @@
             "value" : "Ki"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mati"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15807,6 +17451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "끔"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mati"
           }
         },
         "nb" : {
@@ -15879,6 +17529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вимк."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt"
           }
         },
         "zh-Hans" : {
@@ -15965,6 +17621,12 @@
             "value" : "Felszállás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lepas dari tanah"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15981,6 +17643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이륙"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berlepas"
           }
         },
         "nb" : {
@@ -16053,6 +17721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Відрив"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cất cánh"
           }
         },
         "zh-Hans" : {
@@ -16137,6 +17811,12 @@
             "value" : "Be"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hidup"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16153,6 +17833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "켬"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hidup"
           }
         },
         "nb" : {
@@ -16225,6 +17911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Увімк."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật"
           }
         },
         "zh-Hans" : {
@@ -16311,6 +18003,12 @@
             "value" : "Jó sorozat"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sedang panas"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16327,6 +18025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연승 중"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sedang rancak"
           }
         },
         "nb" : {
@@ -16399,6 +18103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Серія триває"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang lên"
           }
         },
         "zh-Hans" : {
@@ -16483,6 +18193,12 @@
             "value" : "A kezdőképernyőn és a CarPlayben"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di layar utama dan CarPlay"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16499,6 +18215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "홈 화면과 CarPlay에 표시"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pada skrin utama dan CarPlay"
           }
         },
         "nb" : {
@@ -16571,6 +18293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "На головному екрані та в CarPlay"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên màn hình chính và CarPlay"
           }
         },
         "zh-Hans" : {
@@ -16657,6 +18385,12 @@
             "value" : "Partiidő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waktunya pesta"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16673,6 +18407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "파티 타임"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masa berpesta"
           }
         },
         "nb" : {
@@ -16745,6 +18485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Час вечірки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giờ tiệc"
           }
         },
         "zh-Hans" : {
@@ -16829,6 +18575,12 @@
             "value" : "%lld. elem"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balok %lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16845,6 +18597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld번 조각"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blok %lld"
           }
         },
         "nb" : {
@@ -16917,6 +18675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фігура %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khối %lld"
           }
         },
         "zh-Hans" : {
@@ -17001,6 +18765,12 @@
             "value" : "Elemek kicserélve"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balok ditukar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17017,6 +18787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "조각을 다시 받았어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blok ditukar"
           }
         },
         "nb" : {
@@ -17089,6 +18865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фігури замінено"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã đổi khối"
           }
         },
         "zh-Hans" : {
@@ -17173,6 +18955,12 @@
             "value" : "Játssz újra"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main lagi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17189,6 +18977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다시 하기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main lagi"
           }
         },
         "nb" : {
@@ -17261,6 +19055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Грати знову"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi lại"
           }
         },
         "zh-Hans" : {
@@ -17345,6 +19145,12 @@
             "value" : "A tábla alatt szól"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terdengar di bawah papan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17361,6 +19167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드 아래에서 재생됩니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berbunyi di bawah papan"
           }
         },
         "nb" : {
@@ -17433,6 +19245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Звучить під полем"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phát dưới bàn"
           }
         },
         "zh-Hans" : {
@@ -17519,6 +19337,12 @@
             "value" : "Zsebfejtörő"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teka-teki saku"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17535,6 +19359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "주머니 퍼즐"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teka-teki saku"
           }
         },
         "nb" : {
@@ -17607,6 +19437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Головоломка в кишені"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trò xếp hình trong túi"
           }
         },
         "zh-Hans" : {
@@ -17691,6 +19527,12 @@
             "value" : "Segítségek"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17707,6 +19549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아이템"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alat"
           }
         },
         "nb" : {
@@ -17779,6 +19627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Помічники"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trợ thủ"
           }
         },
         "zh-Hans" : {
@@ -17863,6 +19717,12 @@
             "value" : "Nyomj meg egy elemet, hogy mindhárom forduljon — Menu a végén"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekan satu balok untuk memutar ketiganya — Menu bila selesai"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17879,6 +19739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "조각을 누르면 셋 다 회전 — 끝나면 메뉴"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekan satu blok untuk memutar ketiga-tiganya — Menu apabila siap"
           }
         },
         "nb" : {
@@ -17951,6 +19817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Натисни фігуру, щоб повернути всі три — Menu в кінці"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bấm một khối để quay cả ba — Menu khi xong"
           }
         },
         "zh-Hans" : {
@@ -18035,6 +19907,12 @@
             "value" : "Nyomd meg újra a felrobbantáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekan lagi untuk meledakkannya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18051,6 +19929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다시 누르면 터집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekan lagi untuk meletupkannya"
           }
         },
         "nb" : {
@@ -18123,6 +20007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Натисни ще раз, щоб підірвати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bấm lần nữa để cho nổ"
           }
         },
         "zh-Hans" : {
@@ -18209,6 +20099,12 @@
             "value" : "Purista"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purist"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18225,6 +20121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "순수주의자"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purist"
           }
         },
         "nb" : {
@@ -18297,6 +20199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пурист"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thuần chất"
           }
         },
         "zh-Hans" : {
@@ -18383,6 +20291,12 @@
             "value" : "Négyszeres"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empat kali"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18399,6 +20313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "쿼드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empat kali"
           }
         },
         "nb" : {
@@ -18471,6 +20391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Почетверне"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gấp bốn"
           }
         },
         "zh-Hans" : {
@@ -18557,6 +20483,12 @@
             "value" : "Törzsjátékos"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelanggan tetap"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18573,6 +20505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "단골"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelanggan tetap"
           }
         },
         "nb" : {
@@ -18645,6 +20583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Постійний гравець"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khách quen"
           }
         },
         "zh-Hans" : {
@@ -18729,6 +20673,12 @@
             "value" : "Játék visszaállítása"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur ulang permainan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18745,6 +20695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "게임 초기화"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set semula permainan"
           }
         },
         "nb" : {
@@ -18817,6 +20773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скинути гру"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt lại ván"
           }
         },
         "zh-Hans" : {
@@ -18901,6 +20863,12 @@
             "value" : "Visszavonja az utolsó lépést, a kézben lévő elemekkel együtt"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membatalkan langkah terakhirmu, termasuk balok yang kamu pegang"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18917,6 +20885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "마지막 한 수를 되돌립니다. 들고 있던 조각까지 그대로"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membatalkan langkah terakhir anda, termasuk blok yang anda pegang"
           }
         },
         "nb" : {
@@ -18989,6 +20963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скасовує твій останній хід разом із фігурами, які ти мав"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn lại nước đi cuối, cùng cả những khối bạn đang giữ"
           }
         },
         "zh-Hans" : {
@@ -19073,6 +21053,12 @@
             "value" : "Forgatás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19089,6 +21075,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "회전"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putar"
           }
         },
         "nb" : {
@@ -19161,6 +21153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Повернути"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay"
           }
         },
         "zh-Hans" : {
@@ -19245,6 +21243,12 @@
             "value" : "Szabályok, kombók és segítségek"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aturan, kombo, dan alat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19261,6 +21265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "규칙, 콤보, 아이템"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peraturan, kombo dan alat"
           }
         },
         "nb" : {
@@ -19333,6 +21343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Правила, комбо та помічники"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luật, combo và trợ thủ"
           }
         },
         "zh-Hans" : {
@@ -19417,6 +21433,12 @@
             "value" : "Futó"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelari"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19433,6 +21455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "러너"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelari"
           }
         },
         "nb" : {
@@ -19505,6 +21533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бігун"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Người chạy"
           }
         },
         "zh-Hans" : {
@@ -19589,6 +21623,12 @@
             "value" : "Amikor már nem fér el semmi"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat tidak ada tempat lagi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19605,6 +21645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "막혔을 때"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apabila tiada ruang lagi"
           }
         },
         "nb" : {
@@ -19677,6 +21723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Коли вже нічого не вміщається"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi không còn chỗ"
           }
         },
         "zh-Hans" : {
@@ -19761,6 +21813,12 @@
             "value" : "PONT"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SKOR"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19777,6 +21835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "점수"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MATA"
           }
         },
         "nb" : {
@@ -19849,6 +21913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "РАХУНОК"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ĐIỂM"
           }
         },
         "zh-Hans" : {
@@ -19933,6 +22003,12 @@
             "value" : "Homok, szappan, slime, mosás, felújítás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasir, sabun, slime, mencuci, memulihkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19949,6 +22025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모래, 비누, 슬라임, 세척, 복원"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasir, sabun, slime, mencuci, memulihkan"
           }
         },
         "nb" : {
@@ -20021,6 +22103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пісок, мило, слиз, миття, відновлення"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cát, xà phòng, slime, rửa, phục chế"
           }
         },
         "zh-Hans" : {
@@ -20107,6 +22195,12 @@
             "value" : "A Mikulás segítője"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembantu Sinterklas"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20123,6 +22217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "산타의 조수"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembantu Santa"
           }
         },
         "nb" : {
@@ -20195,6 +22295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Помічник Санти"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Người giúp ông già Noel"
           }
         },
         "zh-Hans" : {
@@ -20279,6 +22385,12 @@
             "value" : "Pontozás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penilaian"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20295,6 +22407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "점수 계산"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemarkahan"
           }
         },
         "nb" : {
@@ -20367,6 +22485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бали"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cách tính điểm"
           }
         },
         "zh-Hans" : {
@@ -20453,6 +22577,12 @@
             "value" : "Meggondoltam magam"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berubah pikiran"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20469,6 +22599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다시 생각해보니"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berubah fikiran"
           }
         },
         "nb" : {
@@ -20541,6 +22677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я передумав"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi ý"
           }
         },
         "zh-Hans" : {
@@ -20625,6 +22767,12 @@
             "value" : "Érzékek felerősítése"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penguat indra"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20641,6 +22789,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "감각 강화"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penambah rasa"
           }
         },
         "nb" : {
@@ -20713,6 +22867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Посилення відчуттів"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tăng cảm giác"
           }
         },
         "zh-Hans" : {
@@ -20797,6 +22957,12 @@
             "value" : "Beállítások"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20813,6 +22979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "설정"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tetapan"
           }
         },
         "nb" : {
@@ -20885,6 +23057,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Налаштування"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
           }
         },
         "zh-Hans" : {
@@ -20969,6 +23147,12 @@
             "value" : "Beállítások…"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan…"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20985,6 +23169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "설정…"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tetapan…"
           }
         },
         "nb" : {
@@ -21057,6 +23247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Налаштування…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt…"
           }
         },
         "zh-Hans" : {
@@ -21141,6 +23337,12 @@
             "value" : "Segítségek megjelenítése"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilkan alat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21157,6 +23359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아이템 표시"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tunjukkan alat"
           }
         },
         "nb" : {
@@ -21229,6 +23437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показати помічників"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện trợ thủ"
           }
         },
         "zh-Hans" : {
@@ -21313,6 +23527,12 @@
             "value" : "Csere"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21329,6 +23549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다시 받기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukar"
           }
         },
         "nb" : {
@@ -21401,6 +23627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Замінити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi"
           }
         },
         "zh-Hans" : {
@@ -21487,6 +23719,12 @@
             "value" : "Zúzás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hancurkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21503,6 +23741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "한 방"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hancurkan"
           }
         },
         "nb" : {
@@ -21575,6 +23819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Розбити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đập"
           }
         },
         "zh-Hans" : {
@@ -21659,6 +23909,12 @@
             "value" : "Egyetlen kockát zúz szét"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menghancurkan satu balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21675,6 +23931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록 하나를 깹니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menghancurkan satu blok"
           }
         },
         "nb" : {
@@ -21747,6 +24009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Розбиває один кубик"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đập một viên gạch"
           }
         },
         "zh-Hans" : {
@@ -21831,6 +24099,12 @@
             "value" : "Hangok"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suara"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21847,6 +24121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사운드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bunyi"
           }
         },
         "nb" : {
@@ -21919,6 +24199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Звуки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Âm thanh"
           }
         },
         "zh-Hans" : {
@@ -22005,6 +24291,12 @@
             "value" : "Térbeli kockák"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balok spasial"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22021,6 +24313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "공간의 블록"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blok ruang"
           }
         },
         "nb" : {
@@ -22093,6 +24391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кубики в просторі"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gạch trong không gian"
           }
         },
         "zh-Hans" : {
@@ -22179,6 +24483,12 @@
             "value" : "Látványos"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spektakuler"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22195,6 +24505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "장관"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hebat"
           }
         },
         "nb" : {
@@ -22267,6 +24583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ефектно"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngoạn mục"
           }
         },
         "zh-Hans" : {
@@ -22351,6 +24673,12 @@
             "value" : "Új játék indítása?"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai permainan baru?"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22367,6 +24695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "새 게임을 시작할까요?"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulakan permainan baharu?"
           }
         },
         "nb" : {
@@ -22439,6 +24773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Почати нову гру?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu ván mới?"
           }
         },
         "zh-Hans" : {
@@ -22523,6 +24863,12 @@
             "value" : "Utca"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22539,6 +24885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스트리트"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan"
           }
         },
         "nb" : {
@@ -22611,6 +24963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вулиця"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phố"
           }
         },
         "zh-Hans" : {
@@ -22697,6 +25055,12 @@
             "value" : "A takarítás mestere"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juara bersih-bersih"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22713,6 +25077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "청소의 최고수"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juara pembersihan"
           }
         },
         "nb" : {
@@ -22785,6 +25155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Майстер прибирання"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bậc thầy dọn dẹp"
           }
         },
         "zh-Hans" : {
@@ -22869,6 +25245,12 @@
             "value" : "Koppints egy kockára a szétzúzáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk balok untuk menghancurkannya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22885,6 +25267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록을 탭하면 깨집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik blok untuk menghancurkannya"
           }
         },
         "nb" : {
@@ -22957,6 +25345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись кубика, щоб розбити його"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn một viên gạch để đập"
           }
         },
         "zh-Hans" : {
@@ -23041,6 +25435,12 @@
             "value" : "Koppints egy elemre, hogy mindhárom forduljon"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk satu balok untuk memutar ketiganya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23057,6 +25457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "조각을 탭하면 셋 다 회전합니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik satu blok untuk memutar ketiga-tiganya"
           }
         },
         "nb" : {
@@ -23129,6 +25535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись фігури, щоб повернути всі три"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn một khối để quay cả ba"
           }
         },
         "zh-Hans" : {
@@ -23213,6 +25625,12 @@
             "value" : "Koppints a táblára a célzáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk papan untuk membidik"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23229,6 +25647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드를 탭해서 조준하세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik papan untuk mengacu"
           }
         },
         "nb" : {
@@ -23301,6 +25725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись поля, щоб націлитись"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn vào bàn để ngắm"
           }
         },
         "zh-Hans" : {
@@ -23385,6 +25815,12 @@
             "value" : "Koppints a táblára egy 3×3-as terület felrobbantásához"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk papan untuk meledakkan area 3×3"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23401,6 +25837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드를 탭하면 3×3 범위가 터집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik papan untuk meletupkan kawasan 3×3"
           }
         },
         "nb" : {
@@ -23473,6 +25915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись поля, щоб підірвати ділянку 3×3"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn vào bàn để nổ một vùng 3×3"
           }
         },
         "zh-Hans" : {
@@ -23557,6 +26005,12 @@
             "value" : "Koppints a körvonalra a lehelyezéshez"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk garis luar untuk meletakkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23573,6 +26027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "윤곽을 탭해서 놓으세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik garis luar untuk meletakkannya"
           }
         },
         "nb" : {
@@ -23645,6 +26105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись контуру, щоб поставити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn vào đường viền để đặt"
           }
         },
         "zh-Hans" : {
@@ -23729,6 +26195,12 @@
             "value" : "Koppints a pipára a felrobbantáshoz"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk tanda centang untuk meledakkannya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23745,6 +26217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "체크를 탭하면 터집니다"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik tanda betul untuk meletupkannya"
           }
         },
         "nb" : {
@@ -23817,6 +26295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись галочки, щоб підірвати"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn dấu tích để cho nổ"
           }
         },
         "zh-Hans" : {
@@ -23901,6 +26385,12 @@
             "value" : "Koppints, hogy mindhárom forduljon — aztán húzz egy elemet"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk untuk memutar ketiganya — lalu geser satu balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23917,6 +26407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "탭하면 셋 다 회전 — 끝나면 조각을 끌어다 놓으세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik untuk memutar ketiga-tiganya — kemudian seret satu blok"
           }
         },
         "nb" : {
@@ -23989,6 +26485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись, щоб повернути всі три — тоді перетягни фігуру"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn để quay cả ba — rồi kéo một khối"
           }
         },
         "zh-Hans" : {
@@ -24073,6 +26575,12 @@
             "value" : "Koppints oda, ahol a 3×3-as robbanást szeretnéd"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk tempat yang kamu mau untuk ledakan 3×3"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24089,6 +26597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3×3으로 터뜨릴 자리를 탭하세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketik tempat anda mahu letupan 3×3"
           }
         },
         "nb" : {
@@ -24161,6 +26675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торкнись там, де хочеш вибух 3×3"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn vào nơi bạn muốn nổ 3×3"
           }
         },
         "zh-Hans" : {
@@ -24245,6 +26765,12 @@
             "value" : "A tábla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24261,6 +26787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "보드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan"
           }
         },
         "nb" : {
@@ -24333,6 +26865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поле"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn chơi"
           }
         },
         "zh-Hans" : {
@@ -24417,6 +26955,12 @@
             "value" : "Ez a tábla és a pontszámod elveszik. A segítségek megmaradnak."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan ini dan skormu akan hilang. Alatmu tetap tersimpan."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24433,6 +26977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 보드와 점수는 사라집니다. 아이템은 그대로 남습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papan ini dan mata anda akan hilang. Alat anda kekal."
           }
         },
         "nb" : {
@@ -24505,6 +27055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Це поле й твій рахунок буде втрачено. Помічники залишаться."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn này và điểm của bạn sẽ mất. Trợ thủ vẫn được giữ."
           }
         },
         "zh-Hans" : {
@@ -24591,6 +27147,12 @@
             "value" : "Rendezett"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24607,6 +27169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "깔끔하게"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teratur"
           }
         },
         "nb" : {
@@ -24679,6 +27247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Охайно"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gọn gàng"
           }
         },
         "zh-Hans" : {
@@ -24765,6 +27339,12 @@
             "value" : "Szerszámosláda"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kotak alat"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24781,6 +27361,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "공구함"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kotak alat"
           }
         },
         "nb" : {
@@ -24853,6 +27439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скринька з інструментами"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hộp dụng cụ"
           }
         },
         "zh-Hans" : {
@@ -24937,6 +27529,12 @@
             "value" : "Forgalom a játékvárosban"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lalu lintas kota mainan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24953,6 +27551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "장난감 도시의 교통"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lalu lintas bandar mainan"
           }
         },
         "nb" : {
@@ -25025,6 +27629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Рух у місті іграшок"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giao thông trong thành phố đồ chơi"
           }
         },
         "zh-Hans" : {
@@ -25109,6 +27719,12 @@
             "value" : "Ösvény"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalur"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25125,6 +27741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "트레일"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denai"
           }
         },
         "nb" : {
@@ -25197,6 +27819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стежка"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lối mòn"
           }
         },
         "zh-Hans" : {
@@ -25283,6 +27911,12 @@
             "value" : "Tripla"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiga kali"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25299,6 +27933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "트리플"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiga kali"
           }
         },
         "nb" : {
@@ -25371,6 +28011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Потрійне"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gấp ba"
           }
         },
         "zh-Hans" : {
@@ -25455,6 +28101,12 @@
             "value" : "Mindhárom elemet negyed fordulattal elforgatja, ahányszor csak akarod"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memutar ketiga balok seperempat putaran, sesering yang kamu mau"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25471,6 +28123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "세 조각을 90도씩 회전합니다. 몇 번이든 가능"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memutar ketiga-tiga blok sebanyak satu perempat putaran, seberapa kerap anda mahu"
           }
         },
         "nb" : {
@@ -25543,6 +28201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Повертає всі три фігури на 90°, скільки разів захочеш"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay cả ba khối một phần tư vòng, bao nhiêu lần cũng được"
           }
         },
         "zh-Hans" : {
@@ -25629,6 +28293,12 @@
             "value" : "Fordítás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putaran"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25645,6 +28315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "한 바퀴"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putaran"
           }
         },
         "nb" : {
@@ -25717,6 +28393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поворот"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xoay"
           }
         },
         "zh-Hans" : {
@@ -25801,6 +28483,12 @@
             "value" : "A kurzor alatt"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah penunjuk"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25817,6 +28505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "포인터 아래"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah penuding"
           }
         },
         "nb" : {
@@ -25889,6 +28583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Під курсором"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dưới con trỏ"
           }
         },
         "zh-Hans" : {
@@ -25973,6 +28673,12 @@
             "value" : "Az ujjad alatt"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah jari"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25989,6 +28695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "손가락 아래"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah jari"
           }
         },
         "nb" : {
@@ -26061,6 +28773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Під пальцем"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dưới ngón tay"
           }
         },
         "zh-Hans" : {
@@ -26145,6 +28863,12 @@
             "value" : "A fogásod alatt"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah jepitan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26161,6 +28885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "집은 손가락 아래"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di bawah cubitan"
           }
         },
         "nb" : {
@@ -26233,6 +28963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Під захватом"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dưới chỗ bạn kẹp"
           }
         },
         "zh-Hans" : {
@@ -26317,6 +29053,12 @@
             "value" : "Visszavonás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26333,6 +29075,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "되돌리기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan"
           }
         },
         "nb" : {
@@ -26405,6 +29153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Відмінити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn lại"
           }
         },
         "zh-Hans" : {
@@ -26489,6 +29243,12 @@
             "value" : "Lépés visszavonása"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan langkah"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26505,6 +29265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "한 수 되돌리기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan langkah"
           }
         },
         "nb" : {
@@ -26577,6 +29343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Відмінити хід"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn lại nước đi"
           }
         },
         "zh-Hans" : {
@@ -26663,6 +29435,12 @@
             "value" : "Megállíthatatlan"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak terbendung"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26679,6 +29457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "멈출 수 없음"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak dapat dihalang"
           }
         },
         "nb" : {
@@ -26751,6 +29535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нестримний"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể cản"
           }
         },
         "zh-Hans" : {
@@ -26837,6 +29627,12 @@
             "value" : "Kibontva"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sudah dibuka"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26853,6 +29649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개봉"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sudah dibuka"
           }
         },
         "nb" : {
@@ -26925,6 +29727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Розпаковано"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã mở quà"
           }
         },
         "zh-Hans" : {
@@ -27009,6 +29817,12 @@
             "value" : "Frissítés"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbarui"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27025,6 +29839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업데이트"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kemas kini"
           }
         },
         "nb" : {
@@ -27097,6 +29917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Оновити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật"
           }
         },
         "zh-Hans" : {
@@ -27181,6 +30007,12 @@
             "value" : "Frissítsd a BRICKS!-et az App Store-ból, hogy játszhass tovább."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbarui BRICKS! dari App Store untuk terus bermain."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27197,6 +30029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속 플레이하려면 App Store에서 BRICKS!를 업데이트하세요."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kemas kini BRICKS! dari App Store untuk terus bermain."
           }
         },
         "nb" : {
@@ -27269,6 +30107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Онови BRICKS! в App Store, щоб грати далі."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật BRICKS! từ App Store để chơi tiếp."
           }
         },
         "zh-Hans" : {
@@ -27353,6 +30197,12 @@
             "value" : "Frissíts, hogy játszhass tovább. A játékod és a rekordod mentve van."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbarui untuk terus bermain. Permainan dan rekormu tersimpan."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27369,6 +30219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "업데이트하면 계속 플레이할 수 있습니다. 게임과 최고 점수는 저장되어 있습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kemas kini untuk terus bermain. Permainan dan rekod anda disimpan."
           }
         },
         "nb" : {
@@ -27441,6 +30297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Онови, щоб грати далі. Гру й рекорд збережено."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật để chơi tiếp. Ván chơi và kỷ lục của bạn đã được lưu."
           }
         },
         "zh-Hans" : {
@@ -27525,6 +30387,12 @@
             "value" : "Megjelent a %@ verzió"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versi %@ sudah ada"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27541,6 +30409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ 버전이 나왔어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versi %@ sudah ada"
           }
         },
         "nb" : {
@@ -27613,6 +30487,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вийшла версія %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã có phiên bản %@"
           }
         },
         "zh-Hans" : {
@@ -27697,6 +30577,12 @@
             "value" : "Vibrálás"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getaran"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27713,6 +30599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "진동"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getaran"
           }
         },
         "nb" : {
@@ -27785,6 +30677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вібрація"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rung"
           }
         },
         "zh-Hans" : {
@@ -27871,6 +30769,12 @@
             "value" : "Bemelegítés"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemanasan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27887,6 +30791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "몸풀기"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memanaskan badan"
           }
         },
         "nb" : {
@@ -27959,6 +30869,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Розминка"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động"
           }
         },
         "zh-Hans" : {
@@ -28045,6 +30961,12 @@
             "value" : "Egy hét kockákkal"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepekan dengan balok"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28061,6 +30983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "블록의 한 주"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seminggu dengan blok"
           }
         },
         "nb" : {
@@ -28133,6 +31061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тиждень із кубиками"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một tuần với gạch"
           }
         },
         "zh-Hans" : {
@@ -28217,6 +31151,12 @@
             "value" : "Amikor a három elem közül egyik sem fér el sehol, a játéknak vége — ebből egy segítség sem húz ki.\n\nAmi a raktáradban volt, átkerül a következő játékba, és a tábla menet közben mentődik, így az app bezárása soha nem kerül egy játékba."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalau tidak satu pun dari ketiga balokmu pas di mana saja, permainan berakhir — alat pun tidak bisa menyelamatkanmu.\n\nApa pun yang masih kamu simpan terbawa ke permainan berikutnya, dan papanmu disimpan sambil kamu bermain, jadi menutup aplikasi tidak pernah membuatmu kehilangan satu permainan."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28233,6 +31173,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "세 조각을 어디에도 놓을 수 없게 되면 게임이 끝납니다. 아이템으로도 빠져나올 수 없습니다.\n\n들고 있던 아이템은 다음 게임으로 넘어가고 보드는 진행에 따라 저장되므로, 앱을 닫아도 플레이가 사라지지 않습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apabila tiada satu pun daripada ketiga-tiga blok anda muat di mana-mana, permainan tamat — alat pun tidak dapat menyelamatkan anda.\n\nApa sahaja yang masih anda simpan dibawa ke permainan seterusnya, dan papan anda disimpan sambil anda bermain, jadi menutup aplikasi tidak pernah merugikan anda satu permainan."
           }
         },
         "nb" : {
@@ -28305,6 +31251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Коли жодна з трьох фігур нікуди не вміщається, гра закінчена — помічник з цього не витягне.\n\nТе, що було в запасі, перейде в наступну гру, а поле зберігається на ходу, тож закриття програми ніколи не коштує тобі партії."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi không khối nào trong ba khối còn đặt được ở đâu, ván chơi kết thúc — trợ thủ cũng không kéo bạn ra khỏi đó được.\n\nNhững gì bạn còn giữ sẽ theo sang ván sau, và bàn chơi được lưu ngay trong lúc bạn chơi, nên đóng ứng dụng chưa bao giờ làm bạn mất một ván."
           }
         },
         "zh-Hans" : {
@@ -28389,6 +31341,12 @@
             "value" : "Widget"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28405,6 +31363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위젯"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget"
           }
         },
         "nb" : {
@@ -28477,6 +31441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Віджет"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget"
           }
         },
         "zh-Hans" : {
@@ -28561,6 +31531,12 @@
             "value" : "A widget ki van kapcsolva.\nKapcsold be a BRICKS! beállításaiban."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget mati.\nHidupkan di pengaturan BRICKS!."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28577,6 +31553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위젯이 꺼져 있습니다.\nBRICKS! 설정에서 켜세요."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget mati.\nHidupkannya dalam tetapan BRICKS!."
           }
         },
         "nb" : {
@@ -28649,6 +31631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Віджет вимкнено.\nУвімкни його в налаштуваннях BRICKS!."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget đang tắt.\nBật nó trong cài đặt BRICKS!."
           }
         },
         "zh-Hans" : {
@@ -28733,6 +31721,12 @@
             "value" : "Világ"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunia"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28749,6 +31743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "월드"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunia"
           }
         },
         "nb" : {
@@ -28821,6 +31821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Світ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thế giới"
           }
         },
         "zh-Hans" : {
@@ -28905,6 +31911,12 @@
             "value" : "Igen"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ya"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28921,6 +31933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "예"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ya"
           }
         },
         "nb" : {
@@ -28993,6 +32011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Так"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có"
           }
         },
         "zh-Hans" : {
@@ -29077,6 +32101,12 @@
             "value" : "A folyamatban lévő játékod és a pontszámod."
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainanmu yang sedang berjalan dan skormu."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29093,6 +32123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "진행 중인 게임과 점수."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permainan anda yang sedang berjalan dan mata anda."
           }
         },
         "nb" : {
@@ -29165,6 +32201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Твоя розпочата гра й рахунок."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ván đang chơi và điểm của bạn."
           }
         },
         "zh-Hans" : {
@@ -29249,6 +32291,12 @@
             "value" : "rekord %lld"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "terbaik %lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29265,6 +32313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "최고 %lld"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "terbaik %lld"
           }
         },
         "nb" : {
@@ -29337,6 +32391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "рекорд %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kỷ lục %lld"
           }
         },
         "zh-Hans" : {
@@ -29421,6 +32481,12 @@
             "value" : "%lld. sor, %lld. oszlop"
           }
         },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "baris %lld, kolom %lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29437,6 +32503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld행, %lld열"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "baris %lld, lajur %lld"
           }
         },
         "nb" : {
@@ -29509,6 +32581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "рядок %lld, стовпець %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hàng %lld, cột %lld"
           }
         },
         "zh-Hans" : {
