@@ -30,6 +30,24 @@
             "value" : "%@ +1"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37,6 +55,12 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ +1"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ +1"
@@ -82,6 +106,24 @@
             "value" : "%@ m"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ m"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ m"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ m"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -92,6 +134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ m"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ м"
           }
         },
         "zh-Hans" : {
@@ -134,6 +182,24 @@
             "value" : "%@, ne restano %lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@、残り%lld個"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld개 남음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, nog %lld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -144,6 +210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, restam %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, осталось %lld"
           }
         },
         "zh-Hans" : {
@@ -186,6 +258,24 @@
             "value" : "%@, non ci sta"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@、置けません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, 놓을 수 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, past niet"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -196,6 +286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, não cabe"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, не подходит"
           }
         },
         "zh-Hans" : {
@@ -241,6 +337,24 @@
             "value" : "%lld obiettivi ottenuti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実績%lld個を達成"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업적 %lld개 달성"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld prestaties behaald"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -251,6 +365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld proezas obtidas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получено достижений: %lld"
           }
         },
         "zh-Hans" : {
@@ -293,6 +413,24 @@
             "value" : "%lld in riserva"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld個所持"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개 보유"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld in voorraad"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld em reserva"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В запасе: %lld"
           }
         },
         "zh-Hans" : {
@@ -345,6 +489,24 @@
             "value" : "%lld punti!"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld点！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld점!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld punten!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -355,6 +517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld pontos!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld очков!"
           }
         },
         "zh-Hans" : {
@@ -397,6 +565,24 @@
             "value" : "%lld pt!"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld点！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld점!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld pnt!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -407,6 +593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld pts!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld оч.!"
           }
         },
         "zh-Hans" : {
@@ -449,6 +641,24 @@
             "value" : "+%lld altri"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ほか%lld個"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개 더"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld meer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -459,6 +669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld outras"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ещё %lld"
           }
         },
         "zh-Hans" : {
@@ -501,6 +717,24 @@
             "value" : "+%lld punti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld점"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld punten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -511,6 +745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld pontos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld очков"
           }
         },
         "zh-Hans" : {
@@ -553,6 +793,24 @@
             "value" : "+%lld pt"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld점"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld pnt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -563,6 +821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld pts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld оч."
           }
         },
         "zh-Hans" : {
@@ -605,6 +869,24 @@
             "value" : "+100 bonus!"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボーナス100点！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보너스 100점!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+100 bonus!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -615,6 +897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+100 de bónus!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+100 бонусом!"
           }
         },
         "zh-Hans" : {
@@ -657,6 +945,24 @@
             "value" : "Un regalo: libera la sua riga!"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフト出現——その列を消そう！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물 등장 — 그 줄을 지우세요!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een cadeau — maak die rij vrij!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -667,6 +973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Um presente: limpa a linha dele!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарок — очисти его линию!"
           }
         },
         "zh-Hans" : {
@@ -709,6 +1021,24 @@
             "value" : "È apparso un regalo!"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフトが現れた！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물이 나타났어요!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is een cadeau verschenen!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -719,6 +1049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apareceu um presente!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Появился подарок!"
           }
         },
         "zh-Hans" : {
@@ -761,6 +1097,24 @@
             "value" : "Un regalo è scaduto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフトが消えました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물이 사라졌어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een cadeau is verlopen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -771,6 +1125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Um presente expirou"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарок исчез"
           }
         },
         "zh-Hans" : {
@@ -813,6 +1173,24 @@
             "value" : "Un punto per ogni mattoncino che posi e un punto per ogni cella che liberi.\n\nRompi più di una riga con un solo pezzo e quelle celle valgono una volta e mezza: una riga e una colonna che si incrociano contano 19 celle, non 20."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックを1個置くごとに1点、マスを1つ消すごとに1点。\n\n1つのピースで2列以上そろえると、消えたマスは1.5倍。行と列が交差する場合は20マスではなく19マスとして数えます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록을 하나 놓을 때마다 1점, 칸을 하나 지울 때마다 1점.\n\n한 조각으로 두 줄 이상을 지우면 그 칸들은 1.5배로 계산됩니다. 가로줄과 세로줄이 교차하면 20칸이 아니라 19칸입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eén punt voor elk blok dat je plaatst en één punt voor elk vakje dat je wegwerkt.\n\nBreek meer dan één lijn met één blok en die vakjes leveren anderhalf keer zoveel op — een rij en een kolom die elkaar kruisen tellen als 19 vakjes, niet 20."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -823,6 +1201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Um ponto por cada tijolo que colocas e um ponto por cada célula que limpas.\n\nParte mais do que uma linha com uma só peça e essas células valem uma vez e meia — uma fila e uma coluna que se cruzam contam 19 células, não 20."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одно очко за каждый поставленный блок и одно очко за каждую очищенную клетку.\n\nСними одной фигурой больше одной линии — и эти клетки идут с коэффициентом полтора. Строка и столбец на пересечении считаются как 19 клеток, а не 20."
           }
         },
         "zh-Hans" : {
@@ -865,6 +1249,24 @@
             "value" : "Sopra le nuvole"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雲の上"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구름 위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boven de wolken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -875,6 +1277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acima das nuvens"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Над облаками"
           }
         },
         "zh-Hans" : {
@@ -917,6 +1325,24 @@
             "value" : "Sopra il puntatore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポインタの上"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포인터 위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boven de aanwijzer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -927,6 +1353,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acima do ponteiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Над курсором"
           }
         },
         "zh-Hans" : {
@@ -969,6 +1401,24 @@
             "value" : "Sopra il dito"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指の上"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손가락 위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boven je vinger"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -979,6 +1429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acima do teu dedo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Над пальцем"
           }
         },
         "zh-Hans" : {
@@ -1021,6 +1477,24 @@
             "value" : "Sopra le dita"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "つまんだ指の上"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "집은 손가락 위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boven je greep"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1031,6 +1505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acima dos teus dedos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Над щипком"
           }
         },
         "zh-Hans" : {
@@ -1073,6 +1553,24 @@
             "value" : "Obiettivo ottenuto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実績を達成"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업적 달성"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prestatie behaald"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1083,6 +1581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Proeza obtida"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Достижение получено"
           }
         },
         "zh-Hans" : {
@@ -1125,6 +1629,24 @@
             "value" : "Obiettivi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実績"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업적"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prestaties"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1135,6 +1657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Proezas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Достижения"
           }
         },
         "zh-Hans" : {
@@ -1177,6 +1705,24 @@
             "value" : "Tutti i potenziamenti al massimo: +100 bonus"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテムがすべて満杯——ボーナス100点！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이템이 모두 가득 — 보너스 100점!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle hulpjes vol — +100 bonus!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1187,6 +1733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Todos os poderes no máximo: +100 de bónus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все бонусы заполнены — +100 очков!"
           }
         },
         "zh-Hans" : {
@@ -1229,6 +1781,24 @@
             "value" : "Una corsa infinita che si gioca da sola"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動で進む、終わらないラン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저절로 굴러가는 끝없는 질주"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een eindeloze run die zichzelf speelt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1239,6 +1809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uma corrida sem fim que se joga sozinha"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесконечный забег, который играет сам"
           }
         },
         "zh-Hans" : {
@@ -1283,6 +1859,24 @@
             "value" : "Architetto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建築家"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건축가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Architect"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1293,6 +1887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arquiteto"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Архитектор"
           }
         },
         "zh-Hans" : {
@@ -1335,6 +1935,24 @@
             "value" : "RECORD"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベスト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BESTE"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1345,6 +1963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "RECORDE"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "РЕКОРД"
           }
         },
         "zh-Hans" : {
@@ -1392,6 +2016,24 @@
             "value" : "Tabellone grande"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大きな盤面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "큰 보드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Groot bord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1402,6 +2044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tabuleiro grande"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Большое поле"
           }
         },
         "zh-Hans" : {
@@ -1444,6 +2092,24 @@
             "value" : "Tabellone"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1454,6 +2120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tabuleiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поле"
           }
         },
         "zh-Hans" : {
@@ -1496,6 +2168,24 @@
             "value" : "Bomba"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폭탄"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bom"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1506,6 +2196,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bomba"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бомба"
           }
         },
         "zh-Hans" : {
@@ -1550,6 +2246,24 @@
             "value" : "Dipendente dai mattoncini"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロック中毒"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록 중독"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokkenverslaafd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1560,6 +2274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Viciado em tijolos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зависимый от блоков"
           }
         },
         "zh-Hans" : {
@@ -1604,6 +2324,24 @@
             "value" : "Stella dei mattoncini"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックスター"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록 스타"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokkenster"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1614,6 +2352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estrela dos tijolos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звезда блоков"
           }
         },
         "zh-Hans" : {
@@ -1658,6 +2402,24 @@
             "value" : "Costruttore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビルダー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건설가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bouwer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1668,6 +2430,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Construtor"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Строитель"
           }
         },
         "zh-Hans" : {
@@ -1710,6 +2478,24 @@
             "value" : "Annulla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1720,6 +2506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
           }
         },
         "zh-Hans" : {
@@ -1762,6 +2554,24 @@
             "value" : "Sfida"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャレンジ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "챌린지"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uitdaging"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1772,6 +2582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desafio"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Состязание"
           }
         },
         "zh-Hans" : {
@@ -1816,6 +2632,24 @@
             "value" : "Tabula rasa"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面まっさら"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완전히 비움"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schone lei"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1826,6 +2660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tabuleiro limpo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чистое поле"
           }
         },
         "zh-Hans" : {
@@ -1868,6 +2708,24 @@
             "value" : "Libera un'area 3×3: mira, poi conferma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3×3の範囲を消す——狙ってから確定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3×3 범위를 지웁니다 — 조준한 뒤 확정"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maakt een 3×3-gebied vrij — richt, dan bevestigen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1878,6 +2736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limpa uma área 3×3: aponta e confirma"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очищает область 3×3 — прицелься, затем подтверди"
           }
         },
         "zh-Hans" : {
@@ -1920,6 +2784,24 @@
             "value" : "Libera in un turno e libera di nuovo nel turno immediatamente successivo e parte una combo, che sale accanto al tuo punteggio.\n\nOgni riga conta, quindi romperne tre in una volta la fa avanzare di tre. Ogni cinque combo tutto il tabellone diventa arcobaleno. Un turno che non libera nulla interrompe la serie."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あるターンで消し、次のターンでも続けて消すとコンボが始まり、スコアの横で数が増えていきます。\n\n消した列はすべて数えるので、3列同時なら3つ進みます。5コンボごとに盤面全体が虹色に変わります。何も消せなかったターンで連続は途切れます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 턴에 지우고 바로 다음 턴에도 지우면 콤보가 시작되어 점수 옆에서 올라갑니다.\n\n지운 줄은 모두 세므로 세 줄을 한 번에 지우면 셋이 올라갑니다. 다섯 콤보마다 보드 전체가 무지개색으로 바뀝니다. 아무것도 지우지 못한 턴에 연속이 끊깁니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk in één zet iets weg en doe dat in de zet erna weer, en er begint een combo die naast je score oploopt.\n\nElke lijn telt, dus drie in één keer brengt de combo drie verder. Elke vijfde combo maakt het hele bord regenboog. Een zet waarin niets wegvalt, beëindigt de reeks."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1930,6 +2812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limpa numa jogada e limpa outra vez na jogada seguinte e começa um combo, que vai subindo ao lado da tua pontuação.\n\nCada linha conta, por isso partir três de uma vez avança três. A cada cinco combos, o tabuleiro inteiro fica arco-íris. Uma jogada que não limpa nada acaba com a série."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очисти линию за один ход и очисти снова на следующем — начнётся комбо, которое растёт рядом со счётом.\n\nСчитается каждая линия, так что три сразу продвигают комбо на три. Каждое пятое комбо раскрашивает всё поле радугой. Ход, на котором ничего не очищено, обрывает серию."
           }
         },
         "zh-Hans" : {
@@ -1974,6 +2862,24 @@
             "value" : "Per un pelo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "間一髪"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가까스로"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op het nippertje"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1984,6 +2890,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Por pouco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На волоске"
           }
         },
         "zh-Hans" : {
@@ -2026,6 +2938,24 @@
             "value" : "Combo %lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldコンボ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 콤보"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combo %lld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2036,6 +2966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Combo %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Комбо %lld"
           }
         },
         "zh-Hans" : {
@@ -2078,6 +3014,24 @@
             "value" : "Combo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンボ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "콤보"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combo's"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2088,6 +3042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Combos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Комбо"
           }
         },
         "zh-Hans" : {
@@ -2132,6 +3092,24 @@
             "value" : "Coop sul divano"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソファで協力"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소파 협동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coöp op de bank"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2142,6 +3120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coop no sofá"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кооп на диване"
           }
         },
         "zh-Hans" : {
@@ -2186,6 +3170,24 @@
             "value" : "Incrocio"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十字路"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "교차로"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kruispunt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2196,6 +3198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cruzamento"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перекрёсток"
           }
         },
         "zh-Hans" : {
@@ -2238,6 +3246,24 @@
             "value" : "Scuro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダーク"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다크"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Donker"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2248,6 +3274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escuro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмная"
           }
         },
         "zh-Hans" : {
@@ -2290,6 +3322,24 @@
             "value" : "Modalità scura"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダークモード"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다크 모드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Donkere modus"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2300,6 +3350,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modo escuro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмное оформление"
           }
         },
         "zh-Hans" : {
@@ -2342,6 +3398,24 @@
             "value" : "Distribuisce tre pezzi nuovi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいピースを3つ配る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 조각 세 개를 줍니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geeft drie nieuwe blokken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2352,6 +3426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dá três peças novas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выдаёт три новые фигуры"
           }
         },
         "zh-Hans" : {
@@ -2396,6 +3476,24 @@
             "value" : "Lavoro d'ufficio"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デスクワーク"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "책상 앞에서"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bureauwerk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2406,6 +3504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trabalho de escritório"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "За рабочим столом"
           }
         },
         "zh-Hans" : {
@@ -2450,6 +3554,24 @@
             "value" : "Devoto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熱心なプレイヤー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "열성 팬"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toegewijd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2460,6 +3582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dedicado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Преданный"
           }
         },
         "zh-Hans" : {
@@ -2504,6 +3632,24 @@
             "value" : "Colpo diretto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直撃"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정통으로"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voltreffer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2514,6 +3660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acerto direto"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Точное попадание"
           }
         },
         "zh-Hans" : {
@@ -2556,6 +3708,24 @@
             "value" : "Lì non ci sta"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "そこには置けません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "거기에는 놓을 수 없어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Past daar niet"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2566,6 +3736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aí não cabe"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Туда не подходит"
           }
         },
         "zh-Hans" : {
@@ -2608,6 +3784,24 @@
             "value" : "Fatto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gereed"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2618,6 +3812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Concluído"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
           }
         },
         "zh-Hans" : {
@@ -2662,6 +3862,24 @@
             "value" : "Doppia"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダブル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더블"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2672,6 +3890,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dupla"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Двойной"
           }
         },
         "zh-Hans" : {
@@ -2714,6 +3938,24 @@
             "value" : "Trascina un pezzo dal vassoio sul tabellone 10×10. Riempi un'intera riga o colonna e si libera.\n\nIl vassoio si ricarica solo quando tutti e tre i pezzi sono finiti, e ogni nuova distribuzione contiene sempre almeno un pezzo che ci sta da qualche parte."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トレイのピースを10×10の盤面にドラッグします。行または列をすべて埋めると消えます。\n\nトレイが補充されるのは3つのピースを使い切ったときだけ。新しく配られるピースには、必ずどこかに置けるものが1つ以上あります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트레이의 조각을 10×10 보드로 끌어다 놓으세요. 가로줄이나 세로줄을 가득 채우면 지워집니다.\n\n트레이는 세 조각을 모두 쓴 뒤에야 다시 채워지고, 새로 받는 조각에는 어딘가에 놓을 수 있는 것이 항상 하나 이상 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleep een blok van de houder naar het bord van 10×10. Vul een hele rij of kolom en die valt weg.\n\nDe houder wordt pas bijgevuld als alle drie de blokken op zijn, en elke nieuwe ronde bevat altijd minstens één blok dat ergens past."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2724,6 +3966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arrasta uma peça da bandeja para o tabuleiro 10×10. Enche uma fila ou coluna inteira e ela é limpa.\n\nA bandeja só volta a encher quando as três peças acabam, e cada nova mão traz sempre pelo menos uma peça que cabe em algum sítio."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетащи фигуру с подноса на поле 10×10. Заполни целую строку или столбец — и они очистятся.\n\nПоднос пополняется только когда израсходованы все три фигуры, и в новой выдаче всегда есть хотя бы одна фигура, которая куда-нибудь встанет."
           }
         },
         "zh-Hans" : {
@@ -2766,6 +4014,24 @@
             "value" : "Ogni 300 punti circa un regalo si posa su una casella vuota e inizia un conto alla rovescia da 10 mosse.\n\nCostruisci sopra e libera quella riga o colonna prima che il conto finisca per ottenere un potenziamento. Spaccare il mattoncino sopra lo rimette solo a nudo."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "だいたい300点ごとに、空いているマスにギフトが現れ、10手からカウントダウンが始まります。\n\nカウントが尽きる前にその上を埋めて行か列を消すと、アイテムがもらえます。上のブロックを砕いても、またギフトが見えるだけです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대략 300점마다 빈 칸에 선물이 내려앉아 10수부터 거꾸로 셉니다.\n\n카운트가 끝나기 전에 그 위를 덮고 해당 줄을 지우면 아이템을 받습니다. 위에 있는 블록을 깨면 선물이 다시 드러날 뿐입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ongeveer elke 300 punten landt er een cadeau op een leeg vakje, met een aftelling vanaf 10 zetten.\n\nBouw eroverheen en maak die rij of kolom vrij voordat de teller afloopt, dan levert het een hulpje op. Het blok erboven wegbeuken legt het alleen weer bloot."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2776,6 +4042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cerca de cada 300 pontos, um presente cai num quadrado vazio e começa uma contagem de 10 jogadas.\n\nConstrói por cima e limpa essa fila ou coluna antes de a contagem acabar para ganhar um poder. Esmagar o tijolo de cima só o volta a descobrir."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Примерно каждые 300 очков на пустую клетку опускается подарок и начинает отсчёт с 10 ходов.\n\nЗастрой его и очисти эту строку или столбец до конца отсчёта — получишь бонус. Если разбить блок сверху, подарок просто снова откроется."
           }
         },
         "zh-Hans" : {
@@ -2820,6 +4092,24 @@
             "value" : "Primo mattoncino"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最初のブロック"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫 블록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eerste blok"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2830,6 +4120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Primeiro tijolo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Первый блок"
           }
         },
         "zh-Hans" : {
@@ -2874,6 +4170,24 @@
             "value" : "Prima riga"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "初めての消去"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫 줄 완성"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eerste rij"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2884,6 +4198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Primeira linha"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Первая линия"
           }
         },
         "zh-Hans" : {
@@ -2928,6 +4248,24 @@
             "value" : "Cinque cifre"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5桁"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다섯 자리"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vijf cijfers"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2938,6 +4276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cinco dígitos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пять цифр"
           }
         },
         "zh-Hans" : {
@@ -2980,6 +4324,24 @@
             "value" : "Cinque di ciascuno, al massimo. Toccane uno per usarlo."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各5個まで。タップして使います。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종류마다 최대 다섯 개. 탭하면 사용합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximaal vijf van elk. Tik er een aan om het te gebruiken."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2990,6 +4352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No máximo cinco de cada. Toca num para o usar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не больше пяти каждого. Нажми, чтобы использовать."
           }
         },
         "zh-Hans" : {
@@ -3032,6 +4400,24 @@
             "value" : "Far fluttuare in una finestra"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウインドウに浮かべる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "창에 띄우기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In een venster laten zweven"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3042,6 +4428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A flutuar numa janela"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В отдельном окне"
           }
         },
         "zh-Hans" : {
@@ -3084,6 +4476,24 @@
             "value" : "Pezzi sollevati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピースを浮かせる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조각 띄우기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokken optillen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3094,6 +4504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peças elevadas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приподнимать фигуры"
           }
         },
         "zh-Hans" : {
@@ -3138,6 +4554,24 @@
             "value" : "Mano nuova"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しい手札"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 손패"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuwe hand"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3148,6 +4582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mão nova"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новая рука"
           }
         },
         "zh-Hans" : {
@@ -3192,6 +4632,24 @@
             "value" : "Set completo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全種類コンプリート"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "풀 세트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volledige set"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3202,6 +4660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conjunto completo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный набор"
           }
         },
         "zh-Hans" : {
@@ -3246,6 +4710,24 @@
             "value" : "Scorte complete"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在庫満タン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재고 가득"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volledig voorzien"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3256,6 +4738,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reservas completas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полные запасы"
           }
         },
         "zh-Hans" : {
@@ -3303,6 +4791,24 @@
             "value" : "Cacciatore di regali"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフトハンター"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물 사냥꾼"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadeaujager"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3313,6 +4819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caçador de presentes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Охотник за подарками"
           }
         },
         "zh-Hans" : {
@@ -3355,6 +4867,24 @@
             "value" : "Regalo ritirato: %@ +1"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフト獲得——%@ +1"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물 획득 — %@ +1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadeau opgehaald — %@ +1"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3365,6 +4895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Presente recebido: %@ +1"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарок получен — %@ +1"
           }
         },
         "zh-Hans" : {
@@ -3407,6 +4943,24 @@
             "value" : "Regali"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ギフト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선물"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadeaus"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3417,6 +4971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Presentes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарки"
           }
         },
         "zh-Hans" : {
@@ -3459,6 +5019,24 @@
             "value" : "Frutta di vetro, tasti di gelatina, dolci di cristallo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ガラスの果物、ゼリーのキー、クリスタルのお菓子"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유리 과일, 젤리 키, 크리스털 간식"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glazen fruit, geleitoetsen, kristallen snacks"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3469,6 +5047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fruta de vidro, teclas de gelatina, doces de cristal"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стеклянные фрукты, желейные клавиши, хрустальные сладости"
           }
         },
         "zh-Hans" : {
@@ -3513,6 +5097,24 @@
             "value" : "Diventa un'abitudine"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "習慣になった"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "습관이 됐다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wordt een gewoonte"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3523,6 +5125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Já é hábito"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Входит в привычку"
           }
         },
         "zh-Hans" : {
@@ -3565,6 +5173,24 @@
             "value" : "Martello"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハンマー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해머"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hamer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3575,6 +5201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Martelo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Молоток"
           }
         },
         "zh-Hans" : {
@@ -3617,6 +5249,24 @@
             "value" : "Nascondi i potenziamenti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテムを隠す"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이템 숨기기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hulpjes verbergen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3627,6 +5277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ocultar poderes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть бонусы"
           }
         },
         "zh-Hans" : {
@@ -3671,6 +5327,24 @@
             "value" : "Giocatore d'azzardo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大物プレイヤー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "큰손"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grote speler"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3681,6 +5355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grande jogador"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крупный игрок"
           }
         },
         "zh-Hans" : {
@@ -3723,6 +5403,24 @@
             "value" : "Come si gioca"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遊びかた"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "게임 방법"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spelregels"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3733,6 +5431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Como jogar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как играть"
           }
         },
         "zh-Hans" : {
@@ -3775,6 +5479,24 @@
             "value" : "Impossibilmente appagante"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ありえない心地よさ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "믿기 힘든 쾌감"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onmogelijk bevredigend"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3785,6 +5507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossivelmente satisfatório"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно приятное"
           }
         },
         "zh-Hans" : {
@@ -3829,6 +5557,24 @@
             "value" : "Kaboom"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ドカーン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "콰광"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaboem"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3839,6 +5585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kabum"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бабах"
           }
         },
         "zh-Hans" : {
@@ -3881,6 +5633,24 @@
             "value" : "Resta per la prossima partita"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次のゲームに持ち越されます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 게임까지 유지됩니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blijft voor je volgende spel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3891,6 +5661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardado para o próximo jogo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранится до следующей игры"
           }
         },
         "zh-Hans" : {
@@ -3933,6 +5709,24 @@
             "value" : "Classifiche"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランキング"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "순위표"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ranglijsten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3943,6 +5737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Classificações"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рейтинги"
           }
         },
         "zh-Hans" : {
@@ -3987,6 +5787,24 @@
             "value" : "Leggenda della griglia"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面の伝説"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드의 전설"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legende van het bord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3997,6 +5815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lenda do tabuleiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Легенда поля"
           }
         },
         "zh-Hans" : {
@@ -4039,6 +5863,24 @@
             "value" : "Chiaro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4049,6 +5891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Claro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Светлая"
           }
         },
         "zh-Hans" : {
@@ -4093,6 +5941,24 @@
             "value" : "Spettacolo di luci"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライトショー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이트 쇼"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lichtshow"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4103,6 +5969,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Espetáculo de luzes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шоу огней"
           }
         },
         "zh-Hans" : {
@@ -4147,6 +6019,24 @@
             "value" : "Pulitore di righe"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライン掃除屋"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "줄 청소부"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rijenveger"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4157,6 +6047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limpador de linhas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чистильщик линий"
           }
         },
         "zh-Hans" : {
@@ -4201,6 +6097,24 @@
             "value" : "Lunga distanza"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "長い道のり"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장거리"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lange adem"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4211,6 +6125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Longa caminhada"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Долгий путь"
           }
         },
         "zh-Hans" : {
@@ -4255,6 +6175,24 @@
             "value" : "Maratona"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マラソン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마라톤"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marathon"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4265,6 +6203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maratona"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Марафон"
           }
         },
         "zh-Hans" : {
@@ -4307,6 +6251,24 @@
             "value" : "Spostalo col telecomando, poi premi per posarlo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リモコンで動かし、押して置きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리모컨으로 옮긴 뒤 눌러서 놓으세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verplaats het met de remote en druk om te plaatsen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4317,6 +6279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Move com o comando e pressiona para colocar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перемести пультом, затем нажми, чтобы поставить"
           }
         },
         "zh-Hans" : {
@@ -4359,6 +6327,24 @@
             "value" : "Vai su un mattoncino e premi per spaccarlo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックに合わせて押すと砕けます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록으로 옮긴 뒤 누르면 깨집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga naar een blok en druk om het weg te beuken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4369,6 +6355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vai até um tijolo e pressiona para o esmagar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейди к блоку и нажми, чтобы разбить"
           }
         },
         "zh-Hans" : {
@@ -4411,6 +6403,24 @@
             "value" : "Vai su un punto e premi per mirare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所に合わせて押すと狙えます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치로 옮긴 뒤 누르면 조준합니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga naar een plek en druk om te richten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4421,6 +6431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vai até um ponto e pressiona para apontar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейди к месту и нажми, чтобы прицелиться"
           }
         },
         "zh-Hans" : {
@@ -4463,6 +6479,24 @@
             "value" : "Vai su un punto e premi per farlo esplodere"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所に合わせて押すと爆発します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치로 옮긴 뒤 누르면 터집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga naar een plek en druk om te laten ontploffen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4473,6 +6507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vai até um ponto e pressiona para o explodir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейди к месту и нажми, чтобы взорвать"
           }
         },
         "zh-Hans" : {
@@ -4515,6 +6555,24 @@
             "value" : "Mossa annullata"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1手戻しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 수 되돌렸어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet ongedaan gemaakt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4525,6 +6583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jogada desfeita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ход отменён"
           }
         },
         "zh-Hans" : {
@@ -4569,6 +6633,24 @@
             "value" : "Maniaco dell'ordine"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "整理の達人"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정리의 달인"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordefanaat"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4579,6 +6661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maníaco da ordem"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Маньяк порядка"
           }
         },
         "zh-Hans" : {
@@ -4621,6 +6709,24 @@
             "value" : "Nuova partita"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいゲーム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 게임"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw spel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4631,6 +6737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Novo jogo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новая игра"
           }
         },
         "zh-Hans" : {
@@ -4673,6 +6785,24 @@
             "value" : "Nessuna mossa possibile"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置ける場所がありません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "놓을 곳이 없어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen zetten meer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4683,6 +6813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sem jogadas possíveis"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ходов больше нет"
           }
         },
         "zh-Hans" : {
@@ -4725,6 +6861,24 @@
             "value" : "Niente da annullare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "戻せる手がありません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "되돌릴 수가 없어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niets om ongedaan te maken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4735,6 +6889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nada para desfazer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменять нечего"
           }
         },
         "zh-Hans" : {
@@ -4777,6 +6937,24 @@
             "value" : "Stranamente appagante"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "妙に心地よい"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "묘하게 기분 좋은"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vreemd bevredigend"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4787,6 +6965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estranhamente satisfatório"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Странно приятное"
           }
         },
         "zh-Hans" : {
@@ -4829,6 +7013,24 @@
             "value" : "Disattivato"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "끔"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uit"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4839,6 +7041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desativado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выкл."
           }
         },
         "zh-Hans" : {
@@ -4883,6 +7091,24 @@
             "value" : "Decollo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "離陸"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이륙"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Van de grond"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4893,6 +7119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Levantou voo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Взлёт"
           }
         },
         "zh-Hans" : {
@@ -4935,6 +7167,24 @@
             "value" : "Attivato"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "켬"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aan"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4945,6 +7195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ativado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вкл."
           }
         },
         "zh-Hans" : {
@@ -4989,6 +7245,24 @@
             "value" : "In serie"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "波に乗る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연승 중"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op een rij"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4999,6 +7273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Em sequência"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В ударе"
           }
         },
         "zh-Hans" : {
@@ -5041,6 +7321,24 @@
             "value" : "Nella schermata Home e in CarPlay"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホーム画面とCarPlayに表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홈 화면과 CarPlay에 표시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op het beginscherm en in CarPlay"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5051,6 +7349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No ecrã principal e no CarPlay"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На экране «Домой» и в CarPlay"
           }
         },
         "zh-Hans" : {
@@ -5095,6 +7399,24 @@
             "value" : "È festa"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パーティータイム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파티 타임"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feesttijd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5105,6 +7427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hora da festa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время праздника"
           }
         },
         "zh-Hans" : {
@@ -5147,6 +7475,24 @@
             "value" : "Pezzo %lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピース%lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld번 조각"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blok %lld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5157,6 +7503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peça %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фигура %lld"
           }
         },
         "zh-Hans" : {
@@ -5199,6 +7551,24 @@
             "value" : "Pezzi rimescolati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピースを引き直しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조각을 다시 받았어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokken vervangen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5209,6 +7579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peças trocadas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фигуры заменены"
           }
         },
         "zh-Hans" : {
@@ -5251,6 +7627,24 @@
             "value" : "Gioca di nuovo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう一度遊ぶ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 하기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnieuw spelen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5261,6 +7655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jogar outra vez"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Играть снова"
           }
         },
         "zh-Hans" : {
@@ -5303,6 +7703,24 @@
             "value" : "Scorre sotto il tabellone"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面の下で再生されます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드 아래에서 재생됩니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speelt onder het bord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5313,6 +7731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca por baixo do tabuleiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизводится под полем"
           }
         },
         "zh-Hans" : {
@@ -5357,6 +7781,24 @@
             "value" : "Rompicapo da tasca"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポケットパズル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주머니 퍼즐"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zakpuzzel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5367,6 +7809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Puzzle de bolso"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карманная головоломка"
           }
         },
         "zh-Hans" : {
@@ -5409,6 +7857,24 @@
             "value" : "Potenziamenti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이템"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hulpjes"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5419,6 +7885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poderes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бонусы"
           }
         },
         "zh-Hans" : {
@@ -5461,6 +7933,24 @@
             "value" : "Premi un pezzo per girare tutti e tre; Menu per finire"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピースを押すと3つとも回転——終わったらメニュー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조각을 누르면 셋 다 회전 — 끝나면 메뉴"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Druk op een blok om alle drie te draaien — Menu als je klaar bent"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5471,6 +7961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pressiona uma peça para rodar as três; Menu para terminar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми фигуру, чтобы повернуть все три — «Меню» по готовности"
           }
         },
         "zh-Hans" : {
@@ -5513,6 +8009,24 @@
             "value" : "Premi di nuovo per farla esplodere"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう一度押すと爆発"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 누르면 터집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Druk nog eens om te laten ontploffen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5523,6 +8037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pressiona outra vez para detonar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми снова, чтобы взорвать"
           }
         },
         "zh-Hans" : {
@@ -5567,6 +8087,24 @@
             "value" : "Purista"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "純粋主義者"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "순수주의자"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purist"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5577,6 +8115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Purista"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пурист"
           }
         },
         "zh-Hans" : {
@@ -5621,6 +8165,24 @@
             "value" : "Quadrupla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クアッド"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쿼드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viervoudig"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5631,6 +8193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quádrupla"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Четверной"
           }
         },
         "zh-Hans" : {
@@ -5675,6 +8243,24 @@
             "value" : "Cliente abituale"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常連"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단골"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaste gast"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5685,6 +8271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frequente"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Постоянный игрок"
           }
         },
         "zh-Hans" : {
@@ -5727,6 +8319,24 @@
             "value" : "Azzera la partita"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲームをリセット"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "게임 초기화"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spel opnieuw instellen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5737,6 +8347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reiniciar o jogo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить игру"
           }
         },
         "zh-Hans" : {
@@ -5779,6 +8395,24 @@
             "value" : "Annulla l'ultima mossa, insieme ai pezzi che avevi in mano"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直前の1手を戻します。手元のピースもそのまま戻ります"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 한 수를 되돌립니다. 들고 있던 조각까지 그대로"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draait je laatste zet terug, met de blokken die je had en al"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5789,6 +8423,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desfaz a tua última jogada, com as peças que tinhas e tudo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменяет последний ход вместе с фигурами, что были на руках"
           }
         },
         "zh-Hans" : {
@@ -5831,6 +8471,24 @@
             "value" : "Ruota"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回転"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "회전"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draaien"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5841,6 +8499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поворот"
           }
         },
         "zh-Hans" : {
@@ -5883,6 +8547,24 @@
             "value" : "Regole, combo e potenziamenti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルール、コンボ、アイテム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "규칙, 콤보, 아이템"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regels, combo's en hulpjes"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5893,6 +8575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regras, combos e poderes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правила, комбо и бонусы"
           }
         },
         "zh-Hans" : {
@@ -5935,6 +8623,24 @@
             "value" : "Corridore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランナー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "러너"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runner"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5945,6 +8651,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Corredor"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бегун"
           }
         },
         "zh-Hans" : {
@@ -5987,6 +8699,24 @@
             "value" : "Quando non ci sta più nulla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手詰まり"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "막혔을 때"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als er niets meer past"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5997,6 +8727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quando já não cabe nada"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда ходов не осталось"
           }
         },
         "zh-Hans" : {
@@ -6039,6 +8775,24 @@
             "value" : "PUNTI"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スコア"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점수"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SCORE"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6049,6 +8803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "PONTOS"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "СЧЁТ"
           }
         },
         "zh-Hans" : {
@@ -6091,6 +8851,24 @@
             "value" : "Sabbia, sapone, slime, lavaggi, restauri"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "砂、石けん、スライム、洗浄、修復"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모래, 비누, 슬라임, 세척, 복원"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zand, zeep, slijm, wassen, restaureren"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6101,6 +8879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Areia, sabão, slime, lavagens, restauros"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Песок, мыло, слайм, мойка, реставрация"
           }
         },
         "zh-Hans" : {
@@ -6145,6 +8929,24 @@
             "value" : "Aiutante di Babbo Natale"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サンタの助手"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "산타의 조수"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hulpje van de Kerstman"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6155,6 +8957,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajudante do Pai Natal"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помощник Санты"
           }
         },
         "zh-Hans" : {
@@ -6197,6 +9005,24 @@
             "value" : "Punteggio"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "得点"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점수 계산"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6207,6 +9033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pontuação"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очки"
           }
         },
         "zh-Hans" : {
@@ -6251,6 +9083,24 @@
             "value" : "Ripensamenti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "考え直し"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 생각해보니"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toch maar niet"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6261,6 +9111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pensando melhor"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Передумал"
           }
         },
         "zh-Hans" : {
@@ -6303,6 +9159,24 @@
             "value" : "Rinforzo sensoriale"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感覚を強める"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "감각 강화"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensorische versterking"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6313,6 +9187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reforço sensorial"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Усиление ощущений"
           }
         },
         "zh-Hans" : {
@@ -6355,6 +9235,24 @@
             "value" : "Impostazioni"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6365,6 +9263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
           }
         },
         "zh-Hans" : {
@@ -6407,6 +9311,24 @@
             "value" : "Impostazioni…"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen…"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6417,6 +9339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки…"
           }
         },
         "zh-Hans" : {
@@ -6459,6 +9387,24 @@
             "value" : "Mostra i potenziamenti"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテムを表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이템 표시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hulpjes tonen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6469,6 +9415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostrar poderes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать бонусы"
           }
         },
         "zh-Hans" : {
@@ -6511,6 +9463,24 @@
             "value" : "Rimescola"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "引き直し"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 받기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vervangen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6521,6 +9491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trocar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замена"
           }
         },
         "zh-Hans" : {
@@ -6565,6 +9541,24 @@
             "value" : "Spaccare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一撃"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 방"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beuken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6575,6 +9569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esmagar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разбить"
           }
         },
         "zh-Hans" : {
@@ -6617,6 +9617,24 @@
             "value" : "Spacca un singolo mattoncino"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックを1つ砕く"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록 하나를 깹니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beukt één blok weg"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6627,6 +9645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esmaga um único tijolo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разбивает один блок"
           }
         },
         "zh-Hans" : {
@@ -6669,6 +9693,24 @@
             "value" : "Suoni"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サウンド"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사운드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geluiden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6679,6 +9721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sons"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звуки"
           }
         },
         "zh-Hans" : {
@@ -6723,6 +9771,24 @@
             "value" : "Mattoncini spaziali"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空間のブロック"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공간의 블록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruimtelijke blokken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6733,6 +9799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tijolos espaciais"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блоки в пространстве"
           }
         },
         "zh-Hans" : {
@@ -6777,6 +9849,24 @@
             "value" : "Spettacolare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圧巻"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장관"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spectaculair"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6787,6 +9877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Espetacular"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зрелище"
           }
         },
         "zh-Hans" : {
@@ -6829,6 +9925,24 @@
             "value" : "Iniziare una nuova partita?"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいゲームを始めますか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 게임을 시작할까요?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een nieuw spel starten?"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6839,6 +9953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Começar um novo jogo?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать новую игру?"
           }
         },
         "zh-Hans" : {
@@ -6881,6 +10001,24 @@
             "value" : "Strada"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリート"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스트리트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Straat"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6891,6 +10029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rua"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Улица"
           }
         },
         "zh-Hans" : {
@@ -6935,6 +10079,24 @@
             "value" : "Spazzino supremo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "掃除の極み"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청소의 최고수"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opperveger"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6945,6 +10107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Varredor supremo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мастер уборки"
           }
         },
         "zh-Hans" : {
@@ -6987,6 +10155,24 @@
             "value" : "Tocca un mattoncino per spaccarlo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックをタップすると砕けます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록을 탭하면 깨집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op een blok om het weg te beuken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6997,6 +10183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca num tijolo para o esmagar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми на блок, чтобы разбить его"
           }
         },
         "zh-Hans" : {
@@ -7039,6 +10231,24 @@
             "value" : "Tocca un pezzo per girare tutti e tre"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピースをタップすると3つとも回転します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조각을 탭하면 셋 다 회전합니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op een blok om alle drie te draaien"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7049,6 +10259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca numa peça para rodar as três"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми на фигуру, чтобы повернуть все три"
           }
         },
         "zh-Hans" : {
@@ -7091,6 +10307,24 @@
             "value" : "Tocca il tabellone per mirare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面をタップして狙います"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드를 탭해서 조준하세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op het bord om te richten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7101,6 +10335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca no tabuleiro para apontar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми на поле, чтобы прицелиться"
           }
         },
         "zh-Hans" : {
@@ -7143,6 +10383,24 @@
             "value" : "Tocca il tabellone per far esplodere un'area 3×3"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面をタップすると3×3の範囲が爆発します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드를 탭하면 3×3 범위가 터집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op het bord om een 3×3-gebied te laten ontploffen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7153,6 +10411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca no tabuleiro para explodir uma área 3×3"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми на поле, чтобы взорвать область 3×3"
           }
         },
         "zh-Hans" : {
@@ -7195,6 +10459,24 @@
             "value" : "Tocca il contorno per posare"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "枠をタップして置きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "윤곽을 탭해서 놓으세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op de omtrek om te plaatsen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7205,6 +10487,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca no contorno para colocar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми на контур, чтобы поставить"
           }
         },
         "zh-Hans" : {
@@ -7247,6 +10535,24 @@
             "value" : "Tocca la spunta per farla esplodere"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チェックをタップすると爆発"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "체크를 탭하면 터집니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op het vinkje om te laten ontploffen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7257,6 +10563,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca no visto para detonar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми галочку, чтобы взорвать"
           }
         },
         "zh-Hans" : {
@@ -7299,6 +10611,24 @@
             "value" : "Tocca per girare tutti e tre; trascina un pezzo per finire"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップで3つとも回転——終わったらピースをドラッグ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭하면 셋 다 회전 — 끝나면 조각을 끌어다 놓으세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om alle drie te draaien — sleep een blok als je klaar bent"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7309,6 +10639,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca para rodar as três; arrasta uma peça ao terminar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми, чтобы повернуть все три — затем перетащи фигуру"
           }
         },
         "zh-Hans" : {
@@ -7351,6 +10687,24 @@
             "value" : "Tocca dove vuoi l'esplosione 3×3"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3×3を爆発させたい場所をタップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3×3으로 터뜨릴 자리를 탭하세요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik waar je de 3×3-explosie wilt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7361,6 +10715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca onde queres a explosão 3×3"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми там, где нужен взрыв 3×3"
           }
         },
         "zh-Hans" : {
@@ -7403,6 +10763,24 @@
             "value" : "Il tabellone"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盤面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het bord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7413,6 +10791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O tabuleiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поле"
           }
         },
         "zh-Hans" : {
@@ -7455,6 +10839,24 @@
             "value" : "Perderai questo tabellone e il tuo punteggio. I potenziamenti restano."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この盤面とスコアは失われます。アイテムは残ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 보드와 점수는 사라집니다. 아이템은 그대로 남습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit bord en je score gaan verloren. Je hulpjes blijven behouden."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7465,6 +10867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vais perder este tabuleiro e a tua pontuação. Os teus poderes ficam."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это поле и счёт будут потеряны. Бонусы сохранятся."
           }
         },
         "zh-Hans" : {
@@ -7509,6 +10917,24 @@
             "value" : "Ordinato"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "きれい好き"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "깔끔하게"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opgeruimd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7519,6 +10945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arrumado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аккуратно"
           }
         },
         "zh-Hans" : {
@@ -7563,6 +10995,24 @@
             "value" : "Cassetta degli attrezzi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道具箱"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공구함"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gereedschapskist"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7573,6 +11023,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caixa de ferramentas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ящик с инструментами"
           }
         },
         "zh-Hans" : {
@@ -7615,6 +11071,24 @@
             "value" : "Traffico da città giocattolo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おもちゃの町の交通"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장난감 도시의 교통"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkeer in een speelgoedstad"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7625,6 +11099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trânsito de cidade de brincar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Движение в игрушечном городке"
           }
         },
         "zh-Hans" : {
@@ -7667,6 +11147,24 @@
             "value" : "Sentiero"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トレイル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트레일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pad"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7677,6 +11175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trilho"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тропа"
           }
         },
         "zh-Hans" : {
@@ -7721,6 +11225,24 @@
             "value" : "Tripla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トリプル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트리플"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Driedubbel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7731,6 +11253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tripla"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тройной"
           }
         },
         "zh-Hans" : {
@@ -7773,6 +11301,24 @@
             "value" : "Gira tutti e tre i pezzi di un quarto di giro, quante volte vuoi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3つのピースを90度ずつ回転。何度でも回せます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세 조각을 90도씩 회전합니다. 몇 번이든 가능"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draait alle drie de blokken een kwartslag, zo vaak als je wilt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7783,6 +11329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Roda as três peças um quarto de volta, tantas vezes como quiseres"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поворачивает все три фигуры на 90°, сколько угодно раз"
           }
         },
         "zh-Hans" : {
@@ -7827,6 +11379,24 @@
             "value" : "Giro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひとひねり"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 바퀴"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draai"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7837,6 +11407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volta"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поворот"
           }
         },
         "zh-Hans" : {
@@ -7879,6 +11455,24 @@
             "value" : "Sotto il puntatore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポインタの下"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포인터 아래"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onder de aanwijzer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7889,6 +11483,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Por baixo do ponteiro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Под курсором"
           }
         },
         "zh-Hans" : {
@@ -7931,6 +11531,24 @@
             "value" : "Sotto il dito"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指の下"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손가락 아래"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onder je vinger"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7941,6 +11559,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Por baixo do teu dedo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Под пальцем"
           }
         },
         "zh-Hans" : {
@@ -7983,6 +11607,24 @@
             "value" : "Sotto le dita"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "つまんだ指の下"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "집은 손가락 아래"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onder je greep"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7993,6 +11635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Por baixo dos teus dedos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Под щипком"
           }
         },
         "zh-Hans" : {
@@ -8035,6 +11683,24 @@
             "value" : "Annulla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "元に戻す"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "되돌리기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ongedaan maken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8045,6 +11711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desfazer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
           }
         },
         "zh-Hans" : {
@@ -8087,6 +11759,24 @@
             "value" : "Annulla mossa"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1手戻す"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 수 되돌리기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet ongedaan maken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8097,6 +11787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desfazer jogada"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить ход"
           }
         },
         "zh-Hans" : {
@@ -8141,6 +11837,24 @@
             "value" : "Inarrestabile"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "止まらない"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "멈출 수 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet te stoppen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8151,6 +11865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imparável"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неудержимый"
           }
         },
         "zh-Hans" : {
@@ -8195,6 +11915,24 @@
             "value" : "Scartato"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開封"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개봉"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uitgepakt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8205,6 +11943,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desembrulhado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Распаковано"
           }
         },
         "zh-Hans" : {
@@ -8247,6 +11991,24 @@
             "value" : "Aggiorna"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデート"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk bij"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8257,6 +12019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atualizar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить"
           }
         },
         "zh-Hans" : {
@@ -8299,6 +12067,24 @@
             "value" : "Aggiorna BRICKS! dall'App Store per continuare a giocare."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遊び続けるには、App StoreでBRICKS!をアップデートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속 플레이하려면 App Store에서 BRICKS!를 업데이트하세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk BRICKS! bij in de App Store om te blijven spelen."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8309,6 +12095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atualiza o BRICKS! na App Store para continuares a jogar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обнови BRICKS! в App Store, чтобы продолжить играть."
           }
         },
         "zh-Hans" : {
@@ -8351,6 +12143,24 @@
             "value" : "Aggiorna per continuare a giocare. La partita e il record sono salvati."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデートすれば続けて遊べます。ゲームとベストスコアは保存されています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트하면 계속 플레이할 수 있습니다. 게임과 최고 점수는 저장되어 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk bij om te blijven spelen. Je spel en beste score zijn bewaard."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8361,6 +12171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atualiza para continuares a jogar. O teu jogo e o teu recorde estão guardados."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обнови, чтобы продолжить играть. Игра и рекорд сохранены."
           }
         },
         "zh-Hans" : {
@@ -8403,6 +12219,24 @@
             "value" : "È uscita la versione %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バージョン%@が公開されました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 버전이 나왔어요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versie %@ is uit"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8413,6 +12247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A versão %@ já saiu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вышла версия %@"
           }
         },
         "zh-Hans" : {
@@ -8455,6 +12295,24 @@
             "value" : "Vibrazioni"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "振動"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "진동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trillingen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8465,6 +12323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vibrações"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибрация"
           }
         },
         "zh-Hans" : {
@@ -8509,6 +12373,24 @@
             "value" : "Riscaldamento"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウォーミングアップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "몸풀기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opwarmen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8519,6 +12401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A aquecer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разогрев"
           }
         },
         "zh-Hans" : {
@@ -8563,6 +12451,24 @@
             "value" : "Una settimana di mattoncini"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブロックの一週間"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블록의 한 주"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een week blokken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8573,6 +12479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uma semana de tijolos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неделя блоков"
           }
         },
         "zh-Hans" : {
@@ -8615,6 +12527,24 @@
             "value" : "Quando nessuno dei tre pezzi ci sta più da nessuna parte, la partita è finita: nemmeno un potenziamento ti tira fuori.\n\nQuello che avevi in mano passa alla partita successiva e il tabellone viene salvato strada facendo, così chiudere l'app non ti costa mai una partita."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3つのピースがどこにも置けなくなったら、そこでゲームオーバー——アイテムでも抜け出せません。\n\n手元に残っていたアイテムは次のゲームに引き継がれ、盤面は進行に合わせて保存されるので、アプリを閉じてもプレイが消えることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세 조각을 어디에도 놓을 수 없게 되면 게임이 끝납니다. 아이템으로도 빠져나올 수 없습니다.\n\n들고 있던 아이템은 다음 게임으로 넘어가고 보드는 진행에 따라 저장되므로, 앱을 닫아도 플레이가 사라지지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als geen van je drie blokken nog ergens past, is het spel voorbij — een hulpje haalt je daar niet uit.\n\nWat je nog had, gaat mee naar het volgende spel, en je bord wordt onderweg bewaard, dus de app sluiten kost je nooit een partij."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8625,6 +12555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quando nenhuma das tuas três peças cabe em sítio algum, o jogo acabou: nem um poder te tira de lá.\n\nO que tinhas guardado passa para o jogo seguinte, e o teu tabuleiro vai sendo guardado, por isso fechar a app nunca te custa uma partida."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда ни одна из трёх фигур больше никуда не встаёт, игра кончена — бонус из этого не вытащит.\n\nТо, что было на руках, переходит в следующую игру, а поле сохраняется по ходу дела, так что закрыть приложение никогда не стоит вам партии."
           }
         },
         "zh-Hans" : {
@@ -8667,6 +12603,24 @@
             "value" : "Widget"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィジェット"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위젯"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8677,6 +12631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Widget"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виджет"
           }
         },
         "zh-Hans" : {
@@ -8719,6 +12679,24 @@
             "value" : "Il widget è disattivato.\nAttivalo nelle impostazioni di BRICKS!."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィジェットはオフです。\nBRICKS!の設定でオンにしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위젯이 꺼져 있습니다.\nBRICKS! 설정에서 켜세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De widget staat uit.\nZet hem aan in de instellingen van BRICKS!."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8729,6 +12707,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O widget está desativado.\nAtiva-o nos ajustes do BRICKS!."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виджет выключен.\nВключите его в настройках BRICKS!."
           }
         },
         "zh-Hans" : {
@@ -8771,6 +12755,24 @@
             "value" : "Mondo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ワールド"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wereld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8781,6 +12783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mundo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мир"
           }
         },
         "zh-Hans" : {
@@ -8823,6 +12831,24 @@
             "value" : "Sì"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はい"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8833,6 +12859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sim"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Да"
           }
         },
         "zh-Hans" : {
@@ -8875,6 +12907,24 @@
             "value" : "La partita in corso e il tuo punteggio."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "進行中のゲームとスコア。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "진행 중인 게임과 점수."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je spel dat bezig is en je score."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8885,6 +12935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O teu jogo em curso e a tua pontuação."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша текущая игра и счёт."
           }
         },
         "zh-Hans" : {
@@ -8927,6 +12983,24 @@
             "value" : "record %lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベスト %lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고 %lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "beste %lld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8937,6 +13011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "recorde %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "рекорд %lld"
           }
         },
         "zh-Hans" : {
@@ -8979,6 +13059,24 @@
             "value" : "riga %lld, colonna %lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld行、%lld列"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld행, %lld열"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "rij %lld, kolom %lld"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8989,6 +13087,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "fila %lld, coluna %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "строка %lld, столбец %lld"
           }
         },
         "zh-Hans" : {
