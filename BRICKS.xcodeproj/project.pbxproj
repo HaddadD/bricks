@@ -71,9 +71,6 @@
 		E4000107000000000000A001 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000005000000000000A001 /* Theme.swift */; };
 		E4000A01000000000000A001 /* BRICKSWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E4000000000000000000A001 /* BRICKSWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B1000112000000000000A001 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = B1000012000000000000A001 /* Sounds */; };
-		B100010C000000000000A001 /* DragTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C000000000000A001 /* DragTargeting.swift */; };
-		B100010E000000000000A001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E000000000000A001 /* Settings.swift */; };
-		B100010F000000000000A001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000F000000000000A001 /* SettingsView.swift */; };
 		B1000110000000000000A001 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000010000000000000A001 /* Sound.swift */; };
 		B1000111000000000000A001 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000011000000000000A001 /* HowToPlayView.swift */; };
 		C2001016000000000000A001 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000010000000000000A001 /* Sound.swift */; };
@@ -123,9 +120,6 @@
 		E4000005000000000000A001 /* BRICKSWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRICKSWidget.entitlements; sourceTree = "<group>"; };
 		E4000000000000000000A001 /* BRICKSWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BRICKSWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1000012000000000000A001 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
-		B100000C000000000000A001 /* DragTargeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragTargeting.swift; sourceTree = "<group>"; };
-		B100000E000000000000A001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		B100000F000000000000A001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B1000010000000000000A001 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		B1000011000000000000A001 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */

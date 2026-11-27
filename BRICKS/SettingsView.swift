@@ -236,8 +236,7 @@ struct SettingsView: View {
     }
 
     /// Floats a dragged piece above the finger, pointer or pinch, so the hand doesn't hide
-    /// it or the square it will land on. Offered wherever pieces are dragged and there's
-    /// room under the board for it.
+    /// it or the square it will land on. Offered wherever pieces are dragged.
     private var floatRow: some View {
         HStack(spacing: 12) {
             icon("hand.point.up.left.fill", tint: Color(hex: 0xFFB59E))
@@ -256,7 +255,9 @@ struct SettingsView: View {
             Toggle("Float pieces", isOn: $settings.floatPieces)
                 .labelsHidden()
                 .tint(Color(hex: 0xE99A82))
+                #if os(macOS)
                 .toggleStyle(.switch)
+                #endif
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 13)
